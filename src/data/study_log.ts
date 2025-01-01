@@ -9,4 +9,5 @@ export const STUDY_LOG: string[] = [
   "Learn to Explain: Multimodal Reasoning via Thought Chains for Science Question Answering [NLP, 2022]",
   "Self-Consuming Generative Models Go MAD [Computer Vision, 2023]",
   "ArtPrompt: ASCII Art-based Jailbreak Attacks against Aligned LLMs [NLP, 2024]",
+  "MS MARCO: A Human Generated MAchine Reading COmprehension Dataset [NLP, 2018]",
 ];
