@@ -11,4 +11,5 @@ export const STUDY_LOG: string[] = [
   "ArtPrompt: ASCII Art-based Jailbreak Attacks against Aligned LLMs [NLP, 2024]",
   "MS MARCO: A Human Generated MAchine Reading COmprehension Dataset [NLP, 2018]",
   "Recurrent Memory Transformer [NLP, 2022]",
+  "Movement Pruning: Adaptive Sparsity by Fine-Tuning [NLP, 2020]",
 ];
