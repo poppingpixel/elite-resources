@@ -10,4 +10,5 @@ export const STUDY_LOG: string[] = [
   "Self-Consuming Generative Models Go MAD [Computer Vision, 2023]",
   "ArtPrompt: ASCII Art-based Jailbreak Attacks against Aligned LLMs [NLP, 2024]",
   "MS MARCO: A Human Generated MAchine Reading COmprehension Dataset [NLP, 2018]",
+  "Recurrent Memory Transformer [NLP, 2022]",
 ];
