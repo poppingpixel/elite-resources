@@ -12,4 +12,5 @@ export const STUDY_LOG: string[] = [
   "MS MARCO: A Human Generated MAchine Reading COmprehension Dataset [NLP, 2018]",
   "Recurrent Memory Transformer [NLP, 2022]",
   "Movement Pruning: Adaptive Sparsity by Fine-Tuning [NLP, 2020]",
+  "Take a Step Back: Evoking Reasoning via Abstraction in Large Language Models [NLP, 2023]",
 ];
