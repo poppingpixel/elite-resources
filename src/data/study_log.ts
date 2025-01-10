@@ -14,4 +14,5 @@ export const STUDY_LOG: string[] = [
   "Movement Pruning: Adaptive Sparsity by Fine-Tuning [NLP, 2020]",
   "Take a Step Back: Evoking Reasoning via Abstraction in Large Language Models [NLP, 2023]",
   "Gender Bias in Coreference Resolution: Evaluation and Debiasing Methods [NLP, 2018]",
+  "Extending Context Window of Large Language Models via Positional Interpolation [NLP, 2023]",
 ];
