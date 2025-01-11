@@ -16,4 +16,5 @@ export const STUDY_LOG: string[] = [
   "Gender Bias in Coreference Resolution: Evaluation and Debiasing Methods [NLP, 2018]",
   "Extending Context Window of Large Language Models via Positional Interpolation [NLP, 2023]",
   "GLU Variants Improve Transformer [Core ML, 2020]",
+  "A Careful Examination of Large Language Model Performance on Grade School Arithmetic [NLP, 2024]",
 ];
