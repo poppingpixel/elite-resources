@@ -15,4 +15,5 @@ export const STUDY_LOG: string[] = [
   "Take a Step Back: Evoking Reasoning via Abstraction in Large Language Models [NLP, 2023]",
   "Gender Bias in Coreference Resolution: Evaluation and Debiasing Methods [NLP, 2018]",
   "Extending Context Window of Large Language Models via Positional Interpolation [NLP, 2023]",
+  "GLU Variants Improve Transformer [Core ML, 2020]",
 ];
