@@ -17,4 +17,5 @@ export const STUDY_LOG: string[] = [
   "Extending Context Window of Large Language Models via Positional Interpolation [NLP, 2023]",
   "GLU Variants Improve Transformer [Core ML, 2020]",
   "A Careful Examination of Large Language Model Performance on Grade School Arithmetic [NLP, 2024]",
+  "Diverse Beam Search: Decoding Diverse Solutions from Neural Sequence Models [NLP, 2018]",
 ];
