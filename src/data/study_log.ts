@@ -22,4 +22,5 @@ export const STUDY_LOG: string[] = [
   "YaRN: Efficient Context Window Extension of Large Language Models [NLP, 2023]",
   "Large Language Models Are Neurosymbolic Reasoners [NLP, 2023]",
   "MM-REACT: Prompting ChatGPT for Multimodal Reasoning and Action [Multimodal, 2023]",
+  "Sequencer: Deep LSTM for Image Classification [Computer Vision, 2022]",
 ];
