@@ -24,4 +24,5 @@ export const STUDY_LOG: string[] = [
   "MM-REACT: Prompting ChatGPT for Multimodal Reasoning and Action [Multimodal, 2023]",
   "Sequencer: Deep LSTM for Image Classification [Computer Vision, 2022]",
   "Mastering Atari, Go, Chess and Shogi by Planning with a Learned Model [RL, 2020]",
+  "Native Sparse Attention: Hardware-Aligned and Natively Trainable Sparse Attention [NLP, 2025]",
 ];
