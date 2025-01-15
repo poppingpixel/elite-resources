@@ -18,4 +18,5 @@ export const STUDY_LOG: string[] = [
   "GLU Variants Improve Transformer [Core ML, 2020]",
   "A Careful Examination of Large Language Model Performance on Grade School Arithmetic [NLP, 2024]",
   "Diverse Beam Search: Decoding Diverse Solutions from Neural Sequence Models [NLP, 2018]",
+  "YOLOv6: A Single-Stage Object Detection Framework for Industrial Applications [Computer Vision, 2022]",
 ];
