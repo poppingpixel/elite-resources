@@ -20,4 +20,5 @@ export const STUDY_LOG: string[] = [
   "Diverse Beam Search: Decoding Diverse Solutions from Neural Sequence Models [NLP, 2018]",
   "YOLOv6: A Single-Stage Object Detection Framework for Industrial Applications [Computer Vision, 2022]",
   "YaRN: Efficient Context Window Extension of Large Language Models [NLP, 2023]",
+  "Large Language Models Are Neurosymbolic Reasoners [NLP, 2023]",
 ];
