@@ -26,4 +26,5 @@ export const STUDY_LOG: string[] = [
   "Mastering Atari, Go, Chess and Shogi by Planning with a Learned Model [RL, 2020]",
   "Native Sparse Attention: Hardware-Aligned and Natively Trainable Sparse Attention [NLP, 2025]",
   "MoverScore: Text Generation Evaluating with Contextualized Embeddings and Earth Mover Distance [NLP, 2019]",
+  "Direct speech-to-speech translation with discrete units [Speech, 2022]",
 ];
