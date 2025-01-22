@@ -27,4 +27,5 @@ export const STUDY_LOG: string[] = [
   "Native Sparse Attention: Hardware-Aligned and Natively Trainable Sparse Attention [NLP, 2025]",
   "MoverScore: Text Generation Evaluating with Contextualized Embeddings and Earth Mover Distance [NLP, 2019]",
   "Direct speech-to-speech translation with discrete units [Speech, 2022]",
+  "CogVLM: Visual Expert for Pretrained Language Models [Multimodal, 2023]",
 ];
