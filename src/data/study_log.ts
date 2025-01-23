@@ -32,4 +32,5 @@ export const STUDY_LOG: string[] = [
   "Fresh Content Needs More Attention: Multi-funnel Fresh Content Recommendation [RecSys, 2023]",
   "RAPTOR: Recursive Abstractive Processing for Tree-Organized Retrieval [NLP, 2024]",
   "The Leaderboard Illusion [NLP, 2025]",
+  "RLAIF: Scaling Reinforcement Learning from Human Feedback with AI Feedback [NLP, 2023]",
 ];
