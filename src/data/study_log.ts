@@ -36,4 +36,5 @@ export const STUDY_LOG: string[] = [
   "SELF-INSTRUCT: Aligning Language Model with Self Generated Instructions [NLP, 2023]",
   "mixup: Beyond Empirical Risk Minimization [Multimodal, 2017]",
   "Tackling the Curse of Dimensionality with Physics-Informed Neural Networks [Core ML, 2023]",
+  "Simple Statistical Gradient-Following Algorithms for Connectionist Reinforcement Learning [RL, 1992]",
 ];
