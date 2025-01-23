@@ -30,4 +30,5 @@ export const STUDY_LOG: string[] = [
   "CogVLM: Visual Expert for Pretrained Language Models [Multimodal, 2023]",
   "A Comparison of Human, GPT-3.5, and GPT-4 Performance in a University-Level Coding Course [NLP, 2024]",
   "Fresh Content Needs More Attention: Multi-funnel Fresh Content Recommendation [RecSys, 2023]",
+  "RAPTOR: Recursive Abstractive Processing for Tree-Organized Retrieval [NLP, 2024]",
 ];
