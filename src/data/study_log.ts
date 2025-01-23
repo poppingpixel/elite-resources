@@ -34,4 +34,5 @@ export const STUDY_LOG: string[] = [
   "The Leaderboard Illusion [NLP, 2025]",
   "RLAIF: Scaling Reinforcement Learning from Human Feedback with AI Feedback [NLP, 2023]",
   "SELF-INSTRUCT: Aligning Language Model with Self Generated Instructions [NLP, 2023]",
+  "mixup: Beyond Empirical Risk Minimization [Multimodal, 2017]",
 ];
