@@ -29,4 +29,5 @@ export const STUDY_LOG: string[] = [
   "Direct speech-to-speech translation with discrete units [Speech, 2022]",
   "CogVLM: Visual Expert for Pretrained Language Models [Multimodal, 2023]",
   "A Comparison of Human, GPT-3.5, and GPT-4 Performance in a University-Level Coding Course [NLP, 2024]",
+  "Fresh Content Needs More Attention: Multi-funnel Fresh Content Recommendation [RecSys, 2023]",
 ];
