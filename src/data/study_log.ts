@@ -31,4 +31,5 @@ export const STUDY_LOG: string[] = [
   "A Comparison of Human, GPT-3.5, and GPT-4 Performance in a University-Level Coding Course [NLP, 2024]",
   "Fresh Content Needs More Attention: Multi-funnel Fresh Content Recommendation [RecSys, 2023]",
   "RAPTOR: Recursive Abstractive Processing for Tree-Organized Retrieval [NLP, 2024]",
+  "The Leaderboard Illusion [NLP, 2025]",
 ];
