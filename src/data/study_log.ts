@@ -28,4 +28,5 @@ export const STUDY_LOG: string[] = [
   "MoverScore: Text Generation Evaluating with Contextualized Embeddings and Earth Mover Distance [NLP, 2019]",
   "Direct speech-to-speech translation with discrete units [Speech, 2022]",
   "CogVLM: Visual Expert for Pretrained Language Models [Multimodal, 2023]",
+  "A Comparison of Human, GPT-3.5, and GPT-4 Performance in a University-Level Coding Course [NLP, 2024]",
 ];
