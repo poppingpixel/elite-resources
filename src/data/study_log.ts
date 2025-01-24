@@ -41,4 +41,5 @@ export const STUDY_LOG: string[] = [
   "A ConvNet for the 2020s [Computer Vision, 2022]",
   "REFRAG: Rethinking RAG based Decoding [NLP, 2025]",
   "Hyperbolic Image-Text Representations [Multimodal, 2023]",
+  "Vision-Flan: Scaling Human-Labeled Tasks in Visual Instruction Tuning [Multimodal, 2024]",
 ];
