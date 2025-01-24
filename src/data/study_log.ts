@@ -42,4 +42,5 @@ export const STUDY_LOG: string[] = [
   "REFRAG: Rethinking RAG based Decoding [NLP, 2025]",
   "Hyperbolic Image-Text Representations [Multimodal, 2023]",
   "Vision-Flan: Scaling Human-Labeled Tasks in Visual Instruction Tuning [Multimodal, 2024]",
+  "Acoustic Modeling using Deep Belief Networks [Core ML, 2012]",
 ];
