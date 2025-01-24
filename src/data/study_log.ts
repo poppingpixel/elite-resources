@@ -39,4 +39,5 @@ export const STUDY_LOG: string[] = [
   "Simple Statistical Gradient-Following Algorithms for Connectionist Reinforcement Learning [RL, 1992]",
   "Large Language Models Still Can’t Plan (A Benchmark for LLMs on Planning and Reasoning about Change) [NLP, 2022]",
   "A ConvNet for the 2020s [Computer Vision, 2022]",
+  "REFRAG: Rethinking RAG based Decoding [NLP, 2025]",
 ];
