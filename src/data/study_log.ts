@@ -44,4 +44,5 @@ export const STUDY_LOG: string[] = [
   "Vision-Flan: Scaling Human-Labeled Tasks in Visual Instruction Tuning [Multimodal, 2024]",
   "Acoustic Modeling using Deep Belief Networks [Core ML, 2012]",
   "AlphaCode 2 [NLP, 2023]",
+  "Megatron-LM: Training Multi-Billion Parameter Language Models Using Model Parallelism [NLP, 2019]",
 ];
