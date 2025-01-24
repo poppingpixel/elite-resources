@@ -43,4 +43,5 @@ export const STUDY_LOG: string[] = [
   "Hyperbolic Image-Text Representations [Multimodal, 2023]",
   "Vision-Flan: Scaling Human-Labeled Tasks in Visual Instruction Tuning [Multimodal, 2024]",
   "Acoustic Modeling using Deep Belief Networks [Core ML, 2012]",
+  "AlphaCode 2 [NLP, 2023]",
 ];
