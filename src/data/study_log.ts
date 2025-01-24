@@ -45,4 +45,5 @@ export const STUDY_LOG: string[] = [
   "Acoustic Modeling using Deep Belief Networks [Core ML, 2012]",
   "AlphaCode 2 [NLP, 2023]",
   "Megatron-LM: Training Multi-Billion Parameter Language Models Using Model Parallelism [NLP, 2019]",
+  "Teaching Large Language Models to Self-Debug [NLP, 2024]",
 ];
