@@ -49,4 +49,5 @@ export const STUDY_LOG: string[] = [
   "An Efficient Memory-Augmented Transformer for Knowledge-Intensive NLP Tasks [NLP, 2022]",
   "Understanding R1-Zero-Like Training: A Critical Perspective [NLP, 2025]",
   "You Only Look Once: Unified, Real-Time Object Detection [Computer Vision, 2016]",
+  "Trust Region Policy Optimization [RL, 2015]",
 ];
