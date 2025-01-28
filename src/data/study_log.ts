@@ -50,4 +50,5 @@ export const STUDY_LOG: string[] = [
   "Understanding R1-Zero-Like Training: A Critical Perspective [NLP, 2025]",
   "You Only Look Once: Unified, Real-Time Object Detection [Computer Vision, 2016]",
   "Trust Region Policy Optimization [RL, 2015]",
+  "Distributed Representations of Words and Phrases and their Compositionality [NLP, 2013]",
 ];
