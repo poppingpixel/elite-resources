@@ -51,4 +51,5 @@ export const STUDY_LOG: string[] = [
   "You Only Look Once: Unified, Real-Time Object Detection [Computer Vision, 2016]",
   "Trust Region Policy Optimization [RL, 2015]",
   "Distributed Representations of Words and Phrases and their Compositionality [NLP, 2013]",
+  "ImageBind: One Embedding Space To Bind Them All [Multimodal, 2023]",
 ];
