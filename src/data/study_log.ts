@@ -53,4 +53,5 @@ export const STUDY_LOG: string[] = [
   "Distributed Representations of Words and Phrases and their Compositionality [NLP, 2013]",
   "ImageBind: One Embedding Space To Bind Them All [Multimodal, 2023]",
   "Phi-2: The surprising power of small language models [NLP, 2023]",
+  "ToRA: A Tool-Integrated Reasoning Agent for Mathematical Problem Solving [NLP, 2024]",
 ];
