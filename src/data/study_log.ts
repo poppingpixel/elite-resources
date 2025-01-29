@@ -52,4 +52,5 @@ export const STUDY_LOG: string[] = [
   "Trust Region Policy Optimization [RL, 2015]",
   "Distributed Representations of Words and Phrases and their Compositionality [NLP, 2013]",
   "ImageBind: One Embedding Space To Bind Them All [Multimodal, 2023]",
+  "Phi-2: The surprising power of small language models [NLP, 2023]",
 ];
