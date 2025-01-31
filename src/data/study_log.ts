@@ -57,4 +57,5 @@ export const STUDY_LOG: string[] = [
   "Sycophancy to Subterfuge: Investigating Reward Tampering in Language Models [NLP, 2024]",
   "Monarch Mixer: A Simple Sub-Quadratic GEMM-Based Architecture [NLP, 2023]",
   "Wide & Deep Learning for Recommender Systems [RecSys, 2016]",
+  "Long Short-Term Memory [NLP, 1997]",
 ];
