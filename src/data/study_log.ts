@@ -55,4 +55,5 @@ export const STUDY_LOG: string[] = [
   "Phi-2: The surprising power of small language models [NLP, 2023]",
   "ToRA: A Tool-Integrated Reasoning Agent for Mathematical Problem Solving [NLP, 2024]",
   "Sycophancy to Subterfuge: Investigating Reward Tampering in Language Models [NLP, 2024]",
+  "Monarch Mixer: A Simple Sub-Quadratic GEMM-Based Architecture [NLP, 2023]",
 ];
