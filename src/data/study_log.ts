@@ -59,4 +59,5 @@ export const STUDY_LOG: string[] = [
   "Wide & Deep Learning for Recommender Systems [RecSys, 2016]",
   "Long Short-Term Memory [NLP, 1997]",
   "Massively Multilingual Sentence Embeddings for Zero-Shot Cross-Lingual Transfer and Beyond [NLP, 2019]",
+  "Robust Speech Recognition via Large-Scale Weak Supervision [Speech, 2022]",
 ];
