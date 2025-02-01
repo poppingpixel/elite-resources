@@ -62,4 +62,5 @@ export const STUDY_LOG: string[] = [
   "Robust Speech Recognition via Large-Scale Weak Supervision [Speech, 2022]",
   "An Empirical Study of Training Self-Supervised Vision Transformers [Computer Vision, 2021]",
   "Learning to (Learn at Test Time): RNNs with Expressive Hidden States [NLP, 2025]",
+  "Thread of Thought: Unraveling Chaotic Contexts [NLP, 2023]",
 ];
