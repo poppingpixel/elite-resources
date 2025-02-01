@@ -63,4 +63,5 @@ export const STUDY_LOG: string[] = [
   "An Empirical Study of Training Self-Supervised Vision Transformers [Computer Vision, 2021]",
   "Learning to (Learn at Test Time): RNNs with Expressive Hidden States [NLP, 2025]",
   "Thread of Thought: Unraveling Chaotic Contexts [NLP, 2023]",
+  "A Human-Inspired Reading Agent with Gist Memory of Very Long Contexts [NLP, 2024]",
 ];
