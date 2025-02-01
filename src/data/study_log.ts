@@ -64,4 +64,5 @@ export const STUDY_LOG: string[] = [
   "Learning to (Learn at Test Time): RNNs with Expressive Hidden States [NLP, 2025]",
   "Thread of Thought: Unraveling Chaotic Contexts [NLP, 2023]",
   "A Human-Inspired Reading Agent with Gist Memory of Very Long Contexts [NLP, 2024]",
+  "Multimodal Neurons in Pretrained Text-Only Transformers [NLP, 2023]",
 ];
