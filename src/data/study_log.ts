@@ -67,4 +67,5 @@ export const STUDY_LOG: string[] = [
   "Multimodal Neurons in Pretrained Text-Only Transformers [NLP, 2023]",
   "The wisdom of the few: a collaborative filtering approach based on expert opinions from the web [RecSys, 2009]",
   "Learn Beyond The Answer: Training Language Models with Reflection for Mathematical Reasoning [NLP, 2024]",
+  "Visual Instruction Inversion: Image Editing via Visual Prompting [Multimodal, 2023]",
 ];
