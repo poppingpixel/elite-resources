@@ -70,4 +70,5 @@ export const STUDY_LOG: string[] = [
   "Visual Instruction Inversion: Image Editing via Visual Prompting [Multimodal, 2023]",
   "Neural Collaborative Filtering [RecSys, 2017]",
   "Diffusion-LM Improves Controllable Text Generation [NLP, 2022]",
+  "Make-An-Animation: Large-Scale Text-conditional 3D Human Motion Generation [Multimodal, 2023]",
 ];
