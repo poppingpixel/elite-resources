@@ -68,4 +68,5 @@ export const STUDY_LOG: string[] = [
   "The wisdom of the few: a collaborative filtering approach based on expert opinions from the web [RecSys, 2009]",
   "Learn Beyond The Answer: Training Language Models with Reflection for Mathematical Reasoning [NLP, 2024]",
   "Visual Instruction Inversion: Image Editing via Visual Prompting [Multimodal, 2023]",
+  "Neural Collaborative Filtering [RecSys, 2017]",
 ];
