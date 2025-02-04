@@ -71,4 +71,5 @@ export const STUDY_LOG: string[] = [
   "Neural Collaborative Filtering [RecSys, 2017]",
   "Diffusion-LM Improves Controllable Text Generation [NLP, 2022]",
   "Make-An-Animation: Large-Scale Text-conditional 3D Human Motion Generation [Multimodal, 2023]",
+  "SLoRA: Federated Parameter Efficient Fine-Tuning of Language Models [NLP, 2023]",
 ];
