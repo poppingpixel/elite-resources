@@ -73,4 +73,5 @@ export const STUDY_LOG: string[] = [
   "Make-An-Animation: Large-Scale Text-conditional 3D Human Motion Generation [Multimodal, 2023]",
   "SLoRA: Federated Parameter Efficient Fine-Tuning of Language Models [NLP, 2023]",
   "Understanding the Planning of LLM Agents: A Survey [NLP, 2024]",
+  "Learning Transferable Visual Models From Natural Language Supervision [Multimodal, 2021]",
 ];
