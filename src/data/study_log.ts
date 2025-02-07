@@ -84,4 +84,5 @@ export const STUDY_LOG: string[] = [
   "Lossy Compression for Lossless Prediction [Computer Vision, 2021]",
   "MAGPIE: Alignment Data Synthesis from Scratch by Prompting Aligned LLMs with Nothing [NLP, 2024]",
   "Distilling the Knowledge in a Neural Network [Computer Vision, 2015]",
+  "Scale Efficiently: Insights from Pre-training and Fine-tuning Transformers [NLP, 2022]",
 ];
