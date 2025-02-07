@@ -85,4 +85,5 @@ export const STUDY_LOG: string[] = [
   "MAGPIE: Alignment Data Synthesis from Scratch by Prompting Aligned LLMs with Nothing [NLP, 2024]",
   "Distilling the Knowledge in a Neural Network [Computer Vision, 2015]",
   "Scale Efficiently: Insights from Pre-training and Fine-tuning Transformers [NLP, 2022]",
+  "Dense X Retrieval: What Retrieval Granularity Should We Use? [NLP, 2023]",
 ];
