@@ -78,4 +78,5 @@ export const STUDY_LOG: string[] = [
   "Stable and Latent Diffusion Model [Multimodal, 2022]",
   "Scaling Vision Transformers to 22 Billion Parameters [Computer Vision, 2023]",
   "FacTool: Factuality Detection in Generative AI – A Tool Augmented Framework for Multi-Task and Multi-Domain Scenarios [NLP, 2023]",
+  "Laplacian Eigenmaps and Spectral Techniques for Embedding and Clustering [Graph ML, 2001]",
 ];
