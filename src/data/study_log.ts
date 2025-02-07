@@ -81,4 +81,5 @@ export const STUDY_LOG: string[] = [
   "Laplacian Eigenmaps and Spectral Techniques for Embedding and Clustering [Graph ML, 2001]",
   "Adaptive-RAG: Learning to Adapt Retrieval-Augmented Large Language Models through Question Complexity [NLP, 2024]",
   "An Improved One millisecond Mobile Backbone [Computer Vision, 2022]",
+  "Lossy Compression for Lossless Prediction [Computer Vision, 2021]",
 ];
