@@ -79,4 +79,5 @@ export const STUDY_LOG: string[] = [
   "Scaling Vision Transformers to 22 Billion Parameters [Computer Vision, 2023]",
   "FacTool: Factuality Detection in Generative AI – A Tool Augmented Framework for Multi-Task and Multi-Domain Scenarios [NLP, 2023]",
   "Laplacian Eigenmaps and Spectral Techniques for Embedding and Clustering [Graph ML, 2001]",
+  "Adaptive-RAG: Learning to Adapt Retrieval-Augmented Large Language Models through Question Complexity [NLP, 2024]",
 ];
