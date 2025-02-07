@@ -87,4 +87,5 @@ export const STUDY_LOG: string[] = [
   "Scale Efficiently: Insights from Pre-training and Fine-tuning Transformers [NLP, 2022]",
   "Dense X Retrieval: What Retrieval Granularity Should We Use? [NLP, 2023]",
   "node2vec: Scalable Feature Learning for Networks [Graph ML, 2016]",
+  "FlashAttention-3: Fast and Accurate Attention with Asynchrony and Low-precision [Core ML, 2024]",
 ];
