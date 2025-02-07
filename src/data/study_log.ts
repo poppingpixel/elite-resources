@@ -75,4 +75,5 @@ export const STUDY_LOG: string[] = [
   "Understanding the Planning of LLM Agents: A Survey [NLP, 2024]",
   "Learning Transferable Visual Models From Natural Language Supervision [Multimodal, 2021]",
   "Training language models to follow instructions with human feedback [NLP, 2022]",
+  "Stable and Latent Diffusion Model [Multimodal, 2022]",
 ];
