@@ -83,4 +83,5 @@ export const STUDY_LOG: string[] = [
   "An Improved One millisecond Mobile Backbone [Computer Vision, 2022]",
   "Lossy Compression for Lossless Prediction [Computer Vision, 2021]",
   "MAGPIE: Alignment Data Synthesis from Scratch by Prompting Aligned LLMs with Nothing [NLP, 2024]",
+  "Distilling the Knowledge in a Neural Network [Computer Vision, 2015]",
 ];
