@@ -91,4 +91,5 @@ export const STUDY_LOG: string[] = [
   "BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding [NLP, 2019]",
   "The Alignment Ceiling: Objective Mismatch in Reinforcement Learning from Human Feedback [NLP, 2023]",
   "Prompting Large Language Models with Answer Heuristics for Knowledge-based Visual Question Answering [Multimodal, 2023]",
+  "Constitutional AI: Harmlessness from AI Feedback [NLP, 2022]",
 ];
