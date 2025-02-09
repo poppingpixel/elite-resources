@@ -90,4 +90,5 @@ export const STUDY_LOG: string[] = [
   "FlashAttention-3: Fast and Accurate Attention with Asynchrony and Low-precision [Core ML, 2024]",
   "BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding [NLP, 2019]",
   "The Alignment Ceiling: Objective Mismatch in Reinforcement Learning from Human Feedback [NLP, 2023]",
+  "Prompting Large Language Models with Answer Heuristics for Knowledge-based Visual Question Answering [Multimodal, 2023]",
 ];
