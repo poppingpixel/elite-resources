@@ -89,4 +89,5 @@ export const STUDY_LOG: string[] = [
   "node2vec: Scalable Feature Learning for Networks [Graph ML, 2016]",
   "FlashAttention-3: Fast and Accurate Attention with Asynchrony and Low-precision [Core ML, 2024]",
   "BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding [NLP, 2019]",
+  "The Alignment Ceiling: Objective Mismatch in Reinforcement Learning from Human Feedback [NLP, 2023]",
 ];
