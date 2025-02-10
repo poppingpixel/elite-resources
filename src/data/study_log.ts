@@ -95,4 +95,5 @@ export const STUDY_LOG: string[] = [
   "The Falcon Series of Open Language Models [NLP, 2023]",
   "Multimodal Few-Shot Learning with Frozen Language Models [Multimodal, 2021]",
   "AD-DROP: Attribution-Driven Dropout for Robust Language Model Fine-Tuning [NLP, 2022]",
+  "Mixture of Attention Heads: Selecting Attention Heads Per Token [NLP, 2025]",
 ];
