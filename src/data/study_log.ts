@@ -98,4 +98,5 @@ export const STUDY_LOG: string[] = [
   "Mixture of Attention Heads: Selecting Attention Heads Per Token [NLP, 2025]",
   "Efficient Deep Learning: A Survey on Making Deep Learning Models Smaller, Faster, and Better [Core ML, 2021]",
   "Proximal Policy Optimization Algorithms [RL, 2017]",
+  "Fine-tuning Language Models for Factuality [NLP, 2023]",
 ];
