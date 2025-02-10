@@ -100,4 +100,5 @@ export const STUDY_LOG: string[] = [
   "Proximal Policy Optimization Algorithms [RL, 2017]",
   "Fine-tuning Language Models for Factuality [NLP, 2023]",
   "Large Dual Encoders Are Generalizable Retrievers [NLP, 2021]",
+  "Two-dimensional Matryoshka Sentence Embeddings [NLP, 2024]",
 ];
