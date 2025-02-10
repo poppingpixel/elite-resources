@@ -92,4 +92,5 @@ export const STUDY_LOG: string[] = [
   "The Alignment Ceiling: Objective Mismatch in Reinforcement Learning from Human Feedback [NLP, 2023]",
   "Prompting Large Language Models with Answer Heuristics for Knowledge-based Visual Question Answering [Multimodal, 2023]",
   "Constitutional AI: Harmlessness from AI Feedback [NLP, 2022]",
+  "The Falcon Series of Open Language Models [NLP, 2023]",
 ];
