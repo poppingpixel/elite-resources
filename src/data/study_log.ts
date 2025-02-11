@@ -103,4 +103,5 @@ export const STUDY_LOG: string[] = [
   "Two-dimensional Matryoshka Sentence Embeddings [NLP, 2024]",
   "MuRAG: Multimodal Retrieval-Augmented Generator [NLP, 2022]",
   "Transdreamer: Reinforcement Learning With Transformer World Models [RL, 2022]",
+  "PolyLoss: A Polynomial Expansion Perspective of Classification Loss Functions [Core ML, 2022]",
 ];
