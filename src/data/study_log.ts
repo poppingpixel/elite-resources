@@ -102,4 +102,5 @@ export const STUDY_LOG: string[] = [
   "Large Dual Encoders Are Generalizable Retrievers [NLP, 2021]",
   "Two-dimensional Matryoshka Sentence Embeddings [NLP, 2024]",
   "MuRAG: Multimodal Retrieval-Augmented Generator [NLP, 2022]",
+  "Transdreamer: Reinforcement Learning With Transformer World Models [RL, 2022]",
 ];
