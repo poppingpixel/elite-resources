@@ -101,4 +101,5 @@ export const STUDY_LOG: string[] = [
   "Fine-tuning Language Models for Factuality [NLP, 2023]",
   "Large Dual Encoders Are Generalizable Retrievers [NLP, 2021]",
   "Two-dimensional Matryoshka Sentence Embeddings [NLP, 2024]",
+  "MuRAG: Multimodal Retrieval-Augmented Generator [NLP, 2022]",
 ];
