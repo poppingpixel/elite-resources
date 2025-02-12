@@ -112,4 +112,5 @@ export const STUDY_LOG: string[] = [
   "BPO: Supercharging Online Preference Learning by Adhering to the Proximity of Behavior LLM [NLP, 2024]",
   "LM-Infinite: Simple On-The-Fly Length Generalization for Large Language Models [NLP, 2023]",
   "Corrective Retrieval Augmented Generation [NLP, 2024]",
+  "RoFormer: Enhanced Transformer with Rotary Position Embedding [NLP, 2022]",
 ];
