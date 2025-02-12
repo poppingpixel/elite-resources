@@ -110,4 +110,5 @@ export const STUDY_LOG: string[] = [
   "CLAR: Contrastive Learning of Auditory Representations [Speech, 2021]",
   "Deep Unsupervised Learning using Nonequilibrium Thermodynamics [Computer Vision, 2015]",
   "BPO: Supercharging Online Preference Learning by Adhering to the Proximity of Behavior LLM [NLP, 2024]",
+  "LM-Infinite: Simple On-The-Fly Length Generalization for Large Language Models [NLP, 2023]",
 ];
