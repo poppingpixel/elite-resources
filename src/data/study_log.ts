@@ -109,4 +109,5 @@ export const STUDY_LOG: string[] = [
   "Toward a better trade-off between performance and fairness with kernel-based distribution matching [Core ML, 2019]",
   "CLAR: Contrastive Learning of Auditory Representations [Speech, 2021]",
   "Deep Unsupervised Learning using Nonequilibrium Thermodynamics [Computer Vision, 2015]",
+  "BPO: Supercharging Online Preference Learning by Adhering to the Proximity of Behavior LLM [NLP, 2024]",
 ];
