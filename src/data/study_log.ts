@@ -104,4 +104,5 @@ export const STUDY_LOG: string[] = [
   "MuRAG: Multimodal Retrieval-Augmented Generator [NLP, 2022]",
   "Transdreamer: Reinforcement Learning With Transformer World Models [RL, 2022]",
   "PolyLoss: A Polynomial Expansion Perspective of Classification Loss Functions [Core ML, 2022]",
+  "Sharpness-Aware Minimization for Efficiently Improving Generalization [Core ML, 2021]",
 ];
