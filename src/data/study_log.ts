@@ -107,4 +107,5 @@ export const STUDY_LOG: string[] = [
   "Sharpness-Aware Minimization for Efficiently Improving Generalization [Core ML, 2021]",
   "Fine-Tuning or Retrieval? Comparing Knowledge Injection in LLMs [NLP, 2023]",
   "Toward a better trade-off between performance and fairness with kernel-based distribution matching [Core ML, 2019]",
+  "CLAR: Contrastive Learning of Auditory Representations [Speech, 2021]",
 ];
