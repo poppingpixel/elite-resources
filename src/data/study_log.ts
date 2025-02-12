@@ -108,4 +108,5 @@ export const STUDY_LOG: string[] = [
   "Fine-Tuning or Retrieval? Comparing Knowledge Injection in LLMs [NLP, 2023]",
   "Toward a better trade-off between performance and fairness with kernel-based distribution matching [Core ML, 2019]",
   "CLAR: Contrastive Learning of Auditory Representations [Speech, 2021]",
+  "Deep Unsupervised Learning using Nonequilibrium Thermodynamics [Computer Vision, 2015]",
 ];
