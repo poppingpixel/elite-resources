@@ -113,4 +113,5 @@ export const STUDY_LOG: string[] = [
   "LM-Infinite: Simple On-The-Fly Length Generalization for Large Language Models [NLP, 2023]",
   "Corrective Retrieval Augmented Generation [NLP, 2024]",
   "RoFormer: Enhanced Transformer with Rotary Position Embedding [NLP, 2022]",
+  "SALAD-Bench: A Hierarchical and Comprehensive Safety Benchmark for Large Language Models [NLP, 2024]",
 ];
