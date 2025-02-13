@@ -114,4 +114,5 @@ export const STUDY_LOG: string[] = [
   "Corrective Retrieval Augmented Generation [NLP, 2024]",
   "RoFormer: Enhanced Transformer with Rotary Position Embedding [NLP, 2022]",
   "SALAD-Bench: A Hierarchical and Comprehensive Safety Benchmark for Large Language Models [NLP, 2024]",
+  "Mixed Precision Training [Core ML, 2017]",
 ];
