@@ -116,4 +116,5 @@ export const STUDY_LOG: string[] = [
   "SALAD-Bench: A Hierarchical and Comprehensive Safety Benchmark for Large Language Models [NLP, 2024]",
   "Mixed Precision Training [Core ML, 2017]",
   "PALO: A Polyglot Large Multimodal Model for 5B People [Multimodal, 2024]",
+  "Seamless: Multilingual Expressive and Streaming Speech Translation [Multimodal, 2023]",
 ];
