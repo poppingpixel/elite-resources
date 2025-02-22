@@ -118,4 +118,5 @@ export const STUDY_LOG: string[] = [
   "PALO: A Polyglot Large Multimodal Model for 5B People [Multimodal, 2024]",
   "Seamless: Multilingual Expressive and Streaming Speech Translation [Multimodal, 2023]",
   "Flamingo: a Visual Language Model for Few-Shot Learning [Multimodal, 2022]",
+  "Chain-of-Symbol Prompting for Spatial Relationships in Large Language Models [NLP, 2023]",
 ];
