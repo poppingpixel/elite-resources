@@ -115,4 +115,5 @@ export const STUDY_LOG: string[] = [
   "RoFormer: Enhanced Transformer with Rotary Position Embedding [NLP, 2022]",
   "SALAD-Bench: A Hierarchical and Comprehensive Safety Benchmark for Large Language Models [NLP, 2024]",
   "Mixed Precision Training [Core ML, 2017]",
+  "PALO: A Polyglot Large Multimodal Model for 5B People [Multimodal, 2024]",
 ];
