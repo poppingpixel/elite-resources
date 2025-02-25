@@ -125,4 +125,5 @@ export const STUDY_LOG: string[] = [
   "Large Language Models for Generative Information Extraction: A Survey [NLP, 2023]",
   "Imagic: Text-Based Real Image Editing with Diffusion Models [Multimodal, 2022]",
   "(Ab)using Images and Sounds for Indirect Instruction Injection in Multi-Modal LLMs [Core ML, 2023]",
+  "VICReg: Variance-Invariance-Covariance Regularization for Self-Supervised Learning [Computer Vision, 2022]",
 ];
