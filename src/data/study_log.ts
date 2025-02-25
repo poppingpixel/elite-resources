@@ -124,4 +124,5 @@ export const STUDY_LOG: string[] = [
   "Unsupervised Cross-lingual Representation Learning at Scale [NLP, 2020]",
   "Large Language Models for Generative Information Extraction: A Survey [NLP, 2023]",
   "Imagic: Text-Based Real Image Editing with Diffusion Models [Multimodal, 2022]",
+  "(Ab)using Images and Sounds for Indirect Instruction Injection in Multi-Modal LLMs [Core ML, 2023]",
 ];
