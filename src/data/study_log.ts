@@ -121,4 +121,5 @@ export const STUDY_LOG: string[] = [
   "Chain-of-Symbol Prompting for Spatial Relationships in Large Language Models [NLP, 2023]",
   "SPICE: Semantic Propositional Image Caption Evaluation [Multimodal, 2016]",
   "Operationalizing Machine Learning: An Interview Study [Core ML, 2022]",
+  "Unsupervised Cross-lingual Representation Learning at Scale [NLP, 2020]",
 ];
