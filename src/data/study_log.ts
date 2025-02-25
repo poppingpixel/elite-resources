@@ -123,4 +123,5 @@ export const STUDY_LOG: string[] = [
   "Operationalizing Machine Learning: An Interview Study [Core ML, 2022]",
   "Unsupervised Cross-lingual Representation Learning at Scale [NLP, 2020]",
   "Large Language Models for Generative Information Extraction: A Survey [NLP, 2023]",
+  "Imagic: Text-Based Real Image Editing with Diffusion Models [Multimodal, 2022]",
 ];
