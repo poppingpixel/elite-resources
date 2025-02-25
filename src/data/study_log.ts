@@ -126,4 +126,5 @@ export const STUDY_LOG: string[] = [
   "Imagic: Text-Based Real Image Editing with Diffusion Models [Multimodal, 2022]",
   "(Ab)using Images and Sounds for Indirect Instruction Injection in Multi-Modal LLMs [Core ML, 2023]",
   "VICReg: Variance-Invariance-Covariance Regularization for Self-Supervised Learning [Computer Vision, 2022]",
+  "MViTv2: Improved Multiscale Vision Transformers for Classification and Detection [Computer Vision, 2022]",
 ];
