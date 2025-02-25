@@ -119,4 +119,5 @@ export const STUDY_LOG: string[] = [
   "Seamless: Multilingual Expressive and Streaming Speech Translation [Multimodal, 2023]",
   "Flamingo: a Visual Language Model for Few-Shot Learning [Multimodal, 2022]",
   "Chain-of-Symbol Prompting for Spatial Relationships in Large Language Models [NLP, 2023]",
+  "SPICE: Semantic Propositional Image Caption Evaluation [Multimodal, 2016]",
 ];
