@@ -122,4 +122,5 @@ export const STUDY_LOG: string[] = [
   "SPICE: Semantic Propositional Image Caption Evaluation [Multimodal, 2016]",
   "Operationalizing Machine Learning: An Interview Study [Core ML, 2022]",
   "Unsupervised Cross-lingual Representation Learning at Scale [NLP, 2020]",
+  "Large Language Models for Generative Information Extraction: A Survey [NLP, 2023]",
 ];
