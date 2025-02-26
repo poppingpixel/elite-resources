@@ -128,4 +128,5 @@ export const STUDY_LOG: string[] = [
   "VICReg: Variance-Invariance-Covariance Regularization for Self-Supervised Learning [Computer Vision, 2022]",
   "MViTv2: Improved Multiscale Vision Transformers for Classification and Detection [Computer Vision, 2022]",
   "LongNet: Scaling Transformers to 1,000,000,000 Tokens [NLP, 2023]",
+  "Distil-Whisper: Robust Knowledge Distillation via Large-Scale Pseudo Labelling [Speech, 2022]",
 ];
