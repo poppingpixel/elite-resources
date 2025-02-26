@@ -132,4 +132,5 @@ export const STUDY_LOG: string[] = [
   "FiBiNET: Combining Feature Importance and Bilinear feature Interaction for Click-Through Rate Prediction [RecSys, 2019]",
   "CodeT5+: Open Code Large Language Models for Code Understanding and Generation [NLP, 2023]",
   "Measuring Massive Multitask Language Understanding [NLP, 2021]",
+  "WaveGlow: A Flow-based Generative Network for Speech Synthesis [Speech, 2018]",
 ];
