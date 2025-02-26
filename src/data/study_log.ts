@@ -134,4 +134,5 @@ export const STUDY_LOG: string[] = [
   "Measuring Massive Multitask Language Understanding [NLP, 2021]",
   "WaveGlow: A Flow-based Generative Network for Speech Synthesis [Speech, 2018]",
   "On the Measure of Intelligence [NLP, 2019]",
+  "Tree-Ring Watermarks: Fingerprints for Diffusion Images that are Invisible and Robust [Computer Vision, 2023]",
 ];
