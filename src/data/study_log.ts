@@ -130,4 +130,5 @@ export const STUDY_LOG: string[] = [
   "LongNet: Scaling Transformers to 1,000,000,000 Tokens [NLP, 2023]",
   "Distil-Whisper: Robust Knowledge Distillation via Large-Scale Pseudo Labelling [Speech, 2022]",
   "FiBiNET: Combining Feature Importance and Bilinear feature Interaction for Click-Through Rate Prediction [RecSys, 2019]",
+  "CodeT5+: Open Code Large Language Models for Code Understanding and Generation [NLP, 2023]",
 ];
