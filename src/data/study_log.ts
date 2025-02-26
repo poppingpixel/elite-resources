@@ -129,4 +129,5 @@ export const STUDY_LOG: string[] = [
   "MViTv2: Improved Multiscale Vision Transformers for Classification and Detection [Computer Vision, 2022]",
   "LongNet: Scaling Transformers to 1,000,000,000 Tokens [NLP, 2023]",
   "Distil-Whisper: Robust Knowledge Distillation via Large-Scale Pseudo Labelling [Speech, 2022]",
+  "FiBiNET: Combining Feature Importance and Bilinear feature Interaction for Click-Through Rate Prediction [RecSys, 2019]",
 ];
