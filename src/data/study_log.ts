@@ -127,4 +127,5 @@ export const STUDY_LOG: string[] = [
   "(Ab)using Images and Sounds for Indirect Instruction Injection in Multi-Modal LLMs [Core ML, 2023]",
   "VICReg: Variance-Invariance-Covariance Regularization for Self-Supervised Learning [Computer Vision, 2022]",
   "MViTv2: Improved Multiscale Vision Transformers for Classification and Detection [Computer Vision, 2022]",
+  "LongNet: Scaling Transformers to 1,000,000,000 Tokens [NLP, 2023]",
 ];
