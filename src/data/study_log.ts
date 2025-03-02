@@ -138,4 +138,5 @@ export const STUDY_LOG: string[] = [
   "Outrageously Large Neural Networks: The Sparsely-Gated Mixture-of-Experts Layer [NLP, 2017]",
   "Nemotron-4 340B Technical Report [NLP, 2024]",
   "Humanity’s Last Exam [NLP, 2025]",
+  "ARES: An Automated Evaluation Framework for Retrieval-Augmented Generation Systems [NLP, 2023]",
 ];
