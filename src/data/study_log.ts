@@ -143,4 +143,5 @@ export const STUDY_LOG: string[] = [
   "Towards Conversational Diagnostic AI [NLP, 2024]",
   "Diffusion Model Alignment Using Direct Preference Optimization [Multimodal, 2023]",
   "SpeechMatrix: A Large-Scale Mined Corpus of Multilingual Speech-to-Speech Translations [Speech, 2022]",
+  "Text Generation with Diffusion Language Models: A Pre-training Approach with Continuous Paragraph Denoise [NLP, 2023]",
 ];
