@@ -145,4 +145,5 @@ export const STUDY_LOG: string[] = [
   "SpeechMatrix: A Large-Scale Mined Corpus of Multilingual Speech-to-Speech Translations [Speech, 2022]",
   "Text Generation with Diffusion Language Models: A Pre-training Approach with Continuous Paragraph Denoise [NLP, 2023]",
   "GPT detectors are biased against non-native English writers [NLP, 2023]",
+  "Transforming classifier scores into accurate multiclass probability estimates [Core ML, 2002]",
 ];
