@@ -142,4 +142,5 @@ export const STUDY_LOG: string[] = [
   "RandAugment: Practical automated data augmentation with a reduced search space [Computer Vision, 2019]",
   "Towards Conversational Diagnostic AI [NLP, 2024]",
   "Diffusion Model Alignment Using Direct Preference Optimization [Multimodal, 2023]",
+  "SpeechMatrix: A Large-Scale Mined Corpus of Multilingual Speech-to-Speech Translations [Speech, 2022]",
 ];
