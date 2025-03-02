@@ -137,4 +137,5 @@ export const STUDY_LOG: string[] = [
   "Tree-Ring Watermarks: Fingerprints for Diffusion Images that are Invisible and Robust [Computer Vision, 2023]",
   "Outrageously Large Neural Networks: The Sparsely-Gated Mixture-of-Experts Layer [NLP, 2017]",
   "Nemotron-4 340B Technical Report [NLP, 2024]",
+  "Humanity’s Last Exam [NLP, 2025]",
 ];
