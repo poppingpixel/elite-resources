@@ -144,4 +144,5 @@ export const STUDY_LOG: string[] = [
   "Diffusion Model Alignment Using Direct Preference Optimization [Multimodal, 2023]",
   "SpeechMatrix: A Large-Scale Mined Corpus of Multilingual Speech-to-Speech Translations [Speech, 2022]",
   "Text Generation with Diffusion Language Models: A Pre-training Approach with Continuous Paragraph Denoise [NLP, 2023]",
+  "GPT detectors are biased against non-native English writers [NLP, 2023]",
 ];
