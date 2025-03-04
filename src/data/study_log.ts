@@ -157,4 +157,5 @@ export const STUDY_LOG: string[] = [
   "FLAP: Fast Language-Audio Pre-training [Multimodal, 2023]",
   "Magistral: Mistral’s First Reasoning Model and Reinforcement Learning Stack [NLP, 2025]",
   "A Comprehensive Survey of Hallucination Mitigation Techniques in Large Language Models [NLP, 2023]",
+  "Cobra: Extending Mamba to Multi-Modal Large Language Model for Efficient Inference [Multimodal, 2024]",
 ];
