@@ -150,4 +150,5 @@ export const STUDY_LOG: string[] = [
   "OLMOE: Open Mixture-of-Experts Language Models [NLP, 2024]",
   "Language Model Inversion [NLP, 2023]",
   "Unlimiformer: Long-Range Transformers with Unlimited Length Input [NLP, 2023]",
+  "OpenFlamingo: An Open-Source Framework for Training Large Autoregressive Vision-Language Models [Multimodal, 2023]",
 ];
