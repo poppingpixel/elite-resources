@@ -151,4 +151,5 @@ export const STUDY_LOG: string[] = [
   "Language Model Inversion [NLP, 2023]",
   "Unlimiformer: Long-Range Transformers with Unlimited Length Input [NLP, 2023]",
   "OpenFlamingo: An Open-Source Framework for Training Large Autoregressive Vision-Language Models [Multimodal, 2023]",
+  "Unsupervised Commonsense Question Answering with Self-Talk [NLP, 2020]",
 ];
