@@ -146,4 +146,5 @@ export const STUDY_LOG: string[] = [
   "Text Generation with Diffusion Language Models: A Pre-training Approach with Continuous Paragraph Denoise [NLP, 2023]",
   "GPT detectors are biased against non-native English writers [NLP, 2023]",
   "Transforming classifier scores into accurate multiclass probability estimates [Core ML, 2002]",
+  "PaLI: A Jointly-Scaled Multilingual Language-Image Model [Multimodal, 2023]",
 ];
