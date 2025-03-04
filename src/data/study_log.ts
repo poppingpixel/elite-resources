@@ -149,4 +149,5 @@ export const STUDY_LOG: string[] = [
   "PaLI: A Jointly-Scaled Multilingual Language-Image Model [Multimodal, 2023]",
   "OLMOE: Open Mixture-of-Experts Language Models [NLP, 2024]",
   "Language Model Inversion [NLP, 2023]",
+  "Unlimiformer: Long-Range Transformers with Unlimited Length Input [NLP, 2023]",
 ];
