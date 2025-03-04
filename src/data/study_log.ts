@@ -155,4 +155,5 @@ export const STUDY_LOG: string[] = [
   "LongQLoRA: Efficient and Effective Method to Extend Context Length of Large Language Models [NLP, 2023]",
   "Qwen-VL: A Frontier Large Vision-Language Model with Versatile Abilities [Multimodal, 2023]",
   "FLAP: Fast Language-Audio Pre-training [Multimodal, 2023]",
+  "Magistral: Mistral’s First Reasoning Model and Reinforcement Learning Stack [NLP, 2025]",
 ];
