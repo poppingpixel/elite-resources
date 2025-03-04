@@ -147,4 +147,5 @@ export const STUDY_LOG: string[] = [
   "GPT detectors are biased against non-native English writers [NLP, 2023]",
   "Transforming classifier scores into accurate multiclass probability estimates [Core ML, 2002]",
   "PaLI: A Jointly-Scaled Multilingual Language-Image Model [Multimodal, 2023]",
+  "OLMOE: Open Mixture-of-Experts Language Models [NLP, 2024]",
 ];
