@@ -156,4 +156,5 @@ export const STUDY_LOG: string[] = [
   "Qwen-VL: A Frontier Large Vision-Language Model with Versatile Abilities [Multimodal, 2023]",
   "FLAP: Fast Language-Audio Pre-training [Multimodal, 2023]",
   "Magistral: Mistral’s First Reasoning Model and Reinforcement Learning Stack [NLP, 2025]",
+  "A Comprehensive Survey of Hallucination Mitigation Techniques in Large Language Models [NLP, 2023]",
 ];
