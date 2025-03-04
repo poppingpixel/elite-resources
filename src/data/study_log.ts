@@ -148,4 +148,5 @@ export const STUDY_LOG: string[] = [
   "Transforming classifier scores into accurate multiclass probability estimates [Core ML, 2002]",
   "PaLI: A Jointly-Scaled Multilingual Language-Image Model [Multimodal, 2023]",
   "OLMOE: Open Mixture-of-Experts Language Models [NLP, 2024]",
+  "Language Model Inversion [NLP, 2023]",
 ];
