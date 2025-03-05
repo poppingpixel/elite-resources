@@ -163,4 +163,5 @@ export const STUDY_LOG: string[] = [
   "Improving neural networks by preventing co-adaptation of feature detectors [Core ML, 2012]",
   "Efficient Estimation of Word Representations in Vector Space [NLP, 2013]",
   "360Brew: A Decoder-only Foundation Model for Personalized Ranking and Recommendation [RecSys, 2025]",
+  "BitFit: Simple Parameter-efficient Fine-tuning for Transformer-based Masked Language-models [NLP, 2022]",
 ];
