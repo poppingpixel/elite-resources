@@ -164,4 +164,5 @@ export const STUDY_LOG: string[] = [
   "Efficient Estimation of Word Representations in Vector Space [NLP, 2013]",
   "360Brew: A Decoder-only Foundation Model for Personalized Ranking and Recommendation [RecSys, 2025]",
   "BitFit: Simple Parameter-efficient Fine-tuning for Transformer-based Masked Language-models [NLP, 2022]",
+  "The Llama 3 Herd of Models [NLP, 2024]",
 ];
