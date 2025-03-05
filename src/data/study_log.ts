@@ -160,4 +160,5 @@ export const STUDY_LOG: string[] = [
   "Cobra: Extending Mamba to Multi-Modal Large Language Model for Efficient Inference [Multimodal, 2024]",
   "Open Problems and Fundamental Limitations of Reinforcement Learning from Human Feedback [Core ML, 2023]",
   "Understanding intermediate layers using linear classifier probes [Computer Vision, 2017]",
+  "Improving neural networks by preventing co-adaptation of feature detectors [Core ML, 2012]",
 ];
