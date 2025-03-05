@@ -159,4 +159,5 @@ export const STUDY_LOG: string[] = [
   "A Comprehensive Survey of Hallucination Mitigation Techniques in Large Language Models [NLP, 2023]",
   "Cobra: Extending Mamba to Multi-Modal Large Language Model for Efficient Inference [Multimodal, 2024]",
   "Open Problems and Fundamental Limitations of Reinforcement Learning from Human Feedback [Core ML, 2023]",
+  "Understanding intermediate layers using linear classifier probes [Computer Vision, 2017]",
 ];
