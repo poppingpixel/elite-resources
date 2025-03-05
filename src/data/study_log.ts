@@ -165,4 +165,5 @@ export const STUDY_LOG: string[] = [
   "360Brew: A Decoder-only Foundation Model for Personalized Ranking and Recommendation [RecSys, 2025]",
   "BitFit: Simple Parameter-efficient Fine-tuning for Transformer-based Masked Language-models [NLP, 2022]",
   "The Llama 3 Herd of Models [NLP, 2024]",
+  "Batch Normalization: Accelerating Deep Network Training by Reducing Internal Covariate Shift [Core ML, 2015]",
 ];
