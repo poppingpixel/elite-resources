@@ -158,4 +158,5 @@ export const STUDY_LOG: string[] = [
   "Magistral: Mistral’s First Reasoning Model and Reinforcement Learning Stack [NLP, 2025]",
   "A Comprehensive Survey of Hallucination Mitigation Techniques in Large Language Models [NLP, 2023]",
   "Cobra: Extending Mamba to Multi-Modal Large Language Model for Efficient Inference [Multimodal, 2024]",
+  "Open Problems and Fundamental Limitations of Reinforcement Learning from Human Feedback [Core ML, 2023]",
 ];
