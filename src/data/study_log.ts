@@ -162,4 +162,5 @@ export const STUDY_LOG: string[] = [
   "Understanding intermediate layers using linear classifier probes [Computer Vision, 2017]",
   "Improving neural networks by preventing co-adaptation of feature detectors [Core ML, 2012]",
   "Efficient Estimation of Word Representations in Vector Space [NLP, 2013]",
+  "360Brew: A Decoder-only Foundation Model for Personalized Ranking and Recommendation [RecSys, 2025]",
 ];
