@@ -170,4 +170,5 @@ export const STUDY_LOG: string[] = [
   "The Era of 1-bit LLMs: All Large Language Models are in 1.58 Bits [NLP, 2024]",
   "Alpha-CLIP: A CLIP Model Focusing on Wherever You Want [Multimodal, 2023]",
   "Chameleon: Mixed-Modal Early-Fusion Foundation Models [NLP, 2024]",
+  "Training Compute-Optimal Large Language Models [NLP, 2022]",
 ];
