@@ -171,4 +171,5 @@ export const STUDY_LOG: string[] = [
   "Alpha-CLIP: A CLIP Model Focusing on Wherever You Want [Multimodal, 2023]",
   "Chameleon: Mixed-Modal Early-Fusion Foundation Models [NLP, 2024]",
   "Training Compute-Optimal Large Language Models [NLP, 2022]",
+  "GLUE: A Multi-Task Benchmark and Analysis Platform for Natural Language Understanding [NLP, 2019]",
 ];
