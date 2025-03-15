@@ -172,4 +172,5 @@ export const STUDY_LOG: string[] = [
   "Chameleon: Mixed-Modal Early-Fusion Foundation Models [NLP, 2024]",
   "Training Compute-Optimal Large Language Models [NLP, 2022]",
   "GLUE: A Multi-Task Benchmark and Analysis Platform for Natural Language Understanding [NLP, 2019]",
+  "Initializing Models with Larger Ones [Computer Vision, 2023]",
 ];
