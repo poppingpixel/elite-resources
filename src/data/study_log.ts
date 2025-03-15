@@ -173,4 +173,5 @@ export const STUDY_LOG: string[] = [
   "Training Compute-Optimal Large Language Models [NLP, 2022]",
   "GLUE: A Multi-Task Benchmark and Analysis Platform for Natural Language Understanding [NLP, 2019]",
   "Initializing Models with Larger Ones [Computer Vision, 2023]",
+  "IndicVoices: Towards Building an Inclusive Multilingual Speech Dataset for Indian Languages [NLP, 2024]",
 ];
