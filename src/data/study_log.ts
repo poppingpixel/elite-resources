@@ -177,4 +177,5 @@ export const STUDY_LOG: string[] = [
   "EVER: Mitigating Hallucination in Large Language Models through Real-Time Verification and Rectification [NLP, 2023]",
   "Alpaca: A Strong, Replicable Instruction-Following Model [NLP, 2023]",
   "Tool Documentation Enables Zero-Shot Tool-Usage with Large Language Models [NLP, 2023]",
+  "Self-supervised learning for fast and scalable time series hyper-parameter tuning [Computer Vision, 2021]",
 ];
