@@ -176,4 +176,5 @@ export const STUDY_LOG: string[] = [
   "IndicVoices: Towards Building an Inclusive Multilingual Speech Dataset for Indian Languages [NLP, 2024]",
   "EVER: Mitigating Hallucination in Large Language Models through Real-Time Verification and Rectification [NLP, 2023]",
   "Alpaca: A Strong, Replicable Instruction-Following Model [NLP, 2023]",
+  "Tool Documentation Enables Zero-Shot Tool-Usage with Large Language Models [NLP, 2023]",
 ];
