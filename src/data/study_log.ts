@@ -186,4 +186,5 @@ export const STUDY_LOG: string[] = [
   "Chain of Code: Reasoning with a Language Model-Augmented Code Emulator [NLP, 2023]",
   "Ask Me Anything: A simple strategy for prompting language models [NLP, 2022]",
   "Llama Pro: Progressive LLaMA with Block Expansion [NLP, 2024]",
+  "Memorizing Transformers [NLP, 2022]",
 ];
