@@ -180,4 +180,5 @@ export const STUDY_LOG: string[] = [
   "Self-supervised learning for fast and scalable time series hyper-parameter tuning [Computer Vision, 2021]",
   "QMoE: Practical Sub-1-Bit Compression of Trillion-Parameter Models [NLP, 2023]",
   "Aligning Large Language Models through Synthetic Feedback [NLP, 2023]",
+  "CSWin Transformer: A General Vision Transformer Backbone with Cross-Shaped Windows [Computer Vision, 2022]",
 ];
