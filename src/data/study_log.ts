@@ -183,4 +183,5 @@ export const STUDY_LOG: string[] = [
   "CSWin Transformer: A General Vision Transformer Backbone with Cross-Shaped Windows [Computer Vision, 2022]",
   "TaskMatrix.AI: Completing Tasks by Connecting Foundation Models with Millions of APIs [Multimodal, 2023]",
   "RAPHAEL: Text-to-Image Generation via Large Mixture of Diffusion Paths [Multimodal, 2023]",
+  "Chain of Code: Reasoning with a Language Model-Augmented Code Emulator [NLP, 2023]",
 ];
