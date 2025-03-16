@@ -185,4 +185,5 @@ export const STUDY_LOG: string[] = [
   "RAPHAEL: Text-to-Image Generation via Large Mixture of Diffusion Paths [Multimodal, 2023]",
   "Chain of Code: Reasoning with a Language Model-Augmented Code Emulator [NLP, 2023]",
   "Ask Me Anything: A simple strategy for prompting language models [NLP, 2022]",
+  "Llama Pro: Progressive LLaMA with Block Expansion [NLP, 2024]",
 ];
