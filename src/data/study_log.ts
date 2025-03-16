@@ -184,4 +184,5 @@ export const STUDY_LOG: string[] = [
   "TaskMatrix.AI: Completing Tasks by Connecting Foundation Models with Millions of APIs [Multimodal, 2023]",
   "RAPHAEL: Text-to-Image Generation via Large Mixture of Diffusion Paths [Multimodal, 2023]",
   "Chain of Code: Reasoning with a Language Model-Augmented Code Emulator [NLP, 2023]",
+  "Ask Me Anything: A simple strategy for prompting language models [NLP, 2022]",
 ];
