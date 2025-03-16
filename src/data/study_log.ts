@@ -179,4 +179,5 @@ export const STUDY_LOG: string[] = [
   "Tool Documentation Enables Zero-Shot Tool-Usage with Large Language Models [NLP, 2023]",
   "Self-supervised learning for fast and scalable time series hyper-parameter tuning [Computer Vision, 2021]",
   "QMoE: Practical Sub-1-Bit Compression of Trillion-Parameter Models [NLP, 2023]",
+  "Aligning Large Language Models through Synthetic Feedback [NLP, 2023]",
 ];
