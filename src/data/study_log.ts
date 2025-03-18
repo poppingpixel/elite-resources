@@ -188,4 +188,5 @@ export const STUDY_LOG: string[] = [
   "Llama Pro: Progressive LLaMA with Block Expansion [NLP, 2024]",
   "Memorizing Transformers [NLP, 2022]",
   "Attention Is All You Need [NLP, 2017]",
+  "A Benchmark for Learning to Translate a New Language from One Grammar Book [NLP, 2025]",
 ];
