@@ -189,4 +189,5 @@ export const STUDY_LOG: string[] = [
   "Memorizing Transformers [NLP, 2022]",
   "Attention Is All You Need [NLP, 2017]",
   "A Benchmark for Learning to Translate a New Language from One Grammar Book [NLP, 2025]",
+  "Reka Core, Flash, and Edge: A Series of Powerful Multimodal Language Models [NLP, 2024]",
 ];
