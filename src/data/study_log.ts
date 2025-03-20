@@ -194,4 +194,5 @@ export const STUDY_LOG: string[] = [
   "Null It Out: Guarding Protected Attributes by Iterative Nullspace Projection [Core ML, 2020]",
   "MiniGPT-v2: Large Language Model as a Unified Interface for Vision-Language Multi-task Learning [Multimodal, 2023]",
   "Unified Model for Image, Video, Audio and Language Tasks [Multimodal, 2023]",
+  "Large Language Models Encode Clinical Knowledge [NLP, 2022]",
 ];
