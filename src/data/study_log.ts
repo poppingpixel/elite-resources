@@ -198,4 +198,5 @@ export const STUDY_LOG: string[] = [
   "DoLa: Decoding by Contrasting Layers Improves Factuality in Large Language Models [NLP, 2023]",
   "Photorealistic Text-to-Image Diffusion Models with Deep Language Understanding [Computer Vision, 2022]",
   "A General Language Assistant as a Laboratory for Alignment [NLP, 2021]",
+  "MentaLLaMA: Interpretable Mental Health Analysis on Social Media with Large Language Models [NLP, 2023]",
 ];
