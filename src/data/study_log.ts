@@ -196,4 +196,5 @@ export const STUDY_LOG: string[] = [
   "Unified Model for Image, Video, Audio and Language Tasks [Multimodal, 2023]",
   "Large Language Models Encode Clinical Knowledge [NLP, 2022]",
   "DoLa: Decoding by Contrasting Layers Improves Factuality in Large Language Models [NLP, 2023]",
+  "Photorealistic Text-to-Image Diffusion Models with Deep Language Understanding [Computer Vision, 2022]",
 ];
