@@ -197,4 +197,5 @@ export const STUDY_LOG: string[] = [
   "Large Language Models Encode Clinical Knowledge [NLP, 2022]",
   "DoLa: Decoding by Contrasting Layers Improves Factuality in Large Language Models [NLP, 2023]",
   "Photorealistic Text-to-Image Diffusion Models with Deep Language Understanding [Computer Vision, 2022]",
+  "A General Language Assistant as a Laboratory for Alignment [NLP, 2021]",
 ];
