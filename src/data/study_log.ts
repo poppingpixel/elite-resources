@@ -193,4 +193,5 @@ export const STUDY_LOG: string[] = [
   "CIDEr: Consensus-based Image Description Evaluation [Multimodal, 2015]",
   "Null It Out: Guarding Protected Attributes by Iterative Nullspace Projection [Core ML, 2020]",
   "MiniGPT-v2: Large Language Model as a Unified Interface for Vision-Language Multi-task Learning [Multimodal, 2023]",
+  "Unified Model for Image, Video, Audio and Language Tasks [Multimodal, 2023]",
 ];
