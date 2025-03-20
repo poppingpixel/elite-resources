@@ -195,4 +195,5 @@ export const STUDY_LOG: string[] = [
   "MiniGPT-v2: Large Language Model as a Unified Interface for Vision-Language Multi-task Learning [Multimodal, 2023]",
   "Unified Model for Image, Video, Audio and Language Tasks [Multimodal, 2023]",
   "Large Language Models Encode Clinical Knowledge [NLP, 2022]",
+  "DoLa: Decoding by Contrasting Layers Improves Factuality in Large Language Models [NLP, 2023]",
 ];
