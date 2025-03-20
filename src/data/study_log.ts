@@ -192,4 +192,5 @@ export const STUDY_LOG: string[] = [
   "Reka Core, Flash, and Edge: A Series of Powerful Multimodal Language Models [NLP, 2024]",
   "CIDEr: Consensus-based Image Description Evaluation [Multimodal, 2015]",
   "Null It Out: Guarding Protected Attributes by Iterative Nullspace Projection [Core ML, 2020]",
+  "MiniGPT-v2: Large Language Model as a Unified Interface for Vision-Language Multi-task Learning [Multimodal, 2023]",
 ];
