@@ -203,4 +203,5 @@ export const STUDY_LOG: string[] = [
   "Tamil-LLaMA: A New Tamil Language Model Based on LLaMA 2 [NLP, 2023]",
   "Curriculum Learning [Core ML, 2009]",
   "Discovering Preference Optimization Algorithms with and for Large Language Models [NLP, 2024]",
+  "Scaling Speech Technology to 1,000+ Languages [Speech, 2022]",
 ];
