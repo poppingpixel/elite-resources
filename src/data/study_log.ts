@@ -202,4 +202,5 @@ export const STUDY_LOG: string[] = [
   "Unbiased Offline Evaluation of Contextual-bandit-based News Article Recommendation Algorithms [RecSys, 2011]",
   "Tamil-LLaMA: A New Tamil Language Model Based on LLaMA 2 [NLP, 2023]",
   "Curriculum Learning [Core ML, 2009]",
+  "Discovering Preference Optimization Algorithms with and for Large Language Models [NLP, 2024]",
 ];
