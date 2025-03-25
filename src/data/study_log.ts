@@ -205,4 +205,5 @@ export const STUDY_LOG: string[] = [
   "Discovering Preference Optimization Algorithms with and for Large Language Models [NLP, 2024]",
   "Scaling Speech Technology to 1,000+ Languages [Speech, 2022]",
   "Large-scale Contrastive Language-Audio Pretraining with Feature Fusion and Keyword-to-Caption Augmentation [Multimodal, 2023]",
+  "FLAME: Factuality-Aware Alignment for Large Language Models [NLP, 2024]",
 ];
