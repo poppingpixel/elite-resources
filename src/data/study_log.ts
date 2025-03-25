@@ -207,4 +207,5 @@ export const STUDY_LOG: string[] = [
   "Large-scale Contrastive Language-Audio Pretraining with Feature Fusion and Keyword-to-Caption Augmentation [Multimodal, 2023]",
   "FLAME: Factuality-Aware Alignment for Large Language Models [NLP, 2024]",
   "Google’s Neural Machine Translation System: Bridging the Gap between Human and Machine Translation [NLP, 2016]",
+  "SLiC-HF: Sequence Likelihood Calibration with Human Feedback [NLP, 2023]",
 ];
