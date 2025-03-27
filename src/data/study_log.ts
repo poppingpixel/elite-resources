@@ -210,4 +210,5 @@ export const STUDY_LOG: string[] = [
   "SLiC-HF: Sequence Likelihood Calibration with Human Feedback [NLP, 2023]",
   "VideoPoet: A Large Language Model for Zero-Shot Video Generation [Multimodal, 2023]",
   "LEEP - Log Expected Empirical Prediction [Core ML, 2020]",
+  "Speech Resynthesis from Discrete Disentangled Self-Supervised Representations [Speech, 2021]",
 ];
