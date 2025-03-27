@@ -211,4 +211,5 @@ export const STUDY_LOG: string[] = [
   "VideoPoet: A Large Language Model for Zero-Shot Video Generation [Multimodal, 2023]",
   "LEEP - Log Expected Empirical Prediction [Core ML, 2020]",
   "Speech Resynthesis from Discrete Disentangled Self-Supervised Representations [Speech, 2021]",
+  "Finetuning Pretrained Transformers into RNNs [Computer Vision, 2021]",
 ];
