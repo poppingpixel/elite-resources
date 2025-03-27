@@ -212,4 +212,5 @@ export const STUDY_LOG: string[] = [
   "LEEP - Log Expected Empirical Prediction [Core ML, 2020]",
   "Speech Resynthesis from Discrete Disentangled Self-Supervised Representations [Speech, 2021]",
   "Finetuning Pretrained Transformers into RNNs [Computer Vision, 2021]",
+  "InCoder: A Generative Model for Code Infilling and Synthesis [NLP, 2022]",
 ];
