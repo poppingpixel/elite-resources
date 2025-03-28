@@ -219,4 +219,5 @@ export const STUDY_LOG: string[] = [
   "CuMo: Scaling Multimodal LLM with Co-Upcycled Mixture-of-Experts [NLP, 2025]",
   "Rephrase and Respond: Let Large Language Models Ask Better Questions for Themselves [NLP, 2023]",
   "AudioGen: Textually Guided Audio Generation [Speech, 2022]",
+  "Scaling Transformer to 1M tokens and beyond with RMT [NLP, 2023]",
 ];
