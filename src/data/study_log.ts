@@ -215,4 +215,5 @@ export const STUDY_LOG: string[] = [
   "InCoder: A Generative Model for Code Infilling and Synthesis [NLP, 2022]",
   "Visualization-of-Thought Elicits Spatial Reasoning in Large Language Models [NLP, 2024]",
   "Gorilla: Large Language Model Connected with Massive APIs [NLP, 2023]",
+  "Nomic Embed: Training a Reproducible Long Context Text Embedder [NLP, 2024]",
 ];
