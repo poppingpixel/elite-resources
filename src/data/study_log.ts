@@ -214,4 +214,5 @@ export const STUDY_LOG: string[] = [
   "Finetuning Pretrained Transformers into RNNs [Computer Vision, 2021]",
   "InCoder: A Generative Model for Code Infilling and Synthesis [NLP, 2022]",
   "Visualization-of-Thought Elicits Spatial Reasoning in Large Language Models [NLP, 2024]",
+  "Gorilla: Large Language Model Connected with Massive APIs [NLP, 2023]",
 ];
