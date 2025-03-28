@@ -217,4 +217,5 @@ export const STUDY_LOG: string[] = [
   "Gorilla: Large Language Model Connected with Massive APIs [NLP, 2023]",
   "Nomic Embed: Training a Reproducible Long Context Text Embedder [NLP, 2024]",
   "CuMo: Scaling Multimodal LLM with Co-Upcycled Mixture-of-Experts [NLP, 2025]",
+  "Rephrase and Respond: Let Large Language Models Ask Better Questions for Themselves [NLP, 2023]",
 ];
