@@ -213,4 +213,5 @@ export const STUDY_LOG: string[] = [
   "Speech Resynthesis from Discrete Disentangled Self-Supervised Representations [Speech, 2021]",
   "Finetuning Pretrained Transformers into RNNs [Computer Vision, 2021]",
   "InCoder: A Generative Model for Code Infilling and Synthesis [NLP, 2022]",
+  "Visualization-of-Thought Elicits Spatial Reasoning in Large Language Models [NLP, 2024]",
 ];
