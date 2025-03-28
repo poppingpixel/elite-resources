@@ -221,4 +221,5 @@ export const STUDY_LOG: string[] = [
   "AudioGen: Textually Guided Audio Generation [Speech, 2022]",
   "Scaling Transformer to 1M tokens and beyond with RMT [NLP, 2023]",
   "HuatuoGPT-o1: Towards Medical Complex Reasoning with LLMs [NLP, 2024]",
+  "Implicit Relation Linking for Question Answering over Knowledge Graph [NLP, 2022]",
 ];
