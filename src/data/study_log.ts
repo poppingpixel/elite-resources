@@ -226,4 +226,5 @@ export const STUDY_LOG: string[] = [
   "TrustLLM: Trustworthiness in Large Language Models [NLP, 2023]",
   "Phi-4 Technical Report [NLP, 2024]",
   "ZeRO-Infinity: Breaking the GPU Memory Wall for Extreme Scale Deep Learning [Core ML, 2021]",
+  "Sound reconstruction from human brain activity via a generative model with brain-like auditory features [Multimodal, 2023]",
 ];
