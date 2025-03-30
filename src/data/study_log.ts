@@ -225,4 +225,5 @@ export const STUDY_LOG: string[] = [
   "Synthetic QA Corpora Generation with Roundtrip Consistency [NLP, 2019]",
   "TrustLLM: Trustworthiness in Large Language Models [NLP, 2023]",
   "Phi-4 Technical Report [NLP, 2024]",
+  "ZeRO-Infinity: Breaking the GPU Memory Wall for Extreme Scale Deep Learning [Core ML, 2021]",
 ];
