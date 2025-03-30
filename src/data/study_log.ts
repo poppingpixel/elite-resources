@@ -224,4 +224,5 @@ export const STUDY_LOG: string[] = [
   "Implicit Relation Linking for Question Answering over Knowledge Graph [NLP, 2022]",
   "Synthetic QA Corpora Generation with Roundtrip Consistency [NLP, 2019]",
   "TrustLLM: Trustworthiness in Large Language Models [NLP, 2023]",
+  "Phi-4 Technical Report [NLP, 2024]",
 ];
