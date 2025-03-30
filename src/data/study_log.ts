@@ -223,4 +223,5 @@ export const STUDY_LOG: string[] = [
   "HuatuoGPT-o1: Towards Medical Complex Reasoning with LLMs [NLP, 2024]",
   "Implicit Relation Linking for Question Answering over Knowledge Graph [NLP, 2022]",
   "Synthetic QA Corpora Generation with Roundtrip Consistency [NLP, 2019]",
+  "TrustLLM: Trustworthiness in Large Language Models [NLP, 2023]",
 ];
