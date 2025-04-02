@@ -232,4 +232,5 @@ export const STUDY_LOG: string[] = [
   "Replacing Softmax with ReLU in Vision Transformers [Computer Vision, 2023]",
   "Towards Deeper, Lighter, and Interpretable Cross Network for CTR Prediction [RecSys, 2023]",
   "Generative Diffusion Models on Graphs: Methods and Applications [Graph ML, 2024]",
+  "Zephyr: Direct Distillation of LM Alignment [NLP, 2023]",
 ];
