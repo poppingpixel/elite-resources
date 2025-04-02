@@ -228,4 +228,5 @@ export const STUDY_LOG: string[] = [
   "ZeRO-Infinity: Breaking the GPU Memory Wall for Extreme Scale Deep Learning [Core ML, 2021]",
   "Sound reconstruction from human brain activity via a generative model with brain-like auditory features [Multimodal, 2023]",
   "Leveraging Implicit Feedback from Deployment Data in Dialogue [NLP, 2023]",
+  "Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks [NLP, 2020]",
 ];
