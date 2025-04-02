@@ -229,4 +229,5 @@ export const STUDY_LOG: string[] = [
   "Sound reconstruction from human brain activity via a generative model with brain-like auditory features [Multimodal, 2023]",
   "Leveraging Implicit Feedback from Deployment Data in Dialogue [NLP, 2023]",
   "Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks [NLP, 2020]",
+  "Replacing Softmax with ReLU in Vision Transformers [Computer Vision, 2023]",
 ];
