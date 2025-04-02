@@ -230,4 +230,5 @@ export const STUDY_LOG: string[] = [
   "Leveraging Implicit Feedback from Deployment Data in Dialogue [NLP, 2023]",
   "Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks [NLP, 2020]",
   "Replacing Softmax with ReLU in Vision Transformers [Computer Vision, 2023]",
+  "Towards Deeper, Lighter, and Interpretable Cross Network for CTR Prediction [RecSys, 2023]",
 ];
