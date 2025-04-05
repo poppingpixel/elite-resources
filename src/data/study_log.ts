@@ -233,4 +233,5 @@ export const STUDY_LOG: string[] = [
   "Towards Deeper, Lighter, and Interpretable Cross Network for CTR Prediction [RecSys, 2023]",
   "Generative Diffusion Models on Graphs: Methods and Applications [Graph ML, 2024]",
   "Zephyr: Direct Distillation of LM Alignment [NLP, 2023]",
+  "An Image is Worth 16x16 Words: Transformers for Image Recognition at Scale [Computer Vision, 2021]",
 ];
