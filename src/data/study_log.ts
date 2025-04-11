@@ -235,4 +235,5 @@ export const STUDY_LOG: string[] = [
   "Zephyr: Direct Distillation of LM Alignment [NLP, 2023]",
   "An Image is Worth 16x16 Words: Transformers for Image Recognition at Scale [Computer Vision, 2021]",
   "Sliding Spectrum Decomposition for Diversified Recommendation [RecSys, 2021]",
+  "PaLM: Scaling Language Modeling with Pathways [NLP, 2022]",
 ];
