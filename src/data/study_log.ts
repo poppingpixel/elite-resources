@@ -238,4 +238,5 @@ export const STUDY_LOG: string[] = [
   "PaLM: Scaling Language Modeling with Pathways [NLP, 2022]",
   "MedGemma: Medical Vision-Language Foundation Models [Multimodal, 2025]",
   "Extreme Compression for Pre-trained Transformers Made Simple and Efficient [NLP, 2022]",
+  "A Length-Extrapolatable Transformer [NLP, 2022]",
 ];
