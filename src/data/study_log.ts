@@ -240,4 +240,5 @@ export const STUDY_LOG: string[] = [
   "Extreme Compression for Pre-trained Transformers Made Simple and Efficient [NLP, 2022]",
   "A Length-Extrapolatable Transformer [NLP, 2022]",
   "data2vec: A General Framework for Self-supervised Learning in Speech, Vision and Language [Multimodal, 2022]",
+  "Speaker Identification for Household Scenarios with Self-attention and Adversarial Training [Speech, 2020]",
 ];
