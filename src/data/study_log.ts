@@ -237,4 +237,5 @@ export const STUDY_LOG: string[] = [
   "Sliding Spectrum Decomposition for Diversified Recommendation [RecSys, 2021]",
   "PaLM: Scaling Language Modeling with Pathways [NLP, 2022]",
   "MedGemma: Medical Vision-Language Foundation Models [Multimodal, 2025]",
+  "Extreme Compression for Pre-trained Transformers Made Simple and Efficient [NLP, 2022]",
 ];
