@@ -246,4 +246,5 @@ export const STUDY_LOG: string[] = [
   "Understanding and Improving Layer Normalization [Core ML, 2019]",
   "Momentum Contrast for Unsupervised Visual Representation Learning [Computer Vision, 2020]",
   "Train Short, Test Long: Attention with Linear Biases Enables Input Length Extrapolation [NLP, 2022]",
+  "BioMistral: A Collection of Open-Source Pretrained Large Language Models for Medical Domains [NLP, 2024]",
 ];
