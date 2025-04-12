@@ -243,4 +243,5 @@ export const STUDY_LOG: string[] = [
   "Speaker Identification for Household Scenarios with Self-attention and Adversarial Training [Speech, 2020]",
   "Evolution Strategies as a Scalable Alternative to Reinforcement Learning [RL, 2017]",
   "Universal Self-Adaptive Prompting for Zero-shot and Few-shot Learning [NLP, 2023]",
+  "Understanding and Improving Layer Normalization [Core ML, 2019]",
 ];
