@@ -248,4 +248,5 @@ export const STUDY_LOG: string[] = [
   "Train Short, Test Long: Attention with Linear Biases Enables Input Length Extrapolation [NLP, 2022]",
   "BioMistral: A Collection of Open-Source Pretrained Large Language Models for Medical Domains [NLP, 2024]",
   "NPHardEval: Dynamic Benchmark on Reasoning Ability of Large Language Models via Complexity Classes [NLP, 2023]",
+  "Zero-Shot Text-to-Image Generation [Multimodal, 2021]",
 ];
