@@ -249,4 +249,5 @@ export const STUDY_LOG: string[] = [
   "BioMistral: A Collection of Open-Source Pretrained Large Language Models for Medical Domains [NLP, 2024]",
   "NPHardEval: Dynamic Benchmark on Reasoning Ability of Large Language Models via Complexity Classes [NLP, 2023]",
   "Zero-Shot Text-to-Image Generation [Multimodal, 2021]",
+  "VeLO: Training Versatile Learned Optimizers by Scaling Up [Core ML, 2022]",
 ];
