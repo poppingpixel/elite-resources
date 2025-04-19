@@ -250,4 +250,5 @@ export const STUDY_LOG: string[] = [
   "NPHardEval: Dynamic Benchmark on Reasoning Ability of Large Language Models via Complexity Classes [NLP, 2023]",
   "Zero-Shot Text-to-Image Generation [Multimodal, 2021]",
   "VeLO: Training Versatile Learned Optimizers by Scaling Up [Core ML, 2022]",
+  "Harnessing the Universal Geometry of Embeddings [NLP, 2025]",
 ];
