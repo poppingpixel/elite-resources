@@ -251,4 +251,5 @@ export const STUDY_LOG: string[] = [
   "Zero-Shot Text-to-Image Generation [Multimodal, 2021]",
   "VeLO: Training Versatile Learned Optimizers by Scaling Up [Core ML, 2022]",
   "Harnessing the Universal Geometry of Embeddings [NLP, 2025]",
+  "Large Language Models Can Be Easily Distracted by Irrelevant Context [NLP, 2023]",
 ];
