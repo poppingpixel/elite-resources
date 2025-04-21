@@ -253,4 +253,5 @@ export const STUDY_LOG: string[] = [
   "Harnessing the Universal Geometry of Embeddings [NLP, 2025]",
   "Large Language Models Can Be Easily Distracted by Irrelevant Context [NLP, 2023]",
   "VideoCoCa: Video-Text Modeling with Zero-Shot Transfer from Contrastive Captioners [Multimodal, 2023]",
+  "Visual Instruction Tuning [Multimodal, 2023]",
 ];
