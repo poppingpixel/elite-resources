@@ -256,4 +256,5 @@ export const STUDY_LOG: string[] = [
   "Visual Instruction Tuning [Multimodal, 2023]",
   "ReFT: Representation Finetuning for Language Models [NLP, 2024]",
   "ALCUNA: Large Language Models Meet New Knowledge [NLP, 2023]",
+  "Estimating Training Data Influence by Tracing Gradient Descent [Core ML, 2020]",
 ];
