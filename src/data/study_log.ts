@@ -255,4 +255,5 @@ export const STUDY_LOG: string[] = [
   "VideoCoCa: Video-Text Modeling with Zero-Shot Transfer from Contrastive Captioners [Multimodal, 2023]",
   "Visual Instruction Tuning [Multimodal, 2023]",
   "ReFT: Representation Finetuning for Language Models [NLP, 2024]",
+  "ALCUNA: Large Language Models Meet New Knowledge [NLP, 2023]",
 ];
