@@ -259,4 +259,5 @@ export const STUDY_LOG: string[] = [
   "Estimating Training Data Influence by Tracing Gradient Descent [Core ML, 2020]",
   "Chain of Thought Prompting Elicits Reasoning in Large Language Models [NLP, 2022]",
   "MatchboxNet: 1D Time-Channel Separable Convolutional Neural Network Architecture for Speech Commands Recognition [Speech, 2020]",
+  "Accelerating Large Language Model Decoding with Speculative Sampling [NLP, 2023]",
 ];
