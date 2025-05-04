@@ -261,4 +261,5 @@ export const STUDY_LOG: string[] = [
   "MatchboxNet: 1D Time-Channel Separable Convolutional Neural Network Architecture for Speech Commands Recognition [Speech, 2020]",
   "Accelerating Large Language Model Decoding with Speculative Sampling [NLP, 2023]",
   "TextDiffuser-2: Unleashing the Power of Language Models for Text Rendering [Multimodal, 2023]",
+  "System 2 Attention (is something you might need too) [NLP, 2023]",
 ];
