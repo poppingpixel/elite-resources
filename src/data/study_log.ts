@@ -263,4 +263,5 @@ export const STUDY_LOG: string[] = [
   "TextDiffuser-2: Unleashing the Power of Language Models for Text Rendering [Multimodal, 2023]",
   "System 2 Attention (is something you might need too) [NLP, 2023]",
   "Automatic Hallucination Assessment for Aligned Large Language Models via Transferable Adversarial Attacks [NLP, 2023]",
+  "Hiera: A Hierarchical Vision Transformer without the Bells-and-Whistles [Computer Vision, 2023]",
 ];
