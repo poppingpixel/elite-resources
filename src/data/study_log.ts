@@ -266,4 +266,5 @@ export const STUDY_LOG: string[] = [
   "Hiera: A Hierarchical Vision Transformer without the Bells-and-Whistles [Computer Vision, 2023]",
   "Ignore This Title and HackAPrompt: Exposing Systemic Vulnerabilities of LLMs through a Global Scale Prompt Hacking Competition [NLP, 2023]",
   "Calibrated recommendations [RecSys, 2008]",
+  "Obtaining calibrated probability estimates from decision trees and naive Bayesian classifiers [Core ML, 2001]",
 ];
