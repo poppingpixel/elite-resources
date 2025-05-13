@@ -267,4 +267,5 @@ export const STUDY_LOG: string[] = [
   "Ignore This Title and HackAPrompt: Exposing Systemic Vulnerabilities of LLMs through a Global Scale Prompt Hacking Competition [NLP, 2023]",
   "Calibrated recommendations [RecSys, 2008]",
   "Obtaining calibrated probability estimates from decision trees and naive Bayesian classifiers [Core ML, 2001]",
+  "Exponentially Faster Language Modeling [NLP, 2023]",
 ];
