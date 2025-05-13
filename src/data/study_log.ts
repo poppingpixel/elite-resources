@@ -268,4 +268,5 @@ export const STUDY_LOG: string[] = [
   "Calibrated recommendations [RecSys, 2008]",
   "Obtaining calibrated probability estimates from decision trees and naive Bayesian classifiers [Core ML, 2001]",
   "Exponentially Faster Language Modeling [NLP, 2023]",
+  "Towards End-To-End Speech Recognition with Recurrent Neural Networks [Speech, 2014]",
 ];
