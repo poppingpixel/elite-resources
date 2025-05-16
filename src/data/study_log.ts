@@ -272,4 +272,5 @@ export const STUDY_LOG: string[] = [
   "SwitchHead: Accelerating Transformers with Mixture-of-Experts Attention [NLP, 2025]",
   "METEOR: An Automatic Metric for MT Evaluation with Improved Correlation with Human Judgments [NLP, 2005]",
   "PromptBench: A Unified Library for Evaluation of Large Language Models [NLP, 2023]",
+  "How Can Recommender Systems Benefit from Large Language Models: A Survey [RecSys, 2023]",
 ];
