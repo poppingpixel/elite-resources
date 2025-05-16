@@ -279,4 +279,5 @@ export const STUDY_LOG: string[] = [
   "MERLOT Reserve: Neural Script Knowledge through Vision and Language and Sound [NLP, 2022]",
   "Less is More: Parameter-Free Text Classification with Gzip [NLP, 2022]",
   "StarVector: Generating Scalable Vector Graphics Code from Images [Multimodal, 2023]",
+  "Starling-7B: Increasing LLM Helpfulness & Harmlessness with RLAIF [NLP, 2023]",
 ];
