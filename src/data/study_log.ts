@@ -271,4 +271,5 @@ export const STUDY_LOG: string[] = [
   "Towards End-To-End Speech Recognition with Recurrent Neural Networks [Speech, 2014]",
   "SwitchHead: Accelerating Transformers with Mixture-of-Experts Attention [NLP, 2025]",
   "METEOR: An Automatic Metric for MT Evaluation with Improved Correlation with Human Judgments [NLP, 2005]",
+  "PromptBench: A Unified Library for Evaluation of Large Language Models [NLP, 2023]",
 ];
