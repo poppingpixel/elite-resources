@@ -280,4 +280,5 @@ export const STUDY_LOG: string[] = [
   "Less is More: Parameter-Free Text Classification with Gzip [NLP, 2022]",
   "StarVector: Generating Scalable Vector Graphics Code from Images [Multimodal, 2023]",
   "Starling-7B: Increasing LLM Helpfulness & Harmlessness with RLAIF [NLP, 2023]",
+  "RAFT: Adapting Language Model to Domain Specific RAG [NLP, 2024]",
 ];
