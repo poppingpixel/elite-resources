@@ -278,4 +278,5 @@ export const STUDY_LOG: string[] = [
   "GQA: Training Generalized Multi-Query Transformer Models from Multi-Head Checkpoints [Core ML, 2023]",
   "MERLOT Reserve: Neural Script Knowledge through Vision and Language and Sound [NLP, 2022]",
   "Less is More: Parameter-Free Text Classification with Gzip [NLP, 2022]",
+  "StarVector: Generating Scalable Vector Graphics Code from Images [Multimodal, 2023]",
 ];
