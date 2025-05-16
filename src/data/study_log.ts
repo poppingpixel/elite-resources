@@ -275,4 +275,5 @@ export const STUDY_LOG: string[] = [
   "How Can Recommender Systems Benefit from Large Language Models: A Survey [RecSys, 2023]",
   "G-Eval: NLG Evaluation using GPT-4 with Better Human Alignment [NLP, 2023]",
   "Block-NeRF: Scalable Large Scene Neural View Synthesis [Computer Vision, 2022]",
+  "GQA: Training Generalized Multi-Query Transformer Models from Multi-Head Checkpoints [Core ML, 2023]",
 ];
