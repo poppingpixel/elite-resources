@@ -273,4 +273,5 @@ export const STUDY_LOG: string[] = [
   "METEOR: An Automatic Metric for MT Evaluation with Improved Correlation with Human Judgments [NLP, 2005]",
   "PromptBench: A Unified Library for Evaluation of Large Language Models [NLP, 2023]",
   "How Can Recommender Systems Benefit from Large Language Models: A Survey [RecSys, 2023]",
+  "G-Eval: NLG Evaluation using GPT-4 with Better Human Alignment [NLP, 2023]",
 ];
