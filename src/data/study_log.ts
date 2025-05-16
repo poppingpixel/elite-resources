@@ -276,4 +276,5 @@ export const STUDY_LOG: string[] = [
   "G-Eval: NLG Evaluation using GPT-4 with Better Human Alignment [NLP, 2023]",
   "Block-NeRF: Scalable Large Scene Neural View Synthesis [Computer Vision, 2022]",
   "GQA: Training Generalized Multi-Query Transformer Models from Multi-Head Checkpoints [Core ML, 2023]",
+  "MERLOT Reserve: Neural Script Knowledge through Vision and Language and Sound [NLP, 2022]",
 ];
