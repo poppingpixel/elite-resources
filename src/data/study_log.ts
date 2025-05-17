@@ -281,4 +281,5 @@ export const STUDY_LOG: string[] = [
   "StarVector: Generating Scalable Vector Graphics Code from Images [Multimodal, 2023]",
   "Starling-7B: Increasing LLM Helpfulness & Harmlessness with RLAIF [NLP, 2023]",
   "RAFT: Adapting Language Model to Domain Specific RAG [NLP, 2024]",
+  "JetMoE: Reaching Llama2 Performance with 0.1M Dollars [NLP, 2024]",
 ];
