@@ -285,4 +285,5 @@ export const STUDY_LOG: string[] = [
   "Muppet: Massive Multi-task Representations with Pre-Finetuning [NLP, 2021]",
   "Effective Approaches to Attention-based Neural Machine Translation [NLP, 2015]",
   "Sky-T1 [NLP, 2025]",
+  "Text2Video-Zero: Text-to-Image Diffusion Models are Zero-Shot Video Generators [Multimodal, 2023]",
 ];
