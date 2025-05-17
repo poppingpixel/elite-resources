@@ -287,4 +287,5 @@ export const STUDY_LOG: string[] = [
   "Sky-T1 [NLP, 2025]",
   "Text2Video-Zero: Text-to-Image Diffusion Models are Zero-Shot Video Generators [Multimodal, 2023]",
   "Multiscale Vision Transformers [Computer Vision, 2021]",
+  "Learning to summarize from human feedback [NLP, 2022]",
 ];
