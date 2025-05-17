@@ -286,4 +286,5 @@ export const STUDY_LOG: string[] = [
   "Effective Approaches to Attention-based Neural Machine Translation [NLP, 2015]",
   "Sky-T1 [NLP, 2025]",
   "Text2Video-Zero: Text-to-Image Diffusion Models are Zero-Shot Video Generators [Multimodal, 2023]",
+  "Multiscale Vision Transformers [Computer Vision, 2021]",
 ];
