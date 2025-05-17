@@ -282,4 +282,5 @@ export const STUDY_LOG: string[] = [
   "Starling-7B: Increasing LLM Helpfulness & Harmlessness with RLAIF [NLP, 2023]",
   "RAFT: Adapting Language Model to Domain Specific RAG [NLP, 2024]",
   "JetMoE: Reaching Llama2 Performance with 0.1M Dollars [NLP, 2024]",
+  "Muppet: Massive Multi-task Representations with Pre-Finetuning [NLP, 2021]",
 ];
