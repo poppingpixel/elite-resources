@@ -283,4 +283,5 @@ export const STUDY_LOG: string[] = [
   "RAFT: Adapting Language Model to Domain Specific RAG [NLP, 2024]",
   "JetMoE: Reaching Llama2 Performance with 0.1M Dollars [NLP, 2024]",
   "Muppet: Massive Multi-task Representations with Pre-Finetuning [NLP, 2021]",
+  "Effective Approaches to Attention-based Neural Machine Translation [NLP, 2015]",
 ];
