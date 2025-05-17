@@ -288,4 +288,5 @@ export const STUDY_LOG: string[] = [
   "Text2Video-Zero: Text-to-Image Diffusion Models are Zero-Shot Video Generators [Multimodal, 2023]",
   "Multiscale Vision Transformers [Computer Vision, 2021]",
   "Learning to summarize from human feedback [NLP, 2022]",
+  "Alice in Wonderland: Simple Tasks Showing Complete Reasoning Breakdown in State-Of-the-Art Large Language Models [NLP, 2024]",
 ];
