@@ -289,4 +289,5 @@ export const STUDY_LOG: string[] = [
   "Multiscale Vision Transformers [Computer Vision, 2021]",
   "Learning to summarize from human feedback [NLP, 2022]",
   "Alice in Wonderland: Simple Tasks Showing Complete Reasoning Breakdown in State-Of-the-Art Large Language Models [NLP, 2024]",
+  "Ask Me Anything: A Simple Strategy for Prompting Language Models [NLP, 2022]",
 ];
