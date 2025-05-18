@@ -293,4 +293,5 @@ export const STUDY_LOG: string[] = [
   "BLIP: Bootstrapping Language-Image Pre-training for Unified Vision-Language Understanding and Generation [Multimodal, 2022]",
   "To Repeat or Not To Repeat: Insights from Scaling LLM under Token-Crisis [NLP, 2023]",
   "LayoutLMv3: Pre-training for Document AI with Unified Text and Image Masking [Multimodal, 2022]",
+  "StarCoder: May the Source Be with You! [NLP, 2023]",
 ];
