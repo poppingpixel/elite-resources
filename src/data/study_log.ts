@@ -292,4 +292,5 @@ export const STUDY_LOG: string[] = [
   "Ask Me Anything: A Simple Strategy for Prompting Language Models [NLP, 2022]",
   "BLIP: Bootstrapping Language-Image Pre-training for Unified Vision-Language Understanding and Generation [Multimodal, 2022]",
   "To Repeat or Not To Repeat: Insights from Scaling LLM under Token-Crisis [NLP, 2023]",
+  "LayoutLMv3: Pre-training for Document AI with Unified Text and Image Masking [Multimodal, 2022]",
 ];
