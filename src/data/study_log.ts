@@ -296,4 +296,5 @@ export const STUDY_LOG: string[] = [
   "StarCoder: May the Source Be with You! [NLP, 2023]",
   "Multilingual E5 Text Embeddings: A Technical Report [NLP, 2024]",
   "What In-Context Learning “Learns” In-Context: Disentangling Task Recognition and Task Learning [NLP, 2023]",
+  "Highly accurate protein structure prediction with AlphaFold [RL, 2021]",
 ];
