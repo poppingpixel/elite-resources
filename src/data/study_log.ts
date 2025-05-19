@@ -300,4 +300,5 @@ export const STUDY_LOG: string[] = [
   "The Reversal Curse: LLMs trained on “A is B” fail to learn “B is A” [NLP, 2023]",
   "Denoising Diffusion Probabilistic Models [Computer Vision, 2020]",
   "TinyGPT-V: Efficient Multimodal Large Language Model via Small Backbones [NLP, 2023]",
+  "Mastering Chess and Shogi by Self-Play with a General Reinforcement Learning Algorithm [RL, 2017]",
 ];
