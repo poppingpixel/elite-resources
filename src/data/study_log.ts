@@ -298,4 +298,5 @@ export const STUDY_LOG: string[] = [
   "What In-Context Learning “Learns” In-Context: Disentangling Task Recognition and Task Learning [NLP, 2023]",
   "Highly accurate protein structure prediction with AlphaFold [RL, 2021]",
   "The Reversal Curse: LLMs trained on “A is B” fail to learn “B is A” [NLP, 2023]",
+  "Denoising Diffusion Probabilistic Models [Computer Vision, 2020]",
 ];
