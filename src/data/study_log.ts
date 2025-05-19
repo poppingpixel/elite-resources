@@ -295,4 +295,5 @@ export const STUDY_LOG: string[] = [
   "LayoutLMv3: Pre-training for Document AI with Unified Text and Image Masking [Multimodal, 2022]",
   "StarCoder: May the Source Be with You! [NLP, 2023]",
   "Multilingual E5 Text Embeddings: A Technical Report [NLP, 2024]",
+  "What In-Context Learning “Learns” In-Context: Disentangling Task Recognition and Task Learning [NLP, 2023]",
 ];
