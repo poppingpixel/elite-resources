@@ -301,4 +301,5 @@ export const STUDY_LOG: string[] = [
   "Denoising Diffusion Probabilistic Models [Computer Vision, 2020]",
   "TinyGPT-V: Efficient Multimodal Large Language Model via Small Backbones [NLP, 2023]",
   "Mastering Chess and Shogi by Self-Play with a General Reinforcement Learning Algorithm [RL, 2017]",
+  "ROUGE-C: A fully automated evaluation method for multi-document summarization [NLP, 2008]",
 ];
