@@ -304,4 +304,5 @@ export const STUDY_LOG: string[] = [
   "ROUGE-C: A fully automated evaluation method for multi-document summarization [NLP, 2008]",
   "Neural machine translation of rare words with subword units [NLP, 2016]",
   "w2v-BERT: Combining Contrastive Learning and Masked Language Modeling for Self-Supervised Speech Pre-Training [Speech, 2021]",
+  "Are Convolutional Neural Networks or Transformers more like human vision? [Computer Vision, 2021]",
 ];
