@@ -312,4 +312,5 @@ export const STUDY_LOG: string[] = [
   "Neural Collaborative Filtering vs. Matrix Factorization Revisited [RecSys, DCN V2: Improved Deep & Cross Network and Practical Lessons for Web-scale Learning to Rank Systems]",
   "Effect of scale on catastrophic forgetting in neural networks [Core ML, 2022]",
   "What Every Programmer Should Know About Memory [Core ML, 2007]",
+  "GraphMaker: Can Diffusion Models Generate Large Attributed Graphs? [Graph ML, 2024]",
 ];
