@@ -308,4 +308,5 @@ export const STUDY_LOG: string[] = [
   "Why Can GPT Learn In-Context? Language Models Secretly Perform Gradient Descent as Meta-Optimizers [NLP, 2022]",
   "Deep neural networks for small footprint text-dependent speaker verification [Speech, 2014]",
   "Layer Normalization [Core ML, 2016]",
+  "Transferring Knowledge from Large Foundation Models to Small Downstream Models [NLP, 2024]",
 ];
