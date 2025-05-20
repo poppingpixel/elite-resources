@@ -313,4 +313,5 @@ export const STUDY_LOG: string[] = [
   "Effect of scale on catastrophic forgetting in neural networks [Core ML, 2022]",
   "What Every Programmer Should Know About Memory [Core ML, 2007]",
   "GraphMaker: Can Diffusion Models Generate Large Attributed Graphs? [Graph ML, 2024]",
+  "Robust Knowledge Extraction from Large Language Models using Social Choice Theory [NLP, 2023]",
 ];
