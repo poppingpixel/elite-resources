@@ -306,4 +306,5 @@ export const STUDY_LOG: string[] = [
   "w2v-BERT: Combining Contrastive Learning and Masked Language Modeling for Self-Supervised Speech Pre-Training [Speech, 2021]",
   "Are Convolutional Neural Networks or Transformers more like human vision? [Computer Vision, 2021]",
   "Why Can GPT Learn In-Context? Language Models Secretly Perform Gradient Descent as Meta-Optimizers [NLP, 2022]",
+  "Deep neural networks for small footprint text-dependent speaker verification [Speech, 2014]",
 ];
