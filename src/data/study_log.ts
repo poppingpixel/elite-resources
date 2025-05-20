@@ -302,4 +302,5 @@ export const STUDY_LOG: string[] = [
   "TinyGPT-V: Efficient Multimodal Large Language Model via Small Backbones [NLP, 2023]",
   "Mastering Chess and Shogi by Self-Play with a General Reinforcement Learning Algorithm [RL, 2017]",
   "ROUGE-C: A fully automated evaluation method for multi-document summarization [NLP, 2008]",
+  "Neural machine translation of rare words with subword units [NLP, 2016]",
 ];
