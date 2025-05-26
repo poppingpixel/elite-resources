@@ -314,4 +314,5 @@ export const STUDY_LOG: string[] = [
   "What Every Programmer Should Know About Memory [Core ML, 2007]",
   "GraphMaker: Can Diffusion Models Generate Large Attributed Graphs? [Graph ML, 2024]",
   "Robust Knowledge Extraction from Large Language Models using Social Choice Theory [NLP, 2023]",
+  "High-Resolution Image Synthesis with Latent Diffusion Models [Computer Vision, 2022]",
 ];
