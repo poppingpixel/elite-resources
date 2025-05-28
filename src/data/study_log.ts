@@ -316,4 +316,5 @@ export const STUDY_LOG: string[] = [
   "Robust Knowledge Extraction from Large Language Models using Social Choice Theory [NLP, 2023]",
   "High-Resolution Image Synthesis with Latent Diffusion Models [Computer Vision, 2022]",
   "MLIM: Vision-and-language Model Pre-training With Masked Language and Image Modeling [Multimodal, 2021]",
+  "DINOv2: Learning Robust Visual Features without Supervision [Computer Vision, 2023]",
 ];
