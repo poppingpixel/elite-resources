@@ -315,4 +315,5 @@ export const STUDY_LOG: string[] = [
   "GraphMaker: Can Diffusion Models Generate Large Attributed Graphs? [Graph ML, 2024]",
   "Robust Knowledge Extraction from Large Language Models using Social Choice Theory [NLP, 2023]",
   "High-Resolution Image Synthesis with Latent Diffusion Models [Computer Vision, 2022]",
+  "MLIM: Vision-and-language Model Pre-training With Masked Language and Image Modeling [Multimodal, 2021]",
 ];
