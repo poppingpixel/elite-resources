@@ -317,4 +317,5 @@ export const STUDY_LOG: string[] = [
   "High-Resolution Image Synthesis with Latent Diffusion Models [Computer Vision, 2022]",
   "MLIM: Vision-and-language Model Pre-training With Masked Language and Image Modeling [Multimodal, 2021]",
   "DINOv2: Learning Robust Visual Features without Supervision [Computer Vision, 2023]",
+  "The case for 4-bit precision: k-bit Inference Scaling Laws [NLP, 2023]",
 ];
