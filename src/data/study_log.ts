@@ -318,4 +318,5 @@ export const STUDY_LOG: string[] = [
   "MLIM: Vision-and-language Model Pre-training With Masked Language and Image Modeling [Multimodal, 2021]",
   "DINOv2: Learning Robust Visual Features without Supervision [Computer Vision, 2023]",
   "The case for 4-bit precision: k-bit Inference Scaling Laws [NLP, 2023]",
+  "WavLM: Large-Scale Self-Supervised Pre-Training for Full Stack Speech Processing [Speech, 2021]",
 ];
