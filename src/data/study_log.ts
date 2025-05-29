@@ -319,4 +319,5 @@ export const STUDY_LOG: string[] = [
   "DINOv2: Learning Robust Visual Features without Supervision [Computer Vision, 2023]",
   "The case for 4-bit precision: k-bit Inference Scaling Laws [NLP, 2023]",
   "WavLM: Large-Scale Self-Supervised Pre-Training for Full Stack Speech Processing [Speech, 2021]",
+  "Blockwise Parallel Decoding for Deep Autoregressive Models [NLP, 2018]",
 ];
