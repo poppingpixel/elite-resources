@@ -321,4 +321,5 @@ export const STUDY_LOG: string[] = [
   "WavLM: Large-Scale Self-Supervised Pre-Training for Full Stack Speech Processing [Speech, 2021]",
   "Blockwise Parallel Decoding for Deep Autoregressive Models [NLP, 2018]",
   "Unsupervised Dense Information Retrieval with Contrastive Learning [NLP, 2022]",
+  "Matcha-TTS: A Fast TTS Architecture with Conditional Flow Matching [Speech, 2022]",
 ];
