@@ -320,4 +320,5 @@ export const STUDY_LOG: string[] = [
   "The case for 4-bit precision: k-bit Inference Scaling Laws [NLP, 2023]",
   "WavLM: Large-Scale Self-Supervised Pre-Training for Full Stack Speech Processing [Speech, 2021]",
   "Blockwise Parallel Decoding for Deep Autoregressive Models [NLP, 2018]",
+  "Unsupervised Dense Information Retrieval with Contrastive Learning [NLP, 2022]",
 ];
