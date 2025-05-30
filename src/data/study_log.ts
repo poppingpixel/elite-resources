@@ -322,4 +322,5 @@ export const STUDY_LOG: string[] = [
   "Blockwise Parallel Decoding for Deep Autoregressive Models [NLP, 2018]",
   "Unsupervised Dense Information Retrieval with Contrastive Learning [NLP, 2022]",
   "Matcha-TTS: A Fast TTS Architecture with Conditional Flow Matching [Speech, 2022]",
+  "Agent Q: Advanced Reasoning and Learning for Autonomous AI Agents [NLP, 2024]",
 ];
