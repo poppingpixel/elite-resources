@@ -324,4 +324,5 @@ export const STUDY_LOG: string[] = [
   "Matcha-TTS: A Fast TTS Architecture with Conditional Flow Matching [Speech, 2022]",
   "Agent Q: Advanced Reasoning and Learning for Autonomous AI Agents [NLP, 2024]",
   "Graph Attention Networks [Graph ML, 2018]",
+  "Extracting Training Data from Large Language Models [NLP, 2021]",
 ];
