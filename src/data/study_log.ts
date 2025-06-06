@@ -327,4 +327,5 @@ export const STUDY_LOG: string[] = [
   "Extracting Training Data from Large Language Models [NLP, 2021]",
   "Squeeze-and-Excitation Networks [Computer Vision, 2018]",
   "Self-Refine: Iterative Refinement with Self-Feedback [NLP, 2024]",
+  "PaperMage: A Unified Toolkit for Processing, Representing, and Manipulating Visually-Rich Scientific Documents [NLP, 2023]",
 ];
