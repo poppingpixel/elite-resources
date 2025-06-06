@@ -326,4 +326,5 @@ export const STUDY_LOG: string[] = [
   "Graph Attention Networks [Graph ML, 2018]",
   "Extracting Training Data from Large Language Models [NLP, 2021]",
   "Squeeze-and-Excitation Networks [Computer Vision, 2018]",
+  "Self-Refine: Iterative Refinement with Self-Feedback [NLP, 2024]",
 ];
