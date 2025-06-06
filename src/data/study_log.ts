@@ -329,4 +329,5 @@ export const STUDY_LOG: string[] = [
   "Self-Refine: Iterative Refinement with Self-Feedback [NLP, 2024]",
   "PaperMage: A Unified Toolkit for Processing, Representing, and Manipulating Visually-Rich Scientific Documents [NLP, 2023]",
   "DreamBooth: Fine Tuning Text-to-Image Diffusion Models for Subject-Driven Generation [Multimodal, 2022]",
+  "CRITIC: Large Language Models Can Self-Correct with Tool-Interactive Critiquing [NLP, 2024]",
 ];
