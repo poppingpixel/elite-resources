@@ -325,4 +325,5 @@ export const STUDY_LOG: string[] = [
   "Agent Q: Advanced Reasoning and Learning for Autonomous AI Agents [NLP, 2024]",
   "Graph Attention Networks [Graph ML, 2018]",
   "Extracting Training Data from Large Language Models [NLP, 2021]",
+  "Squeeze-and-Excitation Networks [Computer Vision, 2018]",
 ];
