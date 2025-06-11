@@ -330,4 +330,5 @@ export const STUDY_LOG: string[] = [
   "PaperMage: A Unified Toolkit for Processing, Representing, and Manipulating Visually-Rich Scientific Documents [NLP, 2023]",
   "DreamBooth: Fine Tuning Text-to-Image Diffusion Models for Subject-Driven Generation [Multimodal, 2022]",
   "CRITIC: Large Language Models Can Self-Correct with Tool-Interactive Critiquing [NLP, 2024]",
+  "Jina Embeddings 2: 8192-Token General-Purpose Text Embeddings for Long Documents [NLP, 2024]",
 ];
