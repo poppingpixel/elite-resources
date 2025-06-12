@@ -338,4 +338,5 @@ export const STUDY_LOG: string[] = [
   "SwiftSage: A Generative Agent with Fast and Slow Thinking for Complex Interactive Tasks [NLP, 2023]",
   "Stable Video Diffusion: Scaling Latent Video Diffusion Models to Large Datasets [Computer Vision, 2024]",
   "Knowledge Distillation of Large Language Models [NLP, 2023]",
+  "Self-attention Does Not Need \(O(n^2)\) Memory [Core ML, 2021]",
 ];
