@@ -334,4 +334,5 @@ export const STUDY_LOG: string[] = [
   "Query-Key Normalization for Transformers [NLP, 2020]",
   "Adaptive Budget Allocation for Parameter-Efficient Fine-Tuning [NLP, 2023]",
   "Self-Supervised Speech Representation Learning: A Review [Speech, 2022]",
+  "DINOv3 [Computer Vision, 2025]",
 ];
