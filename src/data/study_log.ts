@@ -341,4 +341,5 @@ export const STUDY_LOG: string[] = [
   "Self-attention Does Not Need \(O(n^2)\) Memory [Core ML, 2021]",
   "Bytes Are All You Need: Transformers Operating Directly On File Bytes [Multimodal, 2023]",
   "Matryoshka Diffusion Models [Multimodal, 2023]",
+  "Contrastive Preference Optimization: Pushing the Boundaries of LLM Performance in Machine Translation [NLP, 2024]",
 ];
