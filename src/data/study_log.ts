@@ -335,4 +335,5 @@ export const STUDY_LOG: string[] = [
   "Adaptive Budget Allocation for Parameter-Efficient Fine-Tuning [NLP, 2023]",
   "Self-Supervised Speech Representation Learning: A Review [Speech, 2022]",
   "DINOv3 [Computer Vision, 2025]",
+  "SwiftSage: A Generative Agent with Fast and Slow Thinking for Complex Interactive Tasks [NLP, 2023]",
 ];
