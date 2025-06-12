@@ -333,4 +333,5 @@ export const STUDY_LOG: string[] = [
   "Jina Embeddings 2: 8192-Token General-Purpose Text Embeddings for Long Documents [NLP, 2024]",
   "Query-Key Normalization for Transformers [NLP, 2020]",
   "Adaptive Budget Allocation for Parameter-Efficient Fine-Tuning [NLP, 2023]",
+  "Self-Supervised Speech Representation Learning: A Review [Speech, 2022]",
 ];
