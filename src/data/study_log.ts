@@ -336,4 +336,5 @@ export const STUDY_LOG: string[] = [
   "Self-Supervised Speech Representation Learning: A Review [Speech, 2022]",
   "DINOv3 [Computer Vision, 2025]",
   "SwiftSage: A Generative Agent with Fast and Slow Thinking for Complex Interactive Tasks [NLP, 2023]",
+  "Stable Video Diffusion: Scaling Latent Video Diffusion Models to Large Datasets [Computer Vision, 2024]",
 ];
