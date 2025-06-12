@@ -339,4 +339,5 @@ export const STUDY_LOG: string[] = [
   "Stable Video Diffusion: Scaling Latent Video Diffusion Models to Large Datasets [Computer Vision, 2024]",
   "Knowledge Distillation of Large Language Models [NLP, 2023]",
   "Self-attention Does Not Need \(O(n^2)\) Memory [Core ML, 2021]",
+  "Bytes Are All You Need: Transformers Operating Directly On File Bytes [Multimodal, 2023]",
 ];
