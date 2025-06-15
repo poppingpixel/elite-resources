@@ -342,4 +342,5 @@ export const STUDY_LOG: string[] = [
   "Bytes Are All You Need: Transformers Operating Directly On File Bytes [Multimodal, 2023]",
   "Matryoshka Diffusion Models [Multimodal, 2023]",
   "Contrastive Preference Optimization: Pushing the Boundaries of LLM Performance in Machine Translation [NLP, 2024]",
+  "HiQA: A Hierarchical Contextual Augmentation RAG for Massive Documents QA [NLP, 2024]",
 ];
