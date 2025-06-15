@@ -343,4 +343,5 @@ export const STUDY_LOG: string[] = [
   "Matryoshka Diffusion Models [Multimodal, 2023]",
   "Contrastive Preference Optimization: Pushing the Boundaries of LLM Performance in Machine Translation [NLP, 2024]",
   "HiQA: A Hierarchical Contextual Augmentation RAG for Massive Documents QA [NLP, 2024]",
+  "The Unlocking Spell on Base LLMs: Rethinking Alignment via In-Context Learning [NLP, 2023]",
 ];
