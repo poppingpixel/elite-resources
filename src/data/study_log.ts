@@ -345,4 +345,5 @@ export const STUDY_LOG: string[] = [
   "HiQA: A Hierarchical Contextual Augmentation RAG for Massive Documents QA [NLP, 2024]",
   "The Unlocking Spell on Base LLMs: Rethinking Alignment via In-Context Learning [NLP, 2023]",
   "BitNet: Scaling 1-bit Transformers for Large Language Models [NLP, 2023]",
+  "Efficient Few-Shot Learning Without Prompts [NLP, 2022]",
 ];
