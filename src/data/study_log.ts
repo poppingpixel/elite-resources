@@ -346,4 +346,5 @@ export const STUDY_LOG: string[] = [
   "The Unlocking Spell on Base LLMs: Rethinking Alignment via In-Context Learning [NLP, 2023]",
   "BitNet: Scaling 1-bit Transformers for Large Language Models [NLP, 2023]",
   "Efficient Few-Shot Learning Without Prompts [NLP, 2022]",
+  "Kolmogorov–Arnold Networks (KANs): An Alternative to Multi-Layer Perceptrons for Enhanced Interpretability and Accuracy [Core ML, 2023]",
 ];
