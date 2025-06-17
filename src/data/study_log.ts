@@ -347,4 +347,5 @@ export const STUDY_LOG: string[] = [
   "BitNet: Scaling 1-bit Transformers for Large Language Models [NLP, 2023]",
   "Efficient Few-Shot Learning Without Prompts [NLP, 2022]",
   "Kolmogorov–Arnold Networks (KANs): An Alternative to Multi-Layer Perceptrons for Enhanced Interpretability and Accuracy [Core ML, 2023]",
+  "MultiInstruct: Improving Multi-Modal Zero-Shot Learning via Instruction Tuning [NLP, 2023]",
 ];
