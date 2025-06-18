@@ -359,4 +359,5 @@ export const STUDY_LOG: string[] = [
   "Conformer: Convolution-augmented Transformer for Speech Recognition [Speech, 2020]",
   "RAGAS: Automated Evaluation of Retrieval Augmented Generation [NLP, 2023]",
   "FLEEK: Factual Error Detection and Correction with Evidence Retrieved from External Knowledge [NLP, 2023]",
+  "Large Language Models Understand and Can Be Enhanced by Emotional Stimuli [NLP, 2023]",
 ];
