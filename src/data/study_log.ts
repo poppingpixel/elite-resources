@@ -349,4 +349,5 @@ export const STUDY_LOG: string[] = [
   "Kolmogorov–Arnold Networks (KANs): An Alternative to Multi-Layer Perceptrons for Enhanced Interpretability and Accuracy [Core ML, 2023]",
   "MultiInstruct: Improving Multi-Modal Zero-Shot Learning via Instruction Tuning [NLP, 2023]",
   "Weak-to-Strong Generalization: Eliciting Strong Capabilities with Weak Supervision [Core ML, 2023]",
+  "OPT: Open Pre-trained Transformer Language Models [NLP, 2022]",
 ];
