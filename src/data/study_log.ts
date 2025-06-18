@@ -357,4 +357,5 @@ export const STUDY_LOG: string[] = [
   "Evolutionary Optimization of Model Merging Recipes [Core ML, 2024]",
   "Using AntiPatterns to avoid MLOps Mistakes [Core ML, 2021]",
   "Conformer: Convolution-augmented Transformer for Speech Recognition [Speech, 2020]",
+  "RAGAS: Automated Evaluation of Retrieval Augmented Generation [NLP, 2023]",
 ];
