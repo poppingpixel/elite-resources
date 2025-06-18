@@ -353,4 +353,5 @@ export const STUDY_LOG: string[] = [
   "One-Minute Video Generation with Test-Time Training [Multimodal, 2025]",
   "SummaC: Re-Visiting NLI-based Models for Inconsistency Detection in Summarization [NLP, 2022]",
   "Efficient Voice Trigger Detection for Low Resource Hardware [Speech, 2018]",
+  "Fast Inference from Transformers via Speculative Decoding [NLP, 2023]",
 ];
