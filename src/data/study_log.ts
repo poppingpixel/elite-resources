@@ -355,4 +355,5 @@ export const STUDY_LOG: string[] = [
   "Efficient Voice Trigger Detection for Low Resource Hardware [Speech, 2018]",
   "Fast Inference from Transformers via Speculative Decoding [NLP, 2023]",
   "Evolutionary Optimization of Model Merging Recipes [Core ML, 2024]",
+  "Using AntiPatterns to avoid MLOps Mistakes [Core ML, 2021]",
 ];
