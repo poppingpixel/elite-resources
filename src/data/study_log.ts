@@ -352,4 +352,5 @@ export const STUDY_LOG: string[] = [
   "OPT: Open Pre-trained Transformer Language Models [NLP, 2022]",
   "One-Minute Video Generation with Test-Time Training [Multimodal, 2025]",
   "SummaC: Re-Visiting NLI-based Models for Inconsistency Detection in Summarization [NLP, 2022]",
+  "Efficient Voice Trigger Detection for Low Resource Hardware [Speech, 2018]",
 ];
