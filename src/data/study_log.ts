@@ -350,4 +350,5 @@ export const STUDY_LOG: string[] = [
   "MultiInstruct: Improving Multi-Modal Zero-Shot Learning via Instruction Tuning [NLP, 2023]",
   "Weak-to-Strong Generalization: Eliciting Strong Capabilities with Weak Supervision [Core ML, 2023]",
   "OPT: Open Pre-trained Transformer Language Models [NLP, 2022]",
+  "One-Minute Video Generation with Test-Time Training [Multimodal, 2025]",
 ];
