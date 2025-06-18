@@ -351,4 +351,5 @@ export const STUDY_LOG: string[] = [
   "Weak-to-Strong Generalization: Eliciting Strong Capabilities with Weak Supervision [Core ML, 2023]",
   "OPT: Open Pre-trained Transformer Language Models [NLP, 2022]",
   "One-Minute Video Generation with Test-Time Training [Multimodal, 2025]",
+  "SummaC: Re-Visiting NLI-based Models for Inconsistency Detection in Summarization [NLP, 2022]",
 ];
