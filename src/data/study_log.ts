@@ -358,4 +358,5 @@ export const STUDY_LOG: string[] = [
   "Using AntiPatterns to avoid MLOps Mistakes [Core ML, 2021]",
   "Conformer: Convolution-augmented Transformer for Speech Recognition [Speech, 2020]",
   "RAGAS: Automated Evaluation of Retrieval Augmented Generation [NLP, 2023]",
+  "FLEEK: Factual Error Detection and Correction with Evidence Retrieved from External Knowledge [NLP, 2023]",
 ];
