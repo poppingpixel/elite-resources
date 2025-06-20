@@ -599,3 +599,5 @@ export function getOverdueBooks(): Book[] {
         .filter(b => b.status !== 'completed' && b.deadline)
         .filter(b => new Date(b.deadline!) < now);
 }
+
+// Updated: iteration 8
