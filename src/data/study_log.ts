@@ -361,4 +361,5 @@ export const STUDY_LOG: string[] = [
   "FLEEK: Factual Error Detection and Correction with Evidence Retrieved from External Knowledge [NLP, 2023]",
   "Large Language Models Understand and Can Be Enhanced by Emotional Stimuli [NLP, 2023]",
   "The Power of Scale for Parameter-Efficient Prompt Tuning [NLP, 2021]",
+  "Many-Shot In-Context Learning [NLP, 2024]",
 ];
