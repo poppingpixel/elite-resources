@@ -364,4 +364,5 @@ export const STUDY_LOG: string[] = [
   "Many-Shot In-Context Learning [NLP, 2024]",
   "LLM2LLM: Boosting LLMs with Novel Iterative Data Enhancement [NLP, 2024]",
   "A Comprehensive Survey on Vector Database: Storage and Retrieval Technique, Challenges [NLP, 2023]",
+  "Deep Spoken Keyword Spotting: An Overview [Speech, 2021]",
 ];
