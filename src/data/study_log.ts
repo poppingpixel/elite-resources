@@ -362,4 +362,5 @@ export const STUDY_LOG: string[] = [
   "Large Language Models Understand and Can Be Enhanced by Emotional Stimuli [NLP, 2023]",
   "The Power of Scale for Parameter-Efficient Prompt Tuning [NLP, 2021]",
   "Many-Shot In-Context Learning [NLP, 2024]",
+  "LLM2LLM: Boosting LLMs with Novel Iterative Data Enhancement [NLP, 2024]",
 ];
