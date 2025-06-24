@@ -365,4 +365,5 @@ export const STUDY_LOG: string[] = [
   "LLM2LLM: Boosting LLMs with Novel Iterative Data Enhancement [NLP, 2024]",
   "A Comprehensive Survey on Vector Database: Storage and Retrieval Technique, Challenges [NLP, 2023]",
   "Deep Spoken Keyword Spotting: An Overview [Speech, 2021]",
+  "Exploring In-Context Learning Capabilities of Foundation Models for Generating Knowledge Graphs from Text [NLP, 2023]",
 ];
