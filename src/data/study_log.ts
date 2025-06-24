@@ -363,4 +363,5 @@ export const STUDY_LOG: string[] = [
   "The Power of Scale for Parameter-Efficient Prompt Tuning [NLP, 2021]",
   "Many-Shot In-Context Learning [NLP, 2024]",
   "LLM2LLM: Boosting LLMs with Novel Iterative Data Enhancement [NLP, 2024]",
+  "A Comprehensive Survey on Vector Database: Storage and Retrieval Technique, Challenges [NLP, 2023]",
 ];
