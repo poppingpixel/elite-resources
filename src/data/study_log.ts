@@ -366,4 +366,5 @@ export const STUDY_LOG: string[] = [
   "A Comprehensive Survey on Vector Database: Storage and Retrieval Technique, Challenges [NLP, 2023]",
   "Deep Spoken Keyword Spotting: An Overview [Speech, 2021]",
   "Exploring In-Context Learning Capabilities of Foundation Models for Generating Knowledge Graphs from Text [NLP, 2023]",
+  "Fine Tuning vs. Retrieval Augmented Generation for Less Popular Knowledge [NLP, 2024]",
 ];
