@@ -371,4 +371,5 @@ export const STUDY_LOG: string[] = [
   "MAViL: Masked Audio-Video Learners [Multimodal, 2023]",
   "REALM: Retrieval-Augmented Language Model Pre-Training [NLP, 2020]",
   "Large Language Models are Better Reasoners with Self-Verification [NLP, 2023]",
+  "GPT4All: Training an Assistant-style Chatbot with Large Scale Data Distillation from GPT-3.5-Turbo [NLP, 2023]",
 ];
