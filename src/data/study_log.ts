@@ -370,4 +370,5 @@ export const STUDY_LOG: string[] = [
   "Beyond Chain-of-Thought, Effective Graph-of-Thought Reasoning in Large Language Models [NLP, 2023]",
   "MAViL: Masked Audio-Video Learners [Multimodal, 2023]",
   "REALM: Retrieval-Augmented Language Model Pre-Training [NLP, 2020]",
+  "Large Language Models are Better Reasoners with Self-Verification [NLP, 2023]",
 ];
