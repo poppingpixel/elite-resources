@@ -373,4 +373,5 @@ export const STUDY_LOG: string[] = [
   "Large Language Models are Better Reasoners with Self-Verification [NLP, 2023]",
   "GPT4All: Training an Assistant-style Chatbot with Large Scale Data Distillation from GPT-3.5-Turbo [NLP, 2023]",
   "Survey of Hallucination in Natural Language Generation [NLP, 2022]",
+  "ViLT: Vision-and-Language Transformer Without Convolution or Region Supervision [Multimodal, 2021]",
 ];
