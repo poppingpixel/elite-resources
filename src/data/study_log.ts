@@ -368,4 +368,5 @@ export const STUDY_LOG: string[] = [
   "Exploring In-Context Learning Capabilities of Foundation Models for Generating Knowledge Graphs from Text [NLP, 2023]",
   "Fine Tuning vs. Retrieval Augmented Generation for Less Popular Knowledge [NLP, 2024]",
   "Beyond Chain-of-Thought, Effective Graph-of-Thought Reasoning in Large Language Models [NLP, 2023]",
+  "MAViL: Masked Audio-Video Learners [Multimodal, 2023]",
 ];
