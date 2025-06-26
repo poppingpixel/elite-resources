@@ -374,4 +374,5 @@ export const STUDY_LOG: string[] = [
   "GPT4All: Training an Assistant-style Chatbot with Large Scale Data Distillation from GPT-3.5-Turbo [NLP, 2023]",
   "Survey of Hallucination in Natural Language Generation [NLP, 2022]",
   "ViLT: Vision-and-Language Transformer Without Convolution or Region Supervision [Multimodal, 2021]",
+  "Qwen2.5-Omni Technical Report [NLP, 2025]",
 ];
