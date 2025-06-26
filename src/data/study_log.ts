@@ -375,4 +375,5 @@ export const STUDY_LOG: string[] = [
   "Survey of Hallucination in Natural Language Generation [NLP, 2022]",
   "ViLT: Vision-and-Language Transformer Without Convolution or Region Supervision [Multimodal, 2021]",
   "Qwen2.5-Omni Technical Report [NLP, 2025]",
+  "MiniGPT-4: Enhancing Vision-Language Understanding with Advanced Large Language Models [Multimodal, 2023]",
 ];
