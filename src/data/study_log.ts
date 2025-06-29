@@ -376,4 +376,5 @@ export const STUDY_LOG: string[] = [
   "ViLT: Vision-and-Language Transformer Without Convolution or Region Supervision [Multimodal, 2021]",
   "Qwen2.5-Omni Technical Report [NLP, 2025]",
   "MiniGPT-4: Enhancing Vision-Language Understanding with Advanced Large Language Models [Multimodal, 2023]",
+  "The Internal State of an LLM Knows When It’s Lying [NLP, 2023]",
 ];
