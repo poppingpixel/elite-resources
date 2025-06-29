@@ -384,4 +384,5 @@ export const STUDY_LOG: string[] = [
   "Large Language Models are Null-Shot Learners [NLP, 2023]",
   "Qwen-7B: Open foundation and human-aligned models [Multimodal, 2023]",
   "Towards Zero-Label Language Learning [NLP, 2021]",
+  "FLAVA: A Foundational Language And Vision Alignment Model [Multimodal, 2022]",
 ];
