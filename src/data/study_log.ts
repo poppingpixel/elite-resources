@@ -386,4 +386,5 @@ export const STUDY_LOG: string[] = [
   "Towards Zero-Label Language Learning [NLP, 2021]",
   "FLAVA: A Foundational Language And Vision Alignment Model [Multimodal, 2022]",
   "Grad-CAM: Visual Explanations from Deep Networks via Gradient-based Localization [NLP, 2019]",
+  "Nougat: Neural Optical Understanding for Academic Documents [Multimodal, 2023]",
 ];
