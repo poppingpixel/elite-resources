@@ -387,4 +387,5 @@ export const STUDY_LOG: string[] = [
   "FLAVA: A Foundational Language And Vision Alignment Model [Multimodal, 2022]",
   "Grad-CAM: Visual Explanations from Deep Networks via Gradient-based Localization [NLP, 2019]",
   "Nougat: Neural Optical Understanding for Academic Documents [Multimodal, 2023]",
+  "On Calibration of Modern Neural Networks [Core ML, 2017]",
 ];
