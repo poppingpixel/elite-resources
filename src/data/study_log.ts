@@ -381,4 +381,5 @@ export const STUDY_LOG: string[] = [
   "CLIPScore: A Reference-free Evaluation Metric for Image Captioning [Multimodal, 2021]",
   "Efficiently Modeling Long Sequences with Structured State Spaces [Core ML, 2021]",
   "Tensor Programs V: Tuning Large Neural Networks via Zero-Shot Hyperparameter Transfer [Core ML, 2021]",
+  "Large Language Models are Null-Shot Learners [NLP, 2023]",
 ];
