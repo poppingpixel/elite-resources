@@ -385,4 +385,5 @@ export const STUDY_LOG: string[] = [
   "Qwen-7B: Open foundation and human-aligned models [Multimodal, 2023]",
   "Towards Zero-Label Language Learning [NLP, 2021]",
   "FLAVA: A Foundational Language And Vision Alignment Model [Multimodal, 2022]",
+  "Grad-CAM: Visual Explanations from Deep Networks via Gradient-based Localization [NLP, 2019]",
 ];
