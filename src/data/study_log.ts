@@ -379,4 +379,5 @@ export const STUDY_LOG: string[] = [
   "The Internal State of an LLM Knows When It’s Lying [NLP, 2023]",
   "DeepSeek-V3 Technical Report [NLP, 2024]",
   "CLIPScore: A Reference-free Evaluation Metric for Image Captioning [Multimodal, 2021]",
+  "Efficiently Modeling Long Sequences with Structured State Spaces [Core ML, 2021]",
 ];
