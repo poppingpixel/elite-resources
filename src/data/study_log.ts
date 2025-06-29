@@ -383,4 +383,5 @@ export const STUDY_LOG: string[] = [
   "Tensor Programs V: Tuning Large Neural Networks via Zero-Shot Hyperparameter Transfer [Core ML, 2021]",
   "Large Language Models are Null-Shot Learners [NLP, 2023]",
   "Qwen-7B: Open foundation and human-aligned models [Multimodal, 2023]",
+  "Towards Zero-Label Language Learning [NLP, 2021]",
 ];
