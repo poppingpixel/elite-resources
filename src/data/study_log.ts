@@ -392,4 +392,5 @@ export const STUDY_LOG: string[] = [
   "Fact, Fetch, and Reason: A Unified Evaluation of Retrieval-Augmented Generation [NLP, 2025]",
   "Faster R-CNN: Towards Real-Time Object Detection with Region Proposal Networks [Computer Vision, 2016]",
   "Large language models are different [NLP, 2022]",
+  "A Video Is Worth 4096 Tokens: Verbalize Videos To Understand Them In Zero Shot [Multimodal, 2023]",
 ];
