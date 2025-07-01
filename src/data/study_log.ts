@@ -391,4 +391,5 @@ export const STUDY_LOG: string[] = [
   "Large-scale Deep Unsupervised Learning using Graphics Processors [Core ML, 2009]",
   "Fact, Fetch, and Reason: A Unified Evaluation of Retrieval-Augmented Generation [NLP, 2025]",
   "Faster R-CNN: Towards Real-Time Object Detection with Region Proposal Networks [Computer Vision, 2016]",
+  "Large language models are different [NLP, 2022]",
 ];
