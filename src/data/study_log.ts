@@ -390,4 +390,5 @@ export const STUDY_LOG: string[] = [
   "On Calibration of Modern Neural Networks [Core ML, 2017]",
   "Large-scale Deep Unsupervised Learning using Graphics Processors [Core ML, 2009]",
   "Fact, Fetch, and Reason: A Unified Evaluation of Retrieval-Augmented Generation [NLP, 2025]",
+  "Faster R-CNN: Towards Real-Time Object Detection with Region Proposal Networks [Computer Vision, 2016]",
 ];
