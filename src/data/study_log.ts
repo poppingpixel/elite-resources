@@ -400,4 +400,5 @@ export const STUDY_LOG: string[] = [
   "Stacked 1D convolutional networks for end-to-end small footprint voice trigger detection [Speech, 2020]",
   "Transformers are RNNs: Fast Autoregressive Transformers with Linear Attention [NLP, 2020]",
   "Accelerating Large Language Model Decoding with Speculative Sampling [NLP, 2023]",
+  "Contrastive Chain-of-Thought Prompting [NLP, 2023]",
 ];
