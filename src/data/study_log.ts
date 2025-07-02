@@ -395,4 +395,5 @@ export const STUDY_LOG: string[] = [
   "A Video Is Worth 4096 Tokens: Verbalize Videos To Understand Them In Zero Shot [Multimodal, 2023]",
   "SaulLM-7B: A pioneering Large Language Model for Law [NLP, 2024]",
   "BinaryBERT: Pushing the Limit of BERT Quantization [NLP, 2021]",
+  "Fact-Checking the Output of Large Language Models via Token-Level Uncertainty Quantification [NLP, 2024]",
 ];
