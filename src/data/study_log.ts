@@ -397,4 +397,5 @@ export const STUDY_LOG: string[] = [
   "BinaryBERT: Pushing the Limit of BERT Quantization [NLP, 2021]",
   "Fact-Checking the Output of Large Language Models via Token-Level Uncertainty Quantification [NLP, 2024]",
   "Transformer-XL: Attentive Language Models Beyond a Fixed-Length Context [NLP, 2019]",
+  "Stacked 1D convolutional networks for end-to-end small footprint voice trigger detection [Speech, 2020]",
 ];
