@@ -405,4 +405,5 @@ export const STUDY_LOG: string[] = [
   "Medusa: Simple Framework for Accelerating LLM Generation with Multiple Decoding Heads [NLP, 2023]",
   "Large Language Models Are Human-Level Prompt Engineers [NLP, 2023]",
   "Enhancing Zero-Shot Chain-of-Thought Reasoning in Large Language Models through Logic [NLP, 2023]",
+  "Orca: Progressive Learning from Complex Explanation Traces of GPT-4 [NLP, 2023]",
 ];
