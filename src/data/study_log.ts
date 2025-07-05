@@ -403,4 +403,5 @@ export const STUDY_LOG: string[] = [
   "Contrastive Chain-of-Thought Prompting [NLP, 2023]",
   "Graph of Thoughts: Solving Elaborate Problems with Large Language Models [NLP, 2023]",
   "Medusa: Simple Framework for Accelerating LLM Generation with Multiple Decoding Heads [NLP, 2023]",
+  "Large Language Models Are Human-Level Prompt Engineers [NLP, 2023]",
 ];
