@@ -413,4 +413,5 @@ export const STUDY_LOG: string[] = [
   "FrugalGPT: How to Use Large Language Models While Reducing Cost and Improving Performance [NLP, 2023]",
   "Demystifying CLIP Data [Multimodal, 2023]",
   "Style Equalization: Unsupervised Learning of Controllable Generative Sequence Models [Multimodal, 2021]",
+  "SAMBA: Simple Hybrid State Space Models for Efficient Unlimited Context Language Modeling [NLP, 2024]",
 ];
