@@ -409,4 +409,5 @@ export const STUDY_LOG: string[] = [
   "LaMDA: Language Models for Dialog Applications [NLP, 2022]",
   "Efficient Streaming Language Models with Attention Sinks [NLP, 2023]",
   "Using the Output Embedding to Improve Language Models [NLP, 2017]",
+  "Better Language Models of Code through Self-Improvement [NLP, 2023]",
 ];
