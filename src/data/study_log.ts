@@ -410,4 +410,5 @@ export const STUDY_LOG: string[] = [
   "Efficient Streaming Language Models with Attention Sinks [NLP, 2023]",
   "Using the Output Embedding to Improve Language Models [NLP, 2017]",
   "Better Language Models of Code through Self-Improvement [NLP, 2023]",
+  "FrugalGPT: How to Use Large Language Models While Reducing Cost and Improving Performance [NLP, 2023]",
 ];
