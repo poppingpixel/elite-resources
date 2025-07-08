@@ -415,4 +415,5 @@ export const STUDY_LOG: string[] = [
   "Style Equalization: Unsupervised Learning of Controllable Generative Sequence Models [Multimodal, 2021]",
   "SAMBA: Simple Hybrid State Space Models for Efficient Unlimited Context Language Modeling [NLP, 2024]",
   "Judging LLM-as-a-Judge with MT-Bench and Chatbot Arena [NLP, 2023]",
+  "Multimodal Machine Learning: A Survey and Taxonomy [Multimodal, 2017]",
 ];
