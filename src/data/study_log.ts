@@ -416,4 +416,5 @@ export const STUDY_LOG: string[] = [
   "SAMBA: Simple Hybrid State Space Models for Efficient Unlimited Context Language Modeling [NLP, 2024]",
   "Judging LLM-as-a-Judge with MT-Bench and Chatbot Arena [NLP, 2023]",
   "Multimodal Machine Learning: A Survey and Taxonomy [Multimodal, 2017]",
+  "Perceiver IO: A General Architecture for Structured Inputs & Outputs [Multimodal, 2022]",
 ];
