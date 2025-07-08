@@ -420,4 +420,5 @@ export const STUDY_LOG: string[] = [
   "CoDi-2: In-Context Interleaved and Interactive Any-to-Any Generation [Multimodal, 2023]",
   "ROUGE: A Package for Automatic Evaluation of Summaries [NLP, 2004]",
   "Deep Interest Network for Click-Through Rate Prediction [RecSys, 2018]",
+  "Masked Autoencoders that Listen [Speech, 2022]",
 ];
