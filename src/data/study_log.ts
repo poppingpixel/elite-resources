@@ -417,4 +417,5 @@ export const STUDY_LOG: string[] = [
   "Judging LLM-as-a-Judge with MT-Bench and Chatbot Arena [NLP, 2023]",
   "Multimodal Machine Learning: A Survey and Taxonomy [Multimodal, 2017]",
   "Perceiver IO: A General Architecture for Structured Inputs & Outputs [Multimodal, 2022]",
+  "CoDi-2: In-Context Interleaved and Interactive Any-to-Any Generation [Multimodal, 2023]",
 ];
