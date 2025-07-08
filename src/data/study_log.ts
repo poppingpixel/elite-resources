@@ -418,4 +418,5 @@ export const STUDY_LOG: string[] = [
   "Multimodal Machine Learning: A Survey and Taxonomy [Multimodal, 2017]",
   "Perceiver IO: A General Architecture for Structured Inputs & Outputs [Multimodal, 2022]",
   "CoDi-2: In-Context Interleaved and Interactive Any-to-Any Generation [Multimodal, 2023]",
+  "ROUGE: A Package for Automatic Evaluation of Summaries [NLP, 2004]",
 ];
