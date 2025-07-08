@@ -419,4 +419,5 @@ export const STUDY_LOG: string[] = [
   "Perceiver IO: A General Architecture for Structured Inputs & Outputs [Multimodal, 2022]",
   "CoDi-2: In-Context Interleaved and Interactive Any-to-Any Generation [Multimodal, 2023]",
   "ROUGE: A Package for Automatic Evaluation of Summaries [NLP, 2004]",
+  "Deep Interest Network for Click-Through Rate Prediction [RecSys, 2018]",
 ];
