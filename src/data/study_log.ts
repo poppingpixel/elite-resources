@@ -421,4 +421,5 @@ export const STUDY_LOG: string[] = [
   "ROUGE: A Package for Automatic Evaluation of Summaries [NLP, 2004]",
   "Deep Interest Network for Click-Through Rate Prediction [RecSys, 2018]",
   "Masked Autoencoders that Listen [Speech, 2022]",
+  "Optimize What Matters: Training DNN-HMM Keyword Spotting Model Using End Metric [Speech, 2020]",
 ];
