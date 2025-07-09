@@ -422,4 +422,5 @@ export const STUDY_LOG: string[] = [
   "Deep Interest Network for Click-Through Rate Prediction [RecSys, 2018]",
   "Masked Autoencoders that Listen [Speech, 2022]",
   "Optimize What Matters: Training DNN-HMM Keyword Spotting Model Using End Metric [Speech, 2020]",
+  "Direct Preference Optimization: Your Language Model is Secretly a Reward Model [NLP, 2023]",
 ];
