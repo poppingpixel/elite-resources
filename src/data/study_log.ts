@@ -427,4 +427,5 @@ export const STUDY_LOG: string[] = [
   "Prometheus: Inducing Fine-Grained Evaluation Capability in Language Models [NLP, 2023]",
   "AutoInt: Automatic Feature Interaction Learning via Self-Attentive Neural Networks [RecSys, 2019]",
   "Jamba: A Hybrid Transformer-Mamba Language Model [NLP, 2024]",
+  "Interpretability Beyond Feature Attribution: Quantitative Testing with Concept Activation Vectors (TCAV) [Core ML, 2018]",
 ];
