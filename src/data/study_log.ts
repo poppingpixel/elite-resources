@@ -428,4 +428,5 @@ export const STUDY_LOG: string[] = [
   "AutoInt: Automatic Feature Interaction Learning via Self-Attentive Neural Networks [RecSys, 2019]",
   "Jamba: A Hybrid Transformer-Mamba Language Model [NLP, 2024]",
   "Interpretability Beyond Feature Attribution: Quantitative Testing with Concept Activation Vectors (TCAV) [Core ML, 2018]",
+  "Measuring Short-Form Factuality in Large Language Models: SimpleQA [NLP, 2024]",
 ];
