@@ -425,4 +425,5 @@ export const STUDY_LOG: string[] = [
   "Direct Preference Optimization: Your Language Model is Secretly a Reward Model [NLP, 2023]",
   "sDPO: Don’t Use Your Data All at Once [NLP, 2024]",
   "Prometheus: Inducing Fine-Grained Evaluation Capability in Language Models [NLP, 2023]",
+  "AutoInt: Automatic Feature Interaction Learning via Self-Attentive Neural Networks [RecSys, 2019]",
 ];
