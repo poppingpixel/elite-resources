@@ -423,4 +423,5 @@ export const STUDY_LOG: string[] = [
   "Masked Autoencoders that Listen [Speech, 2022]",
   "Optimize What Matters: Training DNN-HMM Keyword Spotting Model Using End Metric [Speech, 2020]",
   "Direct Preference Optimization: Your Language Model is Secretly a Reward Model [NLP, 2023]",
+  "sDPO: Don’t Use Your Data All at Once [NLP, 2024]",
 ];
