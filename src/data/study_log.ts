@@ -429,4 +429,5 @@ export const STUDY_LOG: string[] = [
   "Jamba: A Hybrid Transformer-Mamba Language Model [NLP, 2024]",
   "Interpretability Beyond Feature Attribution: Quantitative Testing with Concept Activation Vectors (TCAV) [Core ML, 2018]",
   "Measuring Short-Form Factuality in Large Language Models: SimpleQA [NLP, 2024]",
+  "LazyLLM: Dynamic Token Pruning for Efficient Long Context LLM Inference [NLP, 2025]",
 ];
