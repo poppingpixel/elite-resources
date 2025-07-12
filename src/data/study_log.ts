@@ -431,4 +431,5 @@ export const STUDY_LOG: string[] = [
   "Measuring Short-Form Factuality in Large Language Models: SimpleQA [NLP, 2024]",
   "LazyLLM: Dynamic Token Pruning for Efficient Long Context LLM Inference [NLP, 2025]",
   "The Impact of Positional Encoding on Length Generalization in Transformers [NLP, 2023]",
+  "Emerging Properties in Self-Supervised Vision Transformers [Computer Vision, 2021]",
 ];
