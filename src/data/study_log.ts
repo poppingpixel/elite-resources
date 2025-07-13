@@ -434,4 +434,5 @@ export const STUDY_LOG: string[] = [
   "Emerging Properties in Self-Supervised Vision Transformers [Computer Vision, 2021]",
   "Video-ChatGPT: Towards Detailed Video Understanding via Large Vision and Language Models [Multimodal, 2022]",
   "Rethinking Reflection in Pre-Training [NLP, 2025]",
+  "Imagen Video: High Definition Video Generation with Diffusion Models [Computer Vision, 2022]",
 ];
