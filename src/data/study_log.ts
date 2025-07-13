@@ -433,4 +433,5 @@ export const STUDY_LOG: string[] = [
   "The Impact of Positional Encoding on Length Generalization in Transformers [NLP, 2023]",
   "Emerging Properties in Self-Supervised Vision Transformers [Computer Vision, 2021]",
   "Video-ChatGPT: Towards Detailed Video Understanding via Large Vision and Language Models [Multimodal, 2022]",
+  "Rethinking Reflection in Pre-Training [NLP, 2025]",
 ];
