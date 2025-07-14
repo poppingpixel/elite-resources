@@ -764,3 +764,5 @@ export function getPrimaryResource(topicId: number): TopicResource | null {
     const resources = TOPIC_RESOURCES[topicId];
     return resources && resources.length > 0 ? resources[0] : null;
 }
+
+// Updated: iteration 11
