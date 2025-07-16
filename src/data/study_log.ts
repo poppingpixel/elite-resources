@@ -435,4 +435,5 @@ export const STUDY_LOG: string[] = [
   "Video-ChatGPT: Towards Detailed Video Understanding via Large Vision and Language Models [Multimodal, 2022]",
   "Rethinking Reflection in Pre-Training [NLP, 2025]",
   "Imagen Video: High Definition Video Generation with Diffusion Models [Computer Vision, 2022]",
+  "Deduplicating Training Data Makes Language Models Better [NLP, 2023]",
 ];
