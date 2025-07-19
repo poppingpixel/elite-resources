@@ -437,4 +437,5 @@ export const STUDY_LOG: string[] = [
   "Imagen Video: High Definition Video Generation with Diffusion Models [Computer Vision, 2022]",
   "Deduplicating Training Data Makes Language Models Better [NLP, 2023]",
   "Sentence-BERT: Sentence Embeddings using Siamese BERT-Networks [NLP, 2019]",
+  "Intriguing properties of neural networks [Core ML, 2014]",
 ];
