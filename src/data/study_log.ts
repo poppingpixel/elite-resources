@@ -438,4 +438,5 @@ export const STUDY_LOG: string[] = [
   "Deduplicating Training Data Makes Language Models Better [NLP, 2023]",
   "Sentence-BERT: Sentence Embeddings using Siamese BERT-Networks [NLP, 2019]",
   "Intriguing properties of neural networks [Core ML, 2014]",
+  "3D Convolutional Neural Networks for Human Action Recognition [Computer Vision, 2012]",
 ];
