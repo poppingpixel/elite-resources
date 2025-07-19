@@ -445,4 +445,5 @@ export const STUDY_LOG: string[] = [
   "Enabling Large Language Models to Generate Text with Citations [NLP, 2023]",
   "Prompt Injection attack against LLM-integrated Applications [NLP, 2023]",
   "Streaming Transformer for Hardware Efficient Voice Trigger Detection and False Trigger Mitigation [Speech, 2021]",
+  "Language Modeling Is Compression [NLP, 2023]",
 ];
