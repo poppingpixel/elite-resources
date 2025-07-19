@@ -440,4 +440,5 @@ export const STUDY_LOG: string[] = [
   "Intriguing properties of neural networks [Core ML, 2014]",
   "3D Convolutional Neural Networks for Human Action Recognition [Computer Vision, 2012]",
   "Learning Factored Representations in a Deep Mixture of Experts [Computer Vision, 2013]",
+  "Chain-of-Verification Reduces Hallucination in Large Language Models [NLP, 2023]",
 ];
