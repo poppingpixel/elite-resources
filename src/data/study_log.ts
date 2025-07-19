@@ -442,4 +442,5 @@ export const STUDY_LOG: string[] = [
   "Learning Factored Representations in a Deep Mixture of Experts [Computer Vision, 2013]",
   "Chain-of-Verification Reduces Hallucination in Large Language Models [NLP, 2023]",
   "HiFi-GAN: Generative Adversarial Networks for Efficient and High Fidelity Speech Synthesis [Speech, 2020]",
+  "Enabling Large Language Models to Generate Text with Citations [NLP, 2023]",
 ];
