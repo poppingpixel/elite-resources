@@ -444,4 +444,5 @@ export const STUDY_LOG: string[] = [
   "HiFi-GAN: Generative Adversarial Networks for Efficient and High Fidelity Speech Synthesis [Speech, 2020]",
   "Enabling Large Language Models to Generate Text with Citations [NLP, 2023]",
   "Prompt Injection attack against LLM-integrated Applications [NLP, 2023]",
+  "Streaming Transformer for Hardware Efficient Voice Trigger Detection and False Trigger Mitigation [Speech, 2021]",
 ];
