@@ -448,4 +448,5 @@ export const STUDY_LOG: string[] = [
   "Language Modeling Is Compression [NLP, 2023]",
   "BLIP-2: Bootstrapping Language-Image Pre-training with Frozen Image Encoders and Large Language Models [Multimodal, 2023]",
   "Editing Models with Task Arithmetic [NLP, 2023]",
+  "Exploiting Edge Features for Graph Neural Networks [Graph ML, 2019]",
 ];
