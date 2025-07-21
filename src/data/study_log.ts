@@ -447,4 +447,5 @@ export const STUDY_LOG: string[] = [
   "Streaming Transformer for Hardware Efficient Voice Trigger Detection and False Trigger Mitigation [Speech, 2021]",
   "Language Modeling Is Compression [NLP, 2023]",
   "BLIP-2: Bootstrapping Language-Image Pre-training with Frozen Image Encoders and Large Language Models [Multimodal, 2023]",
+  "Editing Models with Task Arithmetic [NLP, 2023]",
 ];
