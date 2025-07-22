@@ -398,3 +398,5 @@ export function getTotalBonusIncome(): { min: number; max: number } {
         max: bonusStreams.reduce((sum, s) => sum + s.maxAmount, 0)
     };
 }
+
+// Updated: iteration 12
