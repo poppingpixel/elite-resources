@@ -454,4 +454,5 @@ export const STUDY_LOG: string[] = [
   "No Language Left Behind: Scaling Human-Centered Machine Translation [NLP, 2022]",
   "Molmo [Multimodal, 2024]",
   "Sigmoid Loss for Language Image Pre-Training [Multimodal, 2024]",
+  "From Recognition to Cognition: Visual Commonsense Reasoning [Computer Vision, 2018]",
 ];
