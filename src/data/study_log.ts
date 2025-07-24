@@ -451,4 +451,5 @@ export const STUDY_LOG: string[] = [
   "Exploiting Edge Features for Graph Neural Networks [Graph ML, 2019]",
   "DistillCSE: Distilled Contrastive Learning for Sentence Embeddings [NLP, 2023]",
   "Likelihood-Based Diffusion Language Models [NLP, 2023]",
+  "No Language Left Behind: Scaling Human-Centered Machine Translation [NLP, 2022]",
 ];
