@@ -461,4 +461,5 @@ export const STUDY_LOG: string[] = [
   "Deep Residual Learning for Image Recognition [Computer Vision, 2016]",
   "Focal Loss for Dense Object Detection [Computer Vision, 2018]",
   "Scalable Extraction of Training Data from (Production) Language Models [NLP, 2023]",
+  "Enriching Word Vectors with Subword Information [NLP, 2017]",
 ];
