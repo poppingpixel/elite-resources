@@ -458,4 +458,5 @@ export const STUDY_LOG: string[] = [
   "BANG: Billion-Scale Approximate Nearest Neighbor Search using a Single GPU [Core ML, 2024]",
   "BEiT: BERT Pre-Training of Image Transformers [Computer Vision, 2021]",
   "Understanding the Effective Receptive Field in Deep Convolutional Neural Networks [Computer Vision, 2016]",
+  "Deep Residual Learning for Image Recognition [Computer Vision, 2016]",
 ];
