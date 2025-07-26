@@ -456,4 +456,5 @@ export const STUDY_LOG: string[] = [
   "Sigmoid Loss for Language Image Pre-Training [Multimodal, 2024]",
   "From Recognition to Cognition: Visual Commonsense Reasoning [Computer Vision, 2018]",
   "BANG: Billion-Scale Approximate Nearest Neighbor Search using a Single GPU [Core ML, 2024]",
+  "BEiT: BERT Pre-Training of Image Transformers [Computer Vision, 2021]",
 ];
