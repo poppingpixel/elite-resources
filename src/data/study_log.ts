@@ -462,4 +462,5 @@ export const STUDY_LOG: string[] = [
   "Focal Loss for Dense Object Detection [Computer Vision, 2018]",
   "Scalable Extraction of Training Data from (Production) Language Models [NLP, 2023]",
   "Enriching Word Vectors with Subword Information [NLP, 2017]",
+  "BLIVA: A Simple Multimodal LLM for Better Handling of Text-Rich Visual Questions [NLP, 2024]",
 ];
