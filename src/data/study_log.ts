@@ -459,4 +459,5 @@ export const STUDY_LOG: string[] = [
   "BEiT: BERT Pre-Training of Image Transformers [Computer Vision, 2021]",
   "Understanding the Effective Receptive Field in Deep Convolutional Neural Networks [Computer Vision, 2016]",
   "Deep Residual Learning for Image Recognition [Computer Vision, 2016]",
+  "Focal Loss for Dense Object Detection [Computer Vision, 2018]",
 ];
