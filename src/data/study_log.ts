@@ -465,4 +465,5 @@ export const STUDY_LOG: string[] = [
   "BLIVA: A Simple Multimodal LLM for Better Handling of Text-Rich Visual Questions [NLP, 2024]",
   "Reinforced Self-Training (ReST) for Language Modeling [NLP, 2023]",
   "FinGPT: Open-Source Financial Large Language Models [NLP, 2023]",
+  "Video-LLaMA: An Instruction-tuned Audio-Visual Language Model for Video Understanding [Multimodal, 2023]",
 ];
