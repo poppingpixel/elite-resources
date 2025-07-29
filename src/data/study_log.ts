@@ -464,4 +464,5 @@ export const STUDY_LOG: string[] = [
   "Enriching Word Vectors with Subword Information [NLP, 2017]",
   "BLIVA: A Simple Multimodal LLM for Better Handling of Text-Rich Visual Questions [NLP, 2024]",
   "Reinforced Self-Training (ReST) for Language Modeling [NLP, 2023]",
+  "FinGPT: Open-Source Financial Large Language Models [NLP, 2023]",
 ];
