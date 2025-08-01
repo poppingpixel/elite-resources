@@ -479,4 +479,5 @@ export const STUDY_LOG: string[] = [
   "Beyond Accuracy: Behavioral Testing of NLP models with CheckList [NLP, 2020]",
   "DHEN: A Deep and Hierarchical Ensemble Network for Large-Scale Click-Through Rate Prediction [RecSys, 2022]",
   "GPT4All: An Ecosystem of Open Source Compressed Language Models [NLP, 2023]",
+  "The No Free Lunch Theorem, Kolmogorov Complexity, and the Role of Inductive Biases in Machine Learning [Core ML, 2023]",
 ];
