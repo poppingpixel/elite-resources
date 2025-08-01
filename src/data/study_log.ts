@@ -467,4 +467,5 @@ export const STUDY_LOG: string[] = [
   "FinGPT: Open-Source Financial Large Language Models [NLP, 2023]",
   "Video-LLaMA: An Instruction-tuned Audio-Visual Language Model for Video Understanding [Multimodal, 2023]",
   "ICDPO: Effectively Borrowing Alignment Capability of Others via In-context Direct Preference Optimization [NLP, 2024]",
+  "Lost in the Middle: How Language Models Use Long Contexts [NLP, 2023]",
 ];
