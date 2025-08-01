@@ -477,4 +477,5 @@ export const STUDY_LOG: string[] = [
   "The Curse of Recursion: Training on Generated Data Makes Models Forget [NLP, 2023]",
   "Gemma: Open Models Based on Gemini Research and Technology [NLP, 2024]",
   "Beyond Accuracy: Behavioral Testing of NLP models with CheckList [NLP, 2020]",
+  "DHEN: A Deep and Hierarchical Ensemble Network for Large-Scale Click-Through Rate Prediction [RecSys, 2022]",
 ];
