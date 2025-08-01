@@ -475,4 +475,5 @@ export const STUDY_LOG: string[] = [
   "Just Ask for Calibration: Strategies for Eliciting Calibrated Confidence Scores from Language Models Fine-Tuned with Human Feedback [NLP, 2023]",
   "Semantic Image Synthesis with Spatially-Adaptive Normalization [Computer Vision, 2019]",
   "The Curse of Recursion: Training on Generated Data Makes Models Forget [NLP, 2023]",
+  "Gemma: Open Models Based on Gemini Research and Technology [NLP, 2024]",
 ];
