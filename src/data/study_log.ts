@@ -470,4 +470,5 @@ export const STUDY_LOG: string[] = [
   "Lost in the Middle: How Language Models Use Long Contexts [NLP, 2023]",
   "Textless Speech Emotion Conversion using Discrete and Decomposed Representations [Speech, 2022]",
   "Learning Phrase Representations using RNN Encoder–Decoder for Statistical Machine Translation [NLP, 2014]",
+  "How faithful are RAG models? Quantifying the tug-of-war between RAG and LLMs’ internal prior [NLP, 2024]",
 ];
