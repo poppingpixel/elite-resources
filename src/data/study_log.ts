@@ -473,4 +473,5 @@ export const STUDY_LOG: string[] = [
   "How faithful are RAG models? Quantifying the tug-of-war between RAG and LLMs’ internal prior [NLP, 2024]",
   "SpanBERT: Improving Pre-training by Representing and Predicting Spans [NLP, 2020]",
   "Just Ask for Calibration: Strategies for Eliciting Calibrated Confidence Scores from Language Models Fine-Tuned with Human Feedback [NLP, 2023]",
+  "Semantic Image Synthesis with Spatially-Adaptive Normalization [Computer Vision, 2019]",
 ];
