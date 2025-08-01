@@ -478,4 +478,5 @@ export const STUDY_LOG: string[] = [
   "Gemma: Open Models Based on Gemini Research and Technology [NLP, 2024]",
   "Beyond Accuracy: Behavioral Testing of NLP models with CheckList [NLP, 2020]",
   "DHEN: A Deep and Hierarchical Ensemble Network for Large-Scale Click-Through Rate Prediction [RecSys, 2022]",
+  "GPT4All: An Ecosystem of Open Source Compressed Language Models [NLP, 2023]",
 ];
