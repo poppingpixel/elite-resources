@@ -469,4 +469,5 @@ export const STUDY_LOG: string[] = [
   "ICDPO: Effectively Borrowing Alignment Capability of Others via In-context Direct Preference Optimization [NLP, 2024]",
   "Lost in the Middle: How Language Models Use Long Contexts [NLP, 2023]",
   "Textless Speech Emotion Conversion using Discrete and Decomposed Representations [Speech, 2022]",
+  "Learning Phrase Representations using RNN Encoder–Decoder for Statistical Machine Translation [NLP, 2014]",
 ];
