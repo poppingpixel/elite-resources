@@ -472,4 +472,5 @@ export const STUDY_LOG: string[] = [
   "Learning Phrase Representations using RNN Encoder–Decoder for Statistical Machine Translation [NLP, 2014]",
   "How faithful are RAG models? Quantifying the tug-of-war between RAG and LLMs’ internal prior [NLP, 2024]",
   "SpanBERT: Improving Pre-training by Representing and Predicting Spans [NLP, 2020]",
+  "Just Ask for Calibration: Strategies for Eliciting Calibrated Confidence Scores from Language Models Fine-Tuned with Human Feedback [NLP, 2023]",
 ];
