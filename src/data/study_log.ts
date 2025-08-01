@@ -471,4 +471,5 @@ export const STUDY_LOG: string[] = [
   "Textless Speech Emotion Conversion using Discrete and Decomposed Representations [Speech, 2022]",
   "Learning Phrase Representations using RNN Encoder–Decoder for Statistical Machine Translation [NLP, 2014]",
   "How faithful are RAG models? Quantifying the tug-of-war between RAG and LLMs’ internal prior [NLP, 2024]",
+  "SpanBERT: Improving Pre-training by Representing and Predicting Spans [NLP, 2020]",
 ];
