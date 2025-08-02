@@ -481,4 +481,5 @@ export const STUDY_LOG: string[] = [
   "GPT4All: An Ecosystem of Open Source Compressed Language Models [NLP, 2023]",
   "The No Free Lunch Theorem, Kolmogorov Complexity, and the Role of Inductive Biases in Machine Learning [Core ML, 2023]",
   "A Simple and Effective Pruning Approach for Large Language Models [NLP, 2023]",
+  "Universal Language Model Fine-tuning for Text Classification [NLP, 2018]",
 ];
