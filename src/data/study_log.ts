@@ -482,4 +482,5 @@ export const STUDY_LOG: string[] = [
   "The No Free Lunch Theorem, Kolmogorov Complexity, and the Role of Inductive Biases in Machine Learning [Core ML, 2023]",
   "A Simple and Effective Pruning Approach for Large Language Models [NLP, 2023]",
   "Universal Language Model Fine-tuning for Text Classification [NLP, 2018]",
+  "Promptbreeder: Self-Referential Self-Improvement Via Prompt Evolution [NLP, 2023]",
 ];
