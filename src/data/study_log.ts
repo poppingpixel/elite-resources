@@ -484,4 +484,5 @@ export const STUDY_LOG: string[] = [
   "Universal Language Model Fine-tuning for Text Classification [NLP, 2018]",
   "Promptbreeder: Self-Referential Self-Improvement Via Prompt Evolution [NLP, 2023]",
   "ZeRO: Memory Optimizations Toward Training Trillion Parameter Models [Core ML, 2020]",
+  "DeCLUTR: Deep Contrastive Learning for Unsupervised Textual Representations [NLP, 2021]",
 ];
