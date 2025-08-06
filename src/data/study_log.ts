@@ -487,4 +487,5 @@ export const STUDY_LOG: string[] = [
   "DeCLUTR: Deep Contrastive Learning for Unsupervised Textual Representations [NLP, 2021]",
   "Perceiver: General Perception with Iterative Attention [Multimodal, 2021]",
   "Bootstrap your own latent: A new approach to self-supervised Learning [Computer Vision, 2020]",
+  "Faster sorting algorithms discovered using deep reinforcement learning [RL, 2023]",
 ];
