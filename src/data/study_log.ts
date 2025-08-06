@@ -483,4 +483,5 @@ export const STUDY_LOG: string[] = [
   "A Simple and Effective Pruning Approach for Large Language Models [NLP, 2023]",
   "Universal Language Model Fine-tuning for Text Classification [NLP, 2018]",
   "Promptbreeder: Self-Referential Self-Improvement Via Prompt Evolution [NLP, 2023]",
+  "ZeRO: Memory Optimizations Toward Training Trillion Parameter Models [Core ML, 2020]",
 ];
