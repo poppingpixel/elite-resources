@@ -486,4 +486,5 @@ export const STUDY_LOG: string[] = [
   "ZeRO: Memory Optimizations Toward Training Trillion Parameter Models [Core ML, 2020]",
   "DeCLUTR: Deep Contrastive Learning for Unsupervised Textual Representations [NLP, 2021]",
   "Perceiver: General Perception with Iterative Attention [Multimodal, 2021]",
+  "Bootstrap your own latent: A new approach to self-supervised Learning [Computer Vision, 2020]",
 ];
