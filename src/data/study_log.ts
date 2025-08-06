@@ -488,4 +488,5 @@ export const STUDY_LOG: string[] = [
   "Perceiver: General Perception with Iterative Attention [Multimodal, 2021]",
   "Bootstrap your own latent: A new approach to self-supervised Learning [Computer Vision, 2020]",
   "Faster sorting algorithms discovered using deep reinforcement learning [RL, 2023]",
+  "BW-EDA-EEND: Streaming End-to-end Neural Speaker Diarization for a Variable Number of Speakers [Speech, 2021]",
 ];
