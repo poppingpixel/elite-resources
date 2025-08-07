@@ -493,4 +493,5 @@ export const STUDY_LOG: string[] = [
   "FaceNet: A Unified Embedding for Face Recognition and Clustering [Computer Vision, 2015]",
   "Approximate Nearest Neighbor Negative Contrastive Learning for Dense Text Retrieval [NLP, 2020]",
   "ReST-MCTS\(^{*}\): LLM Self-Training via Process Reward Guided Tree Search [NLP, 2024]",
+  "Towards Generalist Biomedical AI [Multimodal, 2023]",
 ];
