@@ -495,4 +495,5 @@ export const STUDY_LOG: string[] = [
   "ReST-MCTS\(^{*}\): LLM Self-Training via Process Reward Guided Tree Search [NLP, 2024]",
   "Towards Generalist Biomedical AI [Multimodal, 2023]",
   "LLM360: Towards Fully Transparent Open-Source LLMs [NLP, 2023]",
+  "Surgical Fine-Tuning Improves Adaptation to Distribution Shifts [Core ML, 2023]",
 ];
