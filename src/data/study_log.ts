@@ -494,4 +494,5 @@ export const STUDY_LOG: string[] = [
   "Approximate Nearest Neighbor Negative Contrastive Learning for Dense Text Retrieval [NLP, 2020]",
   "ReST-MCTS\(^{*}\): LLM Self-Training via Process Reward Guided Tree Search [NLP, 2024]",
   "Towards Generalist Biomedical AI [Multimodal, 2023]",
+  "LLM360: Towards Fully Transparent Open-Source LLMs [NLP, 2023]",
 ];
