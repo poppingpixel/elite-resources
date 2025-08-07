@@ -491,4 +491,5 @@ export const STUDY_LOG: string[] = [
   "BW-EDA-EEND: Streaming End-to-end Neural Speaker Diarization for a Variable Number of Speakers [Speech, 2021]",
   "SDXL: Improving Latent Diffusion Models for High-Resolution Image Synthesis [Multimodal, 2023]",
   "FaceNet: A Unified Embedding for Face Recognition and Clustering [Computer Vision, 2015]",
+  "Approximate Nearest Neighbor Negative Contrastive Learning for Dense Text Retrieval [NLP, 2020]",
 ];
