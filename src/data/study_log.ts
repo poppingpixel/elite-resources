@@ -498,4 +498,5 @@ export const STUDY_LOG: string[] = [
   "Surgical Fine-Tuning Improves Adaptation to Distribution Shifts [Core ML, 2023]",
   "Transformer models: an introduction and catalog [NLP, 2023]",
   "The RefinedWeb Dataset for Falcon LLM: Outperforming Curated Corpora with Web Data, and Web Data Only [NLP, 2023]",
+  "RescoreBERT: Discriminative Speech Recognition Rescoring with BERT [NLP, 2022]",
 ];
