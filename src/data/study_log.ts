@@ -496,4 +496,5 @@ export const STUDY_LOG: string[] = [
   "Towards Generalist Biomedical AI [Multimodal, 2023]",
   "LLM360: Towards Fully Transparent Open-Source LLMs [NLP, 2023]",
   "Surgical Fine-Tuning Improves Adaptation to Distribution Shifts [Core ML, 2023]",
+  "Transformer models: an introduction and catalog [NLP, 2023]",
 ];
