@@ -497,4 +497,5 @@ export const STUDY_LOG: string[] = [
   "LLM360: Towards Fully Transparent Open-Source LLMs [NLP, 2023]",
   "Surgical Fine-Tuning Improves Adaptation to Distribution Shifts [Core ML, 2023]",
   "Transformer models: an introduction and catalog [NLP, 2023]",
+  "The RefinedWeb Dataset for Falcon LLM: Outperforming Curated Corpora with Web Data, and Web Data Only [NLP, 2023]",
 ];
