@@ -503,4 +503,5 @@ export const STUDY_LOG: string[] = [
   "PubTables-1M: Towards Comprehensive Table Extraction from Unstructured Documents [Multimodal, 2022]",
   "Mass-Editing Memory in a Transformer [NLP, 2023]",
   "SPAFIT: Stratified Progressive Adaptation Fine-tuning for Pre-trained Large Language Models [NLP, 2024]",
+  "Cross-lingual Language Model Pretraining [NLP, 2019]",
 ];
