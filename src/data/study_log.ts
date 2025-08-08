@@ -509,4 +509,5 @@ export const STUDY_LOG: string[] = [
   "Adversarial Attacks on GPT-4 via Simple Random Search [NLP, 2023]",
   "Designing Network Design Spaces [Computer Vision, 2020]",
   "ChipNeMo: Domain-Adapted LLMs for Chip Design [NLP, 2023]",
+  "Generative Adversarial Networks [Computer Vision, 2014]",
 ];
