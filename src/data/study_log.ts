@@ -506,4 +506,5 @@ export const STUDY_LOG: string[] = [
   "Cross-lingual Language Model Pretraining [NLP, 2019]",
   "GLIDE: Towards Photorealistic Image Generation and Editing with Text-Guided Diffusion Models [Computer Vision, 2021]",
   "Jina Embeddings: A Novel Set of High-Performance Sentence Embedding Models [NLP, 2023]",
+  "Adversarial Attacks on GPT-4 via Simple Random Search [NLP, 2023]",
 ];
