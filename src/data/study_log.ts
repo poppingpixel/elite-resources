@@ -505,4 +505,5 @@ export const STUDY_LOG: string[] = [
   "SPAFIT: Stratified Progressive Adaptation Fine-tuning for Pre-trained Large Language Models [NLP, 2024]",
   "Cross-lingual Language Model Pretraining [NLP, 2019]",
   "GLIDE: Towards Photorealistic Image Generation and Editing with Text-Guided Diffusion Models [Computer Vision, 2021]",
+  "Jina Embeddings: A Novel Set of High-Performance Sentence Embedding Models [NLP, 2023]",
 ];
