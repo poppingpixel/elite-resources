@@ -501,4 +501,5 @@ export const STUDY_LOG: string[] = [
   "RescoreBERT: Discriminative Speech Recognition Rescoring with BERT [NLP, 2022]",
   "Generating Text with Recurrent Neural Networks [NLP, 2011]",
   "PubTables-1M: Towards Comprehensive Table Extraction from Unstructured Documents [Multimodal, 2022]",
+  "Mass-Editing Memory in a Transformer [NLP, 2023]",
 ];
