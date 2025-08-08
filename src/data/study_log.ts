@@ -500,4 +500,5 @@ export const STUDY_LOG: string[] = [
   "The RefinedWeb Dataset for Falcon LLM: Outperforming Curated Corpora with Web Data, and Web Data Only [NLP, 2023]",
   "RescoreBERT: Discriminative Speech Recognition Rescoring with BERT [NLP, 2022]",
   "Generating Text with Recurrent Neural Networks [NLP, 2011]",
+  "PubTables-1M: Towards Comprehensive Table Extraction from Unstructured Documents [Multimodal, 2022]",
 ];
