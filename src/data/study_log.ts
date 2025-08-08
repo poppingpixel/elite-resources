@@ -508,4 +508,5 @@ export const STUDY_LOG: string[] = [
   "Jina Embeddings: A Novel Set of High-Performance Sentence Embedding Models [NLP, 2023]",
   "Adversarial Attacks on GPT-4 via Simple Random Search [NLP, 2023]",
   "Designing Network Design Spaces [Computer Vision, 2020]",
+  "ChipNeMo: Domain-Adapted LLMs for Chip Design [NLP, 2023]",
 ];
