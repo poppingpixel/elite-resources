@@ -512,4 +512,5 @@ export const STUDY_LOG: string[] = [
   "Generative Adversarial Networks [Computer Vision, 2014]",
   "ColBERT: Efficient and Effective Passage Search via Contextualized Late Interaction over BERT [NLP, 2020]",
   "ChatDev: Communicative Agents for Software Development [NLP, 2025]",
+  "PaSS: Parallel Speculative Sampling [NLP, 2023]",
 ];
