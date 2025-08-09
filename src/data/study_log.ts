@@ -510,4 +510,5 @@ export const STUDY_LOG: string[] = [
   "Designing Network Design Spaces [Computer Vision, 2020]",
   "ChipNeMo: Domain-Adapted LLMs for Chip Design [NLP, 2023]",
   "Generative Adversarial Networks [Computer Vision, 2014]",
+  "ColBERT: Efficient and Effective Passage Search via Contextualized Late Interaction over BERT [NLP, 2020]",
 ];
