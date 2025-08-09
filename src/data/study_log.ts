@@ -511,4 +511,5 @@ export const STUDY_LOG: string[] = [
   "ChipNeMo: Domain-Adapted LLMs for Chip Design [NLP, 2023]",
   "Generative Adversarial Networks [Computer Vision, 2014]",
   "ColBERT: Efficient and Effective Passage Search via Contextualized Late Interaction over BERT [NLP, 2020]",
+  "ChatDev: Communicative Agents for Software Development [NLP, 2025]",
 ];
