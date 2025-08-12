@@ -513,4 +513,5 @@ export const STUDY_LOG: string[] = [
   "ColBERT: Efficient and Effective Passage Search via Contextualized Late Interaction over BERT [NLP, 2020]",
   "ChatDev: Communicative Agents for Software Development [NLP, 2025]",
   "PaSS: Parallel Speculative Sampling [NLP, 2023]",
+  "Efficient Transformers: A Survey [NLP, 2020]",
 ];
