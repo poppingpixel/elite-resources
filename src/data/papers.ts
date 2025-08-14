@@ -510,6 +510,258 @@ export const ALL_PAPERS: Record<string, Paper[]> = {
             "category": "Seminal Papers / Need-to-know",
             "domain": "Computer Vision",
             "year": "2023"
+        },
+        {
+            "title": "Rethinking FID: Towards a Better Evaluation Metric for Image Generation",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "Computer Vision",
+            "year": "2023"
+        },
+        {
+            "title": "Patch n\u2019 Pack: NaViT, a Vision Transformer for any Aspect Ratio and Resolution",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "Computer Vision",
+            "year": "2023"
+        },
+        {
+            "title": "Vision as LoRA",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "Computer Vision",
+            "year": "2025"
+        },
+        {
+            "title": "DINOv3",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "Computer Vision",
+            "year": "2025"
+        },
+        {
+            "title": "Learning Deep Features for Discriminative Localization",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "Computer Vision",
+            "year": "2015"
+        },
+        {
+            "title": "Understanding the Effective Receptive Field in Deep Convolutional Neural Networks",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "Computer Vision",
+            "year": "2016"
+        },
+        {
+            "title": "Quo Vadis, Action Recognition? A New Model and the Kinetics Dataset",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "Computer Vision",
+            "year": "2017"
+        },
+        {
+            "title": "Densely Connected Convolutional Networks",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "Computer Vision",
+            "year": "2017"
+        },
+        {
+            "title": "Neural Discrete Representation Learning",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "Computer Vision",
+            "year": "2018"
+        },
+        {
+            "title": "EfficientNet: Rethinking Model Scaling for Convolutional Neural Networks",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "Computer Vision",
+            "year": "2019"
+        },
+        {
+            "title": "Taming Transformers for High-Resolution Image Synthesis",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "Computer Vision",
+            "year": "2020"
+        },
+        {
+            "title": "Self-training with Noisy Student improves ImageNet classification",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "Computer Vision",
+            "year": "2020"
+        },
+        {
+            "title": "Big Transfer (BiT): General Visual Representation Learning",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "Computer Vision",
+            "year": "2020"
+        },
+        {
+            "title": "Multi-modal Dense Video Captioning",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "Computer Vision",
+            "year": "2020"
+        },
+        {
+            "title": "Efficient Saliency Maps for Explainable AI",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "Computer Vision",
+            "year": "2020"
+        },
+        {
+            "title": "Finetuning Pretrained Transformers into RNNs",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "Computer Vision",
+            "year": "2021"
+        },
+        {
+            "title": "VATT: Transformers for Multimodal Self-Supervised Learning from Raw Video, Audio and Text",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "Computer Vision",
+            "year": "2021"
+        },
+        {
+            "title": "Self-supervised learning for fast and scalable time series hyper-parameter tuning",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "Computer Vision",
+            "year": "2021"
+        },
+        {
+            "title": "Accelerating SLIDE Deep Learning on Modern CPUs: Vectorization, Quantizations, Memory Optimizations, and More",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "Computer Vision",
+            "year": "2021"
+        },
+        {
+            "title": "Emerging Properties in Self-Supervised Vision Transformers",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "Computer Vision",
+            "year": "2021"
+        },
+        {
+            "title": "Semi-Supervised Learning of Visual Features by Non-Parametrically Predicting View Assignments with Support Samples",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "Computer Vision",
+            "year": "2021"
+        },
+        {
+            "title": "Enhancing Photorealism Enhancement",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "Computer Vision",
+            "year": "2021"
+        },
+        {
+            "title": "FNet: Mixing Tokens with Fourier Transforms",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "Computer Vision",
+            "year": "2021"
+        },
+        {
+            "title": "Are Convolutional Neural Networks or Transformers more like human vision?",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "Computer Vision",
+            "year": "2021"
+        },
+        {
+            "title": "RegNet: Self-Regulated Network for Image Classification",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "Computer Vision",
+            "year": "2021"
+        },
+        {
+            "title": "Lossy Compression for Lossless Prediction",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "Computer Vision",
+            "year": "2021"
+        },
+        {
+            "title": "YOLOv6: A Single-Stage Object Detection Framework for Industrial Applications",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "Computer Vision",
+            "year": "2022"
+        },
+        {
+            "title": "Your Diffusion Model is Secretly a Zero-Shot Classifier",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "Computer Vision",
+            "year": "2023"
+        },
+        {
+            "title": "DINOv2: Learning Robust Visual Features without Supervision",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "Computer Vision",
+            "year": "2023"
+        },
+        {
+            "title": "Consistency Models",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "Computer Vision",
+            "year": "2023"
+        },
+        {
+            "title": "Drag Your GAN: Interactive Point-based Manipulation on the Generative Image Manifold",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "Computer Vision",
+            "year": "2023"
+        },
+        {
+            "title": "ZipIt! Merging Models from Different Tasks without Training",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "Computer Vision",
+            "year": "2023"
+        },
+        {
+            "title": "Self-Consuming Generative Models Go MAD",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "Computer Vision",
+            "year": "2023"
+        },
+        {
+            "title": "Substance or Style: What Does Your Image Embedding Know?",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "Computer Vision",
+            "year": "2023"
+        },
+        {
+            "title": "Scaling Vision Transformers to 22 Billion Parameters",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "Computer Vision",
+            "year": "2023"
+        },
+        {
+            "title": "CLIP-Dissect: Automatic Description of Neuron Representations in Deep Vision Networks",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "Computer Vision",
+            "year": "2023"
+        },
+        {
+            "title": "On the Impact of Knowledge Distillation for Model Interpretability",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "Computer Vision",
+            "year": "2023"
+        },
+        {
+            "title": "Replacing Softmax with ReLU in Vision Transformers",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "Computer Vision",
+            "year": "2023"
+        },
+        {
+            "title": "Learning Vision from Models Rivals Learning Vision from Data",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "Computer Vision",
+            "year": "2023"
+        },
+        {
+            "title": "TUTEL: Adaptive Mixture-of-Experts at Scale",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "Computer Vision",
+            "year": "2023"
+        },
+        {
+            "title": "Stable Video Diffusion: Scaling Latent Video Diffusion Models to Large Datasets",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "Computer Vision",
+            "year": "2024"
+        },
+        {
+            "title": "Scalable Diffusion Models with State Space Backbone",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "Computer Vision",
+            "year": "2024"
         }
     ]
 };
