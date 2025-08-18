@@ -514,4 +514,5 @@ export const STUDY_LOG: string[] = [
   "ChatDev: Communicative Agents for Software Development [NLP, 2025]",
   "PaSS: Parallel Speculative Sampling [NLP, 2023]",
   "Efficient Transformers: A Survey [NLP, 2020]",
+  "WizardLM: Empowering Large Language Models to Follow Complex Instructions [NLP, 2023]",
 ];
