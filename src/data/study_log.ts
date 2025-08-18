@@ -515,4 +515,5 @@ export const STUDY_LOG: string[] = [
   "PaSS: Parallel Speculative Sampling [NLP, 2023]",
   "Efficient Transformers: A Survey [NLP, 2020]",
   "WizardLM: Empowering Large Language Models to Follow Complex Instructions [NLP, 2023]",
+  "FCN: Fusing Exponential and Linear Cross Network for Click-Through Rate Prediction [RecSys, 2025]",
 ];
