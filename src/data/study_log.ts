@@ -517,4 +517,5 @@ export const STUDY_LOG: string[] = [
   "WizardLM: Empowering Large Language Models to Follow Complex Instructions [NLP, 2023]",
   "FCN: Fusing Exponential and Linear Cross Network for Click-Through Rate Prediction [RecSys, 2025]",
   "InstructBLIP: Towards General-purpose Vision-Language Models with Instruction Tuning [Multimodal, 2023]",
+  "FlashAttention: Fast and Memory-Efficient Exact Attention with IO-Awareness [Core ML, 2022]",
 ];
