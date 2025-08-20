@@ -516,4 +516,5 @@ export const STUDY_LOG: string[] = [
   "Efficient Transformers: A Survey [NLP, 2020]",
   "WizardLM: Empowering Large Language Models to Follow Complex Instructions [NLP, 2023]",
   "FCN: Fusing Exponential and Linear Cross Network for Click-Through Rate Prediction [RecSys, 2025]",
+  "InstructBLIP: Towards General-purpose Vision-Language Models with Instruction Tuning [Multimodal, 2023]",
 ];
