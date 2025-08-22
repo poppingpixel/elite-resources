@@ -763,5 +763,247 @@ export const ALL_PAPERS: Record<string, Paper[]> = {
             "domain": "Computer Vision",
             "year": "2024"
         }
+    ],
+    "NLP": [
+        {
+            "title": "Long Short-Term Memory",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "NLP",
+            "year": "1997"
+        },
+        {
+            "title": "A Neural Probabilistic Language Model",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "NLP",
+            "year": "2003"
+        },
+        {
+            "title": "ROUGE: A Package for Automatic Evaluation of Summaries",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "NLP",
+            "year": "2004"
+        },
+        {
+            "title": "METEOR: An Automatic Metric for MT Evaluation with Improved Correlation with Human Judgments",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "NLP",
+            "year": "2005"
+        },
+        {
+            "title": "Recurrent neural network based language model",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "NLP",
+            "year": "2010"
+        },
+        {
+            "title": "Generating Text with Recurrent Neural Networks",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "NLP",
+            "year": "2011"
+        },
+        {
+            "title": "KenLM: Faster and Smaller Language Model Queries",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "NLP",
+            "year": "2011"
+        },
+        {
+            "title": "Efficient Estimation of Word Representations in Vector Space",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "NLP",
+            "year": "2013"
+        },
+        {
+            "title": "Distributed Representations of Words and Phrases and their Compositionality",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "NLP",
+            "year": "2013"
+        },
+        {
+            "title": "On the Properties of Neural Machine Translation: Encoder\u2013Decoder Approaches",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "NLP",
+            "year": "2014"
+        },
+        {
+            "title": "GloVe: Global Vectors for Word Representation",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "NLP",
+            "year": "2014"
+        },
+        {
+            "title": "Sequence to Sequence Learning with Neural Networks",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "NLP",
+            "year": "2014"
+        },
+        {
+            "title": "Learning Phrase Representations using RNN Encoder\u2013Decoder for Statistical Machine Translation",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "NLP",
+            "year": "2014"
+        },
+        {
+            "title": "Neural Machine Translation by Jointly Learning to Align and Translate",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "NLP",
+            "year": "2015"
+        },
+        {
+            "title": "Effective Approaches to Attention-based Neural Machine Translation",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "NLP",
+            "year": "2015"
+        },
+        {
+            "title": "Skip-Thought Vectors",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "NLP",
+            "year": "2015"
+        },
+        {
+            "title": "chrF: character n-gram F-score for automatic MT evaluation",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "NLP",
+            "year": "2015"
+        },
+        {
+            "title": "Google\u2019s Neural Machine Translation System: Bridging the Gap between Human and Machine Translation",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "NLP",
+            "year": "2016"
+        },
+        {
+            "title": "Neural machine translation of rare words with subword units",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "NLP",
+            "year": "2016"
+        },
+        {
+            "title": "HyperNetworks",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "NLP",
+            "year": "2016"
+        },
+        {
+            "title": "Man is to Computer Programmer as Woman is to Homemaker? Debiasing Word Embeddings",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "NLP",
+            "year": "2016"
+        },
+        {
+            "title": "Attention Is All You Need",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "NLP",
+            "year": "2017"
+        },
+        {
+            "title": "Outrageously Large Neural Networks: The Sparsely-Gated Mixture-of-Experts Layer",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "NLP",
+            "year": "2017"
+        },
+        {
+            "title": "Using the Output Embedding to Improve Language Models",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "NLP",
+            "year": "2017"
+        },
+        {
+            "title": "Enriching Word Vectors with Subword Information",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "NLP",
+            "year": "2017"
+        },
+        {
+            "title": "chrF++: Words Helping Character n-grams",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "NLP",
+            "year": "2017"
+        },
+        {
+            "title": "Deep contextualized word representations",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "NLP",
+            "year": "2018"
+        },
+        {
+            "title": "Improving Language Understanding by Generative Pre-Training",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "NLP",
+            "year": "2018"
+        },
+        {
+            "title": "SentencePiece: A simple and language independent subword tokenizer and detokenizer for Neural Text Processing",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "NLP",
+            "year": "2018"
+        },
+        {
+            "title": "Self-Attention with Relative Position Representations",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "NLP",
+            "year": "2018"
+        },
+        {
+            "title": "Blockwise Parallel Decoding for Deep Autoregressive Models",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "NLP",
+            "year": "2018"
+        },
+        {
+            "title": "Universal Language Model Fine-tuning for Text Classification",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "NLP",
+            "year": "2018"
+        },
+        {
+            "title": "Diverse Beam Search: Decoding Diverse Solutions from Neural Sequence Models",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "NLP",
+            "year": "2018"
+        },
+        {
+            "title": "MS MARCO: A Human Generated MAchine Reading COmprehension Dataset",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "NLP",
+            "year": "2018"
+        },
+        {
+            "title": "Gender Bias in Coreference Resolution: Evaluation and Debiasing Methods",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "NLP",
+            "year": "2018"
+        },
+        {
+            "title": "BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "NLP",
+            "year": "2019"
+        },
+        {
+            "title": "RoBERTa: A Robustly Optimized BERT Pretraining Approach",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "NLP",
+            "year": "2019"
+        },
+        {
+            "title": "BART: Denoising Sequence-to-Sequence Pre-training for Natural Language Generation, Translation, and Comprehension",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "NLP",
+            "year": "2019"
+        },
+        {
+            "title": "DistilBERT, a distilled version of BERT: smaller, faster, cheaper and lighter",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "NLP",
+            "year": "2019"
+        },
+        {
+            "title": "Transformer-XL: Attentive Language Models Beyond a Fixed-Length Context",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "NLP",
+            "year": "2019"
+        }
     ]
 };
