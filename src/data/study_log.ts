@@ -518,4 +518,5 @@ export const STUDY_LOG: string[] = [
   "FCN: Fusing Exponential and Linear Cross Network for Click-Through Rate Prediction [RecSys, 2025]",
   "InstructBLIP: Towards General-purpose Vision-Language Models with Instruction Tuning [Multimodal, 2023]",
   "FlashAttention: Fast and Memory-Efficient Exact Attention with IO-Awareness [Core ML, 2022]",
+  "Joint ASR and Language Identification Using RNN-T: An Efficient Approach to Dynamic Language Switching [Speech, 2021]",
 ];
