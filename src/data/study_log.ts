@@ -520,4 +520,5 @@ export const STUDY_LOG: string[] = [
   "FlashAttention: Fast and Memory-Efficient Exact Attention with IO-Awareness [Core ML, 2022]",
   "Joint ASR and Language Identification Using RNN-T: An Efficient Approach to Dynamic Language Switching [Speech, 2021]",
   "Grounded Language-Image Pre-training (GLIP) [Multimodal, 2022]",
+  "\(\infty\)-former: Infinite Memory Transformer [NLP, 2022]",
 ];
