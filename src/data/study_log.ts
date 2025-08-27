@@ -525,4 +525,5 @@ export const STUDY_LOG: string[] = [
   "Fine-Tuning can Distort Pretrained Features and Underperform Out-of-Distribution [Core ML, 2022]",
   "CLAP: Learning Audio Concepts From Natural Language Supervision [Multimodal, 2022]",
   "Unsupervised Feature Learning via Non-Parametric Instance Discrimination [Computer Vision, 2018]",
+  "Leveraging Multilingual Neural Language Models for On-Device Natural Language Understanding [Speech, 2021]",
 ];
