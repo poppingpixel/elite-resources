@@ -521,4 +521,5 @@ export const STUDY_LOG: string[] = [
   "Joint ASR and Language Identification Using RNN-T: An Efficient Approach to Dynamic Language Switching [Speech, 2021]",
   "Grounded Language-Image Pre-training (GLIP) [Multimodal, 2022]",
   "\(\infty\)-former: Infinite Memory Transformer [NLP, 2022]",
+  "Skill-it! A Data-Driven Skills Framework for Understanding and Training Language Models [NLP, 2023]",
 ];
