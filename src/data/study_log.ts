@@ -524,4 +524,5 @@ export const STUDY_LOG: string[] = [
   "Skill-it! A Data-Driven Skills Framework for Understanding and Training Language Models [NLP, 2023]",
   "Fine-Tuning can Distort Pretrained Features and Underperform Out-of-Distribution [Core ML, 2022]",
   "CLAP: Learning Audio Concepts From Natural Language Supervision [Multimodal, 2022]",
+  "Unsupervised Feature Learning via Non-Parametric Instance Discrimination [Computer Vision, 2018]",
 ];
