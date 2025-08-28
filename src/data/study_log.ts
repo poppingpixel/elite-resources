@@ -531,4 +531,5 @@ export const STUDY_LOG: string[] = [
   "QLoRA: Efficient Finetuning of Quantized LLMs [NLP, 2023]",
   "Improving Retrieval-Augmented Large Language Models via Data Importance Learning [NLP, 2023]",
   "An In-depth Look at Gemini’s Language Abilities [NLP, 2023]",
+  "Connectionist Temporal Classification: Labelling Unsegmented Sequence Data with Recurrent Neural Networks [Speech, 2006]",
 ];
