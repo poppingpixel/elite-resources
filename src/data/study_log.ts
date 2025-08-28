@@ -529,4 +529,5 @@ export const STUDY_LOG: string[] = [
   "Show Your Work: Scratchpads for Intermediate Computation with Language Models [NLP, 2023]",
   "Self-training with Noisy Student improves ImageNet classification [Computer Vision, 2020]",
   "QLoRA: Efficient Finetuning of Quantized LLMs [NLP, 2023]",
+  "Improving Retrieval-Augmented Large Language Models via Data Importance Learning [NLP, 2023]",
 ];
