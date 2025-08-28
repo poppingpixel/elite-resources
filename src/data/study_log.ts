@@ -528,4 +528,5 @@ export const STUDY_LOG: string[] = [
   "Leveraging Multilingual Neural Language Models for On-Device Natural Language Understanding [Speech, 2021]",
   "Show Your Work: Scratchpads for Intermediate Computation with Language Models [NLP, 2023]",
   "Self-training with Noisy Student improves ImageNet classification [Computer Vision, 2020]",
+  "QLoRA: Efficient Finetuning of Quantized LLMs [NLP, 2023]",
 ];
