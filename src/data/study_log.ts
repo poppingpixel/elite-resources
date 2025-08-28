@@ -530,4 +530,5 @@ export const STUDY_LOG: string[] = [
   "Self-training with Noisy Student improves ImageNet classification [Computer Vision, 2020]",
   "QLoRA: Efficient Finetuning of Quantized LLMs [NLP, 2023]",
   "Improving Retrieval-Augmented Large Language Models via Data Importance Learning [NLP, 2023]",
+  "An In-depth Look at Gemini’s Language Abilities [NLP, 2023]",
 ];
