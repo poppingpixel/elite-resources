@@ -527,4 +527,5 @@ export const STUDY_LOG: string[] = [
   "Unsupervised Feature Learning via Non-Parametric Instance Discrimination [Computer Vision, 2018]",
   "Leveraging Multilingual Neural Language Models for On-Device Natural Language Understanding [Speech, 2021]",
   "Show Your Work: Scratchpads for Intermediate Computation with Language Models [NLP, 2023]",
+  "Self-training with Noisy Student improves ImageNet classification [Computer Vision, 2020]",
 ];
