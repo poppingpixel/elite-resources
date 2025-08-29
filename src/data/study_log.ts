@@ -536,4 +536,5 @@ export const STUDY_LOG: string[] = [
   "Nash Learning from Human Feedback [NLP, 2023]",
   "ArcFace: Additive Angular Margin Loss for Deep Face Recognition [Computer Vision, 2021]",
   "Scalable-Softmax Is Superior for Attention [NLP, 2023]",
+  "LLM in a Flash: Efficient Large Language Model Inference with Limited Memory [NLP, 2023]",
 ];
