@@ -537,4 +537,5 @@ export const STUDY_LOG: string[] = [
   "ArcFace: Additive Angular Margin Loss for Deep Face Recognition [Computer Vision, 2021]",
   "Scalable-Softmax Is Superior for Attention [NLP, 2023]",
   "LLM in a Flash: Efficient Large Language Model Inference with Limited Memory [NLP, 2023]",
+  "Beyond Human Data: Scaling Self-Training for Problem-Solving with Language Models [NLP, 2023]",
 ];
