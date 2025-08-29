@@ -535,4 +535,5 @@ export const STUDY_LOG: string[] = [
   "LLM2Vec: Large Language Models Are Secretly Powerful Text Encoders [NLP, 2024]",
   "Nash Learning from Human Feedback [NLP, 2023]",
   "ArcFace: Additive Angular Margin Loss for Deep Face Recognition [Computer Vision, 2021]",
+  "Scalable-Softmax Is Superior for Attention [NLP, 2023]",
 ];
