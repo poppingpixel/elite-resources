@@ -538,4 +538,5 @@ export const STUDY_LOG: string[] = [
   "Scalable-Softmax Is Superior for Attention [NLP, 2023]",
   "LLM in a Flash: Efficient Large Language Model Inference with Limited Memory [NLP, 2023]",
   "Beyond Human Data: Scaling Self-Training for Problem-Solving with Language Models [NLP, 2023]",
+  "VATT: Transformers for Multimodal Self-Supervised Learning from Raw Video, Audio and Text [Computer Vision, 2021]",
 ];
