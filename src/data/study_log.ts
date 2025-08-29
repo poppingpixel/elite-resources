@@ -534,4 +534,5 @@ export const STUDY_LOG: string[] = [
   "Connectionist Temporal Classification: Labelling Unsegmented Sequence Data with Recurrent Neural Networks [Speech, 2006]",
   "LLM2Vec: Large Language Models Are Secretly Powerful Text Encoders [NLP, 2024]",
   "Nash Learning from Human Feedback [NLP, 2023]",
+  "ArcFace: Additive Angular Margin Loss for Deep Face Recognition [Computer Vision, 2021]",
 ];
