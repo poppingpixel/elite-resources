@@ -1004,6 +1004,246 @@ export const ALL_PAPERS: Record<string, Paper[]> = {
             "category": "Seminal Papers / Need-to-know",
             "domain": "NLP",
             "year": "2019"
+        },
+        {
+            "title": "XLNet: Generalized Autoregressive Pretraining for Language Understanding",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "NLP",
+            "year": "2019"
+        },
+        {
+            "title": "Adaptive Input Representations for Neural Language Modeling",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "NLP",
+            "year": "2019"
+        },
+        {
+            "title": "Attention Interpretability Across NLP Tasks",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "NLP",
+            "year": "2019"
+        },
+        {
+            "title": "Grad-CAM: Visual Explanations from Deep Networks via Gradient-based Localization",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "NLP",
+            "year": "2019"
+        },
+        {
+            "title": "Massively Multilingual Sentence Embeddings for Zero-Shot Cross-Lingual Transfer and Beyond",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "NLP",
+            "year": "2019"
+        },
+        {
+            "title": "GLUE: A Multi-Task Benchmark and Analysis Platform for Natural Language Understanding",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "NLP",
+            "year": "2019"
+        },
+        {
+            "title": "Parameter-Efficient Transfer Learning for NLP",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "NLP",
+            "year": "2019"
+        },
+        {
+            "title": "Cross-lingual Language Model Pretraining",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "NLP",
+            "year": "2019"
+        },
+        {
+            "title": "MoverScore: Text Generation Evaluating with Contextualized Embeddings and Earth Mover Distance",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "NLP",
+            "year": "2019"
+        },
+        {
+            "title": "Neural Oblivious Decision Ensembles for Deep Learning on Tabular Data",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "NLP",
+            "year": "2019"
+        },
+        {
+            "title": "Latent Retrieval for Weakly Supervised Open Domain Question Answering",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "NLP",
+            "year": "2019"
+        },
+        {
+            "title": "Multi-Stage Document Ranking with BERT",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "NLP",
+            "year": "2019"
+        },
+        {
+            "title": "Modeling Task Relationships in Multi-task Learning with Multi-gate Mixture-of-Experts",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "NLP",
+            "year": "2019"
+        },
+        {
+            "title": "Synthetic QA Corpora Generation with Roundtrip Consistency",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "NLP",
+            "year": "2019"
+        },
+        {
+            "title": "Towards VQA Models That Can Read",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "NLP",
+            "year": "2019"
+        },
+        {
+            "title": "On the Measure of Intelligence",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "NLP",
+            "year": "2019"
+        },
+        {
+            "title": "Language Models are Few-Shot Learners",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "NLP",
+            "year": "2020"
+        },
+        {
+            "title": "Longformer: The Long-Document Transformer",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "NLP",
+            "year": "2020"
+        },
+        {
+            "title": "Big Bird: Transformers for Longer Sequences",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "NLP",
+            "year": "2020"
+        },
+        {
+            "title": "Beyond Accuracy: Behavioral Testing of NLP models with CheckList",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "NLP",
+            "year": "2020"
+        },
+        {
+            "title": "The Curious Case of Neural Text Degeneration",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "NLP",
+            "year": "2020"
+        },
+        {
+            "title": "ELECTRA: Pre-training Text Encoders as Discriminators Rather Than Generators",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "NLP",
+            "year": "2020"
+        },
+        {
+            "title": "TinyBERT: Distilling BERT for Natural Language Understanding",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "NLP",
+            "year": "2020"
+        },
+        {
+            "title": "MPNet: Masked and Permuted Pre-training for Language Understanding",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "NLP",
+            "year": "2020"
+        },
+        {
+            "title": "Exploring the Limits of Transfer Learning with a Unified Text-to-Text Transformer",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "NLP",
+            "year": "2020"
+        },
+        {
+            "title": "Scaling Laws for Neural Language Models",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "NLP",
+            "year": "2020"
+        },
+        {
+            "title": "Unsupervised Cross-lingual Representation Learning at Scale",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "NLP",
+            "year": "2020"
+        },
+        {
+            "title": "SpanBERT: Improving Pre-training by Representing and Predicting Spans",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "NLP",
+            "year": "2020"
+        },
+        {
+            "title": "Intrinsic Dimensionality Explains the Effectiveness of Language Model Fine-Tuning",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "NLP",
+            "year": "2020"
+        },
+        {
+            "title": "Approximate Nearest Neighbor Negative Contrastive Learning for Dense Text Retrieval",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "NLP",
+            "year": "2020"
+        },
+        {
+            "title": "Document Ranking with a Pretrained Sequence-to-Sequence Model",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "NLP",
+            "year": "2020"
+        },
+        {
+            "title": "ColBERT: Efficient and Effective Passage Search via Contextualized Late Interaction over BERT",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "NLP",
+            "year": "2020"
+        },
+        {
+            "title": "REALM: Retrieval-Augmented Language Model Pre-Training",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "NLP",
+            "year": "2020"
+        },
+        {
+            "title": "Linformer: Self-Attention with Linear Complexity",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "NLP",
+            "year": "2020"
+        },
+        {
+            "title": "BLEURT: Learning Robust Metrics for Text Generation",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "NLP",
+            "year": "2020"
+        },
+        {
+            "title": "Query-Key Normalization for Transformers",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "NLP",
+            "year": "2020"
+        },
+        {
+            "title": "Towards a Unified View of Parameter-Efficient Transfer Learning",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "NLP",
+            "year": "2021"
+        },
+        {
+            "title": "BinaryBERT: Pushing the Limit of BERT Quantization",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "NLP",
+            "year": "2021"
+        },
+        {
+            "title": "Towards Zero-Label Language Learning",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "NLP",
+            "year": "2021"
+        },
+        {
+            "title": "Improving Language Models by Retrieving from Trillions of Tokens",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "NLP",
+            "year": "2021"
         }
     ]
 };
