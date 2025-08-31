@@ -540,4 +540,5 @@ export const STUDY_LOG: string[] = [
   "Beyond Human Data: Scaling Self-Training for Problem-Solving with Language Models [NLP, 2023]",
   "VATT: Transformers for Multimodal Self-Supervised Learning from Raw Video, Audio and Text [Computer Vision, 2021]",
   "Visualizing and Understanding Convolutional Networks [Computer Vision, 2013]",
+  "Denoising Diffusion Implicit Models [Computer Vision, 2022]",
 ];
