@@ -542,4 +542,5 @@ export const STUDY_LOG: string[] = [
   "Visualizing and Understanding Convolutional Networks [Computer Vision, 2013]",
   "Denoising Diffusion Implicit Models [Computer Vision, 2022]",
   "Conditional Negative Sampling for Contrastive Learning of Visual Representations [Computer Vision, 2020]",
+  "AI Agent Traps [NLP, 2026]",
 ];
