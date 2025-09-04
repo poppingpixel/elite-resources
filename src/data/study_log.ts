@@ -543,4 +543,5 @@ export const STUDY_LOG: string[] = [
   "Denoising Diffusion Implicit Models [Computer Vision, 2022]",
   "Conditional Negative Sampling for Contrastive Learning of Visual Representations [Computer Vision, 2020]",
   "AI Agent Traps [NLP, 2026]",
+  "Efficient and robust approximate nearest neighbor search using Hierarchical Navigable Small World graphs [Core ML, 2016]",
 ];
