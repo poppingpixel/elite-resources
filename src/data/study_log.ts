@@ -544,4 +544,5 @@ export const STUDY_LOG: string[] = [
   "Conditional Negative Sampling for Contrastive Learning of Visual Representations [Computer Vision, 2020]",
   "AI Agent Traps [NLP, 2026]",
   "Efficient and robust approximate nearest neighbor search using Hierarchical Navigable Small World graphs [Core ML, 2016]",
+  "Less is More: Task-aware Layer-wise Distillation for Language Model Compression [NLP, 2023]",
 ];
