@@ -1244,6 +1244,246 @@ export const ALL_PAPERS: Record<string, Paper[]> = {
             "category": "Seminal Papers / Need-to-know",
             "domain": "NLP",
             "year": "2021"
+        },
+        {
+            "title": "WebGPT: Browser-assisted question-answering with human feedback",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "NLP",
+            "year": "2021"
+        },
+        {
+            "title": "The Power of Scale for Parameter-Efficient Prompt Tuning",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "NLP",
+            "year": "2021"
+        },
+        {
+            "title": "Prefix-Tuning: Optimizing Continuous Prompts for Generation",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "NLP",
+            "year": "2021"
+        },
+        {
+            "title": "LoRA: Low-Rank Adaptation of Large Language Models",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "NLP",
+            "year": "2021"
+        },
+        {
+            "title": "Prompt Programming for Large Language Models: Beyond the Few-Shot Paradigm",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "NLP",
+            "year": "2021"
+        },
+        {
+            "title": "Muppet: Massive Multi-task Representations with Pre-Finetuning",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "NLP",
+            "year": "2021"
+        },
+        {
+            "title": "Synthesizer: Rethinking Self-Attention in Transformer Models",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "NLP",
+            "year": "2021"
+        },
+        {
+            "title": "CodeT5: Identifier-aware Unified Pre-trained Encoder-Decoder Models for Code Understanding and Generation",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "NLP",
+            "year": "2021"
+        },
+        {
+            "title": "Extracting Training Data from Large Language Models",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "NLP",
+            "year": "2021"
+        },
+        {
+            "title": "Large Dual Encoders Are Generalizable Retrievers",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "NLP",
+            "year": "2021"
+        },
+        {
+            "title": "Text Generation by Learning from Demonstrations",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "NLP",
+            "year": "2021"
+        },
+        {
+            "title": "Leveraging Passage Retrieval with Generative Models for Open Domain Question Answering",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "NLP",
+            "year": "2021"
+        },
+        {
+            "title": "A General Language Assistant as a Laboratory for Alignment",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "NLP",
+            "year": "2021"
+        },
+        {
+            "title": "Formal Mathematics Statement Curriculum Learning",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "NLP",
+            "year": "2022"
+        },
+        {
+            "title": "Survey of Hallucination in Natural Language Generation",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "NLP",
+            "year": "2022"
+        },
+        {
+            "title": "Transformer Quality in Linear Time",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "NLP",
+            "year": "2022"
+        },
+        {
+            "title": "Chain of Thought Prompting Elicits Reasoning in Large Language Models",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "NLP",
+            "year": "2022"
+        },
+        {
+            "title": "PaLM: Scaling Language Modeling with Pathways",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "NLP",
+            "year": "2022"
+        },
+        {
+            "title": "Fantastically Ordered Prompts and Where to Find Them: Overcoming Few-Shot Prompt Order Sensitivity",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "NLP",
+            "year": "2022"
+        },
+        {
+            "title": "Beyond the Imitation Game: Quantifying and extrapolating the capabilities of language models",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "NLP",
+            "year": "2022"
+        },
+        {
+            "title": "Training Compute-Optimal Large Language Models",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "NLP",
+            "year": "2022"
+        },
+        {
+            "title": "Large Language Models Still Can\u2019t Plan (A Benchmark for LLMs on Planning and Reasoning about Change)",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "NLP",
+            "year": "2022"
+        },
+        {
+            "title": "OPT: Open Pre-trained Transformer Language Models",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "NLP",
+            "year": "2022"
+        },
+        {
+            "title": "Diffusion-LM Improves Controllable Text Generation",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "NLP",
+            "year": "2022"
+        },
+        {
+            "title": "DeepPERF: A Deep Learning-Based Approach For Improving Software Performance",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "NLP",
+            "year": "2022"
+        },
+        {
+            "title": "No Language Left Behind: Scaling Human-Centered Machine Translation",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "NLP",
+            "year": "2022"
+        },
+        {
+            "title": "Efficient Few-Shot Learning Without Prompts",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "NLP",
+            "year": "2022"
+        },
+        {
+            "title": "Large language models are different",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "NLP",
+            "year": "2022"
+        },
+        {
+            "title": "Solving Quantitative Reasoning Problems with Language Models",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "NLP",
+            "year": "2022"
+        },
+        {
+            "title": "AD-DROP: Attribution-Driven Dropout for Robust Language Model Fine-Tuning",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "NLP",
+            "year": "2022"
+        },
+        {
+            "title": "Why Can GPT Learn In-Context? Language Models Secretly Perform Gradient Descent as Meta-Optimizers",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "NLP",
+            "year": "2022"
+        },
+        {
+            "title": "Finetuned language models are zero-shot learners",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "NLP",
+            "year": "2022"
+        },
+        {
+            "title": "Learning to summarize from human feedback",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "NLP",
+            "year": "2022"
+        },
+        {
+            "title": "Training language models to follow instructions with human feedback",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "NLP",
+            "year": "2022"
+        },
+        {
+            "title": "Constitutional AI: Harmlessness from AI Feedback",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "NLP",
+            "year": "2022"
+        },
+        {
+            "title": "RoFormer: Enhanced Transformer with Rotary Position Embedding",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "NLP",
+            "year": "2022"
+        },
+        {
+            "title": "Train Short, Test Long: Attention with Linear Biases Enables Input Length Extrapolation",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "NLP",
+            "year": "2022"
+        },
+        {
+            "title": "Switch Transformers: Scaling to Trillion Parameter Models with Simple and Efficient Sparsity",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "NLP",
+            "year": "2022"
+        },
+        {
+            "title": "Locating and Editing Factual Associations in GPT",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "NLP",
+            "year": "2022"
+        },
+        {
+            "title": "Scale Efficiently: Insights from Pre-training and Fine-tuning Transformers",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "NLP",
+            "year": "2022"
         }
     ]
 };
