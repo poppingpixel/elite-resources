@@ -548,4 +548,5 @@ export const STUDY_LOG: string[] = [
   "Prometheus 2: An Open Source Language Model Specialized in Evaluating Other Language Models [NLP, 2024]",
   "Transformer Quality in Linear Time [NLP, 2022]",
   "ZipLoRA: Any Subject in Any Style by Effectively Merging LoRAs [Multimodal, 2023]",
+  "RewardBench: Evaluating Reward Models for Language Modeling [NLP, 2024]",
 ];
