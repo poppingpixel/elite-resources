@@ -549,4 +549,5 @@ export const STUDY_LOG: string[] = [
   "Transformer Quality in Linear Time [NLP, 2022]",
   "ZipLoRA: Any Subject in Any Style by Effectively Merging LoRAs [Multimodal, 2023]",
   "RewardBench: Evaluating Reward Models for Language Modeling [NLP, 2024]",
+  "Swin Transformer: Hierarchical Vision Transformer using Shifted Windows [Computer Vision, 2021]",
 ];
