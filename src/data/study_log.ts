@@ -550,4 +550,5 @@ export const STUDY_LOG: string[] = [
   "ZipLoRA: Any Subject in Any Style by Effectively Merging LoRAs [Multimodal, 2023]",
   "RewardBench: Evaluating Reward Models for Language Modeling [NLP, 2024]",
   "Swin Transformer: Hierarchical Vision Transformer using Shifted Windows [Computer Vision, 2021]",
+  "A Diagram Is Worth A Dozen Images [Multimodal, 2016]",
 ];
