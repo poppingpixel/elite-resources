@@ -553,4 +553,5 @@ export const STUDY_LOG: string[] = [
   "A Diagram Is Worth A Dozen Images [Multimodal, 2016]",
   "Chain-of-Knowledge: Grounding Large Language Models via Dynamic Knowledge Adapting over Heterogeneous Sources [NLP, 2023]",
   "Simplifying Transformer Blocks [NLP, 2023]",
+  "Matryoshka Representation Learning [NLP, 2024]",
 ];
