@@ -558,4 +558,5 @@ export const STUDY_LOG: string[] = [
   "Deep Language Networks: Joint Prompt Training of Stacked LLMs using Variational Inference [NLP, 2023]",
   "AR-Diffusion: Auto-Regressive Diffusion Model for Text Generation [NLP, 2023]",
   "DeepSeekMath: Pushing the Limits of Mathematical Reasoning in Open Language Models [NLP, 2024]",
+  "CNN Architectures for Large-Scale Audio Classification [Speech, 2017]",
 ];
