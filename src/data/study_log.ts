@@ -554,4 +554,5 @@ export const STUDY_LOG: string[] = [
   "Chain-of-Knowledge: Grounding Large Language Models via Dynamic Knowledge Adapting over Heterogeneous Sources [NLP, 2023]",
   "Simplifying Transformer Blocks [NLP, 2023]",
   "Matryoshka Representation Learning [NLP, 2024]",
+  "Listen, Attend and Spell [Speech, 2015]",
 ];
