@@ -556,4 +556,5 @@ export const STUDY_LOG: string[] = [
   "Matryoshka Representation Learning [NLP, 2024]",
   "Listen, Attend and Spell [Speech, 2015]",
   "Deep Language Networks: Joint Prompt Training of Stacked LLMs using Variational Inference [NLP, 2023]",
+  "AR-Diffusion: Auto-Regressive Diffusion Model for Text Generation [NLP, 2023]",
 ];
