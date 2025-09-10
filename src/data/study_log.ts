@@ -552,4 +552,5 @@ export const STUDY_LOG: string[] = [
   "Swin Transformer: Hierarchical Vision Transformer using Shifted Windows [Computer Vision, 2021]",
   "A Diagram Is Worth A Dozen Images [Multimodal, 2016]",
   "Chain-of-Knowledge: Grounding Large Language Models via Dynamic Knowledge Adapting over Heterogeneous Sources [NLP, 2023]",
+  "Simplifying Transformer Blocks [NLP, 2023]",
 ];
