@@ -557,4 +557,5 @@ export const STUDY_LOG: string[] = [
   "Listen, Attend and Spell [Speech, 2015]",
   "Deep Language Networks: Joint Prompt Training of Stacked LLMs using Variational Inference [NLP, 2023]",
   "AR-Diffusion: Auto-Regressive Diffusion Model for Text Generation [NLP, 2023]",
+  "DeepSeekMath: Pushing the Limits of Mathematical Reasoning in Open Language Models [NLP, 2024]",
 ];
