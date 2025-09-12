@@ -1484,6 +1484,246 @@ export const ALL_PAPERS: Record<string, Paper[]> = {
             "category": "Seminal Papers / Need-to-know",
             "domain": "NLP",
             "year": "2022"
+        },
+        {
+            "title": "Holistic Evaluation of Language Models",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "NLP",
+            "year": "2022"
+        },
+        {
+            "title": "SummaC: Re-Visiting NLI-based Models for Inconsistency Detection in Summarization",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "NLP",
+            "year": "2022"
+        },
+        {
+            "title": "InCoder: A Generative Model for Code Infilling and Synthesis",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "NLP",
+            "year": "2022"
+        },
+        {
+            "title": "Large Language Models are Zero-Shot Reasoners",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "NLP",
+            "year": "2022"
+        },
+        {
+            "title": "An Efficient Memory-Augmented Transformer for Knowledge-Intensive NLP Tasks",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "NLP",
+            "year": "2022"
+        },
+        {
+            "title": "Unsupervised Dense Information Retrieval with Contrastive Learning",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "NLP",
+            "year": "2022"
+        },
+        {
+            "title": "Implicit Relation Linking for Question Answering over Knowledge Graph",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "NLP",
+            "year": "2022"
+        },
+        {
+            "title": "Galactica: A Large Language Model for Science",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "NLP",
+            "year": "2022"
+        },
+        {
+            "title": "MuRAG: Multimodal Retrieval-Augmented Generator",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "NLP",
+            "year": "2022"
+        },
+        {
+            "title": "Distilling Knowledge from Reader to Retriever for Question Answering",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "NLP",
+            "year": "2022"
+        },
+        {
+            "title": "Learn to Explain: Multimodal Reasoning via Thought Chains for Science Question Answering",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "NLP",
+            "year": "2022"
+        },
+        {
+            "title": "BitFit: Simple Parameter-efficient Fine-tuning for Transformer-based Masked Language-models",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "NLP",
+            "year": "2022"
+        },
+        {
+            "title": "Recurrent Memory Transformer",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "NLP",
+            "year": "2022"
+        },
+        {
+            "title": "ReAct: Synergizing Reasoning and Acting in Language Models",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "NLP",
+            "year": "2023"
+        },
+        {
+            "title": "LLaMA: Open and Efficient Foundation Language Models",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "NLP",
+            "year": "2023"
+        },
+        {
+            "title": "Alpaca: A Strong, Replicable Instruction-Following Model",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "NLP",
+            "year": "2023"
+        },
+        {
+            "title": "Transformer models: an introduction and catalog",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "NLP",
+            "year": "2023"
+        },
+        {
+            "title": "Learning to Compress Prompts with Gist Tokens",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "NLP",
+            "year": "2023"
+        },
+        {
+            "title": "LLaMA-Adapter: Efficient Fine-tuning of Language Models with Zero-init Attention",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "NLP",
+            "year": "2023"
+        },
+        {
+            "title": "LLaMA-Adapter V2: Parameter-Efficient Visual Instruction Model",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "NLP",
+            "year": "2023"
+        },
+        {
+            "title": "LIMA: Less Is More for Alignment",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "NLP",
+            "year": "2023"
+        },
+        {
+            "title": "Language Is Not All You Need: Aligning Perception with Language Models",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "NLP",
+            "year": "2023"
+        },
+        {
+            "title": "QLoRA: Efficient Finetuning of Quantized LLMs",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "NLP",
+            "year": "2023"
+        },
+        {
+            "title": "Direct Preference Optimization: Your Language Model is Secretly a Reward Model",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "NLP",
+            "year": "2023"
+        },
+        {
+            "title": "Deduplicating Training Data Makes Language Models Better",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "NLP",
+            "year": "2023"
+        },
+        {
+            "title": "Llama 2: Open Foundation and Fine-Tuned Chat Models",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "NLP",
+            "year": "2023"
+        },
+        {
+            "title": "Retentive Network: A Successor to Transformer for Large Language Models",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "NLP",
+            "year": "2023"
+        },
+        {
+            "title": "The case for 4-bit precision: k-bit Inference Scaling Laws",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "NLP",
+            "year": "2023"
+        },
+        {
+            "title": "DeBERTa: Decoding-enhanced BERT with Disentangled Attention",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "NLP",
+            "year": "2023"
+        },
+        {
+            "title": "UL2: Unifying Language Learning Paradigms",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "NLP",
+            "year": "2023"
+        },
+        {
+            "title": "Graph of Thoughts: Solving Elaborate Problems with Large Language Models",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "NLP",
+            "year": "2023"
+        },
+        {
+            "title": "Accelerating Large Language Model Decoding with Speculative Sampling",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "NLP",
+            "year": "2023"
+        },
+        {
+            "title": "Pretraining Language Models with Human Preferences",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "NLP",
+            "year": "2023"
+        },
+        {
+            "title": "Large Language Models as Optimizers",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "NLP",
+            "year": "2023"
+        },
+        {
+            "title": "G-Eval: NLG Evaluation using GPT-4 with Better Human Alignment",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "NLP",
+            "year": "2023"
+        },
+        {
+            "title": "Chain-of-Verification Reduces Hallucination in Large Language Models",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "NLP",
+            "year": "2023"
+        },
+        {
+            "title": "LongLoRA: Efficient Fine-tuning of Long-Context Large Language Models",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "NLP",
+            "year": "2023"
+        },
+        {
+            "title": "Mass-Editing Memory in a Transformer",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "NLP",
+            "year": "2023"
+        },
+        {
+            "title": "MTEB: Massive Text Embedding Benchmark",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "NLP",
+            "year": "2023"
+        },
+        {
+            "title": "Language Modeling Is Compression",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "NLP",
+            "year": "2023"
         }
     ]
 };
