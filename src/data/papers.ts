@@ -1724,6 +1724,246 @@ export const ALL_PAPERS: Record<string, Paper[]> = {
             "category": "Seminal Papers / Need-to-know",
             "domain": "NLP",
             "year": "2023"
+        },
+        {
+            "title": "SelfCheckGPT: Zero-Resource Black-Box Hallucination Detection for Generative Large Language Models",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "NLP",
+            "year": "2023"
+        },
+        {
+            "title": "Zephyr: Direct Distillation of LM Alignment",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "NLP",
+            "year": "2023"
+        },
+        {
+            "title": "Evaluating Large Language Models: A Comprehensive Survey",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "NLP",
+            "year": "2023"
+        },
+        {
+            "title": "Tamil-LLaMA: A New Tamil Language Model Based on LLaMA 2",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "NLP",
+            "year": "2023"
+        },
+        {
+            "title": "Think before you speak: Training Language Models With Pause Tokens",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "NLP",
+            "year": "2023"
+        },
+        {
+            "title": "YaRN: Efficient Context Window Extension of Large Language Models",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "NLP",
+            "year": "2023"
+        },
+        {
+            "title": "StarCoder: May the Source Be with You!",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "NLP",
+            "year": "2023"
+        },
+        {
+            "title": "Let\u2019s Verify Step by Step",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "NLP",
+            "year": "2023"
+        },
+        {
+            "title": "Scalable Extraction of Training Data from (Production) Language Models",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "NLP",
+            "year": "2023"
+        },
+        {
+            "title": "Gemini: A Family of Highly Capable Multimodal Models",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "NLP",
+            "year": "2023"
+        },
+        {
+            "title": "Llama Guard: LLM-based Input-Output Safeguard for Human-AI Conversations",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "NLP",
+            "year": "2023"
+        },
+        {
+            "title": "Beyond Human Data: Scaling Self-Training for Problem-Solving with Language Models",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "NLP",
+            "year": "2023"
+        },
+        {
+            "title": "Human-Centered Loss Functions (HALOs)",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "NLP",
+            "year": "2023"
+        },
+        {
+            "title": "Ignore This Title and HackAPrompt: Exposing Systemic Vulnerabilities of LLMs through a Global Scale Prompt Hacking Competition",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "NLP",
+            "year": "2023"
+        },
+        {
+            "title": "Fine-Tuning or Retrieval? Comparing Knowledge Injection in LLMs",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "NLP",
+            "year": "2023"
+        },
+        {
+            "title": "Tuning Language Models by Proxy",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "NLP",
+            "year": "2023"
+        },
+        {
+            "title": "Group Preference Optimization: Few-shot Alignment of Large Language Models",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "NLP",
+            "year": "2023"
+        },
+        {
+            "title": "Large Language Models Are Neurosymbolic Reasoners",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "NLP",
+            "year": "2023"
+        },
+        {
+            "title": "LM-Infinite: Simple On-The-Fly Length Generalization for Large Language Models",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "NLP",
+            "year": "2023"
+        },
+        {
+            "title": "LLM Maybe LongLM: Self-Extend LLM Context Window Without Tuning",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "NLP",
+            "year": "2023"
+        },
+        {
+            "title": "Large Language Models are Null-Shot Learners",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "NLP",
+            "year": "2023"
+        },
+        {
+            "title": "Knowledge Fusion of Large Language Models",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "NLP",
+            "year": "2023"
+        },
+        {
+            "title": "MentaLLaMA: Interpretable Mental Health Analysis on Social Media with Large Language Models",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "NLP",
+            "year": "2023"
+        },
+        {
+            "title": "ChatQA: Building GPT-4 Level Conversational QA Models",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "NLP",
+            "year": "2023"
+        },
+        {
+            "title": "Parameter-efficient Tuning for Large Language Model without Calculating Its Gradients",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "NLP",
+            "year": "2023"
+        },
+        {
+            "title": "BioGPT: Generative Pre-trained Transformer for Biomedical Text Generation and Mining",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "NLP",
+            "year": "2023"
+        },
+        {
+            "title": "AutoGen: Enabling Next-Gen LLM Applications via Multi-Agent Conversation",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "NLP",
+            "year": "2023"
+        },
+        {
+            "title": "Towards Expert-Level Medical Question Answering with Large Language Models",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "NLP",
+            "year": "2023"
+        },
+        {
+            "title": "Adaptation with Self-Evaluation to Improve Selective Prediction in LLMs",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "NLP",
+            "year": "2023"
+        },
+        {
+            "title": "Least-to-Most Prompting Enables Complex Reasoning in Large Language Models",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "NLP",
+            "year": "2023"
+        },
+        {
+            "title": "BitNet: Scaling 1-bit Transformers for Large Language Models",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "NLP",
+            "year": "2023"
+        },
+        {
+            "title": "Reflexion: Language Agents with Verbal Reinforcement Learning",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "NLP",
+            "year": "2023"
+        },
+        {
+            "title": "The Impact of Positional Encoding on Length Generalization in Transformers",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "NLP",
+            "year": "2023"
+        },
+        {
+            "title": "Scalable-Softmax Is Superior for Attention",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "NLP",
+            "year": "2023"
+        },
+        {
+            "title": "Relying on the Unreliable: The Impact of Language Models\u2019 Reluctance to Express Uncertainty",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "NLP",
+            "year": "2024"
+        },
+        {
+            "title": "Matryoshka Representation Learning",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "NLP",
+            "year": "2024"
+        },
+        {
+            "title": "Self-Refine: Iterative Refinement with Self-Feedback",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "NLP",
+            "year": "2024"
+        },
+        {
+            "title": "The Claude 3 Model Family: Opus, Sonnet, Haiku",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "NLP",
+            "year": "2024"
+        },
+        {
+            "title": "ORPO: Monolithic Preference Optimization without Reference Model",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "NLP",
+            "year": "2024"
+        },
+        {
+            "title": "Rainbow Teaming: Open-Ended Generation of Diverse Adversarial Prompts",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "NLP",
+            "year": "2024"
         }
     ]
 };
