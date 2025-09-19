@@ -560,4 +560,5 @@ export const STUDY_LOG: string[] = [
   "DeepSeekMath: Pushing the Limits of Mathematical Reasoning in Open Language Models [NLP, 2024]",
   "CNN Architectures for Large-Scale Audio Classification [Speech, 2017]",
   "Model Cards for Model Reporting [Core ML, 2018]",
+  "Kimi k1.5: Scaling Reinforcement Learning with LLMs [NLP, 2025]",
 ];
