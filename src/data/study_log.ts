@@ -561,4 +561,5 @@ export const STUDY_LOG: string[] = [
   "CNN Architectures for Large-Scale Audio Classification [Speech, 2017]",
   "Model Cards for Model Reporting [Core ML, 2018]",
   "Kimi k1.5: Scaling Reinforcement Learning with LLMs [NLP, 2025]",
+  "Photo-Realistic Single Image Super-Resolution using a GAN [Computer Vision, 2017]",
 ];
