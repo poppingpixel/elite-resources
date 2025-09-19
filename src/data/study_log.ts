@@ -562,4 +562,5 @@ export const STUDY_LOG: string[] = [
   "Model Cards for Model Reporting [Core ML, 2018]",
   "Kimi k1.5: Scaling Reinforcement Learning with LLMs [NLP, 2025]",
   "Photo-Realistic Single Image Super-Resolution using a GAN [Computer Vision, 2017]",
+  "CoCa: Contrastive Captioners are Image-Text Foundation Models [Multimodal, 2022]",
 ];
