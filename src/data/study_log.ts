@@ -564,4 +564,5 @@ export const STUDY_LOG: string[] = [
   "Photo-Realistic Single Image Super-Resolution using a GAN [Computer Vision, 2017]",
   "CoCa: Contrastive Captioners are Image-Text Foundation Models [Multimodal, 2022]",
   "LLaMA-VID: An Image is Worth 2 Tokens in Large Language Models [Multimodal, 2023]",
+  "RotatE: Knowledge Graph Embedding by Relational Rotation in Complex Space [Graph ML, 2019]",
 ];
