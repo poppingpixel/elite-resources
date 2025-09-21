@@ -565,4 +565,5 @@ export const STUDY_LOG: string[] = [
   "CoCa: Contrastive Captioners are Image-Text Foundation Models [Multimodal, 2022]",
   "LLaMA-VID: An Image is Worth 2 Tokens in Large Language Models [Multimodal, 2023]",
   "RotatE: Knowledge Graph Embedding by Relational Rotation in Complex Space [Graph ML, 2019]",
+  "AIOS: LLM Agent Operating System [NLP, 2024]",
 ];
