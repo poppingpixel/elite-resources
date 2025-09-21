@@ -566,4 +566,5 @@ export const STUDY_LOG: string[] = [
   "LLaMA-VID: An Image is Worth 2 Tokens in Large Language Models [Multimodal, 2023]",
   "RotatE: Knowledge Graph Embedding by Relational Rotation in Complex Space [Graph ML, 2019]",
   "AIOS: LLM Agent Operating System [NLP, 2024]",
+  "Llama 2: Open Foundation and Fine-Tuned Chat Models [NLP, 2023]",
 ];
