@@ -567,4 +567,5 @@ export const STUDY_LOG: string[] = [
   "RotatE: Knowledge Graph Embedding by Relational Rotation in Complex Space [Graph ML, 2019]",
   "AIOS: LLM Agent Operating System [NLP, 2024]",
   "Llama 2: Open Foundation and Fine-Tuned Chat Models [NLP, 2023]",
+  "Break the Sequential Dependency of LLM Inference Using Lookahead Decoding [NLP, 2023]",
 ];
