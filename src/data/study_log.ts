@@ -571,4 +571,5 @@ export const STUDY_LOG: string[] = [
   "BART: Denoising Sequence-to-Sequence Pre-training for Natural Language Generation, Translation, and Comprehension [NLP, 2019]",
   "Diffusion Language Models Can Perform Many Tasks with Scaling and Instruction-Finetuning [NLP, 2023]",
   "Swin Transformer V2: Scaling Up Capacity and Resolution [Computer Vision, 2022]",
+  "Relational inductive biases, deep learning, and graph networks [Computer Vision, 2018]",
 ];
