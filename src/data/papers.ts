@@ -1964,6 +1964,246 @@ export const ALL_PAPERS: Record<string, Paper[]> = {
             "category": "Seminal Papers / Need-to-know",
             "domain": "NLP",
             "year": "2024"
+        },
+        {
+            "title": "Stealing Part of a Production Language Model",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "NLP",
+            "year": "2024"
+        },
+        {
+            "title": "OneBit: Towards Extremely Low-bit Large Language Models",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "NLP",
+            "year": "2024"
+        },
+        {
+            "title": "The Era of 1-bit LLMs: All Large Language Models are in 1.58 Bits",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "NLP",
+            "year": "2024"
+        },
+        {
+            "title": "Multilingual E5 Text Embeddings: A Technical Report",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "NLP",
+            "year": "2024"
+        },
+        {
+            "title": "MambaByte: Token-free Selective State Space Model",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "NLP",
+            "year": "2024"
+        },
+        {
+            "title": "How faithful are RAG models? Quantifying the tug-of-war between RAG and LLMs\u2019 internal prior",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "NLP",
+            "year": "2024"
+        },
+        {
+            "title": "Adaptive-RAG: Learning to Adapt Retrieval-Augmented Large Language Models through Question Complexity",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "NLP",
+            "year": "2024"
+        },
+        {
+            "title": "Many-Shot In-Context Learning",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "NLP",
+            "year": "2024"
+        },
+        {
+            "title": "Gemma 2: Improving Open Language Models at a Practical Size",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "NLP",
+            "year": "2024"
+        },
+        {
+            "title": "The Llama 3 Herd of Models",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "NLP",
+            "year": "2024"
+        },
+        {
+            "title": "MobileLLM: Optimizing Sub-billion Parameter Language Models for On-Device Use Cases",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "NLP",
+            "year": "2024"
+        },
+        {
+            "title": "MatFormer: Nested Transformer for Elastic Inference",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "NLP",
+            "year": "2024"
+        },
+        {
+            "title": "Biomni: A General-Purpose Biomedical AI Agent",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "NLP",
+            "year": "2024"
+        },
+        {
+            "title": "Long-form factuality in large language models",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "NLP",
+            "year": "2024"
+        },
+        {
+            "title": "Harnessing the Universal Geometry of Embeddings",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "NLP",
+            "year": "2025"
+        },
+        {
+            "title": "Humanity\u2019s Last Exam",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "NLP",
+            "year": "2025"
+        },
+        {
+            "title": "Qwen2.5-Omni Technical Report",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "NLP",
+            "year": "2025"
+        },
+        {
+            "title": "ROUGE-C: A fully automated evaluation method for multi-document summarization",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "NLP",
+            "year": "2008"
+        },
+        {
+            "title": "Effective Approaches to Attention-based Neural Machine Translation",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "NLP",
+            "year": "2015"
+        },
+        {
+            "title": "Generating Wikipedia by Summarizing Long Sequences",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "NLP",
+            "year": "2018"
+        },
+        {
+            "title": "Sentence-BERT: Sentence Embeddings using Siamese BERT-Networks",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "NLP",
+            "year": "2019"
+        },
+        {
+            "title": "Diversity and Depth in Per-Example Routing Models",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "NLP",
+            "year": "2019"
+        },
+        {
+            "title": "Megatron-LM: Training Multi-Billion Parameter Language Models Using Model Parallelism",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "NLP",
+            "year": "2019"
+        },
+        {
+            "title": "Efficient Transformers: A Survey",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "NLP",
+            "year": "2020"
+        },
+        {
+            "title": "Towards a Human-like Open-Domain Chatbot",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "NLP",
+            "year": "2020"
+        },
+        {
+            "title": "MobileBERT: a Compact Task-Agnostic BERT for Resource-Limited Devices",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "NLP",
+            "year": "2020"
+        },
+        {
+            "title": "Compressing BERT: Studying the Effects of Weight Pruning on Transfer Learning",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "NLP",
+            "year": "2020"
+        },
+        {
+            "title": "Movement Pruning: Adaptive Sparsity by Fine-Tuning",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "NLP",
+            "year": "2020"
+        },
+        {
+            "title": "Dense passage retrieval for open-domain question answering",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "NLP",
+            "year": "2020"
+        },
+        {
+            "title": "Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "NLP",
+            "year": "2020"
+        },
+        {
+            "title": "Unsupervised Commonsense Question Answering with Self-Talk",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "NLP",
+            "year": "2020"
+        },
+        {
+            "title": "Transformers are RNNs: Fast Autoregressive Transformers with Linear Attention",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "NLP",
+            "year": "2020"
+        },
+        {
+            "title": "Pretrained Transformers As Universal Computation Engines",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "NLP",
+            "year": "2021"
+        },
+        {
+            "title": "SimCSE: Simple Contrastive Learning of Sentence Embeddings",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "NLP",
+            "year": "2021"
+        },
+        {
+            "title": "DeCLUTR: Deep Contrastive Learning for Unsupervised Textual Representations",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "NLP",
+            "year": "2021"
+        },
+        {
+            "title": "Transformer Feed-Forward Layers Are Key-Value Memories",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "NLP",
+            "year": "2021"
+        },
+        {
+            "title": "Measuring Massive Multitask Language Understanding",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "NLP",
+            "year": "2021"
+        },
+        {
+            "title": "A Causal Lens for Controllable Text Generation",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "NLP",
+            "year": "2022"
+        },
+        {
+            "title": "SNCSE: Contrastive Learning for Unsupervised Sentence Embedding with Soft Negative Samples",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "NLP",
+            "year": "2022"
+        },
+        {
+            "title": "LaMDA: Language Models for Dialog Applications",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "NLP",
+            "year": "2022"
         }
     ]
 };
