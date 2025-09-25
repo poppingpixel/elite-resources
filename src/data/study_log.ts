@@ -570,4 +570,5 @@ export const STUDY_LOG: string[] = [
   "Break the Sequential Dependency of LLM Inference Using Lookahead Decoding [NLP, 2023]",
   "BART: Denoising Sequence-to-Sequence Pre-training for Natural Language Generation, Translation, and Comprehension [NLP, 2019]",
   "Diffusion Language Models Can Perform Many Tasks with Scaling and Instruction-Finetuning [NLP, 2023]",
+  "Swin Transformer V2: Scaling Up Capacity and Resolution [Computer Vision, 2022]",
 ];
