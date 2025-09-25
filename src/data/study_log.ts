@@ -572,4 +572,5 @@ export const STUDY_LOG: string[] = [
   "Diffusion Language Models Can Perform Many Tasks with Scaling and Instruction-Finetuning [NLP, 2023]",
   "Swin Transformer V2: Scaling Up Capacity and Resolution [Computer Vision, 2022]",
   "Relational inductive biases, deep learning, and graph networks [Computer Vision, 2018]",
+  "LIMA: Less Is More for Alignment [NLP, 2023]",
 ];
