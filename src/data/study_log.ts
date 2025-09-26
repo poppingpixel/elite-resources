@@ -574,4 +574,5 @@ export const STUDY_LOG: string[] = [
   "Relational inductive biases, deep learning, and graph networks [Computer Vision, 2018]",
   "LIMA: Less Is More for Alignment [NLP, 2023]",
   "Continual Pre-training of Language Models [NLP, 2023]",
+  "Statistical Rejection Sampling Improves Preference Optimization [NLP, 2024]",
 ];
