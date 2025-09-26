@@ -575,4 +575,5 @@ export const STUDY_LOG: string[] = [
   "LIMA: Less Is More for Alignment [NLP, 2023]",
   "Continual Pre-training of Language Models [NLP, 2023]",
   "Statistical Rejection Sampling Improves Preference Optimization [NLP, 2024]",
+  "Human-Centered Loss Functions (HALOs) [NLP, 2023]",
 ];
