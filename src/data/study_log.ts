@@ -579,4 +579,5 @@ export const STUDY_LOG: string[] = [
   "JudgeLM: Fine-tuned Large Language Models are Scalable Judges [NLP, 2023]",
   "A/B Testing Intuition Busters [Core ML, 2022]",
   "SelfCheck: Using LLMs to Zero-Shot Check Their Own Step-by-Step Reasoning [NLP, 2023]",
+  "Neural Discrete Representation Learning [Computer Vision, 2018]",
 ];
