@@ -580,4 +580,5 @@ export const STUDY_LOG: string[] = [
   "A/B Testing Intuition Busters [Core ML, 2022]",
   "SelfCheck: Using LLMs to Zero-Shot Check Their Own Step-by-Step Reasoning [NLP, 2023]",
   "Neural Discrete Representation Learning [Computer Vision, 2018]",
+  "Hyena Hierarchy: Towards Larger Convolutional Language Models [NLP, 2023]",
 ];
