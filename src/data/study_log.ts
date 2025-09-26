@@ -584,4 +584,5 @@ export const STUDY_LOG: string[] = [
   "Scaling LLM Test-Time Compute Optimally can be More Effective than Scaling Model Parameters [NLP, 2024]",
   "Augmenting Language Models with Long-Term Memory [NLP, 2023]",
   "OctoTools: An Agentic Framework with Extensible Tools for Complex Reasoning [NLP, 2025]",
+  "Pretraining Language Models with Human Preferences [NLP, 2023]",
 ];
