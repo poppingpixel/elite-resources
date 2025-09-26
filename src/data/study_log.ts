@@ -577,4 +577,5 @@ export const STUDY_LOG: string[] = [
   "Statistical Rejection Sampling Improves Preference Optimization [NLP, 2024]",
   "Human-Centered Loss Functions (HALOs) [NLP, 2023]",
   "JudgeLM: Fine-tuned Large Language Models are Scalable Judges [NLP, 2023]",
+  "A/B Testing Intuition Busters [Core ML, 2022]",
 ];
