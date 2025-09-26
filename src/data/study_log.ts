@@ -573,4 +573,5 @@ export const STUDY_LOG: string[] = [
   "Swin Transformer V2: Scaling Up Capacity and Resolution [Computer Vision, 2022]",
   "Relational inductive biases, deep learning, and graph networks [Computer Vision, 2018]",
   "LIMA: Less Is More for Alignment [NLP, 2023]",
+  "Continual Pre-training of Language Models [NLP, 2023]",
 ];
