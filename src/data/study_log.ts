@@ -585,4 +585,5 @@ export const STUDY_LOG: string[] = [
   "Augmenting Language Models with Long-Term Memory [NLP, 2023]",
   "OctoTools: An Agentic Framework with Extensible Tools for Complex Reasoning [NLP, 2025]",
   "Pretraining Language Models with Human Preferences [NLP, 2023]",
+  "Knowledge Fusion of Large Language Models [NLP, 2023]",
 ];
