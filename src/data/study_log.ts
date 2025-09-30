@@ -586,4 +586,5 @@ export const STUDY_LOG: string[] = [
   "OctoTools: An Agentic Framework with Extensible Tools for Complex Reasoning [NLP, 2025]",
   "Pretraining Language Models with Human Preferences [NLP, 2023]",
   "Knowledge Fusion of Large Language Models [NLP, 2023]",
+  "AlphaEvolve: A coding agent for scientific and algorithmic discovery [Core ML, 2025]",
 ];
