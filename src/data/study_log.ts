@@ -587,4 +587,5 @@ export const STUDY_LOG: string[] = [
   "Pretraining Language Models with Human Preferences [NLP, 2023]",
   "Knowledge Fusion of Large Language Models [NLP, 2023]",
   "AlphaEvolve: A coding agent for scientific and algorithmic discovery [Core ML, 2025]",
+  "Contrastive Preference Optimization: Pushing the Boundaries of LLM Performance in Machine Translation [NLP, 2024]",
 ];
