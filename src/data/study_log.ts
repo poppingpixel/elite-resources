@@ -589,4 +589,5 @@ export const STUDY_LOG: string[] = [
   "AlphaEvolve: A coding agent for scientific and algorithmic discovery [Core ML, 2025]",
   "Contrastive Preference Optimization: Pushing the Boundaries of LLM Performance in Machine Translation [NLP, 2024]",
   "OOTDiffusion: Outfitting Fusion based Latent Diffusion for Controllable Virtual Try-on [Multimodal, 2024]",
+  "RWKV: Reinventing RNNs for the Transformer Era [NLP, 2023]",
 ];
