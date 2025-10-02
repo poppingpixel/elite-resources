@@ -2204,6 +2204,246 @@ export const ALL_PAPERS: Record<string, Paper[]> = {
             "category": "Selected Papers / Good-to-know",
             "domain": "NLP",
             "year": "2022"
+        },
+        {
+            "title": "Causal Inference Principles for Reasoning about Commonsense Causality",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "NLP",
+            "year": "2022"
+        },
+        {
+            "title": "RescoreBERT: Discriminative Speech Recognition Rescoring with BERT",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "NLP",
+            "year": "2022"
+        },
+        {
+            "title": "Using DeepSpeed and Megatron to Train Megatron-Turing NLG 530B, A Large-Scale Generative Language Model",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "NLP",
+            "year": "2022"
+        },
+        {
+            "title": "Extreme Compression for Pre-trained Transformers Made Simple and Efficient",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "NLP",
+            "year": "2022"
+        },
+        {
+            "title": "Memorizing Transformers",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "NLP",
+            "year": "2022"
+        },
+        {
+            "title": "Ask Me Anything: A simple strategy for prompting language models",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "NLP",
+            "year": "2022"
+        },
+        {
+            "title": "Large Language Models Can Self-Improve",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "NLP",
+            "year": "2022"
+        },
+        {
+            "title": "\\(\\infty\\)-former: Infinite Memory Transformer",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "NLP",
+            "year": "2022"
+        },
+        {
+            "title": "Multitask Prompted Training Enables Zero-Shot Task Generalization",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "NLP",
+            "year": "2022"
+        },
+        {
+            "title": "Large Language Models Encode Clinical Knowledge",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "NLP",
+            "year": "2022"
+        },
+        {
+            "title": "GLaM: Efficient Scaling of Language Models with Mixture-of-Experts",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "NLP",
+            "year": "2022"
+        },
+        {
+            "title": "Automatic Chain of Thought Prompting in Large Language Models",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "NLP",
+            "year": "2022"
+        },
+        {
+            "title": "Less is More: Parameter-Free Text Classification with Gzip",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "NLP",
+            "year": "2022"
+        },
+        {
+            "title": "A Length-Extrapolatable Transformer",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "NLP",
+            "year": "2022"
+        },
+        {
+            "title": "Efficient Training of Language Models to Fill in the Middle",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "NLP",
+            "year": "2022"
+        },
+        {
+            "title": "Language Models of Code are Few-Shot Commonsense Learners",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "NLP",
+            "year": "2022"
+        },
+        {
+            "title": "A Systematic Investigation of Commonsense Knowledge in Large Language Models",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "NLP",
+            "year": "2022"
+        },
+        {
+            "title": "MERLOT Reserve: Neural Script Knowledge through Vision and Language and Sound",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "NLP",
+            "year": "2022"
+        },
+        {
+            "title": "MegaBlocks: Efficient Sparse Training with Mixture-of-Experts",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "NLP",
+            "year": "2022"
+        },
+        {
+            "title": "Ask Me Anything: A Simple Strategy for Prompting Language Models",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "NLP",
+            "year": "2022"
+        },
+        {
+            "title": "STaR: Self-Taught Reasoner: Bootstrapping Reasoning With Reasoning",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "NLP",
+            "year": "2022"
+        },
+        {
+            "title": "Challenges and Applications of Large Language Models",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "NLP",
+            "year": "2023"
+        },
+        {
+            "title": "LLM-Adapters: An Adapter Family for Parameter-Efficient Fine-Tuning of Large Language Models",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "NLP",
+            "year": "2023"
+        },
+        {
+            "title": "Accelerating Large Language Model Decoding with Speculative Sampling",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "NLP",
+            "year": "2023"
+        },
+        {
+            "title": "GPT detectors are biased against non-native English writers",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "NLP",
+            "year": "2023"
+        },
+        {
+            "title": "GPT4All: Training an Assistant-style Chatbot with Large Scale Data Distillation from GPT-3.5-Turbo",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "NLP",
+            "year": "2023"
+        },
+        {
+            "title": "SELF-INSTRUCT: Aligning Language Model with Self Generated Instructions",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "NLP",
+            "year": "2023"
+        },
+        {
+            "title": "Efficient Methods for Natural Language Processing: A Survey",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "NLP",
+            "year": "2023"
+        },
+        {
+            "title": "Better Language Models of Code through Self-Improvement",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "NLP",
+            "year": "2023"
+        },
+        {
+            "title": "Distilling Step-by-Step! Outperforming Larger Language Models with Less Training Data and Smaller Model Sizes",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "NLP",
+            "year": "2023"
+        },
+        {
+            "title": "Active Retrieval Augmented Generation",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "NLP",
+            "year": "2023"
+        },
+        {
+            "title": "FrugalGPT: How to Use Large Language Models While Reducing Cost and Improving Performance",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "NLP",
+            "year": "2023"
+        },
+        {
+            "title": "Exploring In-Context Learning Capabilities of Foundation Models for Generating Knowledge Graphs from Text",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "NLP",
+            "year": "2023"
+        },
+        {
+            "title": "How Language Model Hallucinations Can Snowball",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "NLP",
+            "year": "2023"
+        },
+        {
+            "title": "Unlimiformer: Long-Range Transformers with Unlimited Length Input",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "NLP",
+            "year": "2023"
+        },
+        {
+            "title": "Gorilla: Large Language Model Connected with Massive APIs",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "NLP",
+            "year": "2023"
+        },
+        {
+            "title": "SPRING: GPT-4 Out-performs RL Algorithms by Studying Papers and Reasoning",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "NLP",
+            "year": "2023"
+        },
+        {
+            "title": "Deliberate then Generate: Enhanced Prompting Framework for Text Generation",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "NLP",
+            "year": "2023"
+        },
+        {
+            "title": "Enabling Large Language Models to Generate Text with Citations",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "NLP",
+            "year": "2023"
+        },
+        {
+            "title": "The RefinedWeb Dataset for Falcon LLM: Outperforming Curated Corpora with Web Data, and Web Data Only",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "NLP",
+            "year": "2023"
         }
     ]
 };
