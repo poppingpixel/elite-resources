@@ -592,4 +592,5 @@ export const STUDY_LOG: string[] = [
   "RWKV: Reinventing RNNs for the Transformer Era [NLP, 2023]",
   "Rethinking Semantic Segmentation from a Sequence-to-Sequence Perspective with Transformers [Computer Vision, 2021]",
   "Meta-Transformer: A Unified Framework for Multimodal Learning [Multimodal, 2023]",
+  "Random Erasing Data Augmentation [Computer Vision, 2020]",
 ];
