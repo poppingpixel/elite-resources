@@ -591,4 +591,5 @@ export const STUDY_LOG: string[] = [
   "OOTDiffusion: Outfitting Fusion based Latent Diffusion for Controllable Virtual Try-on [Multimodal, 2024]",
   "RWKV: Reinventing RNNs for the Transformer Era [NLP, 2023]",
   "Rethinking Semantic Segmentation from a Sequence-to-Sequence Perspective with Transformers [Computer Vision, 2021]",
+  "Meta-Transformer: A Unified Framework for Multimodal Learning [Multimodal, 2023]",
 ];
