@@ -601,4 +601,5 @@ export const STUDY_LOG: string[] = [
   "mPLUG-DocOwl 1.5: Unified Structure Learning for OCR-free Document Understanding [Multimodal, 2024]",
   "Drag Your GAN: Interactive Point-based Manipulation on the Generative Image Manifold [Computer Vision, 2023]",
   "Multi-Stage Document Ranking with BERT [NLP, 2019]",
+  "A Neural Probabilistic Language Model [NLP, 2003]",
 ];
