@@ -594,4 +594,5 @@ export const STUDY_LOG: string[] = [
   "Meta-Transformer: A Unified Framework for Multimodal Learning [Multimodal, 2023]",
   "Random Erasing Data Augmentation [Computer Vision, 2020]",
   "ChainPoll: A High Efficacy Method for LLM Hallucination Detection [NLP, 2023]",
+  "GLaM: Efficient Scaling of Language Models with Mixture-of-Experts [NLP, 2022]",
 ];
