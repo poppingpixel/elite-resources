@@ -597,4 +597,5 @@ export const STUDY_LOG: string[] = [
   "GLaM: Efficient Scaling of Language Models with Mixture-of-Experts [NLP, 2022]",
   "Audiobox: Unified Audio Generation with Natural Language Prompts [Speech, 2022]",
   "Consistency Models [Computer Vision, 2023]",
+  "Fantastically Ordered Prompts and Where to Find Them: Overcoming Few-Shot Prompt Order Sensitivity [NLP, 2022]",
 ];
