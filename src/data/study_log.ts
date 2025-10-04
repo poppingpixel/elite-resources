@@ -600,4 +600,5 @@ export const STUDY_LOG: string[] = [
   "Fantastically Ordered Prompts and Where to Find Them: Overcoming Few-Shot Prompt Order Sensitivity [NLP, 2022]",
   "mPLUG-DocOwl 1.5: Unified Structure Learning for OCR-free Document Understanding [Multimodal, 2024]",
   "Drag Your GAN: Interactive Point-based Manipulation on the Generative Image Manifold [Computer Vision, 2023]",
+  "Multi-Stage Document Ranking with BERT [NLP, 2019]",
 ];
