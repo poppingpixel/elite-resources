@@ -593,4 +593,5 @@ export const STUDY_LOG: string[] = [
   "Rethinking Semantic Segmentation from a Sequence-to-Sequence Perspective with Transformers [Computer Vision, 2021]",
   "Meta-Transformer: A Unified Framework for Multimodal Learning [Multimodal, 2023]",
   "Random Erasing Data Augmentation [Computer Vision, 2020]",
+  "ChainPoll: A High Efficacy Method for LLM Hallucination Detection [NLP, 2023]",
 ];
