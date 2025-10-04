@@ -595,4 +595,5 @@ export const STUDY_LOG: string[] = [
   "Random Erasing Data Augmentation [Computer Vision, 2020]",
   "ChainPoll: A High Efficacy Method for LLM Hallucination Detection [NLP, 2023]",
   "GLaM: Efficient Scaling of Language Models with Mixture-of-Experts [NLP, 2022]",
+  "Audiobox: Unified Audio Generation with Natural Language Prompts [Speech, 2022]",
 ];
