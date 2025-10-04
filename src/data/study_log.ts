@@ -596,4 +596,5 @@ export const STUDY_LOG: string[] = [
   "ChainPoll: A High Efficacy Method for LLM Hallucination Detection [NLP, 2023]",
   "GLaM: Efficient Scaling of Language Models with Mixture-of-Experts [NLP, 2022]",
   "Audiobox: Unified Audio Generation with Natural Language Prompts [Speech, 2022]",
+  "Consistency Models [Computer Vision, 2023]",
 ];
