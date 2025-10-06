@@ -603,4 +603,5 @@ export const STUDY_LOG: string[] = [
   "Multi-Stage Document Ranking with BERT [NLP, 2019]",
   "A Neural Probabilistic Language Model [NLP, 2003]",
   "RAG vs Fine-tuning: Pipelines, Tradeoffs, and a Case Study on Agriculture [NLP, 2024]",
+  "RichRAG: Crafting Rich Responses for Multi-faceted Queries in Retrieval-Augmented Generation [NLP, 2024]",
 ];
