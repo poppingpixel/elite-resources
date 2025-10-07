@@ -605,4 +605,5 @@ export const STUDY_LOG: string[] = [
   "RAG vs Fine-tuning: Pipelines, Tradeoffs, and a Case Study on Agriculture [NLP, 2024]",
   "RichRAG: Crafting Rich Responses for Multi-faceted Queries in Retrieval-Augmented Generation [NLP, 2024]",
   "MultiHop-RAG: Benchmarking Retrieval-Augmented Generation for Multi-Hop Queries [NLP, 2024]",
+  "Learning to Compress Prompts with Gist Tokens [NLP, 2023]",
 ];
