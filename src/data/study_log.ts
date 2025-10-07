@@ -607,4 +607,5 @@ export const STUDY_LOG: string[] = [
   "MultiHop-RAG: Benchmarking Retrieval-Augmented Generation for Multi-Hop Queries [NLP, 2024]",
   "Learning to Compress Prompts with Gist Tokens [NLP, 2023]",
   "Better & Faster Large Language Models via Multi-token Prediction [NLP, 2024]",
+  "Formal Mathematics Statement Curriculum Learning [NLP, 2022]",
 ];
