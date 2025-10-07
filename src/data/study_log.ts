@@ -611,4 +611,5 @@ export const STUDY_LOG: string[] = [
   "Large Language Monkeys: Scaling Inference Compute with Repeated Sampling [NLP, 2024]",
   "Retrieval-augmented Multi-modal Chain-of-Thoughts Reasoning for Large Language Models [NLP, 2023]",
   "RM-R1: Reward Modeling as Reasoning [NLP, 2025]",
+  "The Perils & Promises of Fact-checking with Large Language Models [NLP, 2023]",
 ];
