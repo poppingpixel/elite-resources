@@ -610,4 +610,5 @@ export const STUDY_LOG: string[] = [
   "Formal Mathematics Statement Curriculum Learning [NLP, 2022]",
   "Large Language Monkeys: Scaling Inference Compute with Repeated Sampling [NLP, 2024]",
   "Retrieval-augmented Multi-modal Chain-of-Thoughts Reasoning for Large Language Models [NLP, 2023]",
+  "RM-R1: Reward Modeling as Reasoning [NLP, 2025]",
 ];
