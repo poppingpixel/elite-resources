@@ -609,4 +609,5 @@ export const STUDY_LOG: string[] = [
   "Better & Faster Large Language Models via Multi-token Prediction [NLP, 2024]",
   "Formal Mathematics Statement Curriculum Learning [NLP, 2022]",
   "Large Language Monkeys: Scaling Inference Compute with Repeated Sampling [NLP, 2024]",
+  "Retrieval-augmented Multi-modal Chain-of-Thoughts Reasoning for Large Language Models [NLP, 2023]",
 ];
