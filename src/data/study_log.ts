@@ -612,4 +612,5 @@ export const STUDY_LOG: string[] = [
   "Retrieval-augmented Multi-modal Chain-of-Thoughts Reasoning for Large Language Models [NLP, 2023]",
   "RM-R1: Reward Modeling as Reasoning [NLP, 2025]",
   "The Perils & Promises of Fact-checking with Large Language Models [NLP, 2023]",
+  "Layer by Layer: Uncovering Hidden Representations in Language Models [NLP, 2025]",
 ];
