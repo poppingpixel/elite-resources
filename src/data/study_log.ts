@@ -608,4 +608,5 @@ export const STUDY_LOG: string[] = [
   "Learning to Compress Prompts with Gist Tokens [NLP, 2023]",
   "Better & Faster Large Language Models via Multi-token Prediction [NLP, 2024]",
   "Formal Mathematics Statement Curriculum Learning [NLP, 2022]",
+  "Large Language Monkeys: Scaling Inference Compute with Repeated Sampling [NLP, 2024]",
 ];
