@@ -619,4 +619,5 @@ export const STUDY_LOG: string[] = [
   "Generating Wikipedia by Summarizing Long Sequences [NLP, 2018]",
   "Natural TTS Synthesis by Conditioning WaveNet on Mel Spectrogram Predictions [Speech, 2018]",
   "Replacing Judges with Juries: Evaluating LLM Generations with a Panel of Diverse Models [NLP, 2024]",
+  "Synthetic Data Generation & Multi-Step RL for Reasoning & Tool Use [NLP, 2026]",
 ];
