@@ -618,4 +618,5 @@ export const STUDY_LOG: string[] = [
   "Do Wide and Deep Networks Learn the Same Things? Uncovering How Neural Network Representations Vary with Width and Depth [Core ML, 2021]",
   "Generating Wikipedia by Summarizing Long Sequences [NLP, 2018]",
   "Natural TTS Synthesis by Conditioning WaveNet on Mel Spectrogram Predictions [Speech, 2018]",
+  "Replacing Judges with Juries: Evaluating LLM Generations with a Panel of Diverse Models [NLP, 2024]",
 ];
