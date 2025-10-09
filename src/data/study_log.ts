@@ -614,4 +614,5 @@ export const STUDY_LOG: string[] = [
   "The Perils & Promises of Fact-checking with Large Language Models [NLP, 2023]",
   "Layer by Layer: Uncovering Hidden Representations in Language Models [NLP, 2025]",
   "Scaling Down, LiTting Up: Efficient Zero-Shot Listwise Reranking with Seq2seq Encoder–Decoder Models [NLP, 2023]",
+  "LAUREL: Learned Augmented Residual Layer [NLP, 2025]",
 ];
