@@ -613,4 +613,5 @@ export const STUDY_LOG: string[] = [
   "RM-R1: Reward Modeling as Reasoning [NLP, 2025]",
   "The Perils & Promises of Fact-checking with Large Language Models [NLP, 2023]",
   "Layer by Layer: Uncovering Hidden Representations in Language Models [NLP, 2025]",
+  "Scaling Down, LiTting Up: Efficient Zero-Shot Listwise Reranking with Seq2seq Encoder–Decoder Models [NLP, 2023]",
 ];
