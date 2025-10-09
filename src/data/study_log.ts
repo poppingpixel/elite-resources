@@ -617,4 +617,5 @@ export const STUDY_LOG: string[] = [
   "LAUREL: Learned Augmented Residual Layer [NLP, 2025]",
   "Do Wide and Deep Networks Learn the Same Things? Uncovering How Neural Network Representations Vary with Width and Depth [Core ML, 2021]",
   "Generating Wikipedia by Summarizing Long Sequences [NLP, 2018]",
+  "Natural TTS Synthesis by Conditioning WaveNet on Mel Spectrogram Predictions [Speech, 2018]",
 ];
