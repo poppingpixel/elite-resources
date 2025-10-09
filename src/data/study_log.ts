@@ -616,4 +616,5 @@ export const STUDY_LOG: string[] = [
   "Scaling Down, LiTting Up: Efficient Zero-Shot Listwise Reranking with Seq2seq Encoder–Decoder Models [NLP, 2023]",
   "LAUREL: Learned Augmented Residual Layer [NLP, 2025]",
   "Do Wide and Deep Networks Learn the Same Things? Uncovering How Neural Network Representations Vary with Width and Depth [Core ML, 2021]",
+  "Generating Wikipedia by Summarizing Long Sequences [NLP, 2018]",
 ];
