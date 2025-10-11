@@ -622,4 +622,5 @@ export const STUDY_LOG: string[] = [
   "Synthetic Data Generation & Multi-Step RL for Reasoning & Tool Use [NLP, 2026]",
   "Semi-Supervised Classification with Graph Convolutional Networks [Graph ML, 2017]",
   "Neural Machine Translation by Jointly Learning to Align and Translate [NLP, 2015]",
+  "Attentive Contextual Carryover For Multi-turn End-to-end Spoken Language Understanding [Speech, 2021]",
 ];
