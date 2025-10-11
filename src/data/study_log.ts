@@ -626,4 +626,5 @@ export const STUDY_LOG: string[] = [
   "The Depth-to-Width Interplay in Self-Attention [Core ML, 2023]",
   "Adaptive Global-Local Context Fusion for Multi-Turn Spoken Language Understanding [Speech, 2022]",
   "Multimodal Chain-of-Thought Reasoning in Language Models [Multimodal, 2023]",
+  "Linformer: Self-Attention with Linear Complexity [NLP, 2020]",
 ];
