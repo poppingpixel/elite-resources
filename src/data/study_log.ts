@@ -624,4 +624,5 @@ export const STUDY_LOG: string[] = [
   "Neural Machine Translation by Jointly Learning to Align and Translate [NLP, 2015]",
   "Attentive Contextual Carryover For Multi-turn End-to-end Spoken Language Understanding [Speech, 2021]",
   "The Depth-to-Width Interplay in Self-Attention [Core ML, 2023]",
+  "Adaptive Global-Local Context Fusion for Multi-Turn Spoken Language Understanding [Speech, 2022]",
 ];
