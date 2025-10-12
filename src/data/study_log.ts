@@ -628,4 +628,5 @@ export const STUDY_LOG: string[] = [
   "Multimodal Chain-of-Thought Reasoning in Language Models [Multimodal, 2023]",
   "Linformer: Self-Attention with Linear Complexity [NLP, 2020]",
   "QA-LoRA: Quantization-Aware Low-Rank Adaptation of Large Language Models [NLP, 2023]",
+  "Quo Vadis, Action Recognition? A New Model and the Kinetics Dataset [Computer Vision, 2017]",
 ];
