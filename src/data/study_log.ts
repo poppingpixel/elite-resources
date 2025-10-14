@@ -630,4 +630,5 @@ export const STUDY_LOG: string[] = [
   "QA-LoRA: Quantization-Aware Low-Rank Adaptation of Large Language Models [NLP, 2023]",
   "Quo Vadis, Action Recognition? A New Model and the Kinetics Dataset [Computer Vision, 2017]",
   "A Survey of Large Language Models in Medicine: Principles, Applications, and Challenges [NLP, 2023]",
+  "XGBoost: A Scalable Tree Boosting System [Core ML, 2016]",
 ];
