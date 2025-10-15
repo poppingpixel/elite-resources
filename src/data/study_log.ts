@@ -640,4 +640,5 @@ export const STUDY_LOG: string[] = [
   "Modality Dropout for Improved Performance-driven Talking Faces [Multimodal, 2020]",
   "Which Algorithmic Choices Matter at Which Batch Sizes? Insights From a Noisy Quadratic Model [Core ML, 2019]",
   "MediTron-70B: Scaling Medical Pretraining for Large Language Models [NLP, 2023]",
+  "Any-to-Any Generation via Composable Diffusion [Multimodal, 2023]",
 ];
