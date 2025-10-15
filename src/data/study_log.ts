@@ -632,4 +632,5 @@ export const STUDY_LOG: string[] = [
   "A Survey of Large Language Models in Medicine: Principles, Applications, and Challenges [NLP, 2023]",
   "XGBoost: A Scalable Tree Boosting System [Core ML, 2016]",
   "Prefix-Tuning: Optimizing Continuous Prompts for Generation [NLP, 2021]",
+  "NOLA: Compressing LoRA Using Linear Combination of Random Basis [NLP, 2024]",
 ];
