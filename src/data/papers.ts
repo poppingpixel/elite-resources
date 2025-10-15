@@ -2684,6 +2684,246 @@ export const ALL_PAPERS: Record<string, Paper[]> = {
             "category": "Selected Papers / Good-to-know",
             "domain": "NLP",
             "year": "2023"
+        },
+        {
+            "title": "AlpaGasus: Training A Better Alpaca with Fewer Data",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "NLP",
+            "year": "2023"
+        },
+        {
+            "title": "How Is ChatGPT\u2019s Behavior Changing over Time?",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "NLP",
+            "year": "2023"
+        },
+        {
+            "title": "Do Multilingual Language Models Think Better in English?",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "NLP",
+            "year": "2023"
+        },
+        {
+            "title": "Skill-it! A Data-Driven Skills Framework for Understanding and Training Language Models",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "NLP",
+            "year": "2023"
+        },
+        {
+            "title": "In-context Autoencoder for Context Compression in a Large Language Model",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "NLP",
+            "year": "2023"
+        },
+        {
+            "title": "No Train No Gain: Revisiting Efficient Training Algorithms For Transformer-based Language Models",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "NLP",
+            "year": "2023"
+        },
+        {
+            "title": "Leveraging Implicit Feedback from Deployment Data in Dialogue",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "NLP",
+            "year": "2023"
+        },
+        {
+            "title": "FacTool: Factuality Detection in Generative AI \u2013 A Tool Augmented Framework for Multi-Task and Multi-Domain Scenarios",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "NLP",
+            "year": "2023"
+        },
+        {
+            "title": "The Belebele Benchmark: a Parallel Reading Comprehension Dataset in 122 Language Variants",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "NLP",
+            "year": "2023"
+        },
+        {
+            "title": "Large Language Models Can Be Easily Distracted by Irrelevant Context",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "NLP",
+            "year": "2023"
+        },
+        {
+            "title": "Fast Inference from Transformers via Speculative Decoding",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "NLP",
+            "year": "2023"
+        },
+        {
+            "title": "Textbooks Are All You Need II",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "NLP",
+            "year": "2023"
+        },
+        {
+            "title": "Cognitive Mirage: A Review of Hallucinations in Large Language Models",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "NLP",
+            "year": "2023"
+        },
+        {
+            "title": "Structured Chain-of-Thought Prompting for Code Generation",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "NLP",
+            "year": "2023"
+        },
+        {
+            "title": "DoLa: Decoding by Contrasting Layers Improves Factuality in Large Language Models",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "NLP",
+            "year": "2023"
+        },
+        {
+            "title": "QA-LoRA: Quantization-Aware Low-Rank Adaptation of Large Language Models",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "NLP",
+            "year": "2023"
+        },
+        {
+            "title": "Editing Commonsense Knowledge in GPT",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "NLP",
+            "year": "2023"
+        },
+        {
+            "title": "The CoT Collection: Improving Zero-shot and Few-shot Learning of Language Models via Chain-of-Thought Fine-Tuning",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "NLP",
+            "year": "2023"
+        },
+        {
+            "title": "FinGPT: Open-Source Financial Large Language Models",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "NLP",
+            "year": "2023"
+        },
+        {
+            "title": "The Reversal Curse: LLMs trained on \u201cA is B\u201d fail to learn \u201cB is A\u201d",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "NLP",
+            "year": "2023"
+        },
+        {
+            "title": "Less is More: Task-aware Layer-wise Distillation for Language Model Compression",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "NLP",
+            "year": "2023"
+        },
+        {
+            "title": "Reinforced Self-Training (ReST) for Language Modeling",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "NLP",
+            "year": "2023"
+        },
+        {
+            "title": "How Do Large Language Models Capture the Ever-changing World Knowledge? A Review of Recent Advances",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "NLP",
+            "year": "2023"
+        },
+        {
+            "title": "Diffusion Language Models Can Perform Many Tasks with Scaling and Instruction-Finetuning",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "NLP",
+            "year": "2023"
+        },
+        {
+            "title": "A Reparameterized Discrete Diffusion Model for Text Generation",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "NLP",
+            "year": "2023"
+        },
+        {
+            "title": "AR-Diffusion: Auto-Regressive Diffusion Model for Text Generation",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "NLP",
+            "year": "2023"
+        },
+        {
+            "title": "HomoDistil: Homotopic Task-Agnostic Distillation of Pre-trained Transformers",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "NLP",
+            "year": "2023"
+        },
+        {
+            "title": "Likelihood-Based Diffusion Language Models",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "NLP",
+            "year": "2023"
+        },
+        {
+            "title": "Who\u2019s Harry Potter? Approximate Unlearning in LLMs",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "NLP",
+            "year": "2023"
+        },
+        {
+            "title": "Mistral 7B",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "NLP",
+            "year": "2023"
+        },
+        {
+            "title": "Take a Step Back: Evoking Reasoning via Abstraction in Large Language Models",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "NLP",
+            "year": "2023"
+        },
+        {
+            "title": "Text Generation with Diffusion Language Models: A Pre-training Approach with Continuous Paragraph Denoise",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "NLP",
+            "year": "2023"
+        },
+        {
+            "title": "JudgeLM: Fine-tuned Large Language Models are Scalable Judges",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "NLP",
+            "year": "2023"
+        },
+        {
+            "title": "LLMs as Factual Reasoners: Insights from Existing Benchmarks and Beyond",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "NLP",
+            "year": "2023"
+        },
+        {
+            "title": "Llemma: An Open Language Model For Mathematics",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "NLP",
+            "year": "2023"
+        },
+        {
+            "title": "CODEFUSION: A Pre-trained Diffusion Model for Code Generation",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "NLP",
+            "year": "2023"
+        },
+        {
+            "title": "CodeT5+: Open Code Large Language Models for Code Understanding and Generation",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "NLP",
+            "year": "2023"
+        },
+        {
+            "title": "Augmenting Language Models with Long-Term Memory",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "NLP",
+            "year": "2023"
+        },
+        {
+            "title": "ALCUNA: Large Language Models Meet New Knowledge",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "NLP",
+            "year": "2023"
+        },
+        {
+            "title": "The Perils & Promises of Fact-checking with Large Language Models",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "NLP",
+            "year": "2023"
         }
     ]
 };
