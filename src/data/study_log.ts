@@ -639,4 +639,5 @@ export const STUDY_LOG: string[] = [
   "Practical Guide to Controlled Experiments on the Web: Listen to Your Customers not to the HiPPO [Core ML, 2009]",
   "Modality Dropout for Improved Performance-driven Talking Faces [Multimodal, 2020]",
   "Which Algorithmic Choices Matter at Which Batch Sizes? Insights From a Noisy Quadratic Model [Core ML, 2019]",
+  "MediTron-70B: Scaling Medical Pretraining for Large Language Models [NLP, 2023]",
 ];
