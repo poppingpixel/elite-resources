@@ -635,4 +635,5 @@ export const STUDY_LOG: string[] = [
   "NOLA: Compressing LoRA Using Linear Combination of Random Basis [NLP, 2024]",
   "Objects as Points [Computer Vision, 2019]",
   "Reflexion: Language Agents with Verbal Reinforcement Learning [NLP, 2023]",
+  "iBOT: Image BERT Pre-training with Online Tokenizer [Computer Vision, 2022]",
 ];
