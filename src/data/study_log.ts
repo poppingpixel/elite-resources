@@ -637,4 +637,5 @@ export const STUDY_LOG: string[] = [
   "Reflexion: Language Agents with Verbal Reinforcement Learning [NLP, 2023]",
   "iBOT: Image BERT Pre-training with Online Tokenizer [Computer Vision, 2022]",
   "Practical Guide to Controlled Experiments on the Web: Listen to Your Customers not to the HiPPO [Core ML, 2009]",
+  "Modality Dropout for Improved Performance-driven Talking Faces [Multimodal, 2020]",
 ];
