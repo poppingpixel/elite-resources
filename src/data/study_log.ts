@@ -633,4 +633,5 @@ export const STUDY_LOG: string[] = [
   "XGBoost: A Scalable Tree Boosting System [Core ML, 2016]",
   "Prefix-Tuning: Optimizing Continuous Prompts for Generation [NLP, 2021]",
   "NOLA: Compressing LoRA Using Linear Combination of Random Basis [NLP, 2024]",
+  "Objects as Points [Computer Vision, 2019]",
 ];
