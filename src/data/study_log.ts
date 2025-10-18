@@ -644,4 +644,5 @@ export const STUDY_LOG: string[] = [
   "Pathways: Asynchronous Distributed Dataflow for ML [Core ML, 2022]",
   "Orca 2: Teaching Small Language Models How to Reason [NLP, 2023]",
   "PaLM-E: An Embodied Multimodal Language Model [Multimodal, 2023]",
+  "EMO: Emote Portrait Alive - Generating Expressive Portrait Videos with Audio2Video Diffusion Model under Weak Conditions [Multimodal, 2024]",
 ];
