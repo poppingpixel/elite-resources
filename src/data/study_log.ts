@@ -646,4 +646,5 @@ export const STUDY_LOG: string[] = [
   "PaLM-E: An Embodied Multimodal Language Model [Multimodal, 2023]",
   "EMO: Emote Portrait Alive - Generating Expressive Portrait Videos with Audio2Video Diffusion Model under Weak Conditions [Multimodal, 2024]",
   "Llemma: An Open Language Model For Mathematics [NLP, 2023]",
+  "Triple Wins: Boosting Accuracy, Robustness and Efficiency Together by Enabling Input-Adaptive Inference [Core ML, 2020]",
 ];
