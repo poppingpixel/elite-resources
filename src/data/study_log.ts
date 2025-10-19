@@ -648,4 +648,5 @@ export const STUDY_LOG: string[] = [
   "Llemma: An Open Language Model For Mathematics [NLP, 2023]",
   "Triple Wins: Boosting Accuracy, Robustness and Efficiency Together by Enabling Input-Adaptive Inference [Core ML, 2020]",
   "Airavata: Introducing Hindi Instruction-Tuned LLM [NLP, 2023]",
+  "LLaMA-Adapter: Efficient Fine-tuning of Language Models with Zero-init Attention [NLP, 2023]",
 ];
