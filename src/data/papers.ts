@@ -2924,6 +2924,246 @@ export const ALL_PAPERS: Record<string, Paper[]> = {
             "category": "Selected Papers / Good-to-know",
             "domain": "NLP",
             "year": "2023"
+        },
+        {
+            "title": "SLoRA: Federated Parameter Efficient Fine-Tuning of Language Models",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "NLP",
+            "year": "2023"
+        },
+        {
+            "title": "S-LoRA: Serving Thousands of Concurrent LoRA Adapters",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "NLP",
+            "year": "2023"
+        },
+        {
+            "title": "ChainPoll: A High Efficacy Method for LLM Hallucination Detection",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "NLP",
+            "year": "2023"
+        },
+        {
+            "title": "Mixture-of-Experts Meets Instruction Tuning: A Winning Combination for Large Language Models",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "NLP",
+            "year": "2023"
+        },
+        {
+            "title": "LLM-Blender: Ensembling Large Language Models with Pairwise Ranking and Generative Fusion",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "NLP",
+            "year": "2023"
+        },
+        {
+            "title": "Semantic Uncertainty: Linguistic Invariances for Uncertainty Estimation in Natural Language Generation",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "NLP",
+            "year": "2023"
+        },
+        {
+            "title": "FACTSCORE: Fine-grained Atomic Evaluation of Factual Precision in Long Form Text Generation",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "NLP",
+            "year": "2023"
+        },
+        {
+            "title": "Fine-tuning Language Models for Factuality",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "NLP",
+            "year": "2023"
+        },
+        {
+            "title": "Better Zero-Shot Reasoning with Self-Adaptive Prompting",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "NLP",
+            "year": "2023"
+        },
+        {
+            "title": "Universal Self-Adaptive Prompting for Zero-shot and Few-shot Learning",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "NLP",
+            "year": "2023"
+        },
+        {
+            "title": "Chain-of-Note: Enhancing Robustness in Retrieval-Augmented Language Models",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "NLP",
+            "year": "2023"
+        },
+        {
+            "title": "Thread of Thought: Unraveling Chaotic Contexts",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "NLP",
+            "year": "2023"
+        },
+        {
+            "title": "Large Language Models Understand and Can Be Enhanced by Emotional Stimuli",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "NLP",
+            "year": "2023"
+        },
+        {
+            "title": "Text Embeddings Reveal (Almost) As Much As Text",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "NLP",
+            "year": "2023"
+        },
+        {
+            "title": "Influence Scores at Scale for Efficient Language Data Sampling",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "NLP",
+            "year": "2023"
+        },
+        {
+            "title": "TableLlama: Towards Open Large Generalist Models for Tables",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "NLP",
+            "year": "2023"
+        },
+        {
+            "title": "NEFTune: Noisy Embeddings Improve Instruction Finetuning",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "NLP",
+            "year": "2023"
+        },
+        {
+            "title": "Break the Sequential Dependency of LLM Inference Using Lookahead Decoding",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "NLP",
+            "year": "2023"
+        },
+        {
+            "title": "Medusa: Simple Framework for Accelerating LLM Generation with Multiple Decoding Heads",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "NLP",
+            "year": "2023"
+        },
+        {
+            "title": "Online Speculative Decoding",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "NLP",
+            "year": "2023"
+        },
+        {
+            "title": "PaSS: Parallel Speculative Sampling",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "NLP",
+            "year": "2023"
+        },
+        {
+            "title": "System 2 Attention (is something you might need too)",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "NLP",
+            "year": "2023"
+        },
+        {
+            "title": "Aligning Large Language Models through Synthetic Feedback",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "NLP",
+            "year": "2023"
+        },
+        {
+            "title": "Contrastive Chain-of-Thought Prompting",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "NLP",
+            "year": "2023"
+        },
+        {
+            "title": "ChipNeMo: Domain-Adapted LLMs for Chip Design",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "NLP",
+            "year": "2023"
+        },
+        {
+            "title": "Efficient Streaming Language Models with Attention Sinks",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "NLP",
+            "year": "2023"
+        },
+        {
+            "title": "Precise Zero-Shot Dense Retrieval without Relevance Labels",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "NLP",
+            "year": "2023"
+        },
+        {
+            "title": "Tied-LoRA: Enhancing Parameter Efficiency of LoRA with Weight Tying",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "NLP",
+            "year": "2023"
+        },
+        {
+            "title": "Adaptive Budget Allocation for Parameter-Efficient Fine-Tuning",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "NLP",
+            "year": "2023"
+        },
+        {
+            "title": "Chain-of-Knowledge: Grounding Large Language Models via Dynamic Knowledge Adapting over Heterogeneous Sources",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "NLP",
+            "year": "2023"
+        },
+        {
+            "title": "Exponentially Faster Language Modeling",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "NLP",
+            "year": "2023"
+        },
+        {
+            "title": "Prompt Injection attack against LLM-integrated Applications",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "NLP",
+            "year": "2023"
+        },
+        {
+            "title": "Jailbroken: How Does LLM Safety Training Fail?",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "NLP",
+            "year": "2023"
+        },
+        {
+            "title": "Orca 2: Teaching Small Language Models How to Reason",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "NLP",
+            "year": "2023"
+        },
+        {
+            "title": "Rephrase and Respond: Let Large Language Models Ask Better Questions for Themselves",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "NLP",
+            "year": "2023"
+        },
+        {
+            "title": "Pythia: A Suite for Analyzing Large Language Models Across Training and Scaling",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "NLP",
+            "year": "2023"
+        },
+        {
+            "title": "Starling-7B: Increasing LLM Helpfulness & Harmlessness with RLAIF",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "NLP",
+            "year": "2023"
+        },
+        {
+            "title": "Large Language Models Are Human-Level Prompt Engineers",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "NLP",
+            "year": "2023"
+        },
+        {
+            "title": "A Survey of Graph Meets Large Language Model: Progress and Future Directions",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "NLP",
+            "year": "2023"
+        },
+        {
+            "title": "Nash Learning from Human Feedback",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "NLP",
+            "year": "2023"
         }
     ]
 };
