@@ -650,4 +650,5 @@ export const STUDY_LOG: string[] = [
   "Airavata: Introducing Hindi Instruction-Tuned LLM [NLP, 2023]",
   "LLaMA-Adapter: Efficient Fine-tuning of Language Models with Zero-init Attention [NLP, 2023]",
   "EfficientSAM: Leveraged Masked Image Pretraining for Efficient Segment Anything [Computer Vision, 2023]",
+  "Deep Learning Recommendation Model for Personalization and Recommendation Systems [RecSys, 2019]",
 ];
