@@ -3404,6 +3404,246 @@ export const ALL_PAPERS: Record<string, Paper[]> = {
             "category": "Selected Papers / Good-to-know",
             "domain": "NLP",
             "year": "2023"
+        },
+        {
+            "title": "Language Model Inversion",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "NLP",
+            "year": "2023"
+        },
+        {
+            "title": "LLM360: Towards Fully Transparent Open-Source LLMs",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "NLP",
+            "year": "2023"
+        },
+        {
+            "title": "LLMLingua: Compressing Prompts for Accelerated Inference of Large Language Models",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "NLP",
+            "year": "2023"
+        },
+        {
+            "title": "Retrieval-Augmented Generation for Large Language Models: A Survey",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "NLP",
+            "year": "2023"
+        },
+        {
+            "title": "LLM in a Flash: Efficient Large Language Model Inference with Limited Memory",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "NLP",
+            "year": "2023"
+        },
+        {
+            "title": "ReST Meets ReAct: Self-Improvement for Multi-Step Reasoning LLM Agent",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "NLP",
+            "year": "2023"
+        },
+        {
+            "title": "PowerInfer: Fast Large Language Model Serving with a Consumer-grade GPU",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "NLP",
+            "year": "2023"
+        },
+        {
+            "title": "Adversarial Attacks on GPT-4 via Simple Random Search",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "NLP",
+            "year": "2023"
+        },
+        {
+            "title": "An In-depth Look at Gemini\u2019s Language Abilities",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "NLP",
+            "year": "2023"
+        },
+        {
+            "title": "LoRAMoE: Revolutionizing Mixture of Experts for Maintaining World Knowledge in Language Model Alignment",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "NLP",
+            "year": "2023"
+        },
+        {
+            "title": "Large Language Models are Better Reasoners with Self-Verification",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "NLP",
+            "year": "2023"
+        },
+        {
+            "title": "PaperMage: A Unified Toolkit for Processing, Representing, and Manipulating Visually-Rich Scientific Documents",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "NLP",
+            "year": "2023"
+        },
+        {
+            "title": "Large Language Models on Graphs: A Comprehensive Survey",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "NLP",
+            "year": "2023"
+        },
+        {
+            "title": "An LLM Compiler for Parallel Function Calling",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "NLP",
+            "year": "2023"
+        },
+        {
+            "title": "Scaling Down, LiTting Up: Efficient Zero-Shot Listwise Reranking with Seq2seq Encoder\u2013Decoder Models",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "NLP",
+            "year": "2023"
+        },
+        {
+            "title": "Is ChatGPT Good at Search? Investigating Large Language Models as Re-Ranking Agents",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "NLP",
+            "year": "2023"
+        },
+        {
+            "title": "NPHardEval: Dynamic Benchmark on Reasoning Ability of Large Language Models via Complexity Classes",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "NLP",
+            "year": "2023"
+        },
+        {
+            "title": "Robust Knowledge Extraction from Large Language Models using Social Choice Theory",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "NLP",
+            "year": "2023"
+        },
+        {
+            "title": "LongQLoRA: Efficient and Effective Method to Extend Context Length of Large Language Models",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "NLP",
+            "year": "2023"
+        },
+        {
+            "title": "Editing Models with Task Arithmetic",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "NLP",
+            "year": "2023"
+        },
+        {
+            "title": "Time is Encoded in the Weights of Finetuned Language Models",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "NLP",
+            "year": "2023"
+        },
+        {
+            "title": "TinyGPT-V: Efficient Multimodal Large Language Model via Small Backbones",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "NLP",
+            "year": "2023"
+        },
+        {
+            "title": "OpenChat: Advancing Open-Source Language Models with Mixed-Quality Data",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "NLP",
+            "year": "2023"
+        },
+        {
+            "title": "What Makes Good Data for Alignment? A Comprehensive Study of Automatic Data Selection in Instruction Tuning",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "NLP",
+            "year": "2023"
+        },
+        {
+            "title": "Judging LLM-as-a-Judge with MT-Bench and Chatbot Arena",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "NLP",
+            "year": "2023"
+        },
+        {
+            "title": "MultiInstruct: Improving Multi-Modal Zero-Shot Learning via Instruction Tuning",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "NLP",
+            "year": "2023"
+        },
+        {
+            "title": "Cheap and Quick: Efficient Vision-Language Instruction Tuning for Large Language Models",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "NLP",
+            "year": "2023"
+        },
+        {
+            "title": "Dense X Retrieval: What Retrieval Granularity Should We Use?",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "NLP",
+            "year": "2023"
+        },
+        {
+            "title": "ARES: An Automated Evaluation Framework for Retrieval-Augmented Generation Systems",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "NLP",
+            "year": "2023"
+        },
+        {
+            "title": "A Comprehensive Survey of Hallucination Mitigation Techniques in Large Language Models",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "NLP",
+            "year": "2023"
+        },
+        {
+            "title": "A Survey of Reasoning with Foundation Models",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "NLP",
+            "year": "2023"
+        },
+        {
+            "title": "GPT-4V(ision) is a Generalist Web Agent, if Grounded",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "NLP",
+            "year": "2023"
+        },
+        {
+            "title": "Large Language Models for Generative Information Extraction: A Survey",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "NLP",
+            "year": "2023"
+        },
+        {
+            "title": "EQ-Bench: An Emotional Intelligence Benchmark for Large Language Models",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "NLP",
+            "year": "2023"
+        },
+        {
+            "title": "Turbulence: Systematically and Automatically Testing Instruction-Tuned Large Language Models for Code",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "NLP",
+            "year": "2023"
+        },
+        {
+            "title": "TrustLLM: Trustworthiness in Large Language Models",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "NLP",
+            "year": "2023"
+        },
+        {
+            "title": "Blending Is All You Need: Cheaper Better Alternative to Trillion-Parameters LLM",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "NLP",
+            "year": "2023"
+        },
+        {
+            "title": "Enhancing Zero-Shot Chain-of-Thought Reasoning in Large Language Models through Logic",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "NLP",
+            "year": "2023"
+        },
+        {
+            "title": "Airavata: Introducing Hindi Instruction-Tuned LLM",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "NLP",
+            "year": "2023"
+        },
+        {
+            "title": "Chain-of-Symbol Prompting for Spatial Relationships in Large Language Models",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "NLP",
+            "year": "2023"
         }
     ]
 };
