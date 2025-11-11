@@ -3644,6 +3644,246 @@ export const ALL_PAPERS: Record<string, Paper[]> = {
             "category": "Selected Papers / Good-to-know",
             "domain": "NLP",
             "year": "2023"
+        },
+        {
+            "title": "Continual Pre-training of Language Models",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "NLP",
+            "year": "2023"
+        },
+        {
+            "title": "Jina Embeddings: A Novel Set of High-Performance Sentence Embedding Models",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "NLP",
+            "year": "2023"
+        },
+        {
+            "title": "Simplifying Transformer Blocks",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "NLP",
+            "year": "2023"
+        },
+        {
+            "title": "Promptbreeder: Self-Referential Self-Improvement Via Prompt Evolution",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "NLP",
+            "year": "2023"
+        },
+        {
+            "title": "AnglE-Optimized Text Embeddings",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "NLP",
+            "year": "2023"
+        },
+        {
+            "title": "SLiC-HF: Sequence Likelihood Calibration with Human Feedback",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "NLP",
+            "year": "2023"
+        },
+        {
+            "title": "Ghostbuster: Detecting Text Ghostwritten by Large Language Models",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "NLP",
+            "year": "2023"
+        },
+        {
+            "title": "Monarch Mixer: A Simple Sub-Quadratic GEMM-Based Architecture",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "NLP",
+            "year": "2023"
+        },
+        {
+            "title": "DistillCSE: Distilled Contrastive Learning for Sentence Embeddings",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "NLP",
+            "year": "2023"
+        },
+        {
+            "title": "The Unlocking Spell on Base LLMs: Rethinking Alignment via In-Context Learning",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "NLP",
+            "year": "2023"
+        },
+        {
+            "title": "GLiNER: Generalist Model for Named Entity Recognition using Bidirectional Transformer",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "NLP",
+            "year": "2023"
+        },
+        {
+            "title": "BLIVA: A Simple Multimodal LLM for Better Handling of Text-Rich Visual Questions",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "NLP",
+            "year": "2024"
+        },
+        {
+            "title": "Building a Llama2-finetuned LLM for Odia Language Utilizing Domain Knowledge Instruction Set",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "NLP",
+            "year": "2024"
+        },
+        {
+            "title": "Leveraging Large Language Models for NLG Evaluation: A Survey",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "NLP",
+            "year": "2024"
+        },
+        {
+            "title": "Nomic Embed: Training a Reproducible Long Context Text Embedder",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "NLP",
+            "year": "2024"
+        },
+        {
+            "title": "Jina Embeddings 2: 8192-Token General-Purpose Text Embeddings for Long Documents",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "NLP",
+            "year": "2024"
+        },
+        {
+            "title": "Seven Failure Points When Engineering a Retrieval Augmented Generation System",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "NLP",
+            "year": "2024"
+        },
+        {
+            "title": "SALAD-Bench: A Hierarchical and Comprehensive Safety Benchmark for Large Language Models",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "NLP",
+            "year": "2024"
+        },
+        {
+            "title": "DoRA: Weight-Decomposed Low-Rank Adaptation",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "NLP",
+            "year": "2024"
+        },
+        {
+            "title": "ICDPO: Effectively Borrowing Alignment Capability of Others via In-context Direct Preference Optimization",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "NLP",
+            "year": "2024"
+        },
+        {
+            "title": "A Human-Inspired Reading Agent with Gist Memory of Very Long Contexts",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "NLP",
+            "year": "2024"
+        },
+        {
+            "title": "SliceGPT: Compress Large Language Models by Deleting Rows and Columns",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "NLP",
+            "year": "2024"
+        },
+        {
+            "title": "Two-dimensional Matryoshka Sentence Embeddings",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "NLP",
+            "year": "2024"
+        },
+        {
+            "title": "Benchmarking Hallucination in Large Language Models based on Unanswerable Math Word Problem",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "NLP",
+            "year": "2024"
+        },
+        {
+            "title": "IndicVoices: Towards Building an Inclusive Multilingual Speech Dataset for Indian Languages",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "NLP",
+            "year": "2024"
+        },
+        {
+            "title": "ArtPrompt: ASCII Art-based Jailbreak Attacks against Aligned LLMs",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "NLP",
+            "year": "2024"
+        },
+        {
+            "title": "The Calibration Gap between Model and Human Confidence in Large Language Models",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "NLP",
+            "year": "2024"
+        },
+        {
+            "title": "Fact-Checking the Output of Large Language Models via Token-Level Uncertainty Quantification",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "NLP",
+            "year": "2024"
+        },
+        {
+            "title": "RAPTOR: Recursive Abstractive Processing for Tree-Organized Retrieval",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "NLP",
+            "year": "2024"
+        },
+        {
+            "title": "The Power of Noise: Redefining Retrieval for RAG Systems",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "NLP",
+            "year": "2024"
+        },
+        {
+            "title": "DeepSeek LLM: Scaling Open-Source Language Models with Longtermism",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "NLP",
+            "year": "2024"
+        },
+        {
+            "title": "Contrastive Preference Optimization: Pushing the Boundaries of LLM Performance in Machine Translation",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "NLP",
+            "year": "2024"
+        },
+        {
+            "title": "MultiHop-RAG: Benchmarking Retrieval-Augmented Generation for Multi-Hop Queries",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "NLP",
+            "year": "2024"
+        },
+        {
+            "title": "Human Alignment of Large Language Models through Online Preference Optimisation",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "NLP",
+            "year": "2024"
+        },
+        {
+            "title": "A General Theoretical Paradigm to Understand Learning from Human Preferences",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "NLP",
+            "year": "2024"
+        },
+        {
+            "title": "Contrastive Preference Optimization: Pushing the Boundaries of LLM Performance in Machine Translation",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "NLP",
+            "year": "2024"
+        },
+        {
+            "title": "What Are Tools Anyway? A Survey from the Language Model Perspective",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "NLP",
+            "year": "2024"
+        },
+        {
+            "title": "AutoDev: Automated AI-Driven Development",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "NLP",
+            "year": "2024"
+        },
+        {
+            "title": "LLM4Decompile: Decompiling Binary Code with Large Language Models",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "NLP",
+            "year": "2024"
+        },
+        {
+            "title": "OLMo: Accelerating the Science of Language Models",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "NLP",
+            "year": "2024"
         }
     ]
 };
