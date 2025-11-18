@@ -3884,6 +3884,246 @@ export const ALL_PAPERS: Record<string, Paper[]> = {
             "category": "Selected Papers / Good-to-know",
             "domain": "NLP",
             "year": "2024"
+        },
+        {
+            "title": "Dolma: an Open Corpus of Three Trillion Tokens for Language Model Pretraining Research",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "NLP",
+            "year": "2024"
+        },
+        {
+            "title": "MathVista: Evaluating Mathematical Reasoning of Foundation Models in Visual Contexts",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "NLP",
+            "year": "2024"
+        },
+        {
+            "title": "RAG vs Fine-tuning: Pipelines, Tradeoffs, and a Case Study on Agriculture",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "NLP",
+            "year": "2024"
+        },
+        {
+            "title": "RAFT: Adapting Language Model to Domain Specific RAG",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "NLP",
+            "year": "2024"
+        },
+        {
+            "title": "Corrective Retrieval Augmented Generation",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "NLP",
+            "year": "2024"
+        },
+        {
+            "title": "SaulLM-7B: A pioneering Large Language Model for Law",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "NLP",
+            "year": "2024"
+        },
+        {
+            "title": "LLM2LLM: Boosting LLMs with Novel Iterative Data Enhancement",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "NLP",
+            "year": "2024"
+        },
+        {
+            "title": "FollowIR: Evaluating and Teaching Information Retrieval Models to Follow Instructions",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "NLP",
+            "year": "2024"
+        },
+        {
+            "title": "AIOS: LLM Agent Operating System",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "NLP",
+            "year": "2024"
+        },
+        {
+            "title": "Lumos: A Modular Open-Source LLM-Based Agent Framework",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "NLP",
+            "year": "2024"
+        },
+        {
+            "title": "A Comparison of Human, GPT-3.5, and GPT-4 Performance in a University-Level Coding Course",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "NLP",
+            "year": "2024"
+        },
+        {
+            "title": "sDPO: Don\u2019t Use Your Data All at Once",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "NLP",
+            "year": "2024"
+        },
+        {
+            "title": "RS-DPO: A Hybrid Rejection Sampling and Direct Preference Optimization Method for Alignment of Large Language Models",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "NLP",
+            "year": "2024"
+        },
+        {
+            "title": "Dataverse: Open-Source ETL (Extract Transform Load) Pipeline for Large Language Models",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "NLP",
+            "year": "2024"
+        },
+        {
+            "title": "Teaching Large Language Models to Reason with Reinforcement Learning",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "NLP",
+            "year": "2024"
+        },
+        {
+            "title": "Jamba: A Hybrid Transformer-Mamba Language Model",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "NLP",
+            "year": "2024"
+        },
+        {
+            "title": "Fine Tuning vs. Retrieval Augmented Generation for Less Popular Knowledge",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "NLP",
+            "year": "2024"
+        },
+        {
+            "title": "LLM2Vec: Large Language Models Are Secretly Powerful Text Encoders",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "NLP",
+            "year": "2024"
+        },
+        {
+            "title": "HGOT: Hierarchical Graph of Thoughts for Retrieval-Augmented In-Context Learning in Factuality Evaluation",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "NLP",
+            "year": "2024"
+        },
+        {
+            "title": "ReFT: Representation Finetuning for Language Models",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "NLP",
+            "year": "2024"
+        },
+        {
+            "title": "Towards Conversational Diagnostic AI",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "NLP",
+            "year": "2024"
+        },
+        {
+            "title": "Reka Core, Flash, and Edge: A Series of Powerful Multimodal Language Models",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "NLP",
+            "year": "2024"
+        },
+        {
+            "title": "Phi-3 Technical Report: A Highly Capable Language Model Locally on Your Phone",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "NLP",
+            "year": "2024"
+        },
+        {
+            "title": "Mixtral of Experts",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "NLP",
+            "year": "2024"
+        },
+        {
+            "title": "BioMistral: A Collection of Open-Source Pretrained Large Language Models for Medical Domains",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "NLP",
+            "year": "2024"
+        },
+        {
+            "title": "Gemma: Open Models Based on Gemini Research and Technology",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "NLP",
+            "year": "2024"
+        },
+        {
+            "title": "SPAFIT: Stratified Progressive Adaptation Fine-tuning for Pre-trained Large Language Models",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "NLP",
+            "year": "2024"
+        },
+        {
+            "title": "Instruction-tuned Language Models are Better Knowledge Learners",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "NLP",
+            "year": "2024"
+        },
+        {
+            "title": "Replacing Judges with Juries: Evaluating LLM Generations with a Panel of Diverse Models",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "NLP",
+            "year": "2024"
+        },
+        {
+            "title": "Prometheus 2: An Open Source Language Model Specialized in Evaluating Other Language Models",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "NLP",
+            "year": "2024"
+        },
+        {
+            "title": "Mixture of LoRA Experts",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "NLP",
+            "year": "2024"
+        },
+        {
+            "title": "Teaching Large Language Models to Self-Debug",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "NLP",
+            "year": "2024"
+        },
+        {
+            "title": "You Only Cache Once: Decoder-Decoder Architectures for Language Models",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "NLP",
+            "year": "2024"
+        },
+        {
+            "title": "JetMoE: Reaching Llama2 Performance with 0.1M Dollars",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "NLP",
+            "year": "2024"
+        },
+        {
+            "title": "LayerSkip: Enabling Early Exit Inference and Self-Speculative Decoding",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "NLP",
+            "year": "2024"
+        },
+        {
+            "title": "Better & Faster Large Language Models via Multi-token Prediction",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "NLP",
+            "year": "2024"
+        },
+        {
+            "title": "When Benchmarks are Targets: Revealing the Sensitivity of Large Language Model Leaderboards",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "NLP",
+            "year": "2024"
+        },
+        {
+            "title": "Visualization-of-Thought Elicits Spatial Reasoning in Large Language Models",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "NLP",
+            "year": "2024"
+        },
+        {
+            "title": "Hallucination of Multimodal Large Language Models: A Survey",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "NLP",
+            "year": "2024"
+        },
+        {
+            "title": "In-Context Learning with Long-Context Models: An In-Depth Exploration",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "NLP",
+            "year": "2024"
         }
     ]
 };
