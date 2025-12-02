@@ -4364,6 +4364,246 @@ export const ALL_PAPERS: Record<string, Paper[]> = {
             "category": "Selected Papers / Good-to-know",
             "domain": "NLP",
             "year": "2024"
+        },
+        {
+            "title": "V-STaR: Training Verifiers for Self-Taught Reasoners",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "NLP",
+            "year": "2024"
+        },
+        {
+            "title": "OLMOE: Open Mixture-of-Experts Language Models",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "NLP",
+            "year": "2024"
+        },
+        {
+            "title": "Anchored Preference Optimization and Contrastive Revisions: Addressing Underspecification in Alignment",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "NLP",
+            "year": "2024"
+        },
+        {
+            "title": "APIGen: Automated Pipeline for Generating Verifiable and Diverse Function-Calling Datasets",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "NLP",
+            "year": "2024"
+        },
+        {
+            "title": "AutoAgents: A Framework for Automatic Agent Generation",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "NLP",
+            "year": "2024"
+        },
+        {
+            "title": "Measuring Short-Form Factuality in Large Language Models: SimpleQA",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "NLP",
+            "year": "2024"
+        },
+        {
+            "title": "Llama-3-Nanda-10B-Chat: An Open Generative Large Language Model for Hindi",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "NLP",
+            "year": "2024"
+        },
+        {
+            "title": "IndicGenBench: A Multilingual Benchmark to Evaluate Generation Capabilities of LLMs on Indic Languages",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "NLP",
+            "year": "2024"
+        },
+        {
+            "title": "Llama Pro: Progressive LLaMA with Block Expansion",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "NLP",
+            "year": "2024"
+        },
+        {
+            "title": "CRITIC: Large Language Models Can Self-Correct with Tool-Interactive Critiquing",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "NLP",
+            "year": "2024"
+        },
+        {
+            "title": "Efficient Tool Use with Chain-of-Abstraction Reasoning",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "NLP",
+            "year": "2024"
+        },
+        {
+            "title": "Understanding the Planning of LLM Agents: A Survey",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "NLP",
+            "year": "2024"
+        },
+        {
+            "title": "Phi-4 Technical Report",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "NLP",
+            "year": "2024"
+        },
+        {
+            "title": "DeepSeekMath: Pushing the Limits of Mathematical Reasoning in Open Language Models",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "NLP",
+            "year": "2024"
+        },
+        {
+            "title": "DeepSeek-V3 Technical Report",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "NLP",
+            "year": "2024"
+        },
+        {
+            "title": "HuatuoGPT-o1: Towards Medical Complex Reasoning with LLMs",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "NLP",
+            "year": "2024"
+        },
+        {
+            "title": "HiQA: A Hierarchical Contextual Augmentation RAG for Massive Documents QA",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "NLP",
+            "year": "2024"
+        },
+        {
+            "title": "MiniMax-01: Scaling Foundation Models with Lightning Attention",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "NLP",
+            "year": "2025"
+        },
+        {
+            "title": "s1: Simple Test-Time Scaling",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "NLP",
+            "year": "2025"
+        },
+        {
+            "title": "Sky-T1",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "NLP",
+            "year": "2025"
+        },
+        {
+            "title": "Kimi k1.5: Scaling Reinforcement Learning with LLMs",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "NLP",
+            "year": "2025"
+        },
+        {
+            "title": "SWE-Lancer: Can Frontier LLMs Earn $1 Million from Real-World Freelance Software Engineering?",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "NLP",
+            "year": "2025"
+        },
+        {
+            "title": "ChatDev: Communicative Agents for Software Development",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "NLP",
+            "year": "2025"
+        },
+        {
+            "title": "Native Sparse Attention: Hardware-Aligned and Natively Trainable Sparse Attention",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "NLP",
+            "year": "2025"
+        },
+        {
+            "title": "CuMo: Scaling Multimodal LLM with Co-Upcycled Mixture-of-Experts",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "NLP",
+            "year": "2025"
+        },
+        {
+            "title": "Branch-Train-MiX: Mixing Expert LLMs into a Mixture-of-Experts LLM",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "NLP",
+            "year": "2025"
+        },
+        {
+            "title": "SwitchHead: Accelerating Transformers with Mixture-of-Experts Attention",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "NLP",
+            "year": "2025"
+        },
+        {
+            "title": "OctoTools: An Agentic Framework with Extensible Tools for Complex Reasoning",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "NLP",
+            "year": "2025"
+        },
+        {
+            "title": "T\u00fclu 3: Pushing Frontiers in Open Language Model Post-Training",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "NLP",
+            "year": "2025"
+        },
+        {
+            "title": "Think Only When You Need with Large Hybrid-Reasoning Models",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "NLP",
+            "year": "2025"
+        },
+        {
+            "title": "RM-R1: Reward Modeling as Reasoning",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "NLP",
+            "year": "2025"
+        },
+        {
+            "title": "Reward Reasoning Model",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "NLP",
+            "year": "2025"
+        },
+        {
+            "title": "The Leaderboard Illusion",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "NLP",
+            "year": "2025"
+        },
+        {
+            "title": "J4R: Learning to Judge with Equivalent Initial State Group Relative Policy Optimization",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "NLP",
+            "year": "2025"
+        },
+        {
+            "title": "Layer by Layer: Uncovering Hidden Representations in Language Models",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "NLP",
+            "year": "2025"
+        },
+        {
+            "title": "LAUREL: Learned Augmented Residual Layer",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "NLP",
+            "year": "2025"
+        },
+        {
+            "title": "A Benchmark for Learning to Translate a New Language from One Grammar Book",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "NLP",
+            "year": "2025"
+        },
+        {
+            "title": "Understanding R1-Zero-Like Training: A Critical Perspective",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "NLP",
+            "year": "2025"
+        },
+        {
+            "title": "LazyLLM: Dynamic Token Pruning for Efficient Long Context LLM Inference",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "NLP",
+            "year": "2025"
+        },
+        {
+            "title": "DAPO: An Open-Source LLM Reinforcement Learning System at Scale",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "NLP",
+            "year": "2025"
         }
     ]
 };
