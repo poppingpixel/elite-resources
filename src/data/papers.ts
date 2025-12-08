@@ -4604,6 +4604,72 @@ export const ALL_PAPERS: Record<string, Paper[]> = {
             "category": "Selected Papers / Good-to-know",
             "domain": "NLP",
             "year": "2025"
+        },
+        {
+            "title": "Learning to (Learn at Test Time): RNNs with Expressive Hidden States",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "NLP",
+            "year": "2025"
+        },
+        {
+            "title": "Scaling Laws of Synthetic Data for Language Models",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "NLP",
+            "year": "2025"
+        },
+        {
+            "title": "Rethinking Reflection in Pre-Training",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "NLP",
+            "year": "2025"
+        },
+        {
+            "title": "Magistral: Mistral\u2019s First Reasoning Model and Reinforcement Learning Stack",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "NLP",
+            "year": "2025"
+        },
+        {
+            "title": "UMoE: Unifying Attention and FFN with Shared Experts",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "NLP",
+            "year": "2025"
+        },
+        {
+            "title": "Mixture of Attention Heads: Selecting Attention Heads Per Token",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "NLP",
+            "year": "2025"
+        },
+        {
+            "title": "REFRAG: Rethinking RAG based Decoding",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "NLP",
+            "year": "2025"
+        },
+        {
+            "title": "Fact, Fetch, and Reason: A Unified Evaluation of Retrieval-Augmented Generation",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "NLP",
+            "year": "2025"
+        },
+        {
+            "title": "AI Agent Traps",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "NLP",
+            "year": "2026"
+        },
+        {
+            "title": "Synthetic Data Generation & Multi-Step RL for Reasoning & Tool Use",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "NLP",
+            "year": "2026"
+        },
+        {
+            "title": "Reasoning-SQL: Reinforcement Learning with SQL Tailored Partial Rewards for Reasoning-Enhanced Text-to-SQL",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "NLP",
+            "year": "2026"
         }
     ]
 };
