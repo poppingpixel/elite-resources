@@ -4671,5 +4671,217 @@ export const ALL_PAPERS: Record<string, Paper[]> = {
             "domain": "NLP",
             "year": "2026"
         }
+    ],
+    "Speech": [
+        {
+            "title": "Connectionist Temporal Classification: Labelling Unsegmented Sequence Data with Recurrent Neural Networks",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "Speech",
+            "year": "2006"
+        },
+        {
+            "title": "Front-end factor analysis for speaker verification",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "Speech",
+            "year": "2010"
+        },
+        {
+            "title": "Sequence Transduction with Recurrent Neural Networks",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "Speech",
+            "year": "2012"
+        },
+        {
+            "title": "Hybrid speech recognition with Deep Bidirectional LSTM",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "Speech",
+            "year": "2013"
+        },
+        {
+            "title": "Towards End-To-End Speech Recognition with Recurrent Neural Networks",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "Speech",
+            "year": "2014"
+        },
+        {
+            "title": "Deep neural networks for small footprint text-dependent speaker verification",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "Speech",
+            "year": "2014"
+        },
+        {
+            "title": "Listen, Attend and Spell",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "Speech",
+            "year": "2015"
+        },
+        {
+            "title": "CNN Architectures for Large-Scale Audio Classification",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "Speech",
+            "year": "2017"
+        },
+        {
+            "title": "X-Vectors: Robust DNN Embeddings for Speaker Recognition",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "Speech",
+            "year": "2018"
+        },
+        {
+            "title": "WaveGlow: A Flow-based Generative Network for Speech Synthesis",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "Speech",
+            "year": "2018"
+        },
+        {
+            "title": "Natural TTS Synthesis by Conditioning WaveNet on Mel Spectrogram Predictions",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "Speech",
+            "year": "2018"
+        },
+        {
+            "title": "wav2vec: Unsupervised Pre-training for Speech Recognition",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "Speech",
+            "year": "2019"
+        },
+        {
+            "title": "SpecAugment: A Simple Data Augmentation Method for Automatic Speech Recognition",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "Speech",
+            "year": "2019"
+        },
+        {
+            "title": "Margin Matters: Towards More Discriminative Deep Neural Network Embeddings for Speaker Recognition",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "Speech",
+            "year": "2019"
+        },
+        {
+            "title": "Fr\u00e9chet Audio Distance: A Metric for Evaluating Music Enhancement Algorithms",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "Speech",
+            "year": "2019"
+        },
+        {
+            "title": "Conformer: Convolution-augmented Transformer for Speech Recognition",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "Speech",
+            "year": "2020"
+        },
+        {
+            "title": "wav2vec 2.0: A Framework for Self-Supervised Learning of Speech Representations",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "Speech",
+            "year": "2020"
+        },
+        {
+            "title": "HiFi-GAN: Generative Adversarial Networks for Efficient and High Fidelity Speech Synthesis",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "Speech",
+            "year": "2020"
+        },
+        {
+            "title": "GAN-based Data Generation for Speech Emotion Recognition",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "Speech",
+            "year": "2020"
+        },
+        {
+            "title": "Generalized end-to-end loss for speaker verification",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "Speech",
+            "year": "2020"
+        },
+        {
+            "title": "Generative Spoken Language Modeling from Raw Audio",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "Speech",
+            "year": "2021"
+        },
+        {
+            "title": "Text-Free Prosody-Aware Generative Spoken Language Modeling",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "Speech",
+            "year": "2021"
+        },
+        {
+            "title": "Speech Resynthesis from Discrete Disentangled Self-Supervised Representations",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "Speech",
+            "year": "2021"
+        },
+        {
+            "title": "WavLM: Large-Scale Self-Supervised Pre-Training for Full Stack Speech Processing",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "Speech",
+            "year": "2021"
+        },
+        {
+            "title": "Recent Advances in End-to-End Automatic Speech Recognition",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "Speech",
+            "year": "2021"
+        },
+        {
+            "title": "w2v-BERT: Combining Contrastive Learning and Masked Language Modeling for Self-Supervised Speech Pre-Training",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "Speech",
+            "year": "2021"
+        },
+        {
+            "title": "SUPERB: Speech processing Universal PERformance Benchmark",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "Speech",
+            "year": "2021"
+        },
+        {
+            "title": "Direct speech-to-speech translation with discrete units",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "Speech",
+            "year": "2022"
+        },
+        {
+            "title": "Textless Speech Emotion Conversion using Discrete and Decomposed Representations",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "Speech",
+            "year": "2022"
+        },
+        {
+            "title": "Generative Spoken Dialogue Language Modeling",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "Speech",
+            "year": "2022"
+        },
+        {
+            "title": "textless-lib: a Library for Textless Spoken Language Processing",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "Speech",
+            "year": "2022"
+        },
+        {
+            "title": "Self-Supervised Speech Representation Learning: A Review",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "Speech",
+            "year": "2022"
+        },
+        {
+            "title": "Masked Autoencoders that Listen",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "Speech",
+            "year": "2022"
+        },
+        {
+            "title": "Robust Speech Recognition via Large-Scale Weak Supervision",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "Speech",
+            "year": "2022"
+        },
+        {
+            "title": "AudioGen: Textually Guided Audio Generation",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "Speech",
+            "year": "2022"
+        }
     ]
 };
