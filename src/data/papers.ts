@@ -4882,6 +4882,210 @@ export const ALL_PAPERS: Record<string, Paper[]> = {
             "category": "Seminal Papers / Need-to-know",
             "domain": "Speech",
             "year": "2022"
+        },
+        {
+            "title": "AudioLM: a Language Modeling Approach to Audio Generation",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "Speech",
+            "year": "2022"
+        },
+        {
+            "title": "SpeechT5: Unified-Modal Encoder-Decoder Pre-Training for Spoken Language Processing",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "Speech",
+            "year": "2022"
+        },
+        {
+            "title": "Scaling Speech Technology to 1,000+ Languages",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "Speech",
+            "year": "2022"
+        },
+        {
+            "title": "Distil-Whisper: Robust Knowledge Distillation via Large-Scale Pseudo Labelling",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "Speech",
+            "year": "2022"
+        },
+        {
+            "title": "Matcha-TTS: A Fast TTS Architecture with Conditional Flow Matching",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "Speech",
+            "year": "2022"
+        },
+        {
+            "title": "Audiobox: Unified Audio Generation with Natural Language Prompts",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "Speech",
+            "year": "2022"
+        },
+        {
+            "title": "On Evaluating and Comparing Conversational Agents",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "Speech",
+            "year": "2017"
+        },
+        {
+            "title": "Attention-Based Models for Text-Dependent Speaker Verification",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "Speech",
+            "year": "2018"
+        },
+        {
+            "title": "Efficient Voice Trigger Detection for Low Resource Hardware",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "Speech",
+            "year": "2018"
+        },
+        {
+            "title": "Automatic Speaker Recognition with Limited Data",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "Speech",
+            "year": "2020"
+        },
+        {
+            "title": "Speaker Identification for Household Scenarios with Self-attention and Adversarial Training",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "Speech",
+            "year": "2020"
+        },
+        {
+            "title": "Stacked 1D convolutional networks for end-to-end small footprint voice trigger detection",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "Speech",
+            "year": "2020"
+        },
+        {
+            "title": "Optimize What Matters: Training DNN-HMM Keyword Spotting Model Using End Metric",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "Speech",
+            "year": "2020"
+        },
+        {
+            "title": "MatchboxNet: 1D Time-Channel Separable Convolutional Neural Network Architecture for Speech Commands Recognition",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "Speech",
+            "year": "2020"
+        },
+        {
+            "title": "HiFi-GAN: High-Fidelity Denoising and Dereverberation Based on Speech Deep Features in Adversarial Networks",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "Speech",
+            "year": "2020"
+        },
+        {
+            "title": "Streaming Transformer for Hardware Efficient Voice Trigger Detection and False Trigger Mitigation",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "Speech",
+            "year": "2021"
+        },
+        {
+            "title": "Joint ASR and Language Identification Using RNN-T: An Efficient Approach to Dynamic Language Switching",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "Speech",
+            "year": "2021"
+        },
+        {
+            "title": "HuBERT: Self-Supervised Speech Representation Learning by Masked Prediction of Hidden Units",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "Speech",
+            "year": "2021"
+        },
+        {
+            "title": "Deep Spoken Keyword Spotting: An Overview",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "Speech",
+            "year": "2021"
+        },
+        {
+            "title": "BW-EDA-EEND: Streaming End-to-end Neural Speaker Diarization for a Variable Number of Speakers",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "Speech",
+            "year": "2021"
+        },
+        {
+            "title": "Attentive Contextual Carryover For Multi-turn End-to-end Spoken Language Understanding",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "Speech",
+            "year": "2021"
+        },
+        {
+            "title": "SmallER: Scaling Neural Entity Resolution for Edge Devices",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "Speech",
+            "year": "2021"
+        },
+        {
+            "title": "Leveraging Multilingual Neural Language Models for On-Device Natural Language Understanding",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "Speech",
+            "year": "2021"
+        },
+        {
+            "title": "Comparing Data Augmentation and Annotation Standardization to Improve End-to-end Spoken Language Understanding Models",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "Speech",
+            "year": "2021"
+        },
+        {
+            "title": "CLAR: Contrastive Learning of Auditory Representations",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "Speech",
+            "year": "2021"
+        },
+        {
+            "title": "Robust Self-Supervised Audio-Visual Speech Recognition",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "Speech",
+            "year": "2022"
+        },
+        {
+            "title": "Adaptive Global-Local Context Fusion for Multi-Turn Spoken Language Understanding",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "Speech",
+            "year": "2022"
+        },
+        {
+            "title": "SpeechMatrix: A Large-Scale Mined Corpus of Multilingual Speech-to-Speech Translations",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "Speech",
+            "year": "2022"
+        },
+        {
+            "title": "GIT: A Generative Image-to-text Transformer for Vision and Language",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "Speech",
+            "year": "2022"
+        },
+        {
+            "title": "Simple and Controllable Music Generation",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "Speech",
+            "year": "2023"
+        },
+        {
+            "title": "UnitY: Two-pass Direct Speech-to-speech Translation with Discrete Units",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "Speech",
+            "year": "2023"
+        },
+        {
+            "title": "Whisper-AT: Noise-Robust Automatic Speech Recognizers are Also Strong General Audio Event Taggers",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "Speech",
+            "year": "2023"
+        },
+        {
+            "title": "Joint Audio and Speech Understanding",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "Speech",
+            "year": "2023"
+        },
+        {
+            "title": "Long-Form Music Generation with Latent Diffusion",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "Speech",
+            "year": "2023"
         }
     ]
 };
