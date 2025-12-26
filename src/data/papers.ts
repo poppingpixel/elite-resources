@@ -5087,5 +5087,319 @@ export const ALL_PAPERS: Record<string, Paper[]> = {
             "domain": "Speech",
             "year": "2023"
         }
+    ],
+    "Multimodal": [
+        {
+            "title": "CIDEr: Consensus-based Image Description Evaluation",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "Multimodal",
+            "year": "2015"
+        },
+        {
+            "title": "\u201cWhy Should I Trust You?\u201d Explaining the Predictions of Any Classifier",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "Multimodal",
+            "year": "2016"
+        },
+        {
+            "title": "SPICE: Semantic Propositional Image Caption Evaluation",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "Multimodal",
+            "year": "2016"
+        },
+        {
+            "title": "A Diagram Is Worth A Dozen Images",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "Multimodal",
+            "year": "2016"
+        },
+        {
+            "title": "A Unified Approach to Interpreting Model Predictions",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "Multimodal",
+            "year": "2017"
+        },
+        {
+            "title": "mixup: Beyond Empirical Risk Minimization",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "Multimodal",
+            "year": "2017"
+        },
+        {
+            "title": "Multimodal Machine Learning: A Survey and Taxonomy",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "Multimodal",
+            "year": "2017"
+        },
+        {
+            "title": "Representation Learning with Contrastive Predictive Coding",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "Multimodal",
+            "year": "2019"
+        },
+        {
+            "title": "Modality Dropout for Improved Performance-driven Talking Faces",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "Multimodal",
+            "year": "2020"
+        },
+        {
+            "title": "Augmentation adversarial training for self-supervised speaker recognition",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "Multimodal",
+            "year": "2020"
+        },
+        {
+            "title": "BERTScore: Evaluating Text Generation with BERT",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "Multimodal",
+            "year": "2020"
+        },
+        {
+            "title": "Comparing Data Augmentation and Annotation Standardization to Improve End-to-end Spoken Language Understanding Models",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "Multimodal",
+            "year": "2021"
+        },
+        {
+            "title": "Learning Transferable Visual Models From Natural Language Supervision",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "Multimodal",
+            "year": "2021"
+        },
+        {
+            "title": "Zero-Shot Text-to-Image Generation",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "Multimodal",
+            "year": "2021"
+        },
+        {
+            "title": "ViLT: Vision-and-Language Transformer Without Convolution or Region Supervision",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "Multimodal",
+            "year": "2021"
+        },
+        {
+            "title": "MLIM: Vision-and-language Model Pre-training With Masked Language and Image Modeling",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "Multimodal",
+            "year": "2021"
+        },
+        {
+            "title": "MURAL: Multimodal, Multi-task Retrieval Across Languages",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "Multimodal",
+            "year": "2021"
+        },
+        {
+            "title": "Perceiver: General Perception with Iterative Attention",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "Multimodal",
+            "year": "2021"
+        },
+        {
+            "title": "Multimodal Few-Shot Learning with Frozen Language Models",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "Multimodal",
+            "year": "2021"
+        },
+        {
+            "title": "On the Opportunities and Risks of Foundation Models",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "Multimodal",
+            "year": "2021"
+        },
+        {
+            "title": "CLIPScore: A Reference-free Evaluation Metric for Image Captioning",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "Multimodal",
+            "year": "2021"
+        },
+        {
+            "title": "VideoCLIP: Contrastive Pre-training for Zero-shot Video-Text Understanding",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "Multimodal",
+            "year": "2021"
+        },
+        {
+            "title": "DeepNet: Scaling Transformers to 1,000 Layers",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "Multimodal",
+            "year": "2022"
+        },
+        {
+            "title": "data2vec: A General Framework for Self-supervised Learning in Speech, Vision and Language",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "Multimodal",
+            "year": "2022"
+        },
+        {
+            "title": "Hierarchical Text-Conditional Image Generation with CLIP Latents",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "Multimodal",
+            "year": "2022"
+        },
+        {
+            "title": "AutoDistill: an End-to-End Framework to Explore and Distill Hardware-Efficient Language Models",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "Multimodal",
+            "year": "2022"
+        },
+        {
+            "title": "A Generalist Agent",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "Multimodal",
+            "year": "2022"
+        },
+        {
+            "title": "Make-A-Scene: Scene-Based Text-to-Image Generation with Human Priors",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "Multimodal",
+            "year": "2022"
+        },
+        {
+            "title": "i-Code: An Integrative and Composable Multimodal Learning Framework",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "Multimodal",
+            "year": "2022"
+        },
+        {
+            "title": "VL-BEIT: Generative Vision-Language Pretraining",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "Multimodal",
+            "year": "2022"
+        },
+        {
+            "title": "FLAVA: A Foundational Language And Vision Alignment Model",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "Multimodal",
+            "year": "2022"
+        },
+        {
+            "title": "Flamingo: a Visual Language Model for Few-Shot Learning",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "Multimodal",
+            "year": "2022"
+        },
+        {
+            "title": "Stable and Latent Diffusion Model",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "Multimodal",
+            "year": "2022"
+        },
+        {
+            "title": "DreamBooth: Fine Tuning Text-to-Image Diffusion Models for Subject-Driven Generation",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "Multimodal",
+            "year": "2022"
+        },
+        {
+            "title": "UniT: Multimodal Multitask Learning with a Unified Transform",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "Multimodal",
+            "year": "2022"
+        },
+        {
+            "title": "Perceiver IO: A General Architecture for Structured Inputs & Outputs",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "Multimodal",
+            "year": "2022"
+        },
+        {
+            "title": "Foundation Transformers",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "Multimodal",
+            "year": "2022"
+        },
+        {
+            "title": "Efficient Self-supervised Learning with Contextualized Target Representations for Vision, Speech and Language",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "Multimodal",
+            "year": "2022"
+        },
+        {
+            "title": "Imagic: Text-Based Real Image Editing with Diffusion Models",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "Multimodal",
+            "year": "2022"
+        },
+        {
+            "title": "EDICT: Exact Diffusion Inversion via Coupled Transformations",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "Multimodal",
+            "year": "2022"
+        },
+        {
+            "title": "CLAP: Learning Audio Concepts From Natural Language Supervision",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "Multimodal",
+            "year": "2022"
+        },
+        {
+            "title": "An Empirical Study of GPT-3 for Few-Shot Knowledge-Based VQA",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "Multimodal",
+            "year": "2022"
+        },
+        {
+            "title": "OCR-free Document Understanding Transformer",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "Multimodal",
+            "year": "2022"
+        },
+        {
+            "title": "PubTables-1M: Towards Comprehensive Table Extraction from Unstructured Documents",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "Multimodal",
+            "year": "2022"
+        },
+        {
+            "title": "CoCa: Contrastive Captioners are Image-Text Foundation Models",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "Multimodal",
+            "year": "2022"
+        },
+        {
+            "title": "BLIP: Bootstrapping Language-Image Pre-training for Unified Vision-Language Understanding and Generation",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "Multimodal",
+            "year": "2022"
+        },
+        {
+            "title": "VideoMAE: Masked Autoencoders are Data-Efficient Learners for Self-Supervised Video Pre-Training",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "Multimodal",
+            "year": "2022"
+        },
+        {
+            "title": "Grounded Language-Image Pre-training (GLIP)",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "Multimodal",
+            "year": "2022"
+        },
+        {
+            "title": "LayoutLMv3: Pre-training for Document AI with Unified Text and Image Masking",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "Multimodal",
+            "year": "2022"
+        },
+        {
+            "title": "Pix2Video: Video Editing using Image Diffusion",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "Multimodal",
+            "year": "2023"
+        },
+        {
+            "title": "TaskMatrix.AI: Completing Tasks by Connecting Foundation Models with Millions of APIs",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "Multimodal",
+            "year": "2023"
+        },
+        {
+            "title": "HuggingGPT: Solving AI Tasks with ChatGPT and its Friends in HuggingFace",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "Multimodal",
+            "year": "2023"
+        }
     ]
 };
