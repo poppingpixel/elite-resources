@@ -5400,6 +5400,318 @@ export const ALL_PAPERS: Record<string, Paper[]> = {
             "category": "Seminal Papers / Need-to-know",
             "domain": "Multimodal",
             "year": "2023"
+        },
+        {
+            "title": "Large-scale Contrastive Language-Audio Pretraining with Feature Fusion and Keyword-to-Caption Augmentation",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "Multimodal",
+            "year": "2023"
+        },
+        {
+            "title": "ImageBind: One Embedding Space To Bind Them All",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "Multimodal",
+            "year": "2023"
+        },
+        {
+            "title": "BLIP-2: Bootstrapping Language-Image Pre-training with Frozen Image Encoders and Large Language Models",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "Multimodal",
+            "year": "2023"
+        },
+        {
+            "title": "InstructBLIP: Towards General-purpose Vision-Language Models with Instruction Tuning",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "Multimodal",
+            "year": "2023"
+        },
+        {
+            "title": "AtMan: Understanding Transformer Predictions Through Memory Efficient Attention Manipulation",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "Multimodal",
+            "year": "2023"
+        },
+        {
+            "title": "Chameleon: Plug-and-Play Compositional Reasoning with Large Language Models",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "Multimodal",
+            "year": "2023"
+        },
+        {
+            "title": "MM-REACT: Prompting ChatGPT for Multimodal Reasoning and Action",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "Multimodal",
+            "year": "2023"
+        },
+        {
+            "title": "PaLM-E: An Embodied Multimodal Language Model",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "Multimodal",
+            "year": "2023"
+        },
+        {
+            "title": "MIMIC-IT: Multi-Modal In-Context Instruction Tuning",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "Multimodal",
+            "year": "2023"
+        },
+        {
+            "title": "Visual Instruction Tuning",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "Multimodal",
+            "year": "2023"
+        },
+        {
+            "title": "Multimodal Chain-of-Thought Reasoning in Language Models",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "Multimodal",
+            "year": "2023"
+        },
+        {
+            "title": "Dreamix: Video Diffusion Models are General Video Editors",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "Multimodal",
+            "year": "2023"
+        },
+        {
+            "title": "Grounding DINO: Marrying DINO with Grounded Pre-Training for Open-Set Object Detection",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "Multimodal",
+            "year": "2023"
+        },
+        {
+            "title": "OpenFlamingo: An Open-Source Framework for Training Large Autoregressive Vision-Language Models",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "Multimodal",
+            "year": "2023"
+        },
+        {
+            "title": "Med-Flamingo: a Multimodal Medical Few-shot Learner",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "Multimodal",
+            "year": "2023"
+        },
+        {
+            "title": "Towards Generalist Biomedical AI",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "Multimodal",
+            "year": "2023"
+        },
+        {
+            "title": "PaLI: A Jointly-Scaled Multilingual Language-Image Model",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "Multimodal",
+            "year": "2023"
+        },
+        {
+            "title": "Nougat: Neural Optical Understanding for Academic Documents",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "Multimodal",
+            "year": "2023"
+        },
+        {
+            "title": "Text-Conditional Contextualized Avatars For Zero-Shot Personalization",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "Multimodal",
+            "year": "2023"
+        },
+        {
+            "title": "Make-An-Animation: Large-Scale Text-conditional 3D Human Motion Generation",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "Multimodal",
+            "year": "2023"
+        },
+        {
+            "title": "AnyMAL: An Efficient and Scalable Any-Modality Augmented Language Model",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "Multimodal",
+            "year": "2023"
+        },
+        {
+            "title": "Phenaki: Variable Length Video Generation From Open Domain Textual Description",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "Multimodal",
+            "year": "2023"
+        },
+        {
+            "title": "Text2Video-Zero: Text-to-Image Diffusion Models are Zero-Shot Video Generators",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "Multimodal",
+            "year": "2023"
+        },
+        {
+            "title": "SeamlessM4T \u2013 Massively Multilingual & Multimodal Machine Translation",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "Multimodal",
+            "year": "2023"
+        },
+        {
+            "title": "PaLI-X: On Scaling up a Multilingual Vision and Language Model",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "Multimodal",
+            "year": "2023"
+        },
+        {
+            "title": "The Dawn of LMMs: Preliminary Explorations with GPT-4V(ision)",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "Multimodal",
+            "year": "2023"
+        },
+        {
+            "title": "Sparks of Artificial General Intelligence: Early Experiments with GPT-4",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "Multimodal",
+            "year": "2023"
+        },
+        {
+            "title": "MiniGPT-4: Enhancing Vision-Language Understanding with Advanced Large Language Models",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "Multimodal",
+            "year": "2023"
+        },
+        {
+            "title": "MiniGPT-v2: Large Language Model as a Unified Interface for Vision-Language Multi-task Learning",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "Multimodal",
+            "year": "2023"
+        },
+        {
+            "title": "SDXL: Improving Latent Diffusion Models for High-Resolution Image Synthesis",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "Multimodal",
+            "year": "2023"
+        },
+        {
+            "title": "Diffusion Model Alignment Using Direct Preference Optimization",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "Multimodal",
+            "year": "2023"
+        },
+        {
+            "title": "Seamless: Multilingual Expressive and Streaming Speech Translation",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "Multimodal",
+            "year": "2023"
+        },
+        {
+            "title": "VideoPoet: A Large Language Model for Zero-Shot Video Generation",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "Multimodal",
+            "year": "2023"
+        },
+        {
+            "title": "LLaMA-VID: An Image is Worth 2 Tokens in Large Language Models",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "Multimodal",
+            "year": "2023"
+        },
+        {
+            "title": "FERRET: Refer and Ground Anything Anywhere at Any Granularity",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "Multimodal",
+            "year": "2023"
+        },
+        {
+            "title": "StarVector: Generating Scalable Vector Graphics Code from Images",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "Multimodal",
+            "year": "2023"
+        },
+        {
+            "title": "KOSMOS-2: Grounding Multimodal Large Language Models to the World",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "Multimodal",
+            "year": "2023"
+        },
+        {
+            "title": "Generative Multimodal Models are In-Context Learners",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "Multimodal",
+            "year": "2023"
+        },
+        {
+            "title": "Alpha-CLIP: A CLIP Model Focusing on Wherever You Want",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "Multimodal",
+            "year": "2023"
+        },
+        {
+            "title": "MoE-LLaVA: Mixture of Experts for Large Vision-Language Models",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "Multimodal",
+            "year": "2024"
+        },
+        {
+            "title": "Towards Language Models That Can See: Computer Vision Through the LENS of Natural Language",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "Multimodal",
+            "year": "2024"
+        },
+        {
+            "title": "Cobra: Extending Mamba to Multi-Modal Large Language Model for Efficient Inference",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "Multimodal",
+            "year": "2024"
+        },
+        {
+            "title": "One-Minute Video Generation with Test-Time Training",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "Multimodal",
+            "year": "2025"
+        },
+        {
+            "title": "OSWorld: Benchmarking Multimodal Agents for Open-Ended Tasks in Real Computer Environments",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "Multimodal",
+            "year": "2025"
+        },
+        {
+            "title": "MedGemma: Medical Vision-Language Foundation Models",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "Multimodal",
+            "year": "2025"
+        },
+        {
+            "title": "Style Equalization: Unsupervised Learning of Controllable Generative Sequence Models",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "Multimodal",
+            "year": "2021"
+        },
+        {
+            "title": "Rethinking Attention with Performers",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "Multimodal",
+            "year": "2021"
+        },
+        {
+            "title": "Learning Audio-Visual Speech Representation by Masked Multimodal Cluster Prediction",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "Multimodal",
+            "year": "2022"
+        },
+        {
+            "title": "GLIDE: Towards Photorealistic Image Generation and Editing with Text-Guided Diffusion Models",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "Multimodal",
+            "year": "2022"
+        },
+        {
+            "title": "Image as a Foreign Language: BEIT Pretraining for All Vision and Vision-Language Tasks",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "Multimodal",
+            "year": "2022"
+        },
+        {
+            "title": "Visual Programming: Compositional visual reasoning without training",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "Multimodal",
+            "year": "2022"
+        },
+        {
+            "title": "Video-ChatGPT: Towards Detailed Video Understanding via Large Vision and Language Models",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "Multimodal",
+            "year": "2022"
         }
     ]
 };
