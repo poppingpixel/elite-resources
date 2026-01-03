@@ -659,4 +659,5 @@ export const STUDY_LOG: string[] = [
   "Any-to-Any Generation via Composable Diffusion [Multimodal, 2023]",
   "BPO: Supercharging Online Preference Learning by Adhering to the Proximity of Behavior LLM [NLP, 2024]",
   "Deep & Cross Network for Ad Click Predictions [RecSys, 2017]",
+  "Jina Embeddings: A Novel Set of High-Performance Sentence Embedding Models [NLP, 2023]",
 ];
