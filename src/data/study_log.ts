@@ -655,4 +655,5 @@ export const STUDY_LOG: string[] = [
   "The Curious Case of Neural Text Degeneration [NLP, 2020]",
   "AutoAgents: A Framework for Automatic Agent Generation [NLP, 2024]",
   "Similarity of Neural Network Representations Revisited [Core ML, 2019]",
+  "Medusa: Simple Framework for Accelerating LLM Generation with Multiple Decoding Heads [NLP, 2023]",
 ];
