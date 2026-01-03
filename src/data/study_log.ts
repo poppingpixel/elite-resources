@@ -652,4 +652,5 @@ export const STUDY_LOG: string[] = [
   "EfficientSAM: Leveraged Masked Image Pretraining for Efficient Segment Anything [Computer Vision, 2023]",
   "Deep Learning Recommendation Model for Personalization and Recommendation Systems [RecSys, 2019]",
   "Mistral 7B [NLP, 2023]",
+  "The Curious Case of Neural Text Degeneration [NLP, 2020]",
 ];
