@@ -654,4 +654,5 @@ export const STUDY_LOG: string[] = [
   "Mistral 7B [NLP, 2023]",
   "The Curious Case of Neural Text Degeneration [NLP, 2020]",
   "AutoAgents: A Framework for Automatic Agent Generation [NLP, 2024]",
+  "Similarity of Neural Network Representations Revisited [Core ML, 2019]",
 ];
