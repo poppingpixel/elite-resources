@@ -5712,6 +5712,318 @@ export const ALL_PAPERS: Record<string, Paper[]> = {
             "category": "Selected Papers / Good-to-know",
             "domain": "Multimodal",
             "year": "2022"
+        },
+        {
+            "title": "Meta-Transformer: A Unified Framework for Multimodal Learning",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "Multimodal",
+            "year": "2023"
+        },
+        {
+            "title": "Any-to-Any Generation via Composable Diffusion",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "Multimodal",
+            "year": "2023"
+        },
+        {
+            "title": "Bytes Are All You Need: Transformers Operating Directly On File Bytes",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "Multimodal",
+            "year": "2023"
+        },
+        {
+            "title": "Prompting Large Language Models with Answer Heuristics for Knowledge-based Visual Question Answering",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "Multimodal",
+            "year": "2023"
+        },
+        {
+            "title": "Sound reconstruction from human brain activity via a generative model with brain-like auditory features",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "Multimodal",
+            "year": "2023"
+        },
+        {
+            "title": "LLaVA-Med: Training a Large Language-and-Vision Assistant for Biomedicine in One Day",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "Multimodal",
+            "year": "2023"
+        },
+        {
+            "title": "Unified Model for Image, Video, Audio and Language Tasks",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "Multimodal",
+            "year": "2023"
+        },
+        {
+            "title": "Qwen-7B: Open foundation and human-aligned models",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "Multimodal",
+            "year": "2023"
+        },
+        {
+            "title": "Qwen-VL: A Frontier Large Vision-Language Model with Versatile Abilities",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "Multimodal",
+            "year": "2023"
+        },
+        {
+            "title": "NExT-GPT: Any-to-Any Multimodal LLM",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "Multimodal",
+            "year": "2023"
+        },
+        {
+            "title": "LLaVA-Plus: Learning to Use Tools for Creating Multimodal Agents",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "Multimodal",
+            "year": "2023"
+        },
+        {
+            "title": "Scaling Autoregressive Multi-Modal Models: Pretraining and Instruction Tuning",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "Multimodal",
+            "year": "2023"
+        },
+        {
+            "title": "Demystifying CLIP Data",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "Multimodal",
+            "year": "2023"
+        },
+        {
+            "title": "Scalable Diffusion Models with Transformers",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "Multimodal",
+            "year": "2023"
+        },
+        {
+            "title": "DeepFloyd IF",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "Multimodal",
+            "year": "2023"
+        },
+        {
+            "title": "PIXART-\\(\\alpha\\): Fast Training of Diffusion Transformer for Photorealistic Text-to-Image Synthesis",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "Multimodal",
+            "year": "2023"
+        },
+        {
+            "title": "RAPHAEL: Text-to-Image Generation via Large Mixture of Diffusion Paths",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "Multimodal",
+            "year": "2023"
+        },
+        {
+            "title": "ERNIE-ViLG 2.0: Improving Text-to-Image Diffusion Model with Knowledge-Enhanced Mixture-of-Denoising-Experts",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "Multimodal",
+            "year": "2023"
+        },
+        {
+            "title": "CogVLM: Visual Expert for Pretrained Language Models",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "Multimodal",
+            "year": "2023"
+        },
+        {
+            "title": "Improved Baselines with Visual Instruction Tuning",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "Multimodal",
+            "year": "2023"
+        },
+        {
+            "title": "Matryoshka Diffusion Models",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "Multimodal",
+            "year": "2023"
+        },
+        {
+            "title": "MAViL: Masked Audio-Video Learners",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "Multimodal",
+            "year": "2023"
+        },
+        {
+            "title": "TextDiffuser-2: Unleashing the Power of Language Models for Text Rendering",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "Multimodal",
+            "year": "2023"
+        },
+        {
+            "title": "CoDi-2: In-Context Interleaved and Interactive Any-to-Any Generation",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "Multimodal",
+            "year": "2023"
+        },
+        {
+            "title": "ZipLoRA: Any Subject in Any Style by Effectively Merging LoRAs",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "Multimodal",
+            "year": "2023"
+        },
+        {
+            "title": "Hyperbolic Image-Text Representations",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "Multimodal",
+            "year": "2023"
+        },
+        {
+            "title": "Evaluating Object Hallucination in Large Vision-Language Models",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "Multimodal",
+            "year": "2023"
+        },
+        {
+            "title": "Analyzing and Mitigating Object Hallucination in Large Vision-Language Models",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "Multimodal",
+            "year": "2023"
+        },
+        {
+            "title": "FLAP: Fast Language-Audio Pre-training",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "Multimodal",
+            "year": "2023"
+        },
+        {
+            "title": "Jointly Learning Visual and Auditory Speech Representations from Raw Data",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "Multimodal",
+            "year": "2023"
+        },
+        {
+            "title": "MIRASOL3B: A Multimodal Autoregressive Model for Time-Aligned and Contextual Modalities",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "Multimodal",
+            "year": "2023"
+        },
+        {
+            "title": "Video-LLaMA: An Instruction-tuned Audio-Visual Language Model for Video Understanding",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "Multimodal",
+            "year": "2023"
+        },
+        {
+            "title": "VideoCoCa: Video-Text Modeling with Zero-Shot Transfer from Contrastive Captioners",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "Multimodal",
+            "year": "2023"
+        },
+        {
+            "title": "Visual Instruction Inversion: Image Editing via Visual Prompting",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "Multimodal",
+            "year": "2023"
+        },
+        {
+            "title": "A Video Is Worth 4096 Tokens: Verbalize Videos To Understand Them In Zero Shot",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "Multimodal",
+            "year": "2023"
+        },
+        {
+            "title": "Emu Edit: Precise Image Editing via Recognition and Generation Tasks",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "Multimodal",
+            "year": "2023"
+        },
+        {
+            "title": "CoVLM: Composing Visual Entities and Relationships in Large Language Models via Communicative Decoding",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "Multimodal",
+            "year": "2024"
+        },
+        {
+            "title": "MME: A Comprehensive Evaluation Benchmark for Multimodal Large Language Models",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "Multimodal",
+            "year": "2024"
+        },
+        {
+            "title": "Vision-Flan: Scaling Human-Labeled Tasks in Visual Instruction Tuning",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "Multimodal",
+            "year": "2024"
+        },
+        {
+            "title": "PALO: A Polyglot Large Multimodal Model for 5B People",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "Multimodal",
+            "year": "2024"
+        },
+        {
+            "title": "Sigmoid Loss for Language Image Pre-Training",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "Multimodal",
+            "year": "2024"
+        },
+        {
+            "title": "EMO: Emote Portrait Alive - Generating Expressive Portrait Videos with Audio2Video Diffusion Model under Weak Conditions",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "Multimodal",
+            "year": "2024"
+        },
+        {
+            "title": "DeepSeek-VL: Towards Real-World Vision-Language Understanding",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "Multimodal",
+            "year": "2024"
+        },
+        {
+            "title": "mPLUG-DocOwl 1.5: Unified Structure Learning for OCR-free Document Understanding",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "Multimodal",
+            "year": "2024"
+        },
+        {
+            "title": "OOTDiffusion: Outfitting Fusion based Latent Diffusion for Controllable Virtual Try-on",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "Multimodal",
+            "year": "2024"
+        },
+        {
+            "title": "Glyph-ByT5: A Customized Text Encoder for Accurate Visual Text Rendering",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "Multimodal",
+            "year": "2024"
+        },
+        {
+            "title": "Mini-Gemini: Mining the Potential of Multi-modality Vision Language Models",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "Multimodal",
+            "year": "2024"
+        },
+        {
+            "title": "Mora: Enabling Generalist Video Generation via A Multi-Agent Framework",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "Multimodal",
+            "year": "2024"
+        },
+        {
+            "title": "VILA: On Pre-training for Visual Language Models",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "Multimodal",
+            "year": "2024"
+        },
+        {
+            "title": "PaliGemma: A versatile 3B VLM for transfer",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "Multimodal",
+            "year": "2024"
+        },
+        {
+            "title": "NVLM: Open Frontier-Class Multimodal LLMs",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "Multimodal",
+            "year": "2024"
+        },
+        {
+            "title": "Molmo",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "Multimodal",
+            "year": "2024"
         }
     ]
 };
