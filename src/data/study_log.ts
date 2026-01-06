@@ -664,4 +664,5 @@ export const STUDY_LOG: string[] = [
   "Representation Learning with Contrastive Predictive Coding [Multimodal, 2019]",
   "Generating Long Sequences with Sparse Transformers [Core ML, 2019]",
   "Emerging Properties in Self-Supervised Vision Transformers [Computer Vision, 2021]",
+  "MiniGPT-4: Enhancing Vision-Language Understanding with Advanced Large Language Models [Multimodal, 2023]",
 ];
