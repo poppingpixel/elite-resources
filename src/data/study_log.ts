@@ -661,4 +661,5 @@ export const STUDY_LOG: string[] = [
   "Deep & Cross Network for Ad Click Predictions [RecSys, 2017]",
   "Jina Embeddings: A Novel Set of High-Performance Sentence Embedding Models [NLP, 2023]",
   "Ignore This Title and HackAPrompt: Exposing Systemic Vulnerabilities of LLMs through a Global Scale Prompt Hacking Competition [NLP, 2023]",
+  "Representation Learning with Contrastive Predictive Coding [Multimodal, 2019]",
 ];
