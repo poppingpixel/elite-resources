@@ -663,4 +663,5 @@ export const STUDY_LOG: string[] = [
   "Ignore This Title and HackAPrompt: Exposing Systemic Vulnerabilities of LLMs through a Global Scale Prompt Hacking Competition [NLP, 2023]",
   "Representation Learning with Contrastive Predictive Coding [Multimodal, 2019]",
   "Generating Long Sequences with Sparse Transformers [Core ML, 2019]",
+  "Emerging Properties in Self-Supervised Vision Transformers [Computer Vision, 2021]",
 ];
