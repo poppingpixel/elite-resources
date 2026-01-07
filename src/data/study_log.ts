@@ -668,4 +668,5 @@ export const STUDY_LOG: string[] = [
   "Zero-Shot Text-to-Image Generation [Multimodal, 2021]",
   "OLMo: Accelerating the Science of Language Models [NLP, 2024]",
   "Textbooks Are All You Need [NLP, 2023]",
+  "Consistency Models [Computer Vision, 2023]",
 ];
