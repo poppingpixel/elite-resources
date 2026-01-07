@@ -667,4 +667,5 @@ export const STUDY_LOG: string[] = [
   "MiniGPT-4: Enhancing Vision-Language Understanding with Advanced Large Language Models [Multimodal, 2023]",
   "Zero-Shot Text-to-Image Generation [Multimodal, 2021]",
   "OLMo: Accelerating the Science of Language Models [NLP, 2024]",
+  "Textbooks Are All You Need [NLP, 2023]",
 ];
