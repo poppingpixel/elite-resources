@@ -666,4 +666,5 @@ export const STUDY_LOG: string[] = [
   "Emerging Properties in Self-Supervised Vision Transformers [Computer Vision, 2021]",
   "MiniGPT-4: Enhancing Vision-Language Understanding with Advanced Large Language Models [Multimodal, 2023]",
   "Zero-Shot Text-to-Image Generation [Multimodal, 2021]",
+  "OLMo: Accelerating the Science of Language Models [NLP, 2024]",
 ];
