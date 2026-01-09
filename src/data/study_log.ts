@@ -671,4 +671,5 @@ export const STUDY_LOG: string[] = [
   "Consistency Models [Computer Vision, 2023]",
   "VideoMAE: Masked Autoencoders are Data-Efficient Learners for Self-Supervised Video Pre-Training [Multimodal, 2022]",
   "Monarch Mixer: A Simple Sub-Quadratic GEMM-Based Architecture [NLP, 2023]",
+  "LLM-Pruner: On the Structural Pruning of Large Language Models [NLP, 2023]",
 ];
