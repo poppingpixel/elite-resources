@@ -669,4 +669,5 @@ export const STUDY_LOG: string[] = [
   "OLMo: Accelerating the Science of Language Models [NLP, 2024]",
   "Textbooks Are All You Need [NLP, 2023]",
   "Consistency Models [Computer Vision, 2023]",
+  "VideoMAE: Masked Autoencoders are Data-Efficient Learners for Self-Supervised Video Pre-Training [Multimodal, 2022]",
 ];
