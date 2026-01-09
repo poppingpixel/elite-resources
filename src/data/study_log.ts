@@ -670,4 +670,5 @@ export const STUDY_LOG: string[] = [
   "Textbooks Are All You Need [NLP, 2023]",
   "Consistency Models [Computer Vision, 2023]",
   "VideoMAE: Masked Autoencoders are Data-Efficient Learners for Self-Supervised Video Pre-Training [Multimodal, 2022]",
+  "Monarch Mixer: A Simple Sub-Quadratic GEMM-Based Architecture [NLP, 2023]",
 ];
