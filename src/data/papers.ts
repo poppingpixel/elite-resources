@@ -6025,5 +6025,289 @@ export const ALL_PAPERS: Record<string, Paper[]> = {
             "domain": "Multimodal",
             "year": "2024"
         }
+    ],
+    "Core ML": [
+        {
+            "title": "What Every Computer Scientist Should Know About Floating-Point Arithmetic",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "Core ML",
+            "year": "1991"
+        },
+        {
+            "title": "Bidirectional recurrent neural networks",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "Core ML",
+            "year": "1997"
+        },
+        {
+            "title": "Obtaining calibrated probability estimates from decision trees and naive Bayesian classifiers",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "Core ML",
+            "year": "2001"
+        },
+        {
+            "title": "Transforming classifier scores into accurate multiclass probability estimates",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "Core ML",
+            "year": "2002"
+        },
+        {
+            "title": "Dimensionality Reduction by Learning an Invariant Mapping",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "Core ML",
+            "year": "2002"
+        },
+        {
+            "title": "Reducing the Dimensionality of Data with Neural Networks",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "Core ML",
+            "year": "2006"
+        },
+        {
+            "title": "What Every Programmer Should Know About Memory",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "Core ML",
+            "year": "2007"
+        },
+        {
+            "title": "ADASYN: Adaptive Synthetic Sampling Approach for Imbalanced Learning",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "Core ML",
+            "year": "2008"
+        },
+        {
+            "title": "Large-scale Deep Unsupervised Learning using Graphics Processors",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "Core ML",
+            "year": "2009"
+        },
+        {
+            "title": "Practical Guide to Controlled Experiments on the Web: Listen to Your Customers not to the HiPPO",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "Core ML",
+            "year": "2009"
+        },
+        {
+            "title": "Curriculum Learning",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "Core ML",
+            "year": "2009"
+        },
+        {
+            "title": "SMOTE: Synthetic Minority Over-sampling Technique",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "Core ML",
+            "year": "2011"
+        },
+        {
+            "title": "Acoustic Modeling using Deep Belief Networks",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "Core ML",
+            "year": "2012"
+        },
+        {
+            "title": "Improving neural networks by preventing co-adaptation of feature detectors",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "Core ML",
+            "year": "2012"
+        },
+        {
+            "title": "Trustworthy Online Controlled Experiments: Five Puzzling Outcomes Explained",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "Core ML",
+            "year": "2012"
+        },
+        {
+            "title": "Dropout: A Simple Way to Prevent Neural Networks from Overfitting",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "Core ML",
+            "year": "2014"
+        },
+        {
+            "title": "Intriguing properties of neural networks",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "Core ML",
+            "year": "2014"
+        },
+        {
+            "title": "ADAM: A Method for Stochastic Optimization",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "Core ML",
+            "year": "2015"
+        },
+        {
+            "title": "Batch Normalization: Accelerating Deep Network Training by Reducing Internal Covariate Shift",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "Core ML",
+            "year": "2015"
+        },
+        {
+            "title": "XGBoost: A Scalable Tree Boosting System",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "Core ML",
+            "year": "2016"
+        },
+        {
+            "title": "Layer Normalization",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "Core ML",
+            "year": "2016"
+        },
+        {
+            "title": "Efficient and robust approximate nearest neighbor search using Hierarchical Navigable Small World graphs",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "Core ML",
+            "year": "2016"
+        },
+        {
+            "title": "Axiomatic Attribution for Deep Networks",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "Core ML",
+            "year": "2017"
+        },
+        {
+            "title": "Decoupled Weight Decay Regularization",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "Core ML",
+            "year": "2017"
+        },
+        {
+            "title": "On Calibration of Modern Neural Networks",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "Core ML",
+            "year": "2017"
+        },
+        {
+            "title": "Beta calibration: a well-founded and easily implemented improvement on logistic calibration for binary classifiers",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "Core ML",
+            "year": "2017"
+        },
+        {
+            "title": "Understanding Black-box Predictions via Influence Functions",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "Core ML",
+            "year": "2017"
+        },
+        {
+            "title": "Mixed Precision Training",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "Core ML",
+            "year": "2017"
+        },
+        {
+            "title": "StarSpace: Embed All The Things!",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "Core ML",
+            "year": "2017"
+        },
+        {
+            "title": "Model Cards for Model Reporting",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "Core ML",
+            "year": "2018"
+        },
+        {
+            "title": "Interpretability Beyond Feature Attribution: Quantitative Testing with Concept Activation Vectors (TCAV)",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "Core ML",
+            "year": "2018"
+        },
+        {
+            "title": "Representer Point Selection for Explaining Deep Neural Networks",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "Core ML",
+            "year": "2018"
+        },
+        {
+            "title": "Mixed Precision Training",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "Core ML",
+            "year": "2018"
+        },
+        {
+            "title": "Fast Transformer Decoding: One Write-Head is All You Need",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "Core ML",
+            "year": "2019"
+        },
+        {
+            "title": "Similarity of Neural Network Representations Revisited",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "Core ML",
+            "year": "2019"
+        },
+        {
+            "title": "Toward a better trade-off between performance and fairness with kernel-based distribution matching",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "Core ML",
+            "year": "2019"
+        },
+        {
+            "title": "Root Mean Square Layer Normalization",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "Core ML",
+            "year": "2019"
+        },
+        {
+            "title": "Generating Long Sequences with Sparse Transformers",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "Core ML",
+            "year": "2019"
+        },
+        {
+            "title": "Understanding and Improving Layer Normalization",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "Core ML",
+            "year": "2019"
+        },
+        {
+            "title": "Estimating Training Data Influence by Tracing Gradient Descent",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "Core ML",
+            "year": "2020"
+        },
+        {
+            "title": "LEEP - Log Expected Empirical Prediction",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "Core ML",
+            "year": "2020"
+        },
+        {
+            "title": "OTDD - Optimal Transport Dataset Distance",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "Core ML",
+            "year": "2020"
+        },
+        {
+            "title": "Null It Out: Guarding Protected Attributes by Iterative Nullspace Projection",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "Core ML",
+            "year": "2020"
+        },
+        {
+            "title": "GLU Variants Improve Transformer",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "Core ML",
+            "year": "2020"
+        },
+        {
+            "title": "ZeRO: Memory Optimizations Toward Training Trillion Parameter Models",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "Core ML",
+            "year": "2020"
+        },
+        {
+            "title": "Efficient Deep Learning: A Survey on Making Deep Learning Models Smaller, Faster, and Better",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "Core ML",
+            "year": "2021"
+        },
+        {
+            "title": "Do Wide and Deep Networks Learn the Same Things? Uncovering How Neural Network Representations Vary with Width and Depth",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "Core ML",
+            "year": "2021"
+        }
     ]
 };
