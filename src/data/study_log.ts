@@ -674,4 +674,5 @@ export const STUDY_LOG: string[] = [
   "LLM-Pruner: On the Structural Pruning of Large Language Models [NLP, 2023]",
   "Magicoder: Source Code Is All You Need [NLP, 2023]",
   "ReST Meets ReAct: Self-Improvement for Multi-Step Reasoning LLM Agent [NLP, 2023]",
+  "PaLM: Scaling Language Modeling with Pathways [NLP, 2022]",
 ];
