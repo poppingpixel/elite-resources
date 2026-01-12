@@ -677,4 +677,5 @@ export const STUDY_LOG: string[] = [
   "PaLM: Scaling Language Modeling with Pathways [NLP, 2022]",
   "SentencePiece: A simple and language independent subword tokenizer and detokenizer for Neural Text Processing [NLP, 2018]",
   "Google’s Neural Machine Translation System: Bridging the Gap between Human and Machine Translation [NLP, 2016]",
+  "MoE-LLaVA: Mixture of Experts for Large Vision-Language Models [Multimodal, 2024]",
 ];
