@@ -681,4 +681,5 @@ export const STUDY_LOG: string[] = [
   "REALM: Retrieval-Augmented Language Model Pre-Training [NLP, 2020]",
   "RepVGG: Making VGG-style ConvNets Great Again [Computer Vision, 2021]",
   "Turbulence: Systematically and Automatically Testing Instruction-Tuned Large Language Models for Code [NLP, 2023]",
+  "Multimodal Few-Shot Learning with Frozen Language Models [Multimodal, 2021]",
 ];
