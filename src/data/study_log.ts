@@ -683,4 +683,5 @@ export const STUDY_LOG: string[] = [
   "Turbulence: Systematically and Automatically Testing Instruction-Tuned Large Language Models for Code [NLP, 2023]",
   "Multimodal Few-Shot Learning with Frozen Language Models [Multimodal, 2021]",
   "KenLM: Faster and Smaller Language Model Queries [NLP, 2011]",
+  "TextDiffuser-2: Unleashing the Power of Language Models for Text Rendering [Multimodal, 2023]",
 ];
