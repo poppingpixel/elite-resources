@@ -682,4 +682,5 @@ export const STUDY_LOG: string[] = [
   "RepVGG: Making VGG-style ConvNets Great Again [Computer Vision, 2021]",
   "Turbulence: Systematically and Automatically Testing Instruction-Tuned Large Language Models for Code [NLP, 2023]",
   "Multimodal Few-Shot Learning with Frozen Language Models [Multimodal, 2021]",
+  "KenLM: Faster and Smaller Language Model Queries [NLP, 2011]",
 ];
