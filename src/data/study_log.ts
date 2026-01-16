@@ -685,4 +685,5 @@ export const STUDY_LOG: string[] = [
   "KenLM: Faster and Smaller Language Model Queries [NLP, 2011]",
   "TextDiffuser-2: Unleashing the Power of Language Models for Text Rendering [Multimodal, 2023]",
   "The Leaderboard Illusion [NLP, 2025]",
+  "Emu Edit: Precise Image Editing via Recognition and Generation Tasks [Multimodal, 2023]",
 ];
