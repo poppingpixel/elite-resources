@@ -686,4 +686,5 @@ export const STUDY_LOG: string[] = [
   "TextDiffuser-2: Unleashing the Power of Language Models for Text Rendering [Multimodal, 2023]",
   "The Leaderboard Illusion [NLP, 2025]",
   "Emu Edit: Precise Image Editing via Recognition and Generation Tasks [Multimodal, 2023]",
+  "Dropout: A Simple Way to Prevent Neural Networks from Overfitting [Core ML, 2014]",
 ];
