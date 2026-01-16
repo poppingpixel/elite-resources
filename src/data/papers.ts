@@ -6308,6 +6308,288 @@ export const ALL_PAPERS: Record<string, Paper[]> = {
             "category": "Seminal Papers / Need-to-know",
             "domain": "Core ML",
             "year": "2021"
+        },
+        {
+            "title": "Using AntiPatterns to avoid MLOps Mistakes",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "Core ML",
+            "year": "2021"
+        },
+        {
+            "title": "Self-attention Does Not Need \\(O(n^2)\\) Memory",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "Core ML",
+            "year": "2021"
+        },
+        {
+            "title": "Sharpness-Aware Minimization for Efficiently Improving Generalization",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "Core ML",
+            "year": "2021"
+        },
+        {
+            "title": "ZeRO-Infinity: Breaking the GPU Memory Wall for Extreme Scale Deep Learning",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "Core ML",
+            "year": "2021"
+        },
+        {
+            "title": "Efficiently Modeling Long Sequences with Structured State Spaces",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "Core ML",
+            "year": "2021"
+        },
+        {
+            "title": "Pathways: Asynchronous Distributed Dataflow for ML",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "Core ML",
+            "year": "2022"
+        },
+        {
+            "title": "PolyLoss: A Polynomial Expansion Perspective of Classification Loss Functions",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "Core ML",
+            "year": "2022"
+        },
+        {
+            "title": "Memorization Without Overfitting: Analyzing the Training Dynamics of Large Language Models",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "Core ML",
+            "year": "2022"
+        },
+        {
+            "title": "Federated Learning with Buffered Asynchronous Aggregation",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "Core ML",
+            "year": "2022"
+        },
+        {
+            "title": "Applied Federated Learning: Architectural Design for Robust and Efficient Learning in Privacy Aware Settings",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "Core ML",
+            "year": "2022"
+        },
+        {
+            "title": "Operationalizing Machine Learning: An Interview Study",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "Core ML",
+            "year": "2022"
+        },
+        {
+            "title": "A/B Testing Intuition Busters",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "Core ML",
+            "year": "2022"
+        },
+        {
+            "title": "Effect of scale on catastrophic forgetting in neural networks",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "Core ML",
+            "year": "2022"
+        },
+        {
+            "title": "Fine-Tuning can Distort Pretrained Features and Underperform Out-of-Distribution",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "Core ML",
+            "year": "2022"
+        },
+        {
+            "title": "FlashAttention: Fast and Memory-Efficient Exact Attention with IO-Awareness",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "Core ML",
+            "year": "2022"
+        },
+        {
+            "title": "Robust fine-tuning of zero-shot models",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "Core ML",
+            "year": "2022"
+        },
+        {
+            "title": "Efficiently Scaling Transformer Inference",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "Core ML",
+            "year": "2022"
+        },
+        {
+            "title": "FlashAttention-2: Faster Attention with Better Parallelism and Work Partitioning",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "Core ML",
+            "year": "2023"
+        },
+        {
+            "title": "Surgical Fine-Tuning Improves Adaptation to Distribution Shifts",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "Core ML",
+            "year": "2023"
+        },
+        {
+            "title": "Dataless Knowledge Fusion by Merging Weights of Language Models",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "Core ML",
+            "year": "2023"
+        },
+        {
+            "title": "Weak-to-Strong Generalization: Eliciting Strong Capabilities with Weak Supervision",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "Core ML",
+            "year": "2023"
+        },
+        {
+            "title": "Mamba: Linear-Time Sequence Modeling with Selective State Spaces",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "Core ML",
+            "year": "2023"
+        },
+        {
+            "title": "Kolmogorov\u2013Arnold Networks (KANs): An Alternative to Multi-Layer Perceptrons for Enhanced Interpretability and Accuracy",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "Core ML",
+            "year": "2023"
+        },
+        {
+            "title": "Mathematical Discoveries from Program Search with Large Language Models",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "Core ML",
+            "year": "2023"
+        },
+        {
+            "title": "Gaussian Error Linear Units (GELUs)",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "Core ML",
+            "year": "2023"
+        },
+        {
+            "title": "FlashAttention-3: Fast and Accurate Attention with Asynchrony and Low-precision",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "Core ML",
+            "year": "2024"
+        },
+        {
+            "title": "AlphaEvolve: A coding agent for scientific and algorithmic discovery",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "Core ML",
+            "year": "2025"
+        },
+        {
+            "title": "The Peaking Phenomenon in Semi-supervised Learning",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "Core ML",
+            "year": "2016"
+        },
+        {
+            "title": "Model Evaluation, Model Selection, and Algorithm Selection in Machine Learning",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "Core ML",
+            "year": "2018"
+        },
+        {
+            "title": "Which Algorithmic Choices Matter at Which Batch Sizes? Insights From a Noisy Quadratic Model",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "Core ML",
+            "year": "2019"
+        },
+        {
+            "title": "Triple Wins: Boosting Accuracy, Robustness and Efficiency Together by Enabling Input-Adaptive Inference",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "Core ML",
+            "year": "2020"
+        },
+        {
+            "title": "Tensor Programs V: Tuning Large Neural Networks via Zero-Shot Hyperparameter Transfer",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "Core ML",
+            "year": "2021"
+        },
+        {
+            "title": "OmniXAI: A Library for Explainable AI",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "Core ML",
+            "year": "2022"
+        },
+        {
+            "title": "VeLO: Training Versatile Learned Optimizers by Scaling Up",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "Core ML",
+            "year": "2022"
+        },
+        {
+            "title": "CoLT5: Faster Long-Range Transformers with Conditional Computation",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "Core ML",
+            "year": "2023"
+        },
+        {
+            "title": "GQA: Training Generalized Multi-Query Transformer Models from Multi-Head Checkpoints",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "Core ML",
+            "year": "2023"
+        },
+        {
+            "title": "Sophia: A Scalable Stochastic Second-order Optimizer for Language Model Pre-training",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "Core ML",
+            "year": "2023"
+        },
+        {
+            "title": "DoReMi: Optimizing Data Mixtures Speeds Up Language Model Pretraining",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "Core ML",
+            "year": "2023"
+        },
+        {
+            "title": "One-for-All: Generalized LoRA for Parameter-Efficient Fine-tuning",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "Core ML",
+            "year": "2023"
+        },
+        {
+            "title": "Tackling the Curse of Dimensionality with Physics-Informed Neural Networks",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "Core ML",
+            "year": "2023"
+        },
+        {
+            "title": "(Ab)using Images and Sounds for Indirect Instruction Injection in Multi-Modal LLMs",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "Core ML",
+            "year": "2023"
+        },
+        {
+            "title": "Open Problems and Fundamental Limitations of Reinforcement Learning from Human Feedback",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "Core ML",
+            "year": "2023"
+        },
+        {
+            "title": "DiffusionBERT: Improving Generative Masked Language Models with Diffusion Models",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "Core ML",
+            "year": "2023"
+        },
+        {
+            "title": "The Depth-to-Width Interplay in Self-Attention",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "Core ML",
+            "year": "2023"
+        },
+        {
+            "title": "The No Free Lunch Theorem, Kolmogorov Complexity, and the Role of Inductive Biases in Machine Learning",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "Core ML",
+            "year": "2023"
+        },
+        {
+            "title": "Evolutionary Optimization of Model Merging Recipes",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "Core ML",
+            "year": "2024"
+        },
+        {
+            "title": "BANG: Billion-Scale Approximate Nearest Neighbor Search using a Single GPU",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "Core ML",
+            "year": "2024"
         }
     ]
 };
