@@ -689,4 +689,5 @@ export const STUDY_LOG: string[] = [
   "Dropout: A Simple Way to Prevent Neural Networks from Overfitting [Core ML, 2014]",
   "Phi-2: The surprising power of small language models [NLP, 2023]",
   "Connectionist Temporal Classification: Labelling Unsegmented Sequence Data with Recurrent Neural Networks [Speech, 2006]",
+  "Humanity’s Last Exam [NLP, 2025]",
 ];
