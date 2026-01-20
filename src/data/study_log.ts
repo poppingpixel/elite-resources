@@ -687,4 +687,5 @@ export const STUDY_LOG: string[] = [
   "The Leaderboard Illusion [NLP, 2025]",
   "Emu Edit: Precise Image Editing via Recognition and Generation Tasks [Multimodal, 2023]",
   "Dropout: A Simple Way to Prevent Neural Networks from Overfitting [Core ML, 2014]",
+  "Phi-2: The surprising power of small language models [NLP, 2023]",
 ];
