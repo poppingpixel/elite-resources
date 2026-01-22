@@ -691,4 +691,5 @@ export const STUDY_LOG: string[] = [
   "Connectionist Temporal Classification: Labelling Unsegmented Sequence Data with Recurrent Neural Networks [Speech, 2006]",
   "Humanity’s Last Exam [NLP, 2025]",
   "A Diagram Is Worth A Dozen Images [Multimodal, 2016]",
+  "The CoT Collection: Improving Zero-shot and Few-shot Learning of Language Models via Chain-of-Thought Fine-Tuning [NLP, 2023]",
 ];
