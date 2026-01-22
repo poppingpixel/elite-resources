@@ -6591,5 +6591,187 @@ export const ALL_PAPERS: Record<string, Paper[]> = {
             "domain": "Core ML",
             "year": "2024"
         }
+    ],
+    "RecSys": [
+        {
+            "title": "Calibrated recommendations",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "RecSys",
+            "year": "2008"
+        },
+        {
+            "title": "The wisdom of the few: a collaborative filtering approach based on expert opinions from the web",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "RecSys",
+            "year": "2009"
+        },
+        {
+            "title": "Factorization Machines",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "RecSys",
+            "year": "2010"
+        },
+        {
+            "title": "Unbiased Offline Evaluation of Contextual-bandit-based News Article Recommendation Algorithms",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "RecSys",
+            "year": "2011"
+        },
+        {
+            "title": "Collaborative Deep Learning for Recommender Systems",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "RecSys",
+            "year": "2015"
+        },
+        {
+            "title": "Wide & Deep Learning for Recommender Systems",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "RecSys",
+            "year": "2016"
+        },
+        {
+            "title": "Deep Neural Networks for YouTube Recommendations",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "RecSys",
+            "year": "2016"
+        },
+        {
+            "title": "Product-based Neural Networks for User Response Prediction",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "RecSys",
+            "year": "2016"
+        },
+        {
+            "title": "Neural Collaborative Filtering",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "RecSys",
+            "year": "2017"
+        },
+        {
+            "title": "Deep & Cross Network for Ad Click Predictions",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "RecSys",
+            "year": "2017"
+        },
+        {
+            "title": "DeepFM: A Factorization-Machine based Neural Network for CTR Prediction",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "RecSys",
+            "year": "2017"
+        },
+        {
+            "title": "Deep Interest Network for Click-Through Rate Prediction",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "RecSys",
+            "year": "2018"
+        },
+        {
+            "title": "Behavior Sequence Transformer for E-commerce Recommendation in Alibaba",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "RecSys",
+            "year": "2019"
+        },
+        {
+            "title": "BERT4Rec: Sequential Recommendation with Bidirectional Encoder Representations from Transformer",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "RecSys",
+            "year": "2019"
+        },
+        {
+            "title": "Neural Collaborative Filtering vs. Matrix Factorization Revisited",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "RecSys",
+            "year": "DCN V2: Improved Deep & Cross Network and Practical Lessons for Web-scale Learning to Rank Systems"
+        },
+        {
+            "title": "PinnerFormer: Sequence Modeling for User Representation at Pinterest",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "RecSys",
+            "year": "2022"
+        },
+        {
+            "title": "Deep Learning Recommendation Model for Personalization and Recommendation Systems",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "RecSys",
+            "year": "2019"
+        },
+        {
+            "title": "FiBiNET: Combining Feature Importance and Bilinear feature Interaction for Click-Through Rate Prediction",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "RecSys",
+            "year": "2019"
+        },
+        {
+            "title": "AutoInt: Automatic Feature Interaction Learning via Self-Attentive Neural Networks",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "RecSys",
+            "year": "2019"
+        },
+        {
+            "title": "GCN-Based User Representation Learning for Unifying Robust Recommendation and Fraudster Detection",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "RecSys",
+            "year": "DCN V2: Improved Deep & Cross Network and Practical Lessons for Web-scale Learning to Rank Systems"
+        },
+        {
+            "title": "Sliding Spectrum Decomposition for Diversified Recommendation",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "RecSys",
+            "year": "2021"
+        },
+        {
+            "title": "DHEN: A Deep and Hierarchical Ensemble Network for Large-Scale Click-Through Rate Prediction",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "RecSys",
+            "year": "2022"
+        },
+        {
+            "title": "Towards Deeper, Lighter, and Interpretable Cross Network for CTR Prediction",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "RecSys",
+            "year": "2023"
+        },
+        {
+            "title": "Do LLMs Understand User Preferences? Evaluating LLMs On User Rating Prediction",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "RecSys",
+            "year": "2023"
+        },
+        {
+            "title": "Fresh Content Needs More Attention: Multi-funnel Fresh Content Recommendation",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "RecSys",
+            "year": "2023"
+        },
+        {
+            "title": "Large Language Models are Zero-Shot Rankers for Recommender Systems",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "RecSys",
+            "year": "2023"
+        },
+        {
+            "title": "How Can Recommender Systems Benefit from Large Language Models: A Survey",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "RecSys",
+            "year": "2023"
+        },
+        {
+            "title": "Joint Modeling of Search and Recommendations Via an Unified Contextual Recommender (UniCoRn)",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "RecSys",
+            "year": "2024"
+        },
+        {
+            "title": "360Brew: A Decoder-only Foundation Model for Personalized Ranking and Recommendation",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "RecSys",
+            "year": "2025"
+        },
+        {
+            "title": "FCN: Fusing Exponential and Linear Cross Network for Click-Through Rate Prediction",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "RecSys",
+            "year": "2025"
+        }
     ]
 };
