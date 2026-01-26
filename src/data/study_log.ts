@@ -694,4 +694,5 @@ export const STUDY_LOG: string[] = [
   "The CoT Collection: Improving Zero-shot and Few-shot Learning of Language Models via Chain-of-Thought Fine-Tuning [NLP, 2023]",
   "Deep Interest Network for Click-Through Rate Prediction [RecSys, 2018]",
   "MIMIC-IT: Multi-Modal In-Context Instruction Tuning [Multimodal, 2023]",
+  "Diffusion-LM Improves Controllable Text Generation [NLP, 2022]",
 ];
