@@ -695,4 +695,5 @@ export const STUDY_LOG: string[] = [
   "Deep Interest Network for Click-Through Rate Prediction [RecSys, 2018]",
   "MIMIC-IT: Multi-Modal In-Context Instruction Tuning [Multimodal, 2023]",
   "Diffusion-LM Improves Controllable Text Generation [NLP, 2022]",
+  "Why Can GPT Learn In-Context? Language Models Secretly Perform Gradient Descent as Meta-Optimizers [NLP, 2022]",
 ];
