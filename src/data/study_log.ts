@@ -696,4 +696,5 @@ export const STUDY_LOG: string[] = [
   "MIMIC-IT: Multi-Modal In-Context Instruction Tuning [Multimodal, 2023]",
   "Diffusion-LM Improves Controllable Text Generation [NLP, 2022]",
   "Why Can GPT Learn In-Context? Language Models Secretly Perform Gradient Descent as Meta-Optimizers [NLP, 2022]",
+  "Noise-contrastive estimation: A new estimation principle for unnormalized statistical models [Computer Vision, 2010]",
 ];
