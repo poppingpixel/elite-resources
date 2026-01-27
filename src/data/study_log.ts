@@ -697,4 +697,5 @@ export const STUDY_LOG: string[] = [
   "Diffusion-LM Improves Controllable Text Generation [NLP, 2022]",
   "Why Can GPT Learn In-Context? Language Models Secretly Perform Gradient Descent as Meta-Optimizers [NLP, 2022]",
   "Noise-contrastive estimation: A new estimation principle for unnormalized statistical models [Computer Vision, 2010]",
+  "ARES: An Automated Evaluation Framework for Retrieval-Augmented Generation Systems [NLP, 2023]",
 ];
