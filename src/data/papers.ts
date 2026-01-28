@@ -6773,5 +6773,85 @@ export const ALL_PAPERS: Record<string, Paper[]> = {
             "domain": "RecSys",
             "year": "2025"
         }
+    ],
+    "RL": [
+        {
+            "title": "Simple Statistical Gradient-Following Algorithms for Connectionist Reinforcement Learning",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "RL",
+            "year": "1992"
+        },
+        {
+            "title": "Trust Region Policy Optimization",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "RL",
+            "year": "2015"
+        },
+        {
+            "title": "Mastering the game of Go with Deep Neural Networks & Tree Search",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "RL",
+            "year": "2016"
+        },
+        {
+            "title": "Proximal Policy Optimization Algorithms",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "RL",
+            "year": "2017"
+        },
+        {
+            "title": "Evolution Strategies as a Scalable Alternative to Reinforcement Learning",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "RL",
+            "year": "2017"
+        },
+        {
+            "title": "Playing FPS Games with Deep Reinforcement Learning",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "RL",
+            "year": "2017"
+        },
+        {
+            "title": "Mastering the game of Go without Human Knowledge",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "RL",
+            "year": "2017"
+        },
+        {
+            "title": "Mastering Chess and Shogi by Self-Play with a General Reinforcement Learning Algorithm",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "RL",
+            "year": "2017"
+        },
+        {
+            "title": "AlphaStar: Grandmaster level in StarCraft II using multi-agent reinforcement learning",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "RL",
+            "year": "2019"
+        },
+        {
+            "title": "Mastering Atari, Go, Chess and Shogi by Planning with a Learned Model",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "RL",
+            "year": "2020"
+        },
+        {
+            "title": "Highly accurate protein structure prediction with AlphaFold",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "RL",
+            "year": "2021"
+        },
+        {
+            "title": "Faster sorting algorithms discovered using deep reinforcement learning",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "RL",
+            "year": "2023"
+        },
+        {
+            "title": "Transdreamer: Reinforcement Learning With Transformer World Models",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "RL",
+            "year": "2022"
+        }
     ]
 };
