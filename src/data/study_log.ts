@@ -699,4 +699,5 @@ export const STUDY_LOG: string[] = [
   "Noise-contrastive estimation: A new estimation principle for unnormalized statistical models [Computer Vision, 2010]",
   "ARES: An Automated Evaluation Framework for Retrieval-Augmented Generation Systems [NLP, 2023]",
   "Sentence-BERT: Sentence Embeddings using Siamese BERT-Networks [NLP, 2019]",
+  "Collaborative Deep Learning for Recommender Systems [RecSys, 2015]",
 ];
