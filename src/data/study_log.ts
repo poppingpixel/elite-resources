@@ -702,4 +702,5 @@ export const STUDY_LOG: string[] = [
   "Collaborative Deep Learning for Recommender Systems [RecSys, 2015]",
   "IndicVoices: Towards Building an Inclusive Multilingual Speech Dataset for Indian Languages [NLP, 2024]",
   "Natural TTS Synthesis by Conditioning WaveNet on Mel Spectrogram Predictions [Speech, 2018]",
+  "The Falcon Series of Open Language Models [NLP, 2023]",
 ];
