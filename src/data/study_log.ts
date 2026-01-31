@@ -704,4 +704,5 @@ export const STUDY_LOG: string[] = [
   "Natural TTS Synthesis by Conditioning WaveNet on Mel Spectrogram Predictions [Speech, 2018]",
   "The Falcon Series of Open Language Models [NLP, 2023]",
   "Unlimiformer: Long-Range Transformers with Unlimited Length Input [NLP, 2023]",
+  "Show Your Work: Scratchpads for Intermediate Computation with Language Models [NLP, 2023]",
 ];
