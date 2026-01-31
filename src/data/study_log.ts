@@ -700,4 +700,5 @@ export const STUDY_LOG: string[] = [
   "ARES: An Automated Evaluation Framework for Retrieval-Augmented Generation Systems [NLP, 2023]",
   "Sentence-BERT: Sentence Embeddings using Siamese BERT-Networks [NLP, 2019]",
   "Collaborative Deep Learning for Recommender Systems [RecSys, 2015]",
+  "IndicVoices: Towards Building an Inclusive Multilingual Speech Dataset for Indian Languages [NLP, 2024]",
 ];
