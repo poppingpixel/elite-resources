@@ -706,4 +706,5 @@ export const STUDY_LOG: string[] = [
   "Unlimiformer: Long-Range Transformers with Unlimited Length Input [NLP, 2023]",
   "Show Your Work: Scratchpads for Intermediate Computation with Language Models [NLP, 2023]",
   "Med-Flamingo: a Multimodal Medical Few-shot Learner [Multimodal, 2023]",
+  "Instant Neural Graphics Primitives with a Multiresolution Hash Encoding [Computer Vision, 2022]",
 ];
