@@ -709,4 +709,5 @@ export const STUDY_LOG: string[] = [
   "Instant Neural Graphics Primitives with a Multiresolution Hash Encoding [Computer Vision, 2022]",
   "VideoPoet: A Large Language Model for Zero-Shot Video Generation [Multimodal, 2023]",
   "Relational inductive biases, deep learning, and graph networks [Computer Vision, 2018]",
+  "Jamba: A Hybrid Transformer-Mamba Language Model [NLP, 2024]",
 ];
