@@ -6853,5 +6853,103 @@ export const ALL_PAPERS: Record<string, Paper[]> = {
             "domain": "RL",
             "year": "2022"
         }
+    ],
+    "Graph ML": [
+        {
+            "title": "Nonlinear dimensionality reduction by locally linear embedding",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "Graph ML",
+            "year": "2000"
+        },
+        {
+            "title": "A Global Geometric Framework for Nonlinear Dimensionality Reduction",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "Graph ML",
+            "year": "2000"
+        },
+        {
+            "title": "Laplacian Eigenmaps and Spectral Techniques for Embedding and Clustering",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "Graph ML",
+            "year": "2001"
+        },
+        {
+            "title": "DeepWalk: Online Learning of Social Representations",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "Graph ML",
+            "year": "2014"
+        },
+        {
+            "title": "Asymmetric Transitivity Preserving Graph Embedding",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "Graph ML",
+            "year": "2016"
+        },
+        {
+            "title": "Structural Deep Network Embedding",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "Graph ML",
+            "year": "2016"
+        },
+        {
+            "title": "node2vec: Scalable Feature Learning for Networks",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "Graph ML",
+            "year": "2016"
+        },
+        {
+            "title": "Inductive Representation Learning on Large Graphs",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "Graph ML",
+            "year": "2017"
+        },
+        {
+            "title": "Semi-Supervised Classification with Graph Convolutional Networks",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "Graph ML",
+            "year": "2017"
+        },
+        {
+            "title": "Graph Attention Networks",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "Graph ML",
+            "year": "2018"
+        },
+        {
+            "title": "Exploiting Edge Features for Graph Neural Networks",
+            "category": "Seminal Papers / Need-to-know",
+            "domain": "Graph ML",
+            "year": "2019"
+        },
+        {
+            "title": "RotatE: Knowledge Graph Embedding by Relational Rotation in Complex Space",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "Graph ML",
+            "year": "2019"
+        },
+        {
+            "title": "Graph-Bert: Only Attention is Needed for Learning Graph Representations",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "Graph ML",
+            "year": "2023"
+        },
+        {
+            "title": "GraphMaker: Can Diffusion Models Generate Large Attributed Graphs?",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "Graph ML",
+            "year": "2024"
+        },
+        {
+            "title": "Generative Diffusion Models on Graphs: Methods and Applications",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "Graph ML",
+            "year": "2024"
+        },
+        {
+            "title": "A Survey on Graph Diffusion Models: Generative AI in Science for Molecule Protein and Material",
+            "category": "Selected Papers / Good-to-know",
+            "domain": "Graph ML",
+            "year": "2024"
+        }
     ]
 };
