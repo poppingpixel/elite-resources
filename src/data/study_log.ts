@@ -711,4 +711,5 @@ export const STUDY_LOG: string[] = [
   "Relational inductive biases, deep learning, and graph networks [Computer Vision, 2018]",
   "Jamba: A Hybrid Transformer-Mamba Language Model [NLP, 2024]",
   "Bidirectional recurrent neural networks [Core ML, 1997]",
+  "LLaMA: Open and Efficient Foundation Language Models [NLP, 2023]",
 ];
