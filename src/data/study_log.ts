@@ -712,4 +712,5 @@ export const STUDY_LOG: string[] = [
   "Jamba: A Hybrid Transformer-Mamba Language Model [NLP, 2024]",
   "Bidirectional recurrent neural networks [Core ML, 1997]",
   "LLaMA: Open and Efficient Foundation Language Models [NLP, 2023]",
+  "LongQLoRA: Efficient and Effective Method to Extend Context Length of Large Language Models [NLP, 2023]",
 ];
