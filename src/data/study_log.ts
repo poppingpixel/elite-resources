@@ -710,4 +710,5 @@ export const STUDY_LOG: string[] = [
   "VideoPoet: A Large Language Model for Zero-Shot Video Generation [Multimodal, 2023]",
   "Relational inductive biases, deep learning, and graph networks [Computer Vision, 2018]",
   "Jamba: A Hybrid Transformer-Mamba Language Model [NLP, 2024]",
+  "Bidirectional recurrent neural networks [Core ML, 1997]",
 ];
