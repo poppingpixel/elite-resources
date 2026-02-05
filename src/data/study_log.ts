@@ -714,4 +714,5 @@ export const STUDY_LOG: string[] = [
   "LLaMA: Open and Efficient Foundation Language Models [NLP, 2023]",
   "LongQLoRA: Efficient and Effective Method to Extend Context Length of Large Language Models [NLP, 2023]",
   "Joint Audio and Speech Understanding [Speech, 2023]",
+  "Squeeze-and-Excitation Networks [Computer Vision, 2018]",
 ];
