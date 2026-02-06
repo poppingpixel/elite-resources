@@ -717,4 +717,5 @@ export const STUDY_LOG: string[] = [
   "Squeeze-and-Excitation Networks [Computer Vision, 2018]",
   "Momentum Contrast for Unsupervised Visual Representation Learning [Computer Vision, 2020]",
   "ViLT: Vision-and-Language Transformer Without Convolution or Region Supervision [Multimodal, 2021]",
+  "Improving Language Understanding by Generative Pre-Training [NLP, 2018]",
 ];
