@@ -715,4 +715,5 @@ export const STUDY_LOG: string[] = [
   "LongQLoRA: Efficient and Effective Method to Extend Context Length of Large Language Models [NLP, 2023]",
   "Joint Audio and Speech Understanding [Speech, 2023]",
   "Squeeze-and-Excitation Networks [Computer Vision, 2018]",
+  "Momentum Contrast for Unsupervised Visual Representation Learning [Computer Vision, 2020]",
 ];
