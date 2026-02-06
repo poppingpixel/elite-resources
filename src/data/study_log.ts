@@ -725,4 +725,5 @@ export const STUDY_LOG: string[] = [
   "A General Language Assistant as a Laboratory for Alignment [NLP, 2021]",
   "SwiftSage: A Generative Agent with Fast and Slow Thinking for Complex Interactive Tasks [NLP, 2023]",
   "Chain-of-Symbol Prompting for Spatial Relationships in Large Language Models [NLP, 2023]",
+  "SeamlessM4T – Massively Multilingual & Multimodal Machine Translation [Multimodal, 2023]",
 ];
