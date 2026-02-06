@@ -722,4 +722,5 @@ export const STUDY_LOG: string[] = [
   "Compressing BERT: Studying the Effects of Weight Pruning on Transfer Learning [NLP, 2020]",
   "Phi-4 Technical Report [NLP, 2024]",
   "Cobra: Extending Mamba to Multi-Modal Large Language Model for Efficient Inference [Multimodal, 2024]",
+  "A General Language Assistant as a Laboratory for Alignment [NLP, 2021]",
 ];
