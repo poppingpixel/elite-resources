@@ -726,4 +726,5 @@ export const STUDY_LOG: string[] = [
   "SwiftSage: A Generative Agent with Fast and Slow Thinking for Complex Interactive Tasks [NLP, 2023]",
   "Chain-of-Symbol Prompting for Spatial Relationships in Large Language Models [NLP, 2023]",
   "SeamlessM4T – Massively Multilingual & Multimodal Machine Translation [Multimodal, 2023]",
+  "The Perils & Promises of Fact-checking with Large Language Models [NLP, 2023]",
 ];
