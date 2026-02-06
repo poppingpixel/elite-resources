@@ -720,4 +720,5 @@ export const STUDY_LOG: string[] = [
   "Improving Language Understanding by Generative Pre-Training [NLP, 2018]",
   "Exponentially Faster Language Modeling [NLP, 2023]",
   "Compressing BERT: Studying the Effects of Weight Pruning on Transfer Learning [NLP, 2020]",
+  "Phi-4 Technical Report [NLP, 2024]",
 ];
