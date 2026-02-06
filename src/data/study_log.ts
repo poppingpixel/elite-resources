@@ -718,4 +718,5 @@ export const STUDY_LOG: string[] = [
   "Momentum Contrast for Unsupervised Visual Representation Learning [Computer Vision, 2020]",
   "ViLT: Vision-and-Language Transformer Without Convolution or Region Supervision [Multimodal, 2021]",
   "Improving Language Understanding by Generative Pre-Training [NLP, 2018]",
+  "Exponentially Faster Language Modeling [NLP, 2023]",
 ];
