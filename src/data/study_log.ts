@@ -727,4 +727,5 @@ export const STUDY_LOG: string[] = [
   "Chain-of-Symbol Prompting for Spatial Relationships in Large Language Models [NLP, 2023]",
   "SeamlessM4T – Massively Multilingual & Multimodal Machine Translation [Multimodal, 2023]",
   "The Perils & Promises of Fact-checking with Large Language Models [NLP, 2023]",
+  "Instruction Pre-Training: Language Models are Supervised Multitask Learners [NLP, 2024]",
 ];
