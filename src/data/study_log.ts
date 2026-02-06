@@ -723,4 +723,5 @@ export const STUDY_LOG: string[] = [
   "Phi-4 Technical Report [NLP, 2024]",
   "Cobra: Extending Mamba to Multi-Modal Large Language Model for Efficient Inference [Multimodal, 2024]",
   "A General Language Assistant as a Laboratory for Alignment [NLP, 2021]",
+  "SwiftSage: A Generative Agent with Fast and Slow Thinking for Complex Interactive Tasks [NLP, 2023]",
 ];
