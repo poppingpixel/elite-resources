@@ -716,4 +716,5 @@ export const STUDY_LOG: string[] = [
   "Joint Audio and Speech Understanding [Speech, 2023]",
   "Squeeze-and-Excitation Networks [Computer Vision, 2018]",
   "Momentum Contrast for Unsupervised Visual Representation Learning [Computer Vision, 2020]",
+  "ViLT: Vision-and-Language Transformer Without Convolution or Region Supervision [Multimodal, 2021]",
 ];
