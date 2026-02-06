@@ -724,4 +724,5 @@ export const STUDY_LOG: string[] = [
   "Cobra: Extending Mamba to Multi-Modal Large Language Model for Efficient Inference [Multimodal, 2024]",
   "A General Language Assistant as a Laboratory for Alignment [NLP, 2021]",
   "SwiftSage: A Generative Agent with Fast and Slow Thinking for Complex Interactive Tasks [NLP, 2023]",
+  "Chain-of-Symbol Prompting for Spatial Relationships in Large Language Models [NLP, 2023]",
 ];
