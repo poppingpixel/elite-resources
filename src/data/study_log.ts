@@ -731,4 +731,5 @@ export const STUDY_LOG: string[] = [
   "Tamil-LLaMA: A New Tamil Language Model Based on LLaMA 2 [NLP, 2023]",
   "An Efficient Memory-Augmented Transformer for Knowledge-Intensive NLP Tasks [NLP, 2022]",
   "REFRAG: Rethinking RAG based Decoding [NLP, 2025]",
+  "Generating Text with Recurrent Neural Networks [NLP, 2011]",
 ];
