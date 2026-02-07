@@ -729,4 +729,5 @@ export const STUDY_LOG: string[] = [
   "The Perils & Promises of Fact-checking with Large Language Models [NLP, 2023]",
   "Instruction Pre-Training: Language Models are Supervised Multitask Learners [NLP, 2024]",
   "Tamil-LLaMA: A New Tamil Language Model Based on LLaMA 2 [NLP, 2023]",
+  "An Efficient Memory-Augmented Transformer for Knowledge-Intensive NLP Tasks [NLP, 2022]",
 ];
