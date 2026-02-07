@@ -733,4 +733,5 @@ export const STUDY_LOG: string[] = [
   "REFRAG: Rethinking RAG based Decoding [NLP, 2025]",
   "Generating Text with Recurrent Neural Networks [NLP, 2011]",
   "ArtPrompt: ASCII Art-based Jailbreak Attacks against Aligned LLMs [NLP, 2024]",
+  "DiffusionBERT: Improving Generative Masked Language Models with Diffusion Models [Core ML, 2023]",
 ];
