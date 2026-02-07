@@ -735,4 +735,5 @@ export const STUDY_LOG: string[] = [
   "ArtPrompt: ASCII Art-based Jailbreak Attacks against Aligned LLMs [NLP, 2024]",
   "DiffusionBERT: Improving Generative Masked Language Models with Diffusion Models [Core ML, 2023]",
   "Very Deep Convolutional Networks for Large-Scale Image Recognition [Computer Vision, 2015]",
+  "LaMDA: Language Models for Dialog Applications [NLP, 2022]",
 ];
