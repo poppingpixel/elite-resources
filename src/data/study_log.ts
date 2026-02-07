@@ -732,4 +732,5 @@ export const STUDY_LOG: string[] = [
   "An Efficient Memory-Augmented Transformer for Knowledge-Intensive NLP Tasks [NLP, 2022]",
   "REFRAG: Rethinking RAG based Decoding [NLP, 2025]",
   "Generating Text with Recurrent Neural Networks [NLP, 2011]",
+  "ArtPrompt: ASCII Art-based Jailbreak Attacks against Aligned LLMs [NLP, 2024]",
 ];
