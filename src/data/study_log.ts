@@ -728,4 +728,5 @@ export const STUDY_LOG: string[] = [
   "SeamlessM4T – Massively Multilingual & Multimodal Machine Translation [Multimodal, 2023]",
   "The Perils & Promises of Fact-checking with Large Language Models [NLP, 2023]",
   "Instruction Pre-Training: Language Models are Supervised Multitask Learners [NLP, 2024]",
+  "Tamil-LLaMA: A New Tamil Language Model Based on LLaMA 2 [NLP, 2023]",
 ];
