@@ -738,4 +738,5 @@ export const STUDY_LOG: string[] = [
   "LaMDA: Language Models for Dialog Applications [NLP, 2022]",
   "Adaptation with Self-Evaluation to Improve Selective Prediction in LLMs [NLP, 2023]",
   "Fine-Tuning or Retrieval? Comparing Knowledge Injection in LLMs [NLP, 2023]",
+  "CodeT5: Identifier-aware Unified Pre-trained Encoder-Decoder Models for Code Understanding and Generation [NLP, 2021]",
 ];
