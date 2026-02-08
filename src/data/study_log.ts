@@ -741,4 +741,5 @@ export const STUDY_LOG: string[] = [
   "CodeT5: Identifier-aware Unified Pre-trained Encoder-Decoder Models for Code Understanding and Generation [NLP, 2021]",
   "Understanding R1-Zero-Like Training: A Critical Perspective [NLP, 2025]",
   "Structured Chain-of-Thought Prompting for Code Generation [NLP, 2023]",
+  "No Language Left Behind: Scaling Human-Centered Machine Translation [NLP, 2022]",
 ];
