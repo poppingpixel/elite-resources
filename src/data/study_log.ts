@@ -742,4 +742,5 @@ export const STUDY_LOG: string[] = [
   "Understanding R1-Zero-Like Training: A Critical Perspective [NLP, 2025]",
   "Structured Chain-of-Thought Prompting for Code Generation [NLP, 2023]",
   "No Language Left Behind: Scaling Human-Centered Machine Translation [NLP, 2022]",
+  "BANG: Billion-Scale Approximate Nearest Neighbor Search using a Single GPU [Core ML, 2024]",
 ];
