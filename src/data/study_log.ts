@@ -745,4 +745,5 @@ export const STUDY_LOG: string[] = [
   "BANG: Billion-Scale Approximate Nearest Neighbor Search using a Single GPU [Core ML, 2024]",
   "RescoreBERT: Discriminative Speech Recognition Rescoring with BERT [NLP, 2022]",
   "Dataverse: Open-Source ETL (Extract Transform Load) Pipeline for Large Language Models [NLP, 2024]",
+  "Textless Speech Emotion Conversion using Discrete and Decomposed Representations [Speech, 2022]",
 ];
