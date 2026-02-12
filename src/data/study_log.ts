@@ -746,4 +746,5 @@ export const STUDY_LOG: string[] = [
   "RescoreBERT: Discriminative Speech Recognition Rescoring with BERT [NLP, 2022]",
   "Dataverse: Open-Source ETL (Extract Transform Load) Pipeline for Large Language Models [NLP, 2024]",
   "Textless Speech Emotion Conversion using Discrete and Decomposed Representations [Speech, 2022]",
+  "Augmentation adversarial training for self-supervised speaker recognition [Multimodal, 2020]",
 ];
