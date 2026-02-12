@@ -747,4 +747,5 @@ export const STUDY_LOG: string[] = [
   "Dataverse: Open-Source ETL (Extract Transform Load) Pipeline for Large Language Models [NLP, 2024]",
   "Textless Speech Emotion Conversion using Discrete and Decomposed Representations [Speech, 2022]",
   "Augmentation adversarial training for self-supervised speaker recognition [Multimodal, 2020]",
+  "Influence Scores at Scale for Efficient Language Data Sampling [NLP, 2023]",
 ];
