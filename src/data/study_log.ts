@@ -748,4 +748,5 @@ export const STUDY_LOG: string[] = [
   "Textless Speech Emotion Conversion using Discrete and Decomposed Representations [Speech, 2022]",
   "Augmentation adversarial training for self-supervised speaker recognition [Multimodal, 2020]",
   "Influence Scores at Scale for Efficient Language Data Sampling [NLP, 2023]",
+  "Qwen-VL: A Frontier Large Vision-Language Model with Versatile Abilities [Multimodal, 2023]",
 ];
