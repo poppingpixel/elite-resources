@@ -750,4 +750,5 @@ export const STUDY_LOG: string[] = [
   "Influence Scores at Scale for Efficient Language Data Sampling [NLP, 2023]",
   "Qwen-VL: A Frontier Large Vision-Language Model with Versatile Abilities [Multimodal, 2023]",
   "Linformer: Self-Attention with Linear Complexity [NLP, 2020]",
+  "Text Embeddings Reveal (Almost) As Much As Text [NLP, 2023]",
 ];
