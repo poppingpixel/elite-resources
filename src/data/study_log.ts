@@ -752,4 +752,5 @@ export const STUDY_LOG: string[] = [
   "Linformer: Self-Attention with Linear Complexity [NLP, 2020]",
   "Text Embeddings Reveal (Almost) As Much As Text [NLP, 2023]",
   "Massively Multilingual Sentence Embeddings for Zero-Shot Cross-Lingual Transfer and Beyond [NLP, 2019]",
+  "Large Language Models Can Be Easily Distracted by Irrelevant Context [NLP, 2023]",
 ];
