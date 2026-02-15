@@ -755,4 +755,5 @@ export const STUDY_LOG: string[] = [
   "Large Language Models Can Be Easily Distracted by Irrelevant Context [NLP, 2023]",
   "Deep Language Networks: Joint Prompt Training of Stacked LLMs using Variational Inference [NLP, 2023]",
   "MatFormer: Nested Transformer for Elastic Inference [NLP, 2024]",
+  "Margin Matters: Towards More Discriminative Deep Neural Network Embeddings for Speaker Recognition [Speech, 2019]",
 ];
