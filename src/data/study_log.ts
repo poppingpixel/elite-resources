@@ -757,4 +757,5 @@ export const STUDY_LOG: string[] = [
   "MatFormer: Nested Transformer for Elastic Inference [NLP, 2024]",
   "Margin Matters: Towards More Discriminative Deep Neural Network Embeddings for Speaker Recognition [Speech, 2019]",
   "DreamBooth: Fine Tuning Text-to-Image Diffusion Models for Subject-Driven Generation [Multimodal, 2022]",
+  "V-STaR: Training Verifiers for Self-Taught Reasoners [NLP, 2024]",
 ];
