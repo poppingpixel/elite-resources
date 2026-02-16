@@ -758,4 +758,5 @@ export const STUDY_LOG: string[] = [
   "Margin Matters: Towards More Discriminative Deep Neural Network Embeddings for Speaker Recognition [Speech, 2019]",
   "DreamBooth: Fine Tuning Text-to-Image Diffusion Models for Subject-Driven Generation [Multimodal, 2022]",
   "V-STaR: Training Verifiers for Self-Taught Reasoners [NLP, 2024]",
+  "DeepSeek-Coder-V2: Breaking the Barrier of Closed-Source Models in Code Intelligence [NLP, 2024]",
 ];
