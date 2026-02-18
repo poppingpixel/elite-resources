@@ -759,4 +759,5 @@ export const STUDY_LOG: string[] = [
   "DreamBooth: Fine Tuning Text-to-Image Diffusion Models for Subject-Driven Generation [Multimodal, 2022]",
   "V-STaR: Training Verifiers for Self-Taught Reasoners [NLP, 2024]",
   "DeepSeek-Coder-V2: Breaking the Barrier of Closed-Source Models in Code Intelligence [NLP, 2024]",
+  "AutoInt: Automatic Feature Interaction Learning via Self-Attentive Neural Networks [RecSys, 2019]",
 ];
