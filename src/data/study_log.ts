@@ -763,4 +763,5 @@ export const STUDY_LOG: string[] = [
   "An In-depth Look at Gemini’s Language Abilities [NLP, 2023]",
   "Phi-3 Technical Report: A Highly Capable Language Model Locally on Your Phone [NLP, 2024]",
   "Gemma 2: Improving Open Language Models at a Practical Size [NLP, 2024]",
+  "Distil-Whisper: Robust Knowledge Distillation via Large-Scale Pseudo Labelling [Speech, 2022]",
 ];
