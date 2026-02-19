@@ -761,4 +761,5 @@ export const STUDY_LOG: string[] = [
   "DeepSeek-Coder-V2: Breaking the Barrier of Closed-Source Models in Code Intelligence [NLP, 2024]",
   "AutoInt: Automatic Feature Interaction Learning via Self-Attentive Neural Networks [RecSys, 2019]",
   "An In-depth Look at Gemini’s Language Abilities [NLP, 2023]",
+  "Phi-3 Technical Report: A Highly Capable Language Model Locally on Your Phone [NLP, 2024]",
 ];
