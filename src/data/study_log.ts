@@ -762,4 +762,5 @@ export const STUDY_LOG: string[] = [
   "AutoInt: Automatic Feature Interaction Learning via Self-Attentive Neural Networks [RecSys, 2019]",
   "An In-depth Look at Gemini’s Language Abilities [NLP, 2023]",
   "Phi-3 Technical Report: A Highly Capable Language Model Locally on Your Phone [NLP, 2024]",
+  "Gemma 2: Improving Open Language Models at a Practical Size [NLP, 2024]",
 ];
