@@ -765,4 +765,5 @@ export const STUDY_LOG: string[] = [
   "Gemma 2: Improving Open Language Models at a Practical Size [NLP, 2024]",
   "Distil-Whisper: Robust Knowledge Distillation via Large-Scale Pseudo Labelling [Speech, 2022]",
   "ZipLoRA: Any Subject in Any Style by Effectively Merging LoRAs [Multimodal, 2023]",
+  "Tree-Ring Watermarks: Fingerprints for Diffusion Images that are Invisible and Robust [Computer Vision, 2023]",
 ];
