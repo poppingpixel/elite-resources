@@ -770,4 +770,5 @@ export const STUDY_LOG: string[] = [
   "X-InstructBLIP: A Framework for Aligning X-Modal Instruction-Aware Representations to LLMs and Emergent Cross-modal Reasoning [NLP, 2023]",
   "YaRN: Efficient Context Window Extension of Large Language Models [NLP, 2023]",
   "ToRA: A Tool-Integrated Reasoning Agent for Mathematical Problem Solving [NLP, 2024]",
+  "wav2vec 2.0: A Framework for Self-Supervised Learning of Speech Representations [Speech, 2020]",
 ];
