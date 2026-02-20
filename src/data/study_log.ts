@@ -768,4 +768,5 @@ export const STUDY_LOG: string[] = [
   "Tree-Ring Watermarks: Fingerprints for Diffusion Images that are Invisible and Robust [Computer Vision, 2023]",
   "Pretraining Language Models with Human Preferences [NLP, 2023]",
   "X-InstructBLIP: A Framework for Aligning X-Modal Instruction-Aware Representations to LLMs and Emergent Cross-modal Reasoning [NLP, 2023]",
+  "YaRN: Efficient Context Window Extension of Large Language Models [NLP, 2023]",
 ];
