@@ -767,4 +767,5 @@ export const STUDY_LOG: string[] = [
   "ZipLoRA: Any Subject in Any Style by Effectively Merging LoRAs [Multimodal, 2023]",
   "Tree-Ring Watermarks: Fingerprints for Diffusion Images that are Invisible and Robust [Computer Vision, 2023]",
   "Pretraining Language Models with Human Preferences [NLP, 2023]",
+  "X-InstructBLIP: A Framework for Aligning X-Modal Instruction-Aware Representations to LLMs and Emergent Cross-modal Reasoning [NLP, 2023]",
 ];
