@@ -771,4 +771,5 @@ export const STUDY_LOG: string[] = [
   "YaRN: Efficient Context Window Extension of Large Language Models [NLP, 2023]",
   "ToRA: A Tool-Integrated Reasoning Agent for Mathematical Problem Solving [NLP, 2024]",
   "wav2vec 2.0: A Framework for Self-Supervised Learning of Speech Representations [Speech, 2020]",
+  "RWKV: Reinventing RNNs for the Transformer Era [NLP, 2023]",
 ];
