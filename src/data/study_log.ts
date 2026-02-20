@@ -772,4 +772,5 @@ export const STUDY_LOG: string[] = [
   "ToRA: A Tool-Integrated Reasoning Agent for Mathematical Problem Solving [NLP, 2024]",
   "wav2vec 2.0: A Framework for Self-Supervised Learning of Speech Representations [Speech, 2020]",
   "RWKV: Reinventing RNNs for the Transformer Era [NLP, 2023]",
+  "The Depth-to-Width Interplay in Self-Attention [Core ML, 2023]",
 ];
