@@ -776,4 +776,5 @@ export const STUDY_LOG: string[] = [
   "LLM4Decompile: Decompiling Binary Code with Large Language Models [NLP, 2024]",
   "Graph Attention Networks [Graph ML, 2018]",
   "On the Properties of Neural Machine Translation: Encoder–Decoder Approaches [NLP, 2014]",
+  "UnitY: Two-pass Direct Speech-to-speech Translation with Discrete Units [Speech, 2023]",
 ];
