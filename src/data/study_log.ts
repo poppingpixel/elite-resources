@@ -779,4 +779,5 @@ export const STUDY_LOG: string[] = [
   "UnitY: Two-pass Direct Speech-to-speech Translation with Discrete Units [Speech, 2023]",
   "Chain-of-Verification Reduces Hallucination in Large Language Models [NLP, 2023]",
   "Retentive Network: A Successor to Transformer for Large Language Models [NLP, 2023]",
+  "Jailbroken: How Does LLM Safety Training Fail? [NLP, 2023]",
 ];
