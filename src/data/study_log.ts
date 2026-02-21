@@ -775,4 +775,5 @@ export const STUDY_LOG: string[] = [
   "The Depth-to-Width Interplay in Self-Attention [Core ML, 2023]",
   "LLM4Decompile: Decompiling Binary Code with Large Language Models [NLP, 2024]",
   "Graph Attention Networks [Graph ML, 2018]",
+  "On the Properties of Neural Machine Translation: Encoder–Decoder Approaches [NLP, 2014]",
 ];
