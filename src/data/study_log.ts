@@ -777,4 +777,5 @@ export const STUDY_LOG: string[] = [
   "Graph Attention Networks [Graph ML, 2018]",
   "On the Properties of Neural Machine Translation: Encoder–Decoder Approaches [NLP, 2014]",
   "UnitY: Two-pass Direct Speech-to-speech Translation with Discrete Units [Speech, 2023]",
+  "Chain-of-Verification Reduces Hallucination in Large Language Models [NLP, 2023]",
 ];
