@@ -774,4 +774,5 @@ export const STUDY_LOG: string[] = [
   "RWKV: Reinventing RNNs for the Transformer Era [NLP, 2023]",
   "The Depth-to-Width Interplay in Self-Attention [Core ML, 2023]",
   "LLM4Decompile: Decompiling Binary Code with Large Language Models [NLP, 2024]",
+  "Graph Attention Networks [Graph ML, 2018]",
 ];
