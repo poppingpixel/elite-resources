@@ -787,4 +787,5 @@ export const STUDY_LOG: string[] = [
   "SpeechT5: Unified-Modal Encoder-Decoder Pre-Training for Spoken Language Processing [Speech, 2022]",
   "sDPO: Don’t Use Your Data All at Once [NLP, 2024]",
   "AnglE-Optimized Text Embeddings [NLP, 2023]",
+  "Scaling Laws for Neural Language Models [NLP, 2020]",
 ];
