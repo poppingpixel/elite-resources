@@ -783,4 +783,5 @@ export const STUDY_LOG: string[] = [
   "Deep Learning Recommendation Model for Personalization and Recommendation Systems [RecSys, 2019]",
   "Whisper-AT: Noise-Robust Automatic Speech Recognizers are Also Strong General Audio Event Taggers [Speech, 2023]",
   "Teaching Large Language Models to Self-Debug [NLP, 2024]",
+  "MetaGPT: Meta Programming for Multi-Agent Collaborative Framework [NLP, 2023]",
 ];
