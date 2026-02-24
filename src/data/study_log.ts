@@ -789,4 +789,5 @@ export const STUDY_LOG: string[] = [
   "AnglE-Optimized Text Embeddings [NLP, 2023]",
   "Scaling Laws for Neural Language Models [NLP, 2020]",
   "\(\infty\)-former: Infinite Memory Transformer [NLP, 2022]",
+  "Scaling Vision with Sparse Mixture of Experts [Computer Vision, 2021]",
 ];
