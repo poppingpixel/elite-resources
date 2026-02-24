@@ -788,4 +788,5 @@ export const STUDY_LOG: string[] = [
   "sDPO: Don’t Use Your Data All at Once [NLP, 2024]",
   "AnglE-Optimized Text Embeddings [NLP, 2023]",
   "Scaling Laws for Neural Language Models [NLP, 2020]",
+  "\(\infty\)-former: Infinite Memory Transformer [NLP, 2022]",
 ];
