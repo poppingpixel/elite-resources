@@ -786,4 +786,5 @@ export const STUDY_LOG: string[] = [
   "MetaGPT: Meta Programming for Multi-Agent Collaborative Framework [NLP, 2023]",
   "SpeechT5: Unified-Modal Encoder-Decoder Pre-Training for Spoken Language Processing [Speech, 2022]",
   "sDPO: Don’t Use Your Data All at Once [NLP, 2024]",
+  "AnglE-Optimized Text Embeddings [NLP, 2023]",
 ];
