@@ -781,4 +781,5 @@ export const STUDY_LOG: string[] = [
   "Retentive Network: A Successor to Transformer for Large Language Models [NLP, 2023]",
   "Jailbroken: How Does LLM Safety Training Fail? [NLP, 2023]",
   "Deep Learning Recommendation Model for Personalization and Recommendation Systems [RecSys, 2019]",
+  "Whisper-AT: Noise-Robust Automatic Speech Recognizers are Also Strong General Audio Event Taggers [Speech, 2023]",
 ];
