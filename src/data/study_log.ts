@@ -784,4 +784,5 @@ export const STUDY_LOG: string[] = [
   "Whisper-AT: Noise-Robust Automatic Speech Recognizers are Also Strong General Audio Event Taggers [Speech, 2023]",
   "Teaching Large Language Models to Self-Debug [NLP, 2024]",
   "MetaGPT: Meta Programming for Multi-Agent Collaborative Framework [NLP, 2023]",
+  "SpeechT5: Unified-Modal Encoder-Decoder Pre-Training for Spoken Language Processing [Speech, 2022]",
 ];
