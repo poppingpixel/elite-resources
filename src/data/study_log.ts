@@ -791,4 +791,5 @@ export const STUDY_LOG: string[] = [
   "\(\infty\)-former: Infinite Memory Transformer [NLP, 2022]",
   "Scaling Vision with Sparse Mixture of Experts [Computer Vision, 2021]",
   "Null It Out: Guarding Protected Attributes by Iterative Nullspace Projection [Core ML, 2020]",
+  "Learning Transferable Visual Models From Natural Language Supervision [Multimodal, 2021]",
 ];
