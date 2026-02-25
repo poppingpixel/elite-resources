@@ -793,4 +793,5 @@ export const STUDY_LOG: string[] = [
   "Null It Out: Guarding Protected Attributes by Iterative Nullspace Projection [Core ML, 2020]",
   "Learning Transferable Visual Models From Natural Language Supervision [Multimodal, 2021]",
   "iBOT: Image BERT Pre-training with Online Tokenizer [Computer Vision, 2022]",
+  "Chameleon: Mixed-Modal Early-Fusion Foundation Models [NLP, 2024]",
 ];
