@@ -792,4 +792,5 @@ export const STUDY_LOG: string[] = [
   "Scaling Vision with Sparse Mixture of Experts [Computer Vision, 2021]",
   "Null It Out: Guarding Protected Attributes by Iterative Nullspace Projection [Core ML, 2020]",
   "Learning Transferable Visual Models From Natural Language Supervision [Multimodal, 2021]",
+  "iBOT: Image BERT Pre-training with Online Tokenizer [Computer Vision, 2022]",
 ];
