@@ -162,3 +162,5 @@ export function getPrimarySkillResource(skillId: number): SkillResource | null {
     const resources = SKILL_RESOURCES[skillId];
     return resources && resources.length > 0 ? resources[0] : null;
 }
+
+// Updated: iteration 16
