@@ -797,4 +797,5 @@ export const STUDY_LOG: string[] = [
   "On Calibration of Modern Neural Networks [Core ML, 2017]",
   "Self-Refine: Iterative Refinement with Self-Feedback [NLP, 2024]",
   "Group Preference Optimization: Few-shot Alignment of Large Language Models [NLP, 2023]",
+  "Is DPO Superior to PPO for LLM Alignment? A Comprehensive Study [NLP, 2024]",
 ];
