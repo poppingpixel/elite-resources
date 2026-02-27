@@ -796,4 +796,5 @@ export const STUDY_LOG: string[] = [
   "Chameleon: Mixed-Modal Early-Fusion Foundation Models [NLP, 2024]",
   "On Calibration of Modern Neural Networks [Core ML, 2017]",
   "Self-Refine: Iterative Refinement with Self-Feedback [NLP, 2024]",
+  "Group Preference Optimization: Few-shot Alignment of Large Language Models [NLP, 2023]",
 ];
