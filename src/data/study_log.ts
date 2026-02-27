@@ -795,4 +795,5 @@ export const STUDY_LOG: string[] = [
   "iBOT: Image BERT Pre-training with Online Tokenizer [Computer Vision, 2022]",
   "Chameleon: Mixed-Modal Early-Fusion Foundation Models [NLP, 2024]",
   "On Calibration of Modern Neural Networks [Core ML, 2017]",
+  "Self-Refine: Iterative Refinement with Self-Feedback [NLP, 2024]",
 ];
