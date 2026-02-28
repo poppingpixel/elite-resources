@@ -799,4 +799,5 @@ export const STUDY_LOG: string[] = [
   "Group Preference Optimization: Few-shot Alignment of Large Language Models [NLP, 2023]",
   "Is DPO Superior to PPO for LLM Alignment? A Comprehensive Study [NLP, 2024]",
   "PALO: A Polyglot Large Multimodal Model for 5B People [Multimodal, 2024]",
+  "Proximal Policy Optimization Algorithms [RL, 2017]",
 ];
