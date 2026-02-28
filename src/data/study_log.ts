@@ -800,4 +800,5 @@ export const STUDY_LOG: string[] = [
   "Is DPO Superior to PPO for LLM Alignment? A Comprehensive Study [NLP, 2024]",
   "PALO: A Polyglot Large Multimodal Model for 5B People [Multimodal, 2024]",
   "Proximal Policy Optimization Algorithms [RL, 2017]",
+  "The Dawn of LMMs: Preliminary Explorations with GPT-4V(ision) [Multimodal, 2023]",
 ];
