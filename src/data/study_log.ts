@@ -801,4 +801,5 @@ export const STUDY_LOG: string[] = [
   "PALO: A Polyglot Large Multimodal Model for 5B People [Multimodal, 2024]",
   "Proximal Policy Optimization Algorithms [RL, 2017]",
   "The Dawn of LMMs: Preliminary Explorations with GPT-4V(ision) [Multimodal, 2023]",
+  "Deep Spoken Keyword Spotting: An Overview [Speech, 2021]",
 ];
