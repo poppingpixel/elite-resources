@@ -803,4 +803,5 @@ export const STUDY_LOG: string[] = [
   "The Dawn of LMMs: Preliminary Explorations with GPT-4V(ision) [Multimodal, 2023]",
   "Deep Spoken Keyword Spotting: An Overview [Speech, 2021]",
   "CvT: Introducing Convolutions to Vision Transformers [Computer Vision, 2021]",
+  "InstructBLIP: Towards General-purpose Vision-Language Models with Instruction Tuning [Multimodal, 2023]",
 ];
