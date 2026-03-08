@@ -804,4 +804,5 @@ export const STUDY_LOG: string[] = [
   "Deep Spoken Keyword Spotting: An Overview [Speech, 2021]",
   "CvT: Introducing Convolutions to Vision Transformers [Computer Vision, 2021]",
   "InstructBLIP: Towards General-purpose Vision-Language Models with Instruction Tuning [Multimodal, 2023]",
+  "Generative Multimodal Models are In-Context Learners [Multimodal, 2023]",
 ];
