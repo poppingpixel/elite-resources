@@ -810,4 +810,5 @@ export const STUDY_LOG: string[] = [
   "Estimating Example Difficulty using Variance of Gradients [Computer Vision, 2023]",
   "Deep Unsupervised Learning using Nonequilibrium Thermodynamics [Computer Vision, 2015]",
   "You Only Cache Once: Decoder-Decoder Architectures for Language Models [NLP, 2024]",
+  "Batch Normalization: Accelerating Deep Network Training by Reducing Internal Covariate Shift [Core ML, 2015]",
 ];
