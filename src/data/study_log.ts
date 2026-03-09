@@ -807,4 +807,5 @@ export const STUDY_LOG: string[] = [
   "Generative Multimodal Models are In-Context Learners [Multimodal, 2023]",
   "DHEN: A Deep and Hierarchical Ensemble Network for Large-Scale Click-Through Rate Prediction [RecSys, 2022]",
   "Automatic Speaker Recognition with Limited Data [Speech, 2020]",
+  "Estimating Example Difficulty using Variance of Gradients [Computer Vision, 2023]",
 ];
