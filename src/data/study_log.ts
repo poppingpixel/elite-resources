@@ -805,4 +805,5 @@ export const STUDY_LOG: string[] = [
   "CvT: Introducing Convolutions to Vision Transformers [Computer Vision, 2021]",
   "InstructBLIP: Towards General-purpose Vision-Language Models with Instruction Tuning [Multimodal, 2023]",
   "Generative Multimodal Models are In-Context Learners [Multimodal, 2023]",
+  "DHEN: A Deep and Hierarchical Ensemble Network for Large-Scale Click-Through Rate Prediction [RecSys, 2022]",
 ];
