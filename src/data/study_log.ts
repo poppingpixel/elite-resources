@@ -806,4 +806,5 @@ export const STUDY_LOG: string[] = [
   "InstructBLIP: Towards General-purpose Vision-Language Models with Instruction Tuning [Multimodal, 2023]",
   "Generative Multimodal Models are In-Context Learners [Multimodal, 2023]",
   "DHEN: A Deep and Hierarchical Ensemble Network for Large-Scale Click-Through Rate Prediction [RecSys, 2022]",
+  "Automatic Speaker Recognition with Limited Data [Speech, 2020]",
 ];
