@@ -811,4 +811,5 @@ export const STUDY_LOG: string[] = [
   "Deep Unsupervised Learning using Nonequilibrium Thermodynamics [Computer Vision, 2015]",
   "You Only Cache Once: Decoder-Decoder Architectures for Language Models [NLP, 2024]",
   "Batch Normalization: Accelerating Deep Network Training by Reducing Internal Covariate Shift [Core ML, 2015]",
+  "Efficient Deep Learning: A Survey on Making Deep Learning Models Smaller, Faster, and Better [Core ML, 2021]",
 ];
