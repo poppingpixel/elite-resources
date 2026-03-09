@@ -809,4 +809,5 @@ export const STUDY_LOG: string[] = [
   "Automatic Speaker Recognition with Limited Data [Speech, 2020]",
   "Estimating Example Difficulty using Variance of Gradients [Computer Vision, 2023]",
   "Deep Unsupervised Learning using Nonequilibrium Thermodynamics [Computer Vision, 2015]",
+  "You Only Cache Once: Decoder-Decoder Architectures for Language Models [NLP, 2024]",
 ];
