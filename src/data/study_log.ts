@@ -816,4 +816,5 @@ export const STUDY_LOG: string[] = [
   "Contrastive Chain-of-Thought Prompting [NLP, 2023]",
   "Beyond the Imitation Game: Quantifying and extrapolating the capabilities of language models [NLP, 2022]",
   "Rephrase and Respond: Let Large Language Models Ask Better Questions for Themselves [NLP, 2023]",
+  "Promptbase: Elevating the Power of Foundation Models through Advanced Prompt Engineering [NLP, 2023]",
 ];
