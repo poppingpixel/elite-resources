@@ -815,4 +815,5 @@ export const STUDY_LOG: string[] = [
   "Longformer: The Long-Document Transformer [NLP, 2020]",
   "Contrastive Chain-of-Thought Prompting [NLP, 2023]",
   "Beyond the Imitation Game: Quantifying and extrapolating the capabilities of language models [NLP, 2022]",
+  "Rephrase and Respond: Let Large Language Models Ask Better Questions for Themselves [NLP, 2023]",
 ];
