@@ -817,4 +817,5 @@ export const STUDY_LOG: string[] = [
   "Beyond the Imitation Game: Quantifying and extrapolating the capabilities of language models [NLP, 2022]",
   "Rephrase and Respond: Let Large Language Models Ask Better Questions for Themselves [NLP, 2023]",
   "Promptbase: Elevating the Power of Foundation Models through Advanced Prompt Engineering [NLP, 2023]",
+  "Self-supervised learning for fast and scalable time series hyper-parameter tuning [Computer Vision, 2021]",
 ];
