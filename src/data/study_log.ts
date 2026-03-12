@@ -824,4 +824,5 @@ export const STUDY_LOG: string[] = [
   "RoFormer: Enhanced Transformer with Rotary Position Embedding [NLP, 2022]",
   "CODEFUSION: A Pre-trained Diffusion Model for Code Generation [NLP, 2023]",
   "Contrastive Preference Optimization: Pushing the Boundaries of LLM Performance in Machine Translation [NLP, 2024]",
+  "CLIPScore: A Reference-free Evaluation Metric for Image Captioning [Multimodal, 2021]",
 ];
