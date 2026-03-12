@@ -822,4 +822,5 @@ export const STUDY_LOG: string[] = [
   "360Brew: A Decoder-only Foundation Model for Personalized Ranking and Recommendation [RecSys, 2025]",
   "Improved Baselines with Visual Instruction Tuning [Multimodal, 2023]",
   "RoFormer: Enhanced Transformer with Rotary Position Embedding [NLP, 2022]",
+  "CODEFUSION: A Pre-trained Diffusion Model for Code Generation [NLP, 2023]",
 ];
