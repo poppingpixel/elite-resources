@@ -821,4 +821,5 @@ export const STUDY_LOG: string[] = [
   "Qwen-7B: Open foundation and human-aligned models [Multimodal, 2023]",
   "360Brew: A Decoder-only Foundation Model for Personalized Ranking and Recommendation [RecSys, 2025]",
   "Improved Baselines with Visual Instruction Tuning [Multimodal, 2023]",
+  "RoFormer: Enhanced Transformer with Rotary Position Embedding [NLP, 2022]",
 ];
