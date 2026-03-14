@@ -826,4 +826,5 @@ export const STUDY_LOG: string[] = [
   "Contrastive Preference Optimization: Pushing the Boundaries of LLM Performance in Machine Translation [NLP, 2024]",
   "CLIPScore: A Reference-free Evaluation Metric for Image Captioning [Multimodal, 2021]",
   "Learning Factored Representations in a Deep Mixture of Experts [Computer Vision, 2013]",
+  "Streaming Transformer for Hardware Efficient Voice Trigger Detection and False Trigger Mitigation [Speech, 2021]",
 ];
