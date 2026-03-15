@@ -828,4 +828,5 @@ export const STUDY_LOG: string[] = [
   "Learning Factored Representations in a Deep Mixture of Experts [Computer Vision, 2013]",
   "Streaming Transformer for Hardware Efficient Voice Trigger Detection and False Trigger Mitigation [Speech, 2021]",
   "AudioLM: a Language Modeling Approach to Audio Generation [Speech, 2022]",
+  "LLaMA-VID: An Image is Worth 2 Tokens in Large Language Models [Multimodal, 2023]",
 ];
