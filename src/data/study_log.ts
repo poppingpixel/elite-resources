@@ -827,4 +827,5 @@ export const STUDY_LOG: string[] = [
   "CLIPScore: A Reference-free Evaluation Metric for Image Captioning [Multimodal, 2021]",
   "Learning Factored Representations in a Deep Mixture of Experts [Computer Vision, 2013]",
   "Streaming Transformer for Hardware Efficient Voice Trigger Detection and False Trigger Mitigation [Speech, 2021]",
+  "AudioLM: a Language Modeling Approach to Audio Generation [Speech, 2022]",
 ];
