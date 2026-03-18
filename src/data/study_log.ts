@@ -831,4 +831,5 @@ export const STUDY_LOG: string[] = [
   "LLaMA-VID: An Image is Worth 2 Tokens in Large Language Models [Multimodal, 2023]",
   "Learning Audio-Visual Speech Representation by Masked Multimodal Cluster Prediction [Multimodal, 2022]",
   "PaperMage: A Unified Toolkit for Processing, Representing, and Manipulating Visually-Rich Scientific Documents [NLP, 2023]",
+  "LLMs as Factual Reasoners: Insights from Existing Benchmarks and Beyond [NLP, 2023]",
 ];
