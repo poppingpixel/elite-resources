@@ -835,4 +835,5 @@ export const STUDY_LOG: string[] = [
   "LLM in a Flash: Efficient Large Language Model Inference with Limited Memory [NLP, 2023]",
   "data2vec: A General Framework for Self-supervised Learning in Speech, Vision and Language [Multimodal, 2022]",
   "VideoCLIP: Contrastive Pre-training for Zero-shot Video-Text Understanding [Multimodal, 2021]",
+  "Efficient Streaming Language Models with Attention Sinks [NLP, 2023]",
 ];
