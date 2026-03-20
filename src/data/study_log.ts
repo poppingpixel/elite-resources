@@ -840,4 +840,5 @@ export const STUDY_LOG: string[] = [
   "Learn Beyond The Answer: Training Language Models with Reflection for Mathematical Reasoning [NLP, 2024]",
   "MPNet: Masked and Permuted Pre-training for Language Understanding [NLP, 2020]",
   "Masked Autoencoders Are Scalable Vision Learners [Computer Vision, 2022]",
+  "Mastering the game of Go without Human Knowledge [RL, 2017]",
 ];
