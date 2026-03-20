@@ -836,4 +836,5 @@ export const STUDY_LOG: string[] = [
   "data2vec: A General Framework for Self-supervised Learning in Speech, Vision and Language [Multimodal, 2022]",
   "VideoCLIP: Contrastive Pre-training for Zero-shot Video-Text Understanding [Multimodal, 2021]",
   "Efficient Streaming Language Models with Attention Sinks [NLP, 2023]",
+  "Text Generation by Learning from Demonstrations [NLP, 2021]",
 ];
