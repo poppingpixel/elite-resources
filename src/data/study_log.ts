@@ -844,4 +844,5 @@ export const STUDY_LOG: string[] = [
   "NVLM: Open Frontier-Class Multimodal LLMs [Multimodal, 2024]",
   "TinyBERT: Distilling BERT for Natural Language Understanding [NLP, 2020]",
   "Large Language Models are Better Reasoners with Self-Verification [NLP, 2023]",
+  "Can Generalist Foundation Models Outcompete Special-Purpose Tuning? Case Study in Medicine [NLP, 2023]",
 ];
