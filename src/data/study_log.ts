@@ -846,4 +846,5 @@ export const STUDY_LOG: string[] = [
   "Large Language Models are Better Reasoners with Self-Verification [NLP, 2023]",
   "Can Generalist Foundation Models Outcompete Special-Purpose Tuning? Case Study in Medicine [NLP, 2023]",
   "Laplacian Eigenmaps and Spectral Techniques for Embedding and Clustering [Graph ML, 2001]",
+  "FlashAttention-3: Fast and Accurate Attention with Asynchrony and Low-precision [Core ML, 2024]",
 ];
