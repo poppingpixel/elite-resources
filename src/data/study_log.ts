@@ -843,4 +843,5 @@ export const STUDY_LOG: string[] = [
   "Mastering the game of Go without Human Knowledge [RL, 2017]",
   "NVLM: Open Frontier-Class Multimodal LLMs [Multimodal, 2024]",
   "TinyBERT: Distilling BERT for Natural Language Understanding [NLP, 2020]",
+  "Large Language Models are Better Reasoners with Self-Verification [NLP, 2023]",
 ];
