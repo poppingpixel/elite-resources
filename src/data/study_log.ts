@@ -848,4 +848,5 @@ export const STUDY_LOG: string[] = [
   "Laplacian Eigenmaps and Spectral Techniques for Embedding and Clustering [Graph ML, 2001]",
   "FlashAttention-3: Fast and Accurate Attention with Asynchrony and Low-precision [Core ML, 2024]",
   "ChipNeMo: Domain-Adapted LLMs for Chip Design [NLP, 2023]",
+  "ChatQA: Building GPT-4 Level Conversational QA Models [NLP, 2023]",
 ];
