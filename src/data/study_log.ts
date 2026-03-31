@@ -850,4 +850,5 @@ export const STUDY_LOG: string[] = [
   "ChipNeMo: Domain-Adapted LLMs for Chip Design [NLP, 2023]",
   "ChatQA: Building GPT-4 Level Conversational QA Models [NLP, 2023]",
   "Generative Spoken Language Modeling from Raw Audio [Speech, 2021]",
+  "Pretrained Transformers As Universal Computation Engines [NLP, 2021]",
 ];
