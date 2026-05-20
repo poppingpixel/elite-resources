@@ -9,7 +9,7 @@ import { ALL_BOOKS, type Book } from './data/books';
 import { POLYMATH_METHODS, RESILIENCE_ACTIVITIES, TOP_BILLIONAIRE_SKILLS, type PolymathMethod } from './data/polymathMethods';
 import { getResourcesForTopic } from './data/topicResources';
 import { getResourcesForSkill } from './data/skillResources';
-import { ALL_PAPERS, type Paper } from './data/papers';
+import { ALL_PAPERS } from './data/papers';
 import {
     setTopicStatus, setSkillLevel, setBookStatus, updateBookPage,
     getAllTopicsProgress, getAllSkillsProgress, getAllBooksProgress,
