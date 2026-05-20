@@ -1250,6 +1250,15 @@ function DetailModal({
     );
 }
 
+// Helper to slugify and link to aman.ai papers summary
+const getPaperLink = (paper: { title: string }) => {
+    const slug = paper.title
+        .toLowerCase()
+        .replace(/[^a-z0-9]+/g, '-')
+        .replace(/(^-|-$)/g, '');
+    return `https://aman.ai/papers/#${slug}`;
+};
+
 // ═══════════════════════════════════════════════════════════════════════════════
 // MAIN ROADMAP COMPONENT
 // ═══════════════════════════════════════════════════════════════════════════════
@@ -1350,6 +1359,27 @@ export default function Roadmap() {
             );
         }
         return books;
+    }, [searchQuery]);
+
+    // Filter papers
+    const filteredPapers = useMemo(() => {
+        if (!searchQuery.trim()) {
+            return ALL_PAPERS;
+        }
+        const query = searchQuery.toLowerCase();
+        const result: Record<string, typeof ALL_PAPERS[string]> = {};
+        
+        for (const [domain, papers] of Object.entries(ALL_PAPERS)) {
+            const filtered = papers.filter(p => 
+                p.title.toLowerCase().includes(query) ||
+                p.year.includes(query) ||
+                p.category.toLowerCase().includes(query)
+            );
+            if (filtered.length > 0) {
+                result[domain] = filtered;
+            }
+        }
+        return result;
     }, [searchQuery]);
 
     const openModal = (type: 'topic' | 'skill' | 'book', data: AITopic | CEOSkill | Book) => {
@@ -1792,7 +1822,7 @@ export default function Roadmap() {
 
             {activeTab === 'papers' && (
                 <div style={{ display: 'flex', flexDirection: 'column', gap: 32, paddingBottom: 60 }}>
-                    {Object.entries(ALL_PAPERS).map(([domain, papers], dIdx) => (
+                    {Object.entries(filteredPapers).map(([domain, papers], dIdx) => (
                         <div key={domain} style={{ animation: `slideUp 0.6s cubic-bezier(0.2, 0.8, 0.2, 1) backwards`, animationDelay: `${Math.min(dIdx * 0.1, 0.5)}s` }}>
                             <h2 style={{
                                 fontSize: 22,
@@ -1830,10 +1860,56 @@ export default function Roadmap() {
                                                 fontWeight: 600, 
                                                 lineHeight: 1.4, 
                                                 color: AppleColors.labelPrimary,
-                                                marginBottom: 'auto'
+                                                marginBottom: 16
                                             }}>
                                                 {paper.title}
                                             </h3>
+                                            <div style={{ display: 'flex', gap: 8, marginTop: 'auto' }}>
+                                                <a 
+                                                    href={getPaperLink(paper)}
+                                                    target="_blank"
+                                                    rel="noopener noreferrer"
+                                                    style={{
+                                                        display: 'inline-flex',
+                                                        alignItems: 'center',
+                                                        gap: 4,
+                                                        fontSize: 11,
+                                                        fontWeight: 500,
+                                                        color: '#ffffff',
+                                                        background: AppleColors.blue,
+                                                        padding: '6px 12px',
+                                                        borderRadius: 8,
+                                                        textDecoration: 'none',
+                                                        transition: 'opacity 0.2s ease',
+                                                    }}
+                                                    onClick={(e) => e.stopPropagation()}
+                                                >
+                                                    <ExternalLink size={12} />
+                                                    Summary
+                                                </a>
+                                                <a 
+                                                    href={`https://scholar.google.com/scholar?q=${encodeURIComponent(paper.title)}`}
+                                                    target="_blank"
+                                                    rel="noopener noreferrer"
+                                                    style={{
+                                                        display: 'inline-flex',
+                                                        alignItems: 'center',
+                                                        gap: 4,
+                                                        fontSize: 11,
+                                                        fontWeight: 500,
+                                                        color: AppleColors.labelSecondary,
+                                                        background: 'rgba(128,128,128,0.1)',
+                                                        border: `1px solid ${AppleColors.glassBorder}`,
+                                                        padding: '6px 12px',
+                                                        borderRadius: 8,
+                                                        textDecoration: 'none',
+                                                    }}
+                                                    onClick={(e) => e.stopPropagation()}
+                                                >
+                                                    <Search size={12} />
+                                                    PDF
+                                                </a>
+                                            </div>
                                         </div>
                                     </GlassCard>
                                 ))}
