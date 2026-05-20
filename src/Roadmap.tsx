@@ -9,7 +9,7 @@ import { ALL_BOOKS, type Book } from './data/books';
 import { POLYMATH_METHODS, RESILIENCE_ACTIVITIES, TOP_BILLIONAIRE_SKILLS, type PolymathMethod } from './data/polymathMethods';
 import { getResourcesForTopic } from './data/topicResources';
 import { getResourcesForSkill } from './data/skillResources';
-import { ALL_PAPERS } from './data/papers';
+import { ALL_PAPERS, type Paper } from './data/papers';
 import {
     setTopicStatus, setSkillLevel, setBookStatus, updateBookPage,
     getAllTopicsProgress, getAllSkillsProgress, getAllBooksProgress,
@@ -715,24 +715,27 @@ function DetailModal({
     type,
     data,
     storedProgress,
-    onUpdate
+    onUpdate,
+    onOpenPaper
 }: {
     isOpen: boolean;
     onClose: () => void;
-    type: 'topic' | 'skill' | 'book';
-    data: AITopic | CEOSkill | Book | null;
+    type: 'topic' | 'skill' | 'book' | 'paper';
+    data: AITopic | CEOSkill | Book | Paper | null;
     storedProgress: {
         topics: Record<number, TopicProgress>;
         skills: Record<number, SkillProgress>;
         books: Record<number, BookProgress>;
     };
     onUpdate: () => void;
+    onOpenPaper?: (paper: Paper) => void;
 }) {
     if (!isOpen || !data) return null;
 
     const topicData = type === 'topic' ? data as AITopic : null;
     const skillData = type === 'skill' ? data as CEOSkill : null;
     const bookData = type === 'book' ? data as Book : null;
+    const paperData = type === 'paper' ? data as Paper : null;
 
     const topicProgress = topicData ? storedProgress.topics[topicData.id] : null;
     const skillProgress = skillData ? storedProgress.skills[skillData.id] : null;
@@ -789,7 +792,7 @@ function DetailModal({
                     background: AppleColors.glass,
                     borderRadius: 20,
                     width: '100%',
-                    maxWidth: 480,
+                    maxWidth: type === 'paper' ? 720 : 480,
                     maxHeight: '85vh',
                     overflow: 'hidden',
                     boxShadow: '0 32px 64px rgba(0, 0, 0, 0.2)',
@@ -810,7 +813,8 @@ function DetailModal({
                         color: AppleColors.labelPrimary,
                     }}>
                         {type === 'topic' ? 'Topic Details' :
-                            type === 'skill' ? 'Skill Details' : 'Book Details'}
+                            type === 'skill' ? 'Skill Details' :
+                                type === 'book' ? 'Book Details' : 'Paper Details'}
                     </h2>
                     <button
                         onClick={onClose}
@@ -898,6 +902,118 @@ function DetailModal({
                                     })}
                                 </div>
                             </div>
+
+                            {/* Key Papers */}
+                            {topicData.keyPapers && topicData.keyPapers.length > 0 && (
+                                <div style={{ marginBottom: 20 }}>
+                                    <label style={{
+                                        fontSize: 12,
+                                        fontWeight: 600,
+                                        color: AppleColors.labelSecondary,
+                                        textTransform: 'uppercase',
+                                        letterSpacing: 0.5,
+                                        marginBottom: 12,
+                                        display: 'block',
+                                    }}>
+                                        Key Papers
+                                    </label>
+                                    <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
+                                        {topicData.keyPapers.map((paperStr, idx) => {
+                                            const matchedPaper = findMatchedPaper(paperStr);
+                                            return (
+                                                <button
+                                                    key={idx}
+                                                    onClick={() => {
+                                                        if (matchedPaper && onOpenPaper) {
+                                                            onOpenPaper(matchedPaper);
+                                                        } else {
+                                                            window.open(`https://scholar.google.com/scholar?q=${encodeURIComponent(paperStr)}`, '_blank');
+                                                        }
+                                                    }}
+                                                    style={{
+                                                        display: 'flex',
+                                                        alignItems: 'center',
+                                                        justifyContent: 'space-between',
+                                                        padding: '12px 16px',
+                                                        background: AppleColors.fillQuaternary,
+                                                        borderRadius: 12,
+                                                        border: 'none',
+                                                        cursor: 'pointer',
+                                                        textAlign: 'left',
+                                                        transition: 'background 0.2s',
+                                                    }}
+                                                    onMouseEnter={(e) => {
+                                                        e.currentTarget.style.background = AppleColors.fillTertiary;
+                                                    }}
+                                                    onMouseLeave={(e) => {
+                                                        e.currentTarget.style.background = AppleColors.fillQuaternary;
+                                                    }}
+                                                >
+                                                    <div style={{ display: 'flex', alignItems: 'center', gap: 12, flex: 1, minWidth: 0 }}>
+                                                        <div style={{
+                                                            width: 32,
+                                                            height: 32,
+                                                            borderRadius: 8,
+                                                            background: matchedPaper ? 'rgba(0, 122, 255, 0.12)' : 'rgba(142, 142, 147, 0.12)',
+                                                            display: 'flex',
+                                                            alignItems: 'center',
+                                                            justifyContent: 'center',
+                                                            flexShrink: 0
+                                                        }}>
+                                                            <FileText size={16} color={matchedPaper ? AppleColors.blue : AppleColors.labelSecondary} />
+                                                        </div>
+                                                        <div style={{ flex: 1, minWidth: 0 }}>
+                                                            <div style={{
+                                                                fontSize: 14,
+                                                                fontWeight: 600,
+                                                                color: AppleColors.labelPrimary,
+                                                                whiteSpace: 'nowrap',
+                                                                overflow: 'hidden',
+                                                                textOverflow: 'ellipsis',
+                                                            }}>
+                                                                {matchedPaper ? matchedPaper.title : paperStr}
+                                                            </div>
+                                                            {matchedPaper ? (
+                                                                <div style={{
+                                                                    fontSize: 12,
+                                                                    color: AppleColors.labelTertiary,
+                                                                    marginTop: 2
+                                                                }}>
+                                                                    {matchedPaper.year} • {matchedPaper.domain}
+                                                                </div>
+                                                            ) : (
+                                                                <div style={{
+                                                                    fontSize: 12,
+                                                                    color: AppleColors.labelTertiary,
+                                                                    marginTop: 2
+                                                                }}>
+                                                                    Search on Google Scholar
+                                                                </div>
+                                                            )}
+                                                        </div>
+                                                    </div>
+                                                    <div style={{ flexShrink: 0, marginLeft: 12 }}>
+                                                        {matchedPaper ? (
+                                                            <div style={{
+                                                                padding: '4px 10px',
+                                                                background: AppleColors.blue,
+                                                                color: '#fff',
+                                                                borderRadius: 20,
+                                                                fontSize: 11,
+                                                                fontWeight: 600
+                                                            }}>
+                                                                View
+                                                            </div>
+                                                        ) : (
+                                                            <ExternalLink size={16} color={AppleColors.labelTertiary} />
+                                                        )}
+                                                    </div>
+                                                </button>
+                                            );
+                                        })}
+                                    </div>
+                                </div>
+                            )}
                         </>
                     )}
 
@@ -1163,6 +1279,169 @@ function DetailModal({
                         </>
                     )}
 
+                    {/* Paper Details */}
+                    {paperData && (
+                        <>
+                            <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap', marginBottom: 12 }}>
+                                <span style={{
+                                    fontSize: 12,
+                                    fontWeight: 600,
+                                    color: AppleColors.blue,
+                                    background: 'rgba(0,122,255,0.1)',
+                                    padding: '3px 10px',
+                                    borderRadius: 12
+                                }}>
+                                    {paperData.year}
+                                </span>
+                                <span style={{
+                                    fontSize: 12,
+                                    fontWeight: 600,
+                                    color: AppleColors.labelSecondary,
+                                    background: 'rgba(128,128,128,0.1)',
+                                    padding: '3px 10px',
+                                    borderRadius: 12
+                                }}>
+                                    {paperData.domain}
+                                </span>
+                                <span style={{
+                                    fontSize: 12,
+                                    fontWeight: 600,
+                                    color: AppleColors.labelSecondary,
+                                    background: 'rgba(128,128,128,0.1)',
+                                    padding: '3px 10px',
+                                    borderRadius: 12
+                                }}>
+                                    {paperData.category}
+                                </span>
+                            </div>
+
+                            <h3 style={{
+                                fontSize: 22,
+                                fontWeight: 700,
+                                color: AppleColors.labelPrimary,
+                                lineHeight: 1.3,
+                                marginBottom: 20
+                            }}>
+                                {paperData.title}
+                            </h3>
+
+                            {/* Action Buttons */}
+                            <div style={{ display: 'flex', gap: 12, marginBottom: 24 }}>
+                                <a
+                                    href={paperData.pdfLink || `https://scholar.google.com/scholar?q=${encodeURIComponent(paperData.title)}`}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    onClick={() => triggerFeedback('light')}
+                                    style={{
+                                        flex: 1,
+                                        display: 'flex',
+                                        alignItems: 'center',
+                                        justifyContent: 'center',
+                                        gap: 8,
+                                        padding: '14px 20px',
+                                        background: AppleColors.blue,
+                                        color: '#fff',
+                                        borderRadius: 12,
+                                        textDecoration: 'none',
+                                        fontSize: 14,
+                                        fontWeight: 600,
+                                        transition: 'transform 0.15s ease, opacity 0.15s ease',
+                                        boxShadow: '0 4px 12px rgba(0, 122, 255, 0.25)'
+                                    }}
+                                    onMouseDown={(e) => {
+                                        e.currentTarget.style.transform = 'scale(0.97)';
+                                        e.currentTarget.style.opacity = '0.9';
+                                    }}
+                                    onMouseUp={(e) => {
+                                        e.currentTarget.style.transform = 'scale(1)';
+                                        e.currentTarget.style.opacity = '1';
+                                    }}
+                                    onMouseLeave={(e) => {
+                                        e.currentTarget.style.transform = 'scale(1)';
+                                        e.currentTarget.style.opacity = '1';
+                                    }}
+                                >
+                                    <ExternalLink size={16} />
+                                    Read PDF
+                                </a>
+                                <a
+                                    href={getPaperLink(paperData)}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    onClick={() => triggerFeedback('light')}
+                                    style={{
+                                        display: 'flex',
+                                        alignItems: 'center',
+                                        justifyContent: 'center',
+                                        padding: '14px 16px',
+                                        background: 'rgba(128,128,128,0.1)',
+                                        border: `1px solid ${AppleColors.glassBorder}`,
+                                        color: AppleColors.labelPrimary,
+                                        borderRadius: 12,
+                                        textDecoration: 'none',
+                                        transition: 'transform 0.15s ease, background 0.15s ease',
+                                    }}
+                                    title="View on aman.ai"
+                                >
+                                    <BookOpen size={16} />
+                                </a>
+                                <a
+                                    href={`https://scholar.google.com/scholar?q=${encodeURIComponent(paperData.title)}`}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    onClick={() => triggerFeedback('light')}
+                                    style={{
+                                        display: 'flex',
+                                        alignItems: 'center',
+                                        justifyContent: 'center',
+                                        padding: '14px 16px',
+                                        background: 'rgba(128,128,128,0.1)',
+                                        border: `1px solid ${AppleColors.glassBorder}`,
+                                        color: AppleColors.labelPrimary,
+                                        borderRadius: 12,
+                                        textDecoration: 'none',
+                                        transition: 'transform 0.15s ease, background 0.15s ease',
+                                    }}
+                                    title="Search on Google Scholar"
+                                >
+                                    <Search size={16} />
+                                </a>
+                            </div>
+
+                            {/* Summary Content */}
+                            <div>
+                                <label style={{
+                                    fontSize: 12,
+                                    fontWeight: 600,
+                                    color: AppleColors.labelSecondary,
+                                    textTransform: 'uppercase',
+                                    letterSpacing: 0.5,
+                                    marginBottom: 12,
+                                    display: 'block',
+                                    borderBottom: `1px solid ${AppleColors.separator}`,
+                                    paddingBottom: 6
+                                }}>
+                                    Paper Summary & Key Insights
+                                </label>
+                                {paperData.summaryHtml ? (
+                                    <div
+                                        className="paper-summary-html"
+                                        style={{
+                                            fontSize: 14,
+                                            lineHeight: 1.6,
+                                            color: AppleColors.labelPrimary,
+                                        }}
+                                        dangerouslySetInnerHTML={{ __html: paperData.summaryHtml }}
+                                    />
+                                ) : (
+                                    <p style={{ fontSize: 14, color: AppleColors.labelTertiary, fontStyle: 'italic' }}>
+                                        No detailed summary is available for this paper.
+                                    </p>
+                                )}
+                            </div>
+                        </>
+                    )}
+
                     {/* Resources */}
                     {resources.length > 0 && (
                         <div style={{ marginTop: 20 }}>
@@ -1250,6 +1529,40 @@ function DetailModal({
     );
 }
 
+// Helper to find a matching paper in ALL_PAPERS from a citation string
+const findMatchedPaper = (citation: string): Paper | null => {
+    const flatPapers = Object.values(ALL_PAPERS).flat();
+    const searchTerms = citation.toLowerCase().replace(/et al\.?/g, '').split(/[^a-z0-9]/).filter(s => s.trim().length > 0);
+    
+    for (const paper of flatPapers) {
+        const textToSearch = (paper.title + " " + (paper.summaryHtml || "") + " " + paper.year).toLowerCase();
+        let matchesAll = true;
+        for (const term of searchTerms) {
+            if (!textToSearch.includes(term)) {
+                matchesAll = false;
+                break;
+            }
+        }
+        if (matchesAll) return paper;
+    }
+    
+    // Fallback: try matching just the first word (usually author) and year
+    if (searchTerms.length >= 2) {
+        const author = searchTerms[0];
+        const year = searchTerms.find(t => !isNaN(parseInt(t)) && t.length === 4);
+        if (author && year) {
+             for (const paper of flatPapers) {
+                 const textToSearch = (paper.title + " " + (paper.summaryHtml || "") + " " + paper.year).toLowerCase();
+                 if (textToSearch.includes(author) && textToSearch.includes(year)) {
+                     return paper;
+                 }
+             }
+        }
+    }
+    
+    return null;
+};
+
 // Helper to slugify and link to aman.ai papers summary
 const getPaperLink = (paper: { title: string }) => {
     const slug = paper.title
@@ -1269,7 +1582,7 @@ export default function Roadmap() {
     const [selectedQuarter, setSelectedQuarter] = useState('all');
     const [selectedCategory, setSelectedCategory] = useState('all');
     const [modalOpen, setModalOpen] = useState(false);
-    const [selectedItem, setSelectedItem] = useState<{ type: 'topic' | 'skill' | 'book'; data: AITopic | CEOSkill | Book } | null>(null);
+    const [selectedItem, setSelectedItem] = useState<{ type: 'topic' | 'skill' | 'book' | 'paper'; data: AITopic | CEOSkill | Book | Paper } | null>(null);
 
     // Progress state
     const [topicsProgressData, setTopicsProgressData] = useState(getAllTopicsProgress());
@@ -1382,7 +1695,7 @@ export default function Roadmap() {
         return result;
     }, [searchQuery]);
 
-    const openModal = (type: 'topic' | 'skill' | 'book', data: AITopic | CEOSkill | Book) => {
+    const openModal = (type: 'topic' | 'skill' | 'book' | 'paper', data: AITopic | CEOSkill | Book | Paper) => {
         setSelectedItem({ type, data });
         setModalOpen(true);
     };
@@ -1838,7 +2151,7 @@ export default function Roadmap() {
                             </h2>
                             <div className="roadmap-grid">
                                 {papers.map((paper, pIdx) => (
-                                    <GlassCard key={pIdx} padding={16} hoverable>
+                                    <GlassCard key={pIdx} padding={16} hoverable onClick={() => openModal('paper', paper)}>
                                         <div style={{ display: 'flex', flexDirection: 'column', height: '100%' }}>
                                             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: 8 }}>
                                                 <span style={{ 
@@ -1865,8 +2178,31 @@ export default function Roadmap() {
                                                 {paper.title}
                                             </h3>
                                             <div style={{ display: 'flex', gap: 8, marginTop: 'auto' }}>
+                                                <button 
+                                                    onClick={(e) => {
+                                                        e.stopPropagation();
+                                                        openModal('paper', paper);
+                                                    }}
+                                                    style={{
+                                                        display: 'inline-flex',
+                                                        alignItems: 'center',
+                                                        gap: 4,
+                                                        fontSize: 11,
+                                                        fontWeight: 500,
+                                                        color: AppleColors.labelSecondary,
+                                                        background: 'rgba(128,128,128,0.1)',
+                                                        border: `1px solid ${AppleColors.glassBorder}`,
+                                                        padding: '6px 12px',
+                                                        borderRadius: 8,
+                                                        cursor: 'pointer',
+                                                        transition: 'background 0.2s ease',
+                                                    }}
+                                                >
+                                                    <Sparkles size={12} color={AppleColors.blue} />
+                                                    Summary
+                                                </button>
                                                 <a 
-                                                    href={getPaperLink(paper)}
+                                                    href={paper.pdfLink || `https://scholar.google.com/scholar?q=${encodeURIComponent(paper.title)}`}
                                                     target="_blank"
                                                     rel="noopener noreferrer"
                                                     style={{
@@ -1884,29 +2220,7 @@ export default function Roadmap() {
                                                     }}
                                                     onClick={(e) => e.stopPropagation()}
                                                 >
-                                                    <ExternalLink size={12} />
-                                                    Summary
-                                                </a>
-                                                <a 
-                                                    href={`https://scholar.google.com/scholar?q=${encodeURIComponent(paper.title)}`}
-                                                    target="_blank"
-                                                    rel="noopener noreferrer"
-                                                    style={{
-                                                        display: 'inline-flex',
-                                                        alignItems: 'center',
-                                                        gap: 4,
-                                                        fontSize: 11,
-                                                        fontWeight: 500,
-                                                        color: AppleColors.labelSecondary,
-                                                        background: 'rgba(128,128,128,0.1)',
-                                                        border: `1px solid ${AppleColors.glassBorder}`,
-                                                        padding: '6px 12px',
-                                                        borderRadius: 8,
-                                                        textDecoration: 'none',
-                                                    }}
-                                                    onClick={(e) => e.stopPropagation()}
-                                                >
-                                                    <Search size={12} />
+                                                    <FileText size={12} />
                                                     PDF
                                                 </a>
                                             </div>
@@ -1931,6 +2245,7 @@ export default function Roadmap() {
                     books: booksProgressData,
                 }}
                 onUpdate={refreshProgress}
+                onOpenPaper={(paper) => openModal('paper', paper)}
             />
         </div>
     );

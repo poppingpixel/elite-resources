@@ -1965,3 +1965,97 @@ a:hover {
 /* Updated: iteration 15 */
 
 /* Updated: iteration 22 */
+
+/* ═══════════════════════════════════════════════════════════════════════════════
+   PAPER SUMMARY RENDERING STYLES
+   ═══════════════════════════════════════════════════════════════════════════════ */
+.paper-summary-html {
+  margin-top: 16px;
+  font-size: 0.9375rem;
+  line-height: 1.6;
+  color: var(--text-primary);
+}
+
+.paper-summary-html p {
+  margin-bottom: 12px;
+}
+
+.paper-summary-html ul, 
+.paper-summary-html ol {
+  margin-left: 20px;
+  margin-bottom: 16px;
+  padding-left: 0;
+}
+
+.paper-summary-html li {
+  margin-bottom: 8px;
+  list-style-type: disc;
+}
+
+.paper-summary-html li::marker {
+  color: var(--color-blue);
+}
+
+.paper-summary-html code {
+  font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
+  font-size: 0.85em;
+  background: rgba(128, 128, 128, 0.12);
+  border: 1.5px solid rgba(255, 255, 255, 0.08);
+  padding: 3px 6px;
+  border-radius: 6px;
+  color: var(--color-orange);
+  word-break: break-word;
+}
+
+.paper-summary-html pre {
+  background: rgba(128, 128, 128, 0.08);
+  border: 1px solid var(--glass-border-light);
+  padding: 14px;
+  border-radius: 10px;
+  overflow-x: auto;
+  margin-bottom: 16px;
+}
+
+.paper-summary-html pre code {
+  background: none;
+  border: none;
+  padding: 0;
+  color: inherit;
+}
+
+.paper-summary-html img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 20px auto;
+  border-radius: 12px;
+  border: 1px solid var(--glass-border-light);
+  box-shadow: var(--glass-shadow-lg);
+  transition: transform var(--duration-normal) var(--ease-spring);
+}
+
+.paper-summary-html img:hover {
+  transform: scale(1.02);
+}
+
+.paper-summary-html blockquote {
+  border-left: 4px solid var(--color-blue);
+  padding-left: 16px;
+  color: var(--text-secondary);
+  font-style: italic;
+  margin: 16px 0;
+}
+
+.paper-summary-html a {
+  color: var(--color-blue);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
+  font-weight: 500;
+  transition: opacity var(--duration-fast) var(--ease-smooth);
+}
+
+.paper-summary-html a:hover {
+  opacity: 0.8;
+}
+
