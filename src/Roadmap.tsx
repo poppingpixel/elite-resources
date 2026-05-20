@@ -1579,6 +1579,14 @@ const getPaperLink = (paper: { title: string }) => {
 export default function Roadmap() {
     const [activeTab, setActiveTab] = useState<RoadmapTab>('topics');
     const [searchQuery, setSearchQuery] = useState('');
+    const [debouncedSearchQuery, setDebouncedSearchQuery] = useState('');
+
+    useEffect(() => {
+        const timer = setTimeout(() => {
+            setDebouncedSearchQuery(searchQuery);
+        }, 250);
+        return () => clearTimeout(timer);
+    }, [searchQuery]);
     const [selectedQuarter, setSelectedQuarter] = useState('all');
     const [selectedCategory, setSelectedCategory] = useState('all');
     const [modalOpen, setModalOpen] = useState(false);
@@ -1635,15 +1643,15 @@ export default function Roadmap() {
         if (selectedCategory !== 'all') {
             topics = topics.filter(t => t.category === selectedCategory);
         }
-        if (searchQuery.trim()) {
-            const query = searchQuery.toLowerCase();
+        if (debouncedSearchQuery.trim()) {
+            const query = debouncedSearchQuery.toLowerCase();
             topics = topics.filter(t =>
                 t.name.toLowerCase().includes(query) ||
                 t.category.toLowerCase().includes(query)
             );
         }
         return topics;
-    }, [selectedQuarter, selectedCategory, searchQuery]);
+    }, [selectedQuarter, selectedCategory, debouncedSearchQuery]);
 
     // Filter skills
     const filteredSkills = useMemo(() => {
@@ -1651,49 +1659,50 @@ export default function Roadmap() {
         if (selectedCategory !== 'all') {
             skills = skills.filter(s => s.category === selectedCategory);
         }
-        if (searchQuery.trim()) {
-            const query = searchQuery.toLowerCase();
+        if (debouncedSearchQuery.trim()) {
+            const query = debouncedSearchQuery.toLowerCase();
             skills = skills.filter(s =>
                 s.name.toLowerCase().includes(query) ||
                 s.category.toLowerCase().includes(query)
             );
         }
         return skills;
-    }, [selectedCategory, searchQuery]);
+    }, [selectedCategory, debouncedSearchQuery]);
 
     // Filter books
     const filteredBooks = useMemo(() => {
         let books = ALL_BOOKS;
-        if (searchQuery.trim()) {
-            const query = searchQuery.toLowerCase();
+        if (debouncedSearchQuery.trim()) {
+            const query = debouncedSearchQuery.toLowerCase();
             books = books.filter(b =>
                 b.title.toLowerCase().includes(query) ||
                 b.author.toLowerCase().includes(query)
             );
         }
         return books;
-    }, [searchQuery]);
+    }, [debouncedSearchQuery]);
 
     // Filter papers
     const filteredPapers = useMemo(() => {
-        if (!searchQuery.trim()) {
+        if (!debouncedSearchQuery.trim()) {
             return ALL_PAPERS;
         }
-        const query = searchQuery.toLowerCase();
+        const query = debouncedSearchQuery.toLowerCase();
         const result: Record<string, typeof ALL_PAPERS[string]> = {};
         
         for (const [domain, papers] of Object.entries(ALL_PAPERS)) {
             const filtered = papers.filter(p => 
                 p.title.toLowerCase().includes(query) ||
                 p.year.includes(query) ||
-                p.category.toLowerCase().includes(query)
+                p.category.toLowerCase().includes(query) ||
+                (p.summaryHtml && p.summaryHtml.toLowerCase().includes(query))
             );
             if (filtered.length > 0) {
                 result[domain] = filtered;
             }
         }
         return result;
-    }, [searchQuery]);
+    }, [debouncedSearchQuery]);
 
     const openModal = (type: 'topic' | 'skill' | 'book' | 'paper', data: AITopic | CEOSkill | Book | Paper) => {
         setSelectedItem({ type, data });
