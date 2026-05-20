@@ -114,7 +114,7 @@ export const Q2_TOPICS: AITopic[] = [
     { id: 80, name: 'Reversible Networks', category: 'Advanced Architecture', quarter: 'Q2', difficulty: 7, status: 'not_started', keyPapers: ['RevNet', 'iRevNet'], estimatedHours: 20, hasImplementation: false, hasBlogPost: false },
     { id: 81, name: 'Neural Architecture Search', category: 'Advanced Architecture', quarter: 'Q2', difficulty: 8, status: 'not_started', keyPapers: ['NAS', 'DARTS'], estimatedHours: 30, hasImplementation: false, hasBlogPost: false },
     { id: 82, name: 'Compound Scaling', category: 'Advanced Architecture', quarter: 'Q2', difficulty: 6, status: 'not_started', keyPapers: ['EfficientNet'], estimatedHours: 20, hasImplementation: false, hasBlogPost: false },
-    { id: 83, name: 'Model Architecture Scaling', category: 'Advanced Architecture', quarter: 'Q2', difficulty: 8, status: 'not_started', keyPapers: ['Chinchilla', 'Kaplan'], estimatedHours: 30, hasImplementation: false, hasBlogPost: false },
+    
     { id: 84, name: 'Depth vs Width Trade-offs', category: 'Advanced Architecture', quarter: 'Q2', difficulty: 6, status: 'not_started', keyPapers: ['Width/depth studies'], estimatedHours: 15, hasImplementation: false, hasBlogPost: false },
     { id: 85, name: 'Skip Connection Variants', category: 'Advanced Architecture', quarter: 'Q2', difficulty: 5, status: 'not_started', keyPapers: ['Dense connections', 'Highway'], estimatedHours: 15, hasImplementation: false, hasBlogPost: false },
     { id: 86, name: 'Attention Variants', category: 'Advanced Architecture', quarter: 'Q2', difficulty: 7, status: 'not_started', keyPapers: ['Rotary', 'ALiBi', 'FlashAttention'], estimatedHours: 25, hasImplementation: false, hasBlogPost: false },
@@ -132,7 +132,7 @@ export const Q2_TOPICS: AITopic[] = [
     { id: 96, name: 'Meta-Learning', category: 'Pre-training', quarter: 'Q2', difficulty: 8, status: 'not_started', keyPapers: ['MAML', 'Reptile'], estimatedHours: 30, hasImplementation: false, hasBlogPost: false },
     { id: 97, name: 'Federated Learning', category: 'Pre-training', quarter: 'Q2', difficulty: 7, status: 'not_started', keyPapers: ['FedAvg', 'Privacy'], estimatedHours: 25, hasImplementation: false, hasBlogPost: false },
     { id: 98, name: 'Continual Learning', category: 'Pre-training', quarter: 'Q2', difficulty: 7, status: 'not_started', keyPapers: ['Catastrophic forgetting'], estimatedHours: 25, hasImplementation: false, hasBlogPost: false },
-    { id: 99, name: 'Advanced Few-Shot Learning', category: 'Pre-training', quarter: 'Q2', difficulty: 7, status: 'not_started', keyPapers: ['Advanced few-shot'], estimatedHours: 25, hasImplementation: false, hasBlogPost: false },
+    
     { id: 100, name: 'Zero-Shot Learning', category: 'Pre-training', quarter: 'Q2', difficulty: 7, status: 'not_started', keyPapers: ['Zero-shot classification'], estimatedHours: 25, hasImplementation: false, hasBlogPost: false },
     { id: 101, name: 'Open-Set Recognition', category: 'Pre-training', quarter: 'Q2', difficulty: 6, status: 'not_started', keyPapers: ['OOD detection'], estimatedHours: 20, hasImplementation: false, hasBlogPost: false },
     { id: 102, name: 'Lifelong Learning', category: 'Pre-training', quarter: 'Q2', difficulty: 7, status: 'not_started', keyPapers: ['Lifelong architectures'], estimatedHours: 25, hasImplementation: false, hasBlogPost: false },
