@@ -1577,7 +1577,9 @@ const getPaperLink = (paper: { title: string }) => {
 // ═══════════════════════════════════════════════════════════════════════════════
 
 export default function Roadmap() {
-    const [activeTab, setActiveTab] = useState<RoadmapTab>('topics');
+    const [activeTab, setActiveTab] = useState<RoadmapTab>(
+        () => (localStorage.getItem('roadmap_activeTab') as RoadmapTab) || 'topics'
+    );
     const [searchQuery, setSearchQuery] = useState('');
     const [debouncedSearchQuery, setDebouncedSearchQuery] = useState('');
 
@@ -1587,8 +1589,17 @@ export default function Roadmap() {
         }, 250);
         return () => clearTimeout(timer);
     }, [searchQuery]);
-    const [selectedQuarter, setSelectedQuarter] = useState('all');
-    const [selectedCategory, setSelectedCategory] = useState('all');
+    const [selectedQuarter, setSelectedQuarter] = useState(
+        () => localStorage.getItem('roadmap_selectedQuarter') || 'all'
+    );
+    const [selectedCategory, setSelectedCategory] = useState(
+        () => localStorage.getItem('roadmap_selectedCategory') || 'all'
+    );
+
+    // Persist state to localStorage on every change
+    useEffect(() => { localStorage.setItem('roadmap_activeTab', activeTab); }, [activeTab]);
+    useEffect(() => { localStorage.setItem('roadmap_selectedQuarter', selectedQuarter); }, [selectedQuarter]);
+    useEffect(() => { localStorage.setItem('roadmap_selectedCategory', selectedCategory); }, [selectedCategory]);
     const [modalOpen, setModalOpen] = useState(false);
     const [selectedItem, setSelectedItem] = useState<{ type: 'topic' | 'skill' | 'book' | 'paper'; data: AITopic | CEOSkill | Book | Paper } | null>(null);
 
