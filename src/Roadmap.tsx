@@ -2,8 +2,9 @@ import { useState, useMemo, useEffect, useCallback, useRef } from 'react';
 import {
     Target, BookOpen, Brain, Trophy, ChevronRight, Search, X,
     Clock, Zap, Play, Minus, Plus, FileText, ExternalLink, Sparkles,
-    Cpu, Terminal, CheckCircle2, Circle, Map, ArrowLeft
+    Cpu, Terminal, CheckCircle2, Circle, Map, ArrowLeft, Code2
 } from 'lucide-react';
+import CsDevHub from './CsDevHub';
 import { ALL_AI_TOPICS, type AITopic } from './data/aiTopics';
 import { CEO_SKILLS, type CEOSkill } from './data/ceoSkills';
 import { ALL_BOOKS, type Book } from './data/books';
@@ -30,7 +31,7 @@ import { triggerFeedback } from './services/feedback';
 
 // Breakpoints for responsiveness - handled via responsive class styles
 
-type RoadmapTab = 'topics' | 'skills' | 'books' | 'polymath' | 'milestones' | 'papers' | 'ai-engineering' | 'ai-glossary' | 'dev-roadmaps' | 'ai-beginners' | 'made-with-ml';
+type RoadmapTab = 'topics' | 'skills' | 'books' | 'polymath' | 'milestones' | 'papers' | 'ai-engineering' | 'ai-glossary' | 'dev-roadmaps' | 'ai-beginners' | 'made-with-ml' | 'cs-dev';
 
 export interface AIFSLesson {
     name: string;
@@ -3186,6 +3187,7 @@ export default function Roadmap() {
         { id: 'ai-engineering' as RoadmapTab, label: 'AI Scratch', icon: <Cpu size={18} />, count: aifsProgress.total },
         { id: 'ai-beginners' as RoadmapTab, label: 'AI Beginners', icon: <BookOpen size={18} />, count: aiBeginnersProgress.total },
         { id: 'made-with-ml' as RoadmapTab, label: 'Made with ML', icon: <Zap size={18} />, count: madeWithMlProgress.total },
+        { id: 'cs-dev' as RoadmapTab, label: 'CS Dev', icon: <Code2 size={18} />, count: 5 },
         { id: 'ai-glossary' as RoadmapTab, label: 'AI Glossary', icon: <Terminal size={18} />, count: AI_ENGINEERING_GLOSSARY.length },
         { id: 'dev-roadmaps' as RoadmapTab, label: 'Dev Roadmaps', icon: <Map size={18} />, count: 62 },
         { id: 'skills' as RoadmapTab, label: 'CEO Skills', icon: <Target size={18} />, count: 30 },
@@ -3239,8 +3241,8 @@ export default function Roadmap() {
 
     return (
         <div style={{
-            padding: '100px 20px 40px 20px',
-            maxWidth: 1200,
+            padding: activeTab === 'cs-dev' ? '100px 0 40px 0' : '100px 20px 40px 20px',
+            maxWidth: activeTab === 'cs-dev' ? '100%' : 1200,
             margin: '0 auto',
         }}>
             {/* Header */}
@@ -3443,7 +3445,7 @@ export default function Roadmap() {
             </div>
 
             {/* Search */}
-            {activeTab !== 'milestones' && (
+            {activeTab !== 'milestones' && activeTab !== 'cs-dev' && (
                 <div
                     style={{
                         maxWidth: 480,
@@ -4363,6 +4365,12 @@ export default function Roadmap() {
                             );
                         })}
                     </div>
+                </div>
+            )}
+
+            {activeTab === 'cs-dev' && (
+                <div style={{ display: 'flex', flexDirection: 'column', gap: 24, paddingBottom: 60, height: 'calc(100vh - 280px)', minHeight: 600 }}>
+                    <CsDevHub />
                 </div>
             )}
 

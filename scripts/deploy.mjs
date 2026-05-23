@@ -9,6 +9,14 @@ console.log('🏗️ Building project...');
 execSync('npm run build', { stdio: 'inherit' });
 
 const distPath = path.join(ROOT, 'dist');
+
+// Remove devhub from build output so it is not deployed
+const devhubDistPath = path.join(distPath, 'devhub');
+if (fs.existsSync(devhubDistPath)) {
+  console.log('🧹 Removing devhub from build output prior to deployment...');
+  fs.rmSync(devhubDistPath, { recursive: true, force: true });
+}
+
 process.chdir(distPath);
 
 console.log('🧹 Initializing git in dist folder...');
