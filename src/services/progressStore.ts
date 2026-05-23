@@ -402,6 +402,102 @@ export function resetDailyResilienceProgress(): void {
     saveProgress(STORAGE_KEYS.RESILIENCE, progress);
 }
 
-// Updated: iteration 6
-
 // Updated: iteration 17
+
+// ============= AIFS PROGRESS =============
+const AIFS_STORAGE_KEY = 'aifs:progress:v1';
+
+export interface AIFSLessonProgress {
+    completedAt: number | null;
+    visitedAt?: number;
+    answers?: Record<string, any>;
+}
+
+export interface AIFSProgressState {
+    lessons: Record<string, AIFSLessonProgress>;
+    updatedAt: number;
+}
+
+export function getAIFSProgress(): AIFSProgressState {
+    try {
+        const stored = localStorage.getItem(AIFS_STORAGE_KEY);
+        return stored ? JSON.parse(stored) : { lessons: {}, updatedAt: 0 };
+    } catch (err) {
+        console.error('Failed to load AIFS progress:', err);
+        return { lessons: {}, updatedAt: 0 };
+    }
+}
+
+export function saveAIFSProgress(state: AIFSProgressState): void {
+    try {
+        state.updatedAt = Date.now();
+        localStorage.setItem(AIFS_STORAGE_KEY, JSON.stringify(state));
+        localStorage.setItem('elite_roadmap_last_updated', new Date().toISOString());
+    } catch (err) {
+        console.error('Failed to save AIFS progress:', err);
+    }
+}
+
+export function setAIFSLessonStatus(lessonPath: string, completed: boolean): void {
+    const state = getAIFSProgress();
+    if (!state.lessons[lessonPath]) {
+        state.lessons[lessonPath] = { completedAt: null };
+    }
+    state.lessons[lessonPath].completedAt = completed ? Date.now() : null;
+    saveAIFSProgress(state);
+}
+
+export function isAIFSLessonComplete(lessonPath: string): boolean {
+    const state = getAIFSProgress();
+    return !!state.lessons[lessonPath]?.completedAt;
+}
+
+export function extractAIFSPath(url: string): string {
+    if (!url) return '';
+    const m = String(url).match(/(phases\/[^/]+\/[^/]+)\/?/);
+    return m ? m[1] : '';
+}
+
+// ============= DEV ROADMAPS PROGRESS =============
+const DEV_ROADMAPS_STORAGE_KEY = 'dev_roadmaps:progress:v1';
+
+export interface DevRoadmapProgressState {
+    completedNodes: Record<string, Record<string, number | null>>;
+    updatedAt: number;
+}
+
+export function getDevRoadmapProgress(): DevRoadmapProgressState {
+    try {
+        const stored = localStorage.getItem(DEV_ROADMAPS_STORAGE_KEY);
+        return stored ? JSON.parse(stored) : { completedNodes: {}, updatedAt: 0 };
+    } catch (err) {
+        console.error('Failed to load dev roadmap progress:', err);
+        return { completedNodes: {}, updatedAt: 0 };
+    }
+}
+
+export function saveDevRoadmapProgress(state: DevRoadmapProgressState): void {
+    try {
+        state.updatedAt = Date.now();
+        localStorage.setItem(DEV_ROADMAPS_STORAGE_KEY, JSON.stringify(state));
+        localStorage.setItem('elite_roadmap_last_updated', new Date().toISOString());
+    } catch (err) {
+        console.error('Failed to save dev roadmap progress:', err);
+    }
+}
+
+export function setDevRoadmapNodeStatus(roadmapId: string, nodeId: string, completed: boolean): void {
+    const state = getDevRoadmapProgress();
+    if (!state.completedNodes[roadmapId]) {
+        state.completedNodes[roadmapId] = {};
+    }
+    state.completedNodes[roadmapId][nodeId] = completed ? Date.now() : null;
+    saveDevRoadmapProgress(state);
+}
+
+export function isDevRoadmapNodeComplete(roadmapId: string, nodeId: string): boolean {
+    const state = getDevRoadmapProgress();
+    return !!state.completedNodes[roadmapId]?.[nodeId];
+}
+
+

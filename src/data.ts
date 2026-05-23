@@ -84,6 +84,8 @@ export const RESOURCES: Resource[] = [
     createResource('Generative AI', 'Hugging Face Community', 'Hugging Face Diffusion Course', 'GitHub / Hugging Face Course', 'https://github.com/huggingface/diffusion-models-class', 'Practical, code-first mastery of Stable Diffusion.', 'ai'),
     createResource('Engineering & Systems', 'Jeff Dean', 'The Datacenter as a Computer', 'The Datacenter as a Computer (PDF)', 'https://research.google/pubs/pub35290/', 'Learn how to think at "Google Scale."', 'ai'),
     createResource('Hardware & Acceleration', 'Jeremy Howard', 'Practical Deep Learning for Coders', 'Part 2: Deep Learning from Foundations', 'https://course.fast.ai/', 'Teaches you how to write the backend of PyTorch.', 'ai'),
+    createResource('AI Scratch', 'Rohit Gupta', 'AI Engineering from Scratch (AIFS)', 'GitHub Repo & Complete Curriculum', 'https://github.com/rohitg00/ai-engineering-from-scratch', 'Build 435 lessons across 20 phases from scratch. The ultimate hands-on curriculum for deep understanding.', 'ai'),
+    createResource('Dev Roadmaps', 'Kamran Ahmed', 'Interactive Developer Roadmaps', 'GitHub Repo & Interactive Guides', 'https://github.com/nilbuild/developer-roadmap', 'Comprehensive, step-by-step career path guides for frontend, backend, devops, AI, system design, and more.', 'ai'),
 
     // ═══════════════════════════════════════════════════════════════════════════════
     // COMBAT & MARTIAL ARTS

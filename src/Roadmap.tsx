@@ -1,7 +1,8 @@
-import { useState, useMemo, useEffect, useCallback } from 'react';
+import { useState, useMemo, useEffect, useCallback, useRef } from 'react';
 import {
     Target, BookOpen, Brain, Trophy, ChevronRight, Search, X,
-    Clock, Zap, Play, Minus, Plus, FileText, ExternalLink, Sparkles
+    Clock, Zap, Play, Minus, Plus, FileText, ExternalLink, Sparkles,
+    Cpu, Terminal, CheckCircle2, Circle, Map, ArrowLeft
 } from 'lucide-react';
 import { ALL_AI_TOPICS, type AITopic } from './data/aiTopics';
 import { CEO_SKILLS, type CEOSkill } from './data/ceoSkills';
@@ -10,11 +11,14 @@ import { POLYMATH_METHODS, RESILIENCE_ACTIVITIES, TOP_BILLIONAIRE_SKILLS, type P
 import { getResourcesForTopic } from './data/topicResources';
 import { getResourcesForSkill } from './data/skillResources';
 import { ALL_PAPERS, type Paper } from './data/papers';
+import { AI_ENGINEERING_PHASES, AI_ENGINEERING_GLOSSARY } from './data/aiEngineering';
 import {
-    setTopicStatus, setSkillLevel, setBookStatus, updateBookPage,
-    getAllTopicsProgress, getAllSkillsProgress, getAllBooksProgress,
-    getAllMethodsProgress, incrementMethodPractice, setMethodMastered,
+    getAllTopicsProgress, getAllSkillsProgress, getAllBooksProgress, getAllMethodsProgress,
     getAllResilienceProgress, completeResilienceActivity,
+    setTopicStatus, setSkillLevel, setBookStatus, updateBookPage,
+    getAIFSProgress, setAIFSLessonStatus, extractAIFSPath,
+    getDevRoadmapProgress, setDevRoadmapNodeStatus, isDevRoadmapNodeComplete,
+    incrementMethodPractice, setMethodMastered,
     type TopicProgress, type SkillProgress, type BookProgress, type TopicStatus, type BookStatus,
     type MethodProgress, type ResilienceProgress
 } from './services/progressStore';
@@ -22,7 +26,19 @@ import { triggerFeedback } from './services/feedback';
 
 // Breakpoints for responsiveness - handled via responsive class styles
 
-type RoadmapTab = 'topics' | 'skills' | 'books' | 'polymath' | 'milestones' | 'papers';
+type RoadmapTab = 'topics' | 'skills' | 'books' | 'polymath' | 'milestones' | 'papers' | 'ai-engineering' | 'ai-glossary' | 'dev-roadmaps';
+
+export interface AIFSLesson {
+    name: string;
+    status: string;
+    type: string;
+    lang: string;
+    url: string;
+    summary: string;
+    keywords: string;
+    phaseId?: number;
+    phaseName?: string;
+}
 
 // ═══════════════════════════════════════════════════════════════════════════════
 // APPLE HIG COLOR SYSTEM - Uses CSS variables for dark mode support
@@ -706,6 +722,451 @@ function ResilienceCard({ activity, progress, onComplete }: {
 }
 
 // ═══════════════════════════════════════════════════════════════════════════════
+// MERMAID DIAGRAM & PREMIUM CODE BLOCK RENDERERS
+// ═══════════════════════════════════════════════════════════════════════════════
+
+let mermaidPromise: Promise<any> | null = null;
+function loadMermaid(): Promise<any> {
+    if (typeof window === 'undefined') return Promise.resolve(null);
+    if ((window as any).mermaid) {
+        return Promise.resolve((window as any).mermaid);
+    }
+    if (mermaidPromise) {
+        return mermaidPromise;
+    }
+    mermaidPromise = new Promise((resolve, reject) => {
+        const script = document.createElement('script');
+        script.src = 'https://cdn.jsdelivr.net/npm/mermaid@10.9.1/dist/mermaid.min.js';
+        script.async = true;
+        script.onload = () => {
+            const mermaid = (window as any).mermaid;
+            try {
+                mermaid.initialize({
+                    startOnLoad: false,
+                    theme: 'dark',
+                    themeVariables: {
+                        background: '#141416',
+                        primaryColor: '#007aff',
+                        primaryTextColor: '#fff',
+                        lineColor: '#3a3a3c',
+                    },
+                    securityLevel: 'loose',
+                });
+                resolve(mermaid);
+            } catch (err) {
+                reject(err);
+            }
+        };
+        script.onerror = (err) => {
+            mermaidPromise = null;
+            reject(err);
+        };
+        document.body.appendChild(script);
+    });
+    return mermaidPromise;
+}
+
+interface MermaidDiagramProps {
+    chart: string;
+}
+
+function MermaidDiagram({ chart }: MermaidDiagramProps) {
+    const [svg, setSvg] = useState<string>('');
+    const [error, setError] = useState<string | null>(null);
+
+    useEffect(() => {
+        let isMounted = true;
+        
+        loadMermaid()
+            .then(async (mermaid) => {
+                if (!mermaid) return;
+                const id = `mermaid-${Math.random().toString(36).substring(2, 11)}`;
+                const { svg: renderedSvg } = await mermaid.render(id, chart);
+                if (isMounted) {
+                    setSvg(renderedSvg);
+                    setError(null);
+                }
+            })
+            .catch((err) => {
+                console.error('Mermaid render failure:', err);
+                if (isMounted) {
+                    setError(err.message || 'Failed to render Mermaid chart');
+                }
+            });
+
+        return () => {
+            isMounted = false;
+        };
+    }, [chart]);
+
+    if (error) {
+        return (
+            <div style={{
+                background: 'rgba(255, 59, 48, 0.08)',
+                border: '1px solid rgba(255, 59, 48, 0.2)',
+                padding: '16px',
+                borderRadius: '8px',
+                color: '#ff453a',
+                fontSize: '13px',
+                fontFamily: 'monospace',
+                margin: '16px 0',
+                whiteSpace: 'pre-wrap'
+            }}>
+                <strong>Mermaid rendering error:</strong>
+                <pre style={{ margin: '8px 0 0 0', opacity: 0.8, fontSize: '12px' }}>{chart}</pre>
+            </div>
+        );
+    }
+
+    if (!svg) {
+        return (
+            <div style={{
+                background: 'rgba(255,255,255,0.02)',
+                padding: '30px',
+                borderRadius: '8px',
+                textAlign: 'center',
+                color: 'rgba(255,255,255,0.4)',
+                fontSize: '13px',
+                margin: '16px 0',
+                border: '1px dashed rgba(255,255,255,0.1)'
+            }}>
+                Rendering diagram...
+            </div>
+        );
+    }
+
+    return (
+        <div 
+            dangerouslySetInnerHTML={{ __html: svg }}
+            className="mermaid-container"
+            style={{
+                background: '#141416',
+                border: '1px solid rgba(255, 255, 255, 0.08)',
+                padding: '24px',
+                borderRadius: '12px',
+                margin: '20px 0',
+                display: 'flex',
+                justifyContent: 'center',
+                overflowX: 'auto',
+            }}
+        />
+    );
+}
+
+interface PremiumCodeBlockProps {
+    code: string;
+    lang: string;
+}
+
+function PremiumCodeBlock({ code, lang }: PremiumCodeBlockProps) {
+    const [copied, setCopied] = useState(false);
+
+    const handleCopy = () => {
+        navigator.clipboard.writeText(code);
+        setCopied(true);
+        triggerFeedback('light');
+        setTimeout(() => setCopied(false), 2000);
+    };
+
+    return (
+        <div style={{
+            background: '#0e0f12',
+            borderRadius: 10,
+            border: `1px solid rgba(255, 255, 255, 0.08)`,
+            margin: '18px 0',
+            overflow: 'hidden',
+            position: 'relative'
+        }}>
+            <div style={{
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'space-between',
+                padding: '8px 16px',
+                background: 'rgba(255,255,255,0.02)',
+                borderBottom: `1px solid rgba(255, 255, 255, 0.06)`,
+            }}>
+                <span style={{
+                    fontSize: 11,
+                    fontFamily: 'monospace',
+                    color: 'rgba(255,255,255,0.4)',
+                    textTransform: 'uppercase',
+                    letterSpacing: 0.5
+                }}>
+                    {lang || 'code'}
+                </span>
+                <button
+                    onClick={handleCopy}
+                    style={{
+                        background: 'none',
+                        border: 'none',
+                        color: copied ? AppleColors.green : 'rgba(255,255,255,0.5)',
+                        fontSize: 11,
+                        cursor: 'pointer',
+                        fontWeight: 600,
+                        display: 'flex',
+                        alignItems: 'center',
+                        gap: 4
+                    }}
+                >
+                    {copied ? 'Copied!' : 'Copy'}
+                </button>
+            </div>
+            <pre style={{
+                margin: 0,
+                padding: 16,
+                overflowX: 'auto',
+                fontFamily: 'monospace',
+                fontSize: 13,
+                color: '#e4e4e7',
+                lineHeight: 1.5,
+            }}>
+                <code>{code}</code>
+            </pre>
+        </div>
+    );
+}
+
+// ═══════════════════════════════════════════════════════════════════════════════
+// LIGHTWEIGHT MARKDOWN FORMATTER FOR PREMIUM UI
+// ═══════════════════════════════════════════════════════════════════════════════
+
+const renderMarkdown = (text: string | null) => {
+    if (!text) return null;
+
+    const lines = text.split('\n');
+    const elements: React.ReactNode[] = [];
+    let inCodeBlock = false;
+    let codeContent: string[] = [];
+    let codeLang = '';
+    let listItems: React.ReactNode[] = [];
+    let tableRows: React.ReactNode[][] = [];
+
+    const flushList = (key: string | number) => {
+        if (listItems.length > 0) {
+            elements.push(
+                <ul key={`list-${key}`} style={{ margin: '10px 0 16px 20px', padding: 0, listStyleType: 'disc' }}>
+                    {listItems}
+                </ul>
+            );
+            listItems = [];
+        }
+    };
+
+    const flushTable = (key: string | number) => {
+        if (tableRows.length > 0) {
+            elements.push(
+                <div key={`table-container-${key}`} style={{ overflowX: 'auto', margin: '16px 0', borderRadius: 8, border: `1px solid ${AppleColors.separator}` }}>
+                    <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: 13, background: 'rgba(255,255,255,0.01)' }}>
+                        <tbody>
+                            {tableRows.map((row, rIdx) => (
+                                <tr key={rIdx} style={{ borderBottom: `1px solid ${AppleColors.separator}`, background: rIdx === 0 ? 'rgba(255,255,255,0.03)' : 'transparent' }}>
+                                    {row.map((cell, cIdx) => (
+                                        <td key={cIdx} style={{ padding: '8px 12px', fontWeight: rIdx === 0 ? 600 : 400, color: rIdx === 0 ? AppleColors.labelPrimary : AppleColors.labelSecondary, textAlign: 'left' }}>
+                                            {cell}
+                                        </td>
+                                    ))}
+                                </tr>
+                            ))}
+                        </tbody>
+                    </table>
+                </div>
+            );
+            tableRows = [];
+        }
+    };
+
+    const parseInlineStyles = (line: string, lineKey: string | number) => {
+        const linkParts = line.split(/(\[.*?\]\(.*?\))/);
+        return linkParts.map((part, pIdx) => {
+            if (part.startsWith('[') && part.includes('](')) {
+                const match = part.match(/\[(.*?)\]\((.*?)\)/);
+                if (match) {
+                    const text = match[1];
+                    const url = match[2];
+                    return (
+                        <a 
+                            key={`${lineKey}-link-${pIdx}`} 
+                            href={url} 
+                            target="_blank" 
+                            rel="noopener noreferrer"
+                            style={{ color: AppleColors.blue, textDecoration: 'none', fontWeight: 500 }}
+                            onClick={(e) => e.stopPropagation()}
+                        >
+                            {text}
+                        </a>
+                    );
+                }
+            }
+            const subParts = part.split(/(\*\*.*?\*\*|`.*?`)/);
+            return subParts.map((subPart, sIdx) => {
+                if (subPart.startsWith('**') && subPart.endsWith('**')) {
+                    return <strong key={`${lineKey}-${pIdx}-${sIdx}`} style={{ color: AppleColors.labelPrimary, fontWeight: 700 }}>{subPart.slice(2, -2)}</strong>;
+                }
+                if (subPart.startsWith('`') && subPart.endsWith('`')) {
+                    return (
+                        <code key={`${lineKey}-${pIdx}-${sIdx}`} style={{
+                            fontFamily: 'monospace',
+                            background: 'rgba(255, 255, 255, 0.08)',
+                            padding: '2px 6px',
+                            borderRadius: 4,
+                            fontSize: '0.9em',
+                            color: AppleColors.orange,
+                            border: `1px solid ${AppleColors.glassBorder}`
+                        }}>
+                            {subPart.slice(1, -1)}
+                        </code>
+                    );
+                }
+                return subPart;
+            });
+        });
+    };
+
+    for (let i = 0; i < lines.length; i++) {
+        const line = lines[i];
+
+        if (line.trim().startsWith('```')) {
+            if (inCodeBlock) {
+                inCodeBlock = false;
+                const finalCode = codeContent.join('\n');
+                if (codeLang.toLowerCase() === 'mermaid') {
+                    elements.push(
+                        <MermaidDiagram key={`mermaid-${i}`} chart={finalCode} />
+                    );
+                } else {
+                    elements.push(
+                        <PremiumCodeBlock key={`code-${i}`} code={finalCode} lang={codeLang} />
+                    );
+                }
+                codeContent = [];
+                codeLang = '';
+            } else {
+                flushList(i);
+                flushTable(i);
+                inCodeBlock = true;
+                codeLang = line.trim().slice(3).trim();
+            }
+            continue;
+        }
+
+        if (inCodeBlock) {
+            codeContent.push(line);
+            continue;
+        }
+
+        // Image support
+        if (line.trim().startsWith('![') && line.includes('](')) {
+            flushList(i);
+            flushTable(i);
+            const match = line.match(/!\[(.*?)\]\((.*?)\)/);
+            if (match) {
+                const alt = match[1];
+                const src = match[2];
+                elements.push(
+                    <div key={`img-${i}`} style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', margin: '20px 0' }}>
+                        <img src={src} alt={alt} style={{ maxWidth: '100%', borderRadius: 8, border: `1px solid ${AppleColors.glassBorder}` }} />
+                        {alt && <span style={{ fontSize: 12, color: AppleColors.labelSecondary, marginTop: 8, fontStyle: 'italic' }}>{alt}</span>}
+                    </div>
+                );
+                continue;
+            }
+        }
+
+        if (line.startsWith('## ')) {
+            flushList(i);
+            flushTable(i);
+            elements.push(
+                <h3 key={i} style={{ fontSize: 18, fontWeight: 700, color: AppleColors.labelPrimary, marginTop: 24, marginBottom: 12 }}>
+                    {parseInlineStyles(line.slice(3), i)}
+                </h3>
+            );
+            continue;
+        }
+        if (line.startsWith('### ')) {
+            flushList(i);
+            flushTable(i);
+            elements.push(
+                <h4 key={i} style={{ fontSize: 15, fontWeight: 600, color: AppleColors.labelPrimary, marginTop: 18, marginBottom: 8 }}>
+                    {parseInlineStyles(line.slice(4), i)}
+                </h4>
+            );
+            continue;
+        }
+        if (line.startsWith('# ')) {
+            flushList(i);
+            flushTable(i);
+            elements.push(
+                <h2 key={i} style={{ fontSize: 22, fontWeight: 800, color: AppleColors.labelPrimary, marginTop: 28, marginBottom: 16 }}>
+                    {parseInlineStyles(line.slice(2), i)}
+                </h2>
+            );
+            continue;
+        }
+
+        if (line.startsWith('> ')) {
+            flushList(i);
+            flushTable(i);
+            elements.push(
+                <blockquote key={i} style={{
+                    margin: '12px 0 16px 0',
+                    padding: '8px 16px',
+                    background: 'rgba(255, 255, 255, 0.02)',
+                    borderLeft: `3px solid ${AppleColors.blue}`,
+                    color: AppleColors.labelSecondary,
+                    fontStyle: 'italic',
+                    borderRadius: '0 8px 8px 0',
+                }}>
+                    {parseInlineStyles(line.slice(2), i)}
+                </blockquote>
+            );
+            continue;
+        }
+
+        if (line.trim().startsWith('- ') || line.trim().startsWith('* ')) {
+            flushTable(i);
+            const content = line.trim().slice(2);
+            listItems.push(
+                <li key={`li-${i}`} style={{ fontSize: 14, color: AppleColors.labelSecondary, marginBottom: 6, lineHeight: 1.5 }}>
+                    {parseInlineStyles(content, i)}
+                </li>
+            );
+            continue;
+        }
+
+        if (line.trim().startsWith('|')) {
+            flushList(i);
+            if (line.includes('---')) {
+                continue;
+            }
+            const cells = line.split('|').map(c => c.trim()).filter((_, idx, arr) => idx > 0 && idx < arr.length - 1);
+            if (cells.length > 0) {
+                tableRows.push(cells.map((cell, cIdx) => parseInlineStyles(cell, `cell-${i}-${cIdx}`)));
+            }
+            continue;
+        }
+
+        if (line.trim() === '') {
+            flushList(i);
+            flushTable(i);
+            elements.push(<div key={`space-${i}`} style={{ height: 10 }} />);
+        } else {
+            flushList(i);
+            flushTable(i);
+            elements.push(
+                <p key={i} style={{ fontSize: 14, lineHeight: 1.6, color: AppleColors.labelSecondary, margin: '8px 0 12px 0' }}>
+                    {parseInlineStyles(line, i)}
+                </p>
+            );
+        }
+    }
+
+    flushList('final');
+    flushTable('final');
+
+    return elements;
+};
+
+// ═══════════════════════════════════════════════════════════════════════════════
 // DETAIL MODAL - Apple Sheet Style
 // ═══════════════════════════════════════════════════════════════════════════════
 
@@ -720,8 +1181,8 @@ function DetailModal({
 }: {
     isOpen: boolean;
     onClose: () => void;
-    type: 'topic' | 'skill' | 'book' | 'paper';
-    data: AITopic | CEOSkill | Book | Paper | null;
+    type: 'topic' | 'skill' | 'book' | 'paper' | 'aifs-lesson' | 'dev-roadmap-node';
+    data: AITopic | CEOSkill | Book | Paper | AIFSLesson | { id: string; label: string; roadmapId: string; roadmapName?: string } | null;
     storedProgress: {
         topics: Record<number, TopicProgress>;
         skills: Record<number, SkillProgress>;
@@ -736,6 +1197,68 @@ function DetailModal({
     const skillData = type === 'skill' ? data as CEOSkill : null;
     const bookData = type === 'book' ? data as Book : null;
     const paperData = type === 'paper' ? data as Paper : null;
+    const aifsData = type === 'aifs-lesson' ? data as AIFSLesson : null;
+    const devRoadmapNodeData = type === 'dev-roadmap-node' ? data as { id: string; label: string; roadmapId: string; roadmapName?: string } : null;
+
+    const [lessonMd, setLessonMd] = useState<string | null>(null);
+    const [isMdLoading, setIsMdLoading] = useState(false);
+
+    useEffect(() => {
+        if (!data || (type !== 'dev-roadmap-node' && type !== 'aifs-lesson')) {
+            setLessonMd(null);
+            return;
+        }
+
+        setIsMdLoading(true);
+        setLessonMd(null);
+
+        if (type === 'dev-roadmap-node') {
+            const node = data as any;
+            const slug = slugify(node.label);
+            const url = `/elite-resources/roadmaps/${node.roadmapId}/content/${slug}@${node.id}.md`;
+
+            fetch(url)
+                .then(res => {
+                    if (!res.ok) throw new Error('Not found');
+                    return res.text();
+                })
+                .then(text => {
+                    const cleanText = text.replace(/^#\s+.*?\n+/, '');
+                    setLessonMd(cleanText);
+                })
+                .catch(() => {
+                    setLessonMd(`Learn about **${node.label}** in the context of the **${node.roadmapName || node.roadmapId}** curriculum.`);
+                })
+                .finally(() => {
+                    setIsMdLoading(false);
+                });
+        } else if (type === 'aifs-lesson') {
+            const lesson = data as any;
+            const relativePath = extractAIFSPath(lesson.url);
+            if (!relativePath) {
+                setLessonMd(lesson.summary || 'No detailed content available.');
+                setIsMdLoading(false);
+                return;
+            }
+            const url = `/elite-resources/aifs/${relativePath}/docs/en.md`;
+
+            fetch(url)
+                .then(res => {
+                    if (!res.ok) throw new Error('Not found');
+                    return res.text();
+                })
+                .then(text => {
+                    const cleanText = text.replace(/^#\s+.*?\n+/, '');
+                    setLessonMd(cleanText);
+                })
+                .catch(() => {
+                    setLessonMd(lesson.summary || 'No detailed content available.');
+                })
+                .finally(() => {
+                    setIsMdLoading(false);
+                });
+        }
+    }, [type, data]);
 
     const topicProgress = topicData ? storedProgress.topics[topicData.id] : null;
     const skillProgress = skillData ? storedProgress.skills[skillData.id] : null;
@@ -792,7 +1315,7 @@ function DetailModal({
                     background: AppleColors.glass,
                     borderRadius: 20,
                     width: '100%',
-                    maxWidth: type === 'paper' ? 720 : 480,
+                    maxWidth: (type === 'paper' || type === 'dev-roadmap-node') ? 720 : 480,
                     maxHeight: '85vh',
                     overflow: 'hidden',
                     boxShadow: '0 32px 64px rgba(0, 0, 0, 0.2)',
@@ -814,7 +1337,9 @@ function DetailModal({
                     }}>
                         {type === 'topic' ? 'Topic Details' :
                             type === 'skill' ? 'Skill Details' :
-                                type === 'book' ? 'Book Details' : 'Paper Details'}
+                                type === 'book' ? 'Book Details' : 
+                                    type === 'paper' ? 'Paper Details' : 
+                                        type === 'dev-roadmap-node' ? 'Roadmap Node' : 'Lesson Details'}
                     </h2>
                     <button
                         onClick={onClose}
@@ -1442,6 +1967,315 @@ function DetailModal({
                         </>
                     )}
 
+                    {/* Roadmap Node Details */}
+                    {devRoadmapNodeData && (
+                        <>
+                            <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap', marginBottom: 12 }}>
+                                <span style={{
+                                    fontSize: 12,
+                                    fontWeight: 600,
+                                    color: AppleColors.blue,
+                                    background: 'rgba(0,122,255,0.1)',
+                                    padding: '3px 10px',
+                                    borderRadius: 12
+                                }}>
+                                    Roadmap Node
+                                </span>
+                                <span style={{
+                                    fontSize: 12,
+                                    fontWeight: 600,
+                                    color: AppleColors.labelSecondary,
+                                    background: 'rgba(128,128,128,0.1)',
+                                    padding: '3px 10px',
+                                    borderRadius: 12
+                                }}>
+                                    {devRoadmapNodeData.roadmapName || devRoadmapNodeData.roadmapId}
+                                </span>
+                            </div>
+
+                            <h2 style={{ fontSize: 24, fontWeight: 800, color: AppleColors.labelPrimary, marginBottom: 16 }}>
+                                {devRoadmapNodeData.label}
+                            </h2>
+
+                            {/* Node status toggle in modal */}
+                            <div style={{ marginBottom: 20 }}>
+                                <button
+                                    onClick={() => {
+                                        triggerFeedback('light');
+                                        const isComplete = isDevRoadmapNodeComplete(devRoadmapNodeData.roadmapId, devRoadmapNodeData.id);
+                                        setDevRoadmapNodeStatus(devRoadmapNodeData.roadmapId, devRoadmapNodeData.id, !isComplete);
+                                        onUpdate();
+                                    }}
+                                    style={{
+                                        display: 'inline-flex',
+                                        alignItems: 'center',
+                                        gap: 8,
+                                        padding: '10px 16px',
+                                        borderRadius: 10,
+                                        border: `1px solid ${isDevRoadmapNodeComplete(devRoadmapNodeData.roadmapId, devRoadmapNodeData.id) ? AppleColors.green : AppleColors.glassBorder}`,
+                                        background: isDevRoadmapNodeComplete(devRoadmapNodeData.roadmapId, devRoadmapNodeData.id) ? 'rgba(52, 199, 89, 0.15)' : 'rgba(128,128,128,0.1)',
+                                        color: isDevRoadmapNodeComplete(devRoadmapNodeData.roadmapId, devRoadmapNodeData.id) ? AppleColors.green : AppleColors.labelPrimary,
+                                        fontSize: 13,
+                                        fontWeight: 600,
+                                        cursor: 'pointer',
+                                        transition: 'all 0.2s ease',
+                                    }}
+                                >
+                                    {isDevRoadmapNodeComplete(devRoadmapNodeData.roadmapId, devRoadmapNodeData.id) ? (
+                                        <>
+                                            <CheckCircle2 size={16} color={AppleColors.green} />
+                                            Completed
+                                        </>
+                                    ) : (
+                                        <>
+                                            <Circle size={16} color={AppleColors.labelSecondary} />
+                                            Mark as Complete
+                                        </>
+                                    )}
+                                </button>
+                            </div>
+
+                            <div style={{
+                                display: 'flex',
+                                flexDirection: 'column',
+                                gap: 16,
+                                maxHeight: '350px',
+                                overflowY: 'auto',
+                                paddingRight: 8,
+                            }}>
+                                <label style={{
+                                    fontSize: 12,
+                                    fontWeight: 600,
+                                    color: AppleColors.labelSecondary,
+                                    textTransform: 'uppercase',
+                                    letterSpacing: 0.5,
+                                    marginBottom: 4,
+                                    display: 'block',
+                                    borderBottom: `1px solid ${AppleColors.separator}`,
+                                    paddingBottom: 6
+                                }}>
+                                    Description & Guide
+                                </label>
+                                {isMdLoading ? (
+                                    <div style={{ color: AppleColors.labelSecondary, fontSize: 14, fontStyle: 'italic', padding: '20px 0' }}>
+                                        Loading guide content...
+                                    </div>
+                                ) : (
+                                    <div style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
+                                        {renderMarkdown(lessonMd)}
+                                    </div>
+                                )}
+                            </div>
+                        </>
+                    )}
+
+                    {/* AIFS Lesson Details */}
+                    {aifsData && (
+                        <>
+                            <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap', marginBottom: 12 }}>
+                                <span style={{
+                                    fontSize: 12,
+                                    fontWeight: 600,
+                                    color: AppleColors.purple,
+                                    background: 'rgba(175, 82, 222, 0.1)',
+                                    padding: '3px 10px',
+                                    borderRadius: 12
+                                }}>
+                                    AI Scratch Lesson
+                                </span>
+                                {aifsData.phaseName && (
+                                    <span style={{
+                                        fontSize: 12,
+                                        fontWeight: 600,
+                                        color: AppleColors.labelSecondary,
+                                        background: 'rgba(128,128,128,0.1)',
+                                        padding: '3px 10px',
+                                        borderRadius: 12
+                                    }}>
+                                        {aifsData.phaseName}
+                                    </span>
+                                )}
+                                {aifsData.type && (
+                                    <span style={{
+                                        fontSize: 12,
+                                        fontWeight: 600,
+                                        color: AppleColors.orange,
+                                        background: 'rgba(255, 149, 0, 0.1)',
+                                        padding: '3px 10px',
+                                        borderRadius: 12
+                                    }}>
+                                        {aifsData.type}
+                                    </span>
+                                )}
+                                {aifsData.lang && (
+                                    <span style={{
+                                        fontSize: 12,
+                                        fontWeight: 600,
+                                        color: AppleColors.blue,
+                                        background: 'rgba(0, 122, 255, 0.1)',
+                                        padding: '3px 10px',
+                                        borderRadius: 12
+                                    }}>
+                                        {aifsData.lang}
+                                    </span>
+                                )}
+                            </div>
+
+                            <h2 style={{ fontSize: 24, fontWeight: 800, color: AppleColors.labelPrimary, marginBottom: 16 }}>
+                                {aifsData.name}
+                            </h2>
+
+                            {/* Status toggle in modal */}
+                            <div style={{ marginBottom: 20, display: 'flex', gap: 12, flexWrap: 'wrap' }}>
+                                <button
+                                    onClick={() => {
+                                        triggerFeedback('light');
+                                        const path = extractAIFSPath(aifsData.url);
+                                        if (path) {
+                                            const state = getAIFSProgress();
+                                            const isComplete = !!state.lessons[path]?.completedAt;
+                                            setAIFSLessonStatus(path, !isComplete);
+                                            onUpdate();
+                                        }
+                                    }}
+                                    style={{
+                                        display: 'inline-flex',
+                                        alignItems: 'center',
+                                        gap: 8,
+                                        padding: '10px 16px',
+                                        borderRadius: 10,
+                                        border: `1px solid ${(() => {
+                                            const path = extractAIFSPath(aifsData.url);
+                                            const state = getAIFSProgress();
+                                            return path && state.lessons[path]?.completedAt ? AppleColors.green : AppleColors.glassBorder;
+                                        })()}`,
+                                        background: (() => {
+                                            const path = extractAIFSPath(aifsData.url);
+                                            const state = getAIFSProgress();
+                                            return path && state.lessons[path]?.completedAt ? 'rgba(52, 199, 89, 0.15)' : 'rgba(128,128,128,0.1)';
+                                        })(),
+                                        color: (() => {
+                                            const path = extractAIFSPath(aifsData.url);
+                                            const state = getAIFSProgress();
+                                            return path && state.lessons[path]?.completedAt ? AppleColors.green : AppleColors.labelPrimary;
+                                        })(),
+                                        fontSize: 13,
+                                        fontWeight: 600,
+                                        cursor: 'pointer',
+                                        transition: 'all 0.2s ease',
+                                    }}
+                                >
+                                    {(() => {
+                                        const path = extractAIFSPath(aifsData.url);
+                                        const state = getAIFSProgress();
+                                        return path && state.lessons[path]?.completedAt ? (
+                                            <>
+                                                <CheckCircle2 size={16} color={AppleColors.green} />
+                                                Completed
+                                            </>
+                                        ) : (
+                                            <>
+                                                <Circle size={16} color={AppleColors.labelSecondary} />
+                                                Mark as Complete
+                                            </>
+                                        );
+                                    })()}
+                                </button>
+
+                                {aifsData.url && (
+                                    <a
+                                        href={aifsData.url}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        onClick={() => triggerFeedback('light')}
+                                        style={{
+                                            display: 'inline-flex',
+                                            alignItems: 'center',
+                                            gap: 8,
+                                            padding: '10px 16px',
+                                            borderRadius: 10,
+                                            border: `1px solid ${AppleColors.glassBorder}`,
+                                            background: AppleColors.blue,
+                                            color: '#fff',
+                                            fontSize: 13,
+                                            fontWeight: 600,
+                                            textDecoration: 'none',
+                                            cursor: 'pointer',
+                                            transition: 'all 0.2s ease',
+                                        }}
+                                    >
+                                        <ExternalLink size={16} />
+                                        Open on GitHub
+                                    </a>
+                                )}
+                            </div>
+
+                            <div style={{
+                                display: 'flex',
+                                flexDirection: 'column',
+                                gap: 16,
+                                maxHeight: '350px',
+                                overflowY: 'auto',
+                                paddingRight: 8,
+                            }}>
+                                <div>
+                                    <label style={{
+                                        fontSize: 12,
+                                        fontWeight: 600,
+                                        color: AppleColors.labelSecondary,
+                                        textTransform: 'uppercase',
+                                        letterSpacing: 0.5,
+                                        marginBottom: 6,
+                                        display: 'block',
+                                        borderBottom: `1px solid ${AppleColors.separator}`,
+                                        paddingBottom: 6
+                                    }}>
+                                        Lesson Guide & Concepts
+                                    </label>
+                                    {isMdLoading ? (
+                                        <div style={{ color: AppleColors.labelSecondary, fontSize: 14, fontStyle: 'italic', padding: '20px 0' }}>
+                                            Loading guide content...
+                                        </div>
+                                    ) : (
+                                        <div style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
+                                            {renderMarkdown(lessonMd)}
+                                        </div>
+                                    )}
+                                </div>
+
+                                {aifsData.keywords && (
+                                    <div>
+                                        <label style={{
+                                            fontSize: 12,
+                                            fontWeight: 600,
+                                            color: AppleColors.labelSecondary,
+                                            textTransform: 'uppercase',
+                                            letterSpacing: 0.5,
+                                            marginBottom: 6,
+                                            display: 'block'
+                                        }}>
+                                            Keywords
+                                        </label>
+                                        <div style={{ display: 'flex', gap: 6, flexWrap: 'wrap' }}>
+                                            {aifsData.keywords.split(',').map((k, kIdx) => (
+                                                <span key={kIdx} style={{
+                                                    fontSize: 11,
+                                                    color: AppleColors.labelSecondary,
+                                                    background: 'rgba(255,255,255,0.05)',
+                                                    padding: '2px 8px',
+                                                    borderRadius: 8,
+                                                    border: `1px solid ${AppleColors.glassBorder}`
+                                                }}>
+                                                    {k.trim()}
+                                                </span>
+                                            ))}
+                                        </div>
+                                    </div>
+                                )}
+                            </div>
+                        </>
+                    )}
+
                     {/* Resources */}
                     {resources.length > 0 && (
                         <div style={{ marginTop: 20 }}>
@@ -1572,6 +2406,47 @@ const getPaperLink = (paper: { title: string }) => {
     return `https://aman.ai/papers/#${slug}`;
 };
 
+const slugify = (value: string): string => {
+  if (typeof value !== 'string') return '';
+  return value.toLowerCase().replace(/[^A-Za-z0-9_\- ]/g, '').trim().replace(/ /g, '-');
+};
+
+interface GroupedRoadmapTopic {
+    id: string;
+    label: string;
+    subtopics: Array<{
+        id: string;
+        label: string;
+    }>;
+}
+
+const buildRoadmapTree = (nodes: any[], edges: any[]): GroupedRoadmapTopic[] => {
+    const topicNodes = nodes.filter(n => n.type === 'topic');
+    topicNodes.sort((a, b) => (a.position?.y - b.position?.y) || (a.position?.x - b.position?.x));
+
+    return topicNodes.map(t => {
+        const connectedSubIds = new Set(
+            edges
+                .filter(e => e.source === t.id || e.target === t.id)
+                .map(e => e.source === t.id ? e.target : e.source)
+        );
+
+        const subtopics = nodes
+            .filter(n => n.type === 'subtopic' && connectedSubIds.has(n.id))
+            .sort((a, b) => (a.position?.y - b.position?.y) || (a.position?.x - b.position?.x))
+            .map(s => ({
+                id: s.id,
+                label: s.data?.label || '',
+            }));
+
+        return {
+            id: t.id,
+            label: t.data?.label || '',
+            subtopics
+        };
+    });
+};
+
 // ═══════════════════════════════════════════════════════════════════════════════
 // MAIN ROADMAP COMPONENT
 // ═══════════════════════════════════════════════════════════════════════════════
@@ -1601,7 +2476,18 @@ export default function Roadmap() {
     useEffect(() => { localStorage.setItem('roadmap_selectedQuarter', selectedQuarter); }, [selectedQuarter]);
     useEffect(() => { localStorage.setItem('roadmap_selectedCategory', selectedCategory); }, [selectedCategory]);
     const [modalOpen, setModalOpen] = useState(false);
-    const [selectedItem, setSelectedItem] = useState<{ type: 'topic' | 'skill' | 'book' | 'paper'; data: AITopic | CEOSkill | Book | Paper } | null>(null);
+    const [selectedItem, setSelectedItem] = useState<{ type: 'topic' | 'skill' | 'book' | 'paper' | 'aifs-lesson' | 'dev-roadmap-node'; data: any } | null>(null);
+
+    // Dev Roadmaps state
+    const [registry, setRegistry] = useState<Array<{ id: string; title: string }>>([]);
+    const [selectedRoadmapId, setSelectedRoadmapId] = useState(() => localStorage.getItem('roadmap_selectedDevRoadmapId') || 'ai-engineer');
+    const [roadmapData, setRoadmapData] = useState<any[] | null>(null);
+    const [roadmapProgressData, setRoadmapProgressData] = useState(getDevRoadmapProgress());
+    const [expandedRoadmapTopics, setExpandedRoadmapTopics] = useState<Record<string, boolean>>({});
+
+    useEffect(() => {
+        localStorage.setItem('roadmap_selectedDevRoadmapId', selectedRoadmapId);
+    }, [selectedRoadmapId]);
 
     // Progress state
     const [topicsProgressData, setTopicsProgressData] = useState(getAllTopicsProgress());
@@ -1609,6 +2495,109 @@ export default function Roadmap() {
     const [booksProgressData, setBooksProgressData] = useState(getAllBooksProgress());
     const [methodsProgressData, setMethodsProgressData] = useState(getAllMethodsProgress());
     const [resilienceProgressData, setResilienceProgressData] = useState(getAllResilienceProgress());
+    const [aifsProgressData, setAifsProgressData] = useState(getAIFSProgress());
+    const [expandedPhases, setExpandedPhases] = useState<Record<number, boolean>>({});
+    const [activeAIFSLesson, setActiveAIFSLesson] = useState<{ lesson: any; phase: any } | null>(null);
+
+    const togglePhase = (phaseId: number) => {
+        setExpandedPhases(prev => ({
+            ...prev,
+            [phaseId]: !prev[phaseId]
+        }));
+    };
+
+    // Filter AIFS phases and lessons
+    const filteredAIFSPhases = useMemo(() => {
+        if (!debouncedSearchQuery.trim()) {
+            return AI_ENGINEERING_PHASES;
+        }
+        const query = debouncedSearchQuery.toLowerCase();
+        return AI_ENGINEERING_PHASES.map(phase => {
+            const matchingLessons = phase.lessons.filter((l: any) =>
+                l.name.toLowerCase().includes(query) ||
+                (l.summary && l.summary.toLowerCase().includes(query)) ||
+                (l.keywords && l.keywords.toLowerCase().includes(query)) ||
+                l.lang.toLowerCase().includes(query) ||
+                l.type.toLowerCase().includes(query)
+            );
+            if (matchingLessons.length > 0 || phase.name.toLowerCase().includes(query) || (phase.desc && phase.desc.toLowerCase().includes(query))) {
+                return { ...phase, lessons: matchingLessons };
+            }
+            return null;
+        }).filter(Boolean) as typeof AI_ENGINEERING_PHASES;
+    }, [debouncedSearchQuery]);
+
+    // Filter AIFS glossary terms
+    const filteredAIFSGlossary = useMemo(() => {
+        if (!debouncedSearchQuery.trim()) {
+            return AI_ENGINEERING_GLOSSARY;
+        }
+        const query = debouncedSearchQuery.toLowerCase();
+        return AI_ENGINEERING_GLOSSARY.filter((t: any) =>
+            t.term.toLowerCase().includes(query) ||
+            t.says.toLowerCase().includes(query) ||
+            t.means.toLowerCase().includes(query)
+        );
+    }, [debouncedSearchQuery]);
+
+    // Filter Dev Roadmaps data
+    const filteredRoadmapData = useMemo(() => {
+        if (!roadmapData) return null;
+        if (!debouncedSearchQuery.trim()) return roadmapData;
+        const query = debouncedSearchQuery.toLowerCase();
+        
+        return roadmapData.map(topic => {
+            const matchingSubs = topic.subtopics.filter((s: any) =>
+                s.label.toLowerCase().includes(query)
+            );
+            if (matchingSubs.length > 0 || topic.label.toLowerCase().includes(query)) {
+                return { ...topic, subtopics: matchingSubs };
+            }
+            return null;
+        }).filter(Boolean) as typeof roadmapData;
+    }, [roadmapData, debouncedSearchQuery]);
+
+    const effectiveExpandedRoadmapTopics = useMemo(() => {
+        if (debouncedSearchQuery.trim() && filteredRoadmapData) {
+            const expanded: Record<string, boolean> = {};
+            filteredRoadmapData.forEach(t => {
+                expanded[t.id] = true;
+            });
+            return expanded;
+        }
+        return expandedRoadmapTopics;
+    }, [expandedRoadmapTopics, debouncedSearchQuery, filteredRoadmapData]);
+
+    useEffect(() => {
+        fetch('/elite-resources/roadmaps/registry.json')
+            .then(res => res.json())
+            .then(data => setRegistry(data))
+            .catch(err => console.error('Failed to load registry:', err));
+    }, []);
+
+    useEffect(() => {
+        if (!selectedRoadmapId) return;
+        fetch(`/elite-resources/roadmaps/${selectedRoadmapId}/${selectedRoadmapId}.json`)
+            .then(res => res.json())
+            .then(data => {
+                if (data && data.nodes && data.edges) {
+                    const tree = buildRoadmapTree(data.nodes, data.edges);
+                    setRoadmapData(tree);
+                }
+            })
+            .catch(err => console.error('Failed to load roadmap JSON:', err));
+    }, [selectedRoadmapId]);
+
+    const effectiveExpandedPhases = useMemo(() => {
+        if (debouncedSearchQuery.trim()) {
+            const expanded: Record<number, boolean> = {};
+            filteredAIFSPhases.forEach(phase => {
+                expanded[phase.id] = true;
+            });
+            return expanded;
+        }
+        return expandedPhases;
+    }, [expandedPhases, debouncedSearchQuery, filteredAIFSPhases]);
 
     const refreshProgress = useCallback(() => {
         setTopicsProgressData(getAllTopicsProgress());
@@ -1616,6 +2605,8 @@ export default function Roadmap() {
         setBooksProgressData(getAllBooksProgress());
         setMethodsProgressData(getAllMethodsProgress());
         setResilienceProgressData(getAllResilienceProgress());
+        setAifsProgressData(getAIFSProgress());
+        setRoadmapProgressData(getDevRoadmapProgress());
     }, []);
 
     useEffect(() => {
@@ -1715,7 +2706,25 @@ export default function Roadmap() {
         return result;
     }, [debouncedSearchQuery]);
 
-    const openModal = (type: 'topic' | 'skill' | 'book' | 'paper', data: AITopic | CEOSkill | Book | Paper) => {
+    const aifsProgress = useMemo(() => {
+        let total = 0;
+        let completed = 0;
+        AI_ENGINEERING_PHASES.forEach(phase => {
+            phase.lessons.forEach((lesson: any) => {
+                total++;
+                const path = extractAIFSPath(lesson.url);
+                if (path && aifsProgressData.lessons[path]?.completedAt) {
+                    completed++;
+                }
+            });
+        });
+        return { total, completed };
+    }, [aifsProgressData]);
+
+    const openModal = (
+        type: 'topic' | 'skill' | 'book' | 'paper' | 'aifs-lesson' | 'dev-roadmap-node', 
+        data: any
+    ) => {
         setSelectedItem({ type, data });
         setModalOpen(true);
     };
@@ -1723,6 +2732,9 @@ export default function Roadmap() {
     const tabs = [
         { id: 'polymath' as RoadmapTab, label: 'Polymath', icon: <Sparkles size={18} />, count: 5 },
         { id: 'topics' as RoadmapTab, label: 'AI Topics', icon: <Brain size={18} />, count: topicsProgress.total },
+        { id: 'ai-engineering' as RoadmapTab, label: 'AI Scratch', icon: <Cpu size={18} />, count: aifsProgress.total },
+        { id: 'ai-glossary' as RoadmapTab, label: 'AI Glossary', icon: <Terminal size={18} />, count: AI_ENGINEERING_GLOSSARY.length },
+        { id: 'dev-roadmaps' as RoadmapTab, label: 'Dev Roadmaps', icon: <Map size={18} />, count: 62 },
         { id: 'skills' as RoadmapTab, label: 'CEO Skills', icon: <Target size={18} />, count: 30 },
         { id: 'books' as RoadmapTab, label: 'Books', icon: <BookOpen size={18} />, count: booksProgress.total },
         { id: 'papers' as RoadmapTab, label: 'Papers', icon: <FileText size={18} />, count: Object.values(ALL_PAPERS).reduce((acc, arr) => acc + arr.length, 0) },
@@ -2101,6 +3113,602 @@ export default function Roadmap() {
                 </div>
             )}
 
+            {activeTab === 'ai-engineering' && (
+                <div style={{ display: 'flex', flexDirection: 'column', gap: 24, paddingBottom: 60 }}>
+                    {/* Header stats bar */}
+                    <GlassCard padding={20}>
+                        <div style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', justifyContent: 'space-between', gap: 20 }}>
+                            <div style={{ display: 'flex', alignItems: 'center', gap: 16 }}>
+                                <ProgressRing progress={(aifsProgress.completed / aifsProgress.total) * 100} color={AppleColors.blue} size={70} strokeWidth={6} />
+                                <div>
+                                    <h3 style={{ fontSize: 18, fontWeight: 700, color: AppleColors.labelPrimary, marginBottom: 4 }}>
+                                        AI Engineering from Scratch
+                                    </h3>
+                                    <p style={{ fontSize: 14, color: AppleColors.labelSecondary }}>
+                                        {aifsProgress.completed} of {aifsProgress.total} lessons completed • ~320 hours curriculum
+                                    </p>
+                                </div>
+                            </div>
+                            <div style={{ display: 'flex', gap: 12 }}>
+                                <a 
+                                    href="https://github.com/rohitg00/ai-engineering-from-scratch"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    onClick={() => triggerFeedback('light')}
+                                    style={{
+                                        display: 'inline-flex',
+                                        alignItems: 'center',
+                                        gap: 6,
+                                        fontSize: 13,
+                                        fontWeight: 600,
+                                        color: '#ffffff',
+                                        background: AppleColors.blue,
+                                        padding: '8px 16px',
+                                        borderRadius: 10,
+                                        textDecoration: 'none',
+                                        transition: 'opacity 0.2s ease',
+                                    }}
+                                >
+                                    <Terminal size={14} />
+                                    GitHub Repo
+                                </a>
+                            </div>
+                        </div>
+                    </GlassCard>
+
+                    {/* Phase lists */}
+                    <div style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
+                        {filteredAIFSPhases.map((phase, idx) => {
+                            const isExpanded = !!effectiveExpandedPhases[phase.id];
+                            const totalLessons = phase.lessons.length;
+                            
+                            // Calculate completed lessons in this phase
+                            let completedInPhase = 0;
+                            phase.lessons.forEach((l: any) => {
+                                const path = extractAIFSPath(l.url);
+                                if (path && aifsProgressData.lessons[path]?.completedAt) {
+                                    completedInPhase++;
+                                }
+                            });
+
+                            const phasePercentage = totalLessons > 0 ? (completedInPhase / totalLessons) * 100 : 0;
+                            
+                            // Determine phase status dynamically
+                            const phaseStatus = completedInPhase === totalLessons && totalLessons > 0
+                                ? 'completed'
+                                : completedInPhase > 0
+                                    ? 'in_progress'
+                                    : 'not_started';
+
+                            return (
+                                <div 
+                                    key={phase.id} 
+                                    style={{ 
+                                        animation: `slideUp 0.6s cubic-bezier(0.2, 0.8, 0.2, 1) backwards`, 
+                                        animationDelay: `${Math.min(idx * 0.05, 0.5)}s` 
+                                    }}
+                                >
+                                    <GlassCard padding={16}>
+                                        {/* Phase Accordion Header */}
+                                        <div 
+                                            onClick={() => togglePhase(phase.id)}
+                                            style={{ 
+                                                display: 'flex', 
+                                                alignItems: 'center', 
+                                                justifyContent: 'space-between', 
+                                                cursor: 'pointer',
+                                                userSelect: 'none'
+                                            }}
+                                        >
+                                            <div style={{ display: 'flex', alignItems: 'center', gap: 12, flex: 1, minWidth: 0 }}>
+                                                <div style={{ transform: 'scale(0.8)', flexShrink: 0 }}>
+                                                    <ProgressRing 
+                                                        progress={phasePercentage} 
+                                                        color={phaseStatus === 'completed' ? AppleColors.green : AppleColors.orange} 
+                                                        size={40} 
+                                                        strokeWidth={4} 
+                                                        showLabel={false} 
+                                                    />
+                                                </div>
+                                                <div style={{ minWidth: 0 }}>
+                                                    <div style={{ display: 'flex', alignItems: 'center', gap: 8, flexWrap: 'wrap' }}>
+                                                        <span style={{ fontSize: 13, fontWeight: 700, color: AppleColors.blue, textTransform: 'uppercase', letterSpacing: 0.5 }}>
+                                                            Phase {phase.id}
+                                                        </span>
+                                                        <StatusPill status={phaseStatus} />
+                                                    </div>
+                                                    <h3 style={{ fontSize: 17, fontWeight: 700, color: AppleColors.labelPrimary, marginTop: 2, overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>
+                                                        {phase.name}
+                                                    </h3>
+                                                </div>
+                                            </div>
+                                            <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
+                                                <span style={{ fontSize: 13, color: AppleColors.labelSecondary, fontWeight: 500 }}>
+                                                    {completedInPhase}/{totalLessons} lessons
+                                                </span>
+                                                <ChevronRight 
+                                                    size={18} 
+                                                    color={AppleColors.labelSecondary} 
+                                                    style={{ 
+                                                        transform: isExpanded ? 'rotate(90deg)' : 'rotate(0deg)', 
+                                                        transition: 'transform 0.25s ease' 
+                                                    }} 
+                                                />
+                                            </div>
+                                        </div>
+
+                                        {/* Expanded Phase Lessons */}
+                                        {isExpanded && (
+                                            <div style={{ 
+                                                marginTop: 16, 
+                                                paddingTop: 16, 
+                                                borderTop: `1px solid ${AppleColors.separator}`,
+                                                display: 'flex',
+                                                flexDirection: 'column',
+                                                gap: 12
+                                            }}>
+                                                {phase.desc && (
+                                                    <p style={{ fontSize: 14, color: AppleColors.labelSecondary, marginBottom: 8, fontStyle: 'italic' }}>
+                                                        {phase.desc}
+                                                    </p>
+                                                )}
+                                                <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
+                                                    {phase.lessons.map((lesson: any, lIdx: number) => {
+                                                        const path = extractAIFSPath(lesson.url);
+                                                        const isCompleted = !!(path && aifsProgressData.lessons[path]?.completedAt);
+
+                                                        // Parse keywords into list
+                                                        const tags = lesson.keywords 
+                                                            ? lesson.keywords.split('·').map((t: string) => t.trim()).filter(Boolean)
+                                                            : [];
+
+                                                        return (
+                                                            <div 
+                                                                key={lIdx}
+                                                                style={{ 
+                                                                    display: 'flex', 
+                                                                    flexDirection: 'column',
+                                                                    padding: 12,
+                                                                    background: 'rgba(255, 255, 255, 0.02)',
+                                                                    borderRadius: 10,
+                                                                    border: `0.5px solid ${AppleColors.glassBorder}`,
+                                                                    transition: 'background 0.2s ease',
+                                                                }}
+                                                            >
+                                                                <div style={{ display: 'flex', alignItems: 'flex-start', justifyContent: 'space-between', gap: 12 }}>
+                                                                    <div style={{ display: 'flex', alignItems: 'flex-start', gap: 10, flex: 1 }}>
+                                                                        <button 
+                                                                            onClick={(e) => {
+                                                                                e.stopPropagation();
+                                                                                triggerFeedback('light');
+                                                                                setAIFSLessonStatus(path, !isCompleted);
+                                                                                refreshProgress();
+                                                                            }}
+                                                                            style={{
+                                                                                background: 'none',
+                                                                                border: 'none',
+                                                                                padding: 0,
+                                                                                cursor: 'pointer',
+                                                                                display: 'inline-flex',
+                                                                                marginTop: 2,
+                                                                                flexShrink: 0
+                                                                            }}
+                                                                        >
+                                                                            {isCompleted ? (
+                                                                                <CheckCircle2 size={18} color={AppleColors.green} />
+                                                                            ) : (
+                                                                                <Circle size={18} color={AppleColors.labelTertiary} />
+                                                                            )}
+                                                                        </button>
+                                                                        <div style={{ minWidth: 0 }}>
+                                                                            <div style={{ display: 'flex', alignItems: 'center', gap: 8, flexWrap: 'wrap' }}>
+                                                                                <span style={{ fontSize: 12, fontWeight: 600, color: AppleColors.labelTertiary }}>
+                                                                                    {String(lIdx + 1).padStart(2, '0')}
+                                                                                </span>
+                                                                                <span 
+                                                                                    onClick={() => {
+                                                                                        triggerFeedback('light');
+                                                                                        setActiveAIFSLesson({ lesson, phase });
+                                                                                    }}
+                                                                                    style={{ fontSize: 15, fontWeight: 600, color: AppleColors.labelPrimary, cursor: 'pointer', textDecoration: 'none' }}
+                                                                                >
+                                                                                    {lesson.name}
+                                                                                </span>
+                                                                                <span style={{ 
+                                                                                    fontSize: 10, 
+                                                                                    fontWeight: 700, 
+                                                                                    color: lesson.type === 'Build' ? AppleColors.blue : AppleColors.purple,
+                                                                                    background: lesson.type === 'Build' ? 'rgba(0,122,255,0.1)' : 'rgba(175,82,222,0.1)',
+                                                                                    padding: '1px 6px',
+                                                                                    borderRadius: 4
+                                                                                }}>
+                                                                                    {lesson.type}
+                                                                                </span>
+                                                                            </div>
+                                                                            <p style={{ fontSize: 13, color: AppleColors.labelSecondary, marginTop: 4, lineHeight: 1.4 }}>
+                                                                                {lesson.summary}
+                                                                            </p>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div style={{ display: 'flex', alignItems: 'center', gap: 8, flexShrink: 0 }}>
+                                                                        <span style={{ fontSize: 11, fontFamily: 'monospace', color: AppleColors.labelSecondary }}>
+                                                                            {lesson.lang}
+                                                                        </span>
+                                                                        <a 
+                                                                            href={lesson.url} 
+                                                                            target="_blank" 
+                                                                            rel="noopener noreferrer"
+                                                                            onClick={(e) => e.stopPropagation()}
+                                                                            style={{
+                                                                                display: 'inline-flex',
+                                                                                alignItems: 'center',
+                                                                                justifyContent: 'center',
+                                                                                width: 28,
+                                                                                height: 28,
+                                                                                borderRadius: 14,
+                                                                                background: AppleColors.fillTertiary,
+                                                                                textDecoration: 'none',
+                                                                                color: AppleColors.labelSecondary,
+                                                                                transition: 'background 0.2s ease',
+                                                                            }}
+                                                                        >
+                                                                            <ExternalLink size={12} />
+                                                                        </a>
+                                                                    </div>
+                                                                </div>
+                                                                
+                                                                {/* Tags list */}
+                                                                {tags.length > 0 && (
+                                                                    <div style={{ display: 'flex', flexWrap: 'wrap', gap: 6, marginTop: 10, marginLeft: 28 }}>
+                                                                        {tags.map((tag: string, tIdx: number) => (
+                                                                            <span key={tIdx} style={{ fontSize: 10, color: AppleColors.labelSecondary, background: AppleColors.fillTertiary, padding: '2px 8px', borderRadius: 4 }}>
+                                                                                {tag}
+                                                                            </span>
+                                                                        ))}
+                                                                    </div>
+                                                                )}
+                                                            </div>
+                                                        );
+                                                    })}
+                                                </div>
+                                            </div>
+                                        )}
+                                    </GlassCard>
+                                </div>
+                            );
+                        })}
+                    </div>
+                </div>
+            )}
+
+            {activeTab === 'dev-roadmaps' && (
+                <div style={{ display: 'flex', flexDirection: 'column', gap: 24, paddingBottom: 60 }}>
+                    {/* Header stats bar */}
+                    <GlassCard padding={20}>
+                        <div style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', justifyContent: 'space-between', gap: 20 }}>
+                            <div style={{ display: 'flex', alignItems: 'center', gap: 16 }}>
+                                <ProgressRing 
+                                    progress={
+                                        roadmapData ? (() => {
+                                            let total = 0;
+                                            let completed = 0;
+                                            roadmapData.forEach(topic => {
+                                                total++; // the topic itself
+                                                if (!!roadmapProgressData.completedNodes[selectedRoadmapId]?.[topic.id]) completed++;
+                                                topic.subtopics.forEach((sub: any) => {
+                                                    total++;
+                                                    if (!!roadmapProgressData.completedNodes[selectedRoadmapId]?.[sub.id]) completed++;
+                                                });
+                                            });
+                                            return total > 0 ? (completed / total) * 100 : 0;
+                                        })() : 0
+                                    } 
+                                    color={AppleColors.blue} 
+                                    size={70} 
+                                    strokeWidth={6} 
+                                />
+                                <div>
+                                    <h3 style={{ fontSize: 18, fontWeight: 700, color: AppleColors.labelPrimary, marginBottom: 4 }}>
+                                        {registry.find(r => r.id === selectedRoadmapId)?.title || 'Developer Roadmap'}
+                                    </h3>
+                                    <p style={{ fontSize: 14, color: AppleColors.labelSecondary }}>
+                                        {roadmapData ? (() => {
+                                            let total = 0;
+                                            let completed = 0;
+                                            roadmapData.forEach(topic => {
+                                                total++;
+                                                if (!!roadmapProgressData.completedNodes[selectedRoadmapId]?.[topic.id]) completed++;
+                                                topic.subtopics.forEach((sub: any) => {
+                                                    total++;
+                                                    if (!!roadmapProgressData.completedNodes[selectedRoadmapId]?.[sub.id]) completed++;
+                                                });
+                                            });
+                                            return `${completed} of ${total} nodes completed`;
+                                        })() : 'Loading nodes...'}
+                                    </p>
+                                </div>
+                            </div>
+                            
+                            {/* Selector */}
+                            <div style={{ display: 'flex', flexDirection: 'column', gap: 6, minWidth: 200 }}>
+                                <label style={{ fontSize: 11, fontWeight: 700, textTransform: 'uppercase', letterSpacing: 0.5, color: AppleColors.labelSecondary }}>
+                                    Select Roadmap
+                                </label>
+                                <select
+                                    value={selectedRoadmapId}
+                                    onChange={(e) => {
+                                        triggerFeedback('light');
+                                        setSelectedRoadmapId(e.target.value);
+                                        setRoadmapData(null);
+                                    }}
+                                    style={{
+                                        padding: '8px 12px',
+                                        borderRadius: 10,
+                                        background: AppleColors.fillSecondary,
+                                        border: `1px solid ${AppleColors.glassBorder}`,
+                                        color: AppleColors.labelPrimary,
+                                        fontSize: 14,
+                                        fontWeight: 600,
+                                        outline: 'none',
+                                        cursor: 'pointer',
+                                    }}
+                                >
+                                    {registry.map(r => (
+                                        <option key={r.id} value={r.id} style={{ background: '#1c1c1e', color: '#fff' }}>
+                                            {r.title}
+                                        </option>
+                                    ))}
+                                </select>
+                            </div>
+                        </div>
+                    </GlassCard>
+
+                    {/* Topics Accordion List */}
+                    {!roadmapData ? (
+                        <div style={{ textAlign: 'center', padding: '40px 20px', color: AppleColors.labelSecondary, fontStyle: 'italic' }}>
+                            Loading roadmap structure...
+                        </div>
+                    ) : (
+                        <div style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
+                            {filteredRoadmapData?.map((topic, idx) => {
+                                const isExpanded = !!effectiveExpandedRoadmapTopics[topic.id];
+                                const isTopicChecked = !!roadmapProgressData.completedNodes[selectedRoadmapId]?.[topic.id];
+                                const totalSubs = topic.subtopics.length;
+                                
+                                // Calculate completed subtopics in this topic
+                                let completedSubs = 0;
+                                topic.subtopics.forEach((s: any) => {
+                                    if (!!roadmapProgressData.completedNodes[selectedRoadmapId]?.[s.id]) {
+                                        completedSubs++;
+                                    }
+                                });
+
+                                const isAllComplete = (isTopicChecked && completedSubs === totalSubs);
+                                const isSomeComplete = (isTopicChecked || completedSubs > 0);
+                                const topicStatus = isAllComplete ? 'completed' : isSomeComplete ? 'in_progress' : 'not_started';
+
+                                return (
+                                    <div 
+                                        key={topic.id} 
+                                        style={{ 
+                                            animation: `slideUp 0.6s cubic-bezier(0.2, 0.8, 0.2, 1) backwards`, 
+                                            animationDelay: `${Math.min(idx * 0.05, 0.5)}s` 
+                                        }}
+                                    >
+                                        <GlassCard padding={16}>
+                                            {/* Topic Header */}
+                                            <div 
+                                                onClick={() => {
+                                                    setExpandedRoadmapTopics(prev => ({
+                                                        ...prev,
+                                                        [topic.id]: !prev[topic.id]
+                                                    }));
+                                                }}
+                                                style={{ 
+                                                    display: 'flex', 
+                                                    alignItems: 'center', 
+                                                    justifyContent: 'space-between', 
+                                                    cursor: 'pointer',
+                                                    userSelect: 'none'
+                                                }}
+                                            >
+                                                <div style={{ display: 'flex', alignItems: 'center', gap: 12, flex: 1, minWidth: 0 }}>
+                                                    <button
+                                                        onClick={(e) => {
+                                                            e.stopPropagation();
+                                                            triggerFeedback('light');
+                                                            setDevRoadmapNodeStatus(selectedRoadmapId, topic.id, !isTopicChecked);
+                                                            refreshProgress();
+                                                        }}
+                                                        style={{
+                                                            background: 'none',
+                                                            border: 'none',
+                                                            padding: 0,
+                                                            cursor: 'pointer',
+                                                            display: 'inline-flex',
+                                                            flexShrink: 0
+                                                        }}
+                                                    >
+                                                        {isTopicChecked ? (
+                                                            <CheckCircle2 size={20} color={AppleColors.green} />
+                                                        ) : (
+                                                            <Circle size={20} color={AppleColors.labelTertiary} />
+                                                        )}
+                                                    </button>
+                                                    <div style={{ minWidth: 0 }}>
+                                                        <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
+                                                            <span 
+                                                                onClick={(e) => {
+                                                                    e.stopPropagation();
+                                                                    openModal('dev-roadmap-node', { ...topic, roadmapId: selectedRoadmapId, roadmapName: registry.find(r => r.id === selectedRoadmapId)?.title });
+                                                                }}
+                                                                style={{ fontSize: 17, fontWeight: 700, color: AppleColors.labelPrimary, cursor: 'pointer' }}
+                                                            >
+                                                                {topic.label}
+                                                            </span>
+                                                            <StatusPill status={topicStatus} />
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
+                                                    {totalSubs > 0 && (
+                                                        <span style={{ fontSize: 13, color: AppleColors.labelSecondary, fontWeight: 500 }}>
+                                                            {completedSubs}/{totalSubs} steps
+                                                        </span>
+                                                    )}
+                                                    <ChevronRight 
+                                                        size={18} 
+                                                        color={AppleColors.labelSecondary} 
+                                                        style={{ 
+                                                            transform: isExpanded ? 'rotate(90deg)' : 'rotate(0deg)', 
+                                                            transition: 'transform 0.25s ease' 
+                                                        }} 
+                                                    />
+                                                </div>
+                                            </div>
+
+                                            {/* Subtopics List */}
+                                            {isExpanded && totalSubs > 0 && (
+                                                <div style={{ 
+                                                    marginTop: 16, 
+                                                    paddingTop: 16, 
+                                                    borderTop: `1px solid ${AppleColors.separator}`,
+                                                    display: 'flex',
+                                                    flexDirection: 'column',
+                                                    gap: 10
+                                                }}>
+                                                    {topic.subtopics.map((sub: any) => {
+                                                        const isSubChecked = !!roadmapProgressData.completedNodes[selectedRoadmapId]?.[sub.id];
+                                                        return (
+                                                            <div 
+                                                                key={sub.id}
+                                                                style={{ 
+                                                                    display: 'flex', 
+                                                                    alignItems: 'center', 
+                                                                    justifyContent: 'space-between',
+                                                                    padding: '8px 12px',
+                                                                    background: 'rgba(255, 255, 255, 0.02)',
+                                                                    borderRadius: 8,
+                                                                    border: `0.5px solid ${AppleColors.glassBorder}`,
+                                                                }}
+                                                            >
+                                                                <div style={{ display: 'flex', alignItems: 'center', gap: 10, flex: 1, minWidth: 0 }}>
+                                                                    <button
+                                                                        onClick={() => {
+                                                                            triggerFeedback('light');
+                                                                            setDevRoadmapNodeStatus(selectedRoadmapId, sub.id, !isSubChecked);
+                                                                            refreshProgress();
+                                                                        }}
+                                                                        style={{
+                                                                            background: 'none',
+                                                                            border: 'none',
+                                                                            padding: 0,
+                                                                            cursor: 'pointer',
+                                                                            display: 'inline-flex',
+                                                                            flexShrink: 0
+                                                                        }}
+                                                                    >
+                                                                        {isSubChecked ? (
+                                                                            <CheckCircle2 size={18} color={AppleColors.green} />
+                                                                        ) : (
+                                                                            <Circle size={18} color={AppleColors.labelTertiary} />
+                                                                        )}
+                                                                    </button>
+                                                                    <span 
+                                                                        onClick={() => openModal('dev-roadmap-node', { ...sub, roadmapId: selectedRoadmapId, roadmapName: registry.find(r => r.id === selectedRoadmapId)?.title })}
+                                                                        style={{ 
+                                                                            fontSize: 14, 
+                                                                            fontWeight: 500, 
+                                                                            color: AppleColors.labelPrimary, 
+                                                                            cursor: 'pointer',
+                                                                            overflow: 'hidden',
+                                                                            textOverflow: 'ellipsis',
+                                                                            whiteSpace: 'nowrap'
+                                                                        }}
+                                                                    >
+                                                                        {sub.label}
+                                                                    </span>
+                                                                </div>
+                                                                <ChevronRight size={14} color={AppleColors.labelTertiary} />
+                                                            </div>
+                                                        );
+                                                    })}
+                                                </div>
+                                            )}
+                                        </GlassCard>
+                                    </div>
+                                );
+                            })}
+                            {filteredRoadmapData?.length === 0 && (
+                                <div style={{ textAlign: 'center', padding: '40px 20px', color: AppleColors.labelSecondary }}>
+                                    No topics match your search.
+                                </div>
+                            )}
+                        </div>
+                    )}
+                </div>
+            )}
+
+            {activeTab === 'ai-glossary' && (
+                <div style={{ display: 'flex', flexDirection: 'column', gap: 16, paddingBottom: 60 }}>
+                    {/* Header stats bar */}
+                    <GlassCard padding={20}>
+                        <div style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', justifyContent: 'space-between', gap: 20 }}>
+                            <div>
+                                <h3 style={{ fontSize: 18, fontWeight: 700, color: AppleColors.labelPrimary, marginBottom: 4 }}>
+                                    AI Glossary
+                                </h3>
+                                <p style={{ fontSize: 14, color: AppleColors.labelSecondary }}>
+                                    What people <em>say</em> vs what things actually <em>mean</em> • {filteredAIFSGlossary.length} terms
+                                </p>
+                            </div>
+                        </div>
+                    </GlassCard>
+
+                    {/* Glossary Terms List */}
+                    <div style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
+                        {filteredAIFSGlossary.map((t, idx) => (
+                            <div 
+                                key={idx}
+                                style={{ 
+                                    animation: `slideUp 0.6s cubic-bezier(0.2, 0.8, 0.2, 1) backwards`, 
+                                    animationDelay: `${Math.min(idx * 0.03, 0.4)}s` 
+                                }}
+                            >
+                                <GlassCard padding={20} hoverable>
+                                    <div style={{ fontSize: 17, fontWeight: 700, color: AppleColors.blue, marginBottom: 12 }}>
+                                        {t.term}
+                                    </div>
+                                    <div style={{ display: 'flex', gap: 24, flexWrap: 'wrap' }}>
+                                        <div style={{ flex: 1, minWidth: 200 }}>
+                                            <div style={{ fontSize: 11, fontWeight: 700, textTransform: 'uppercase', letterSpacing: 0.5, color: AppleColors.labelTertiary, marginBottom: 4 }}>
+                                                What they say
+                                            </div>
+                                            <div style={{ fontSize: 14, fontStyle: 'italic', color: AppleColors.labelSecondary, lineHeight: 1.5 }}>
+                                                "{t.says}"
+                                            </div>
+                                        </div>
+                                        <div style={{ flex: 1.5, minWidth: 280 }}>
+                                            <div style={{ fontSize: 11, fontWeight: 700, textTransform: 'uppercase', letterSpacing: 0.5, color: AppleColors.labelTertiary, marginBottom: 4 }}>
+                                                What it actually means
+                                            </div>
+                                            <div style={{ fontSize: 14, color: AppleColors.labelPrimary, lineHeight: 1.5 }}>
+                                                {t.means}
+                                            </div>
+                                        </div>
+                                    </div>
+                                </GlassCard>
+                            </div>
+                        ))}
+                        {filteredAIFSGlossary.length === 0 && (
+                            <div style={{ textAlign: 'center', padding: '40px 20px', color: AppleColors.labelSecondary }}>
+                                No glossary terms match your search.
+                            </div>
+                        )}
+                    </div>
+                </div>
+            )}
+
             {activeTab === 'topics' && (
                 <div className="roadmap-grid">
                     {filteredTopics.map((topic, index) => (
@@ -2267,18 +3875,846 @@ export default function Roadmap() {
                 onUpdate={refreshProgress}
                 onOpenPaper={(paper) => openModal('paper', paper)}
             />
+
+            {activeAIFSLesson && (
+                <AIFSLearningWorkspace
+                    activeLesson={activeAIFSLesson.lesson}
+                    activePhase={activeAIFSLesson.phase}
+                    allPhases={AI_ENGINEERING_PHASES}
+                    aifsProgressData={aifsProgressData}
+                    onSelectLesson={(lesson, phase) => {
+                        setActiveAIFSLesson({ lesson, phase });
+                    }}
+                    onToggleComplete={(lesson) => {
+                        const path = extractAIFSPath(lesson.url);
+                        if (path) {
+                            const isComplete = !!aifsProgressData.lessons[path]?.completedAt;
+                            setAIFSLessonStatus(path, !isComplete);
+                            refreshProgress();
+                        }
+                    }}
+                    onClose={() => setActiveAIFSLesson(null)}
+                />
+            )}
+        </div>
+    );
+}
+
+// ═══════════════════════════════════════════════════════════════════════════════
+// AIFS LEARNING WORKSPACE SUBCOMPONENTS & PARSER
+// ═══════════════════════════════════════════════════════════════════════════════
+
+interface AIFSLearningWorkspaceProps {
+    activeLesson: AIFSLesson;
+    activePhase: any;
+    allPhases: any[];
+    aifsProgressData: any;
+    onSelectLesson: (lesson: AIFSLesson, phase: any) => void;
+    onToggleComplete: (lesson: AIFSLesson) => void;
+    onClose: () => void;
+}
+
+interface ParsedLesson {
+    type: string;
+    languages: string;
+    prerequisites: string;
+    time: string;
+    objectives: string[];
+    body: string;
+}
+
+function parseLessonMarkdown(mdText: string): ParsedLesson {
+    const result: ParsedLesson = {
+        type: 'Build',
+        languages: 'Python',
+        prerequisites: 'None',
+        time: '~45 mins',
+        objectives: [],
+        body: mdText
+    };
+
+    // Extract Type
+    const typeMatch = mdText.match(/\*\*Type:\*\*\s*(.*)/i);
+    if (typeMatch) result.type = typeMatch[1].trim();
+
+    // Extract Languages
+    const langMatch = mdText.match(/\*\*Languages:\*\*\s*(.*)/i);
+    if (langMatch) result.languages = langMatch[1].trim();
+
+    // Extract Prerequisites
+    const prereqMatch = mdText.match(/\*\*Prerequisites:\*\*\s*(.*)/i);
+    if (prereqMatch) result.prerequisites = prereqMatch[1].trim();
+
+    // Extract Time
+    const timeMatch = mdText.match(/\*\*Time:\*\*\s*(.*)/i);
+    if (timeMatch) result.time = timeMatch[1].trim();
+
+    // Extract objectives
+    const objectivesSection = mdText.match(/## Learning Objectives([\s\S]*?)(?=##)/i);
+    if (objectivesSection) {
+        const objLines = objectivesSection[1].split('\n');
+        result.objectives = objLines
+            .map(line => line.trim())
+            .filter(line => line.startsWith('-') || line.startsWith('*'))
+            .map(line => line.replace(/^[-*]\s*/, '').trim());
+    }
+
+    // Clean body
+    let bodyText = mdText;
+    bodyText = bodyText.replace(/^#\s+.*?\n+/m, '');
+    bodyText = bodyText.replace(/^>\s+.*?\n+/m, '');
+    bodyText = bodyText.replace(/^\*\*Type:\*\*.*?\n+/im, '');
+    bodyText = bodyText.replace(/^\*\*Languages:\*\*.*?\n+/im, '');
+    bodyText = bodyText.replace(/^\*\*Prerequisites:\*\*.*?\n+/im, '');
+    bodyText = bodyText.replace(/^\*\*Time:\*\*.*?\n+/im, '');
+    bodyText = bodyText.replace(/## Learning Objectives[\s\S]*?(?=##)/i, '');
+
+    result.body = bodyText.trim();
+    return result;
+}
+
+function QuizQuestion({ 
+    question, 
+    index, 
+    total, 
+    onAnswerSelected,
+    selectedAnswer 
+}: { 
+    question: any; 
+    index: number; 
+    total: number;
+    questionId: string;
+    onAnswerSelected: (ansIdx: number) => void;
+    selectedAnswer: number | undefined;
+}) {
+    const isAnswered = selectedAnswer !== undefined;
+
+    return (
+        <div style={{
+            background: 'rgba(255, 255, 255, 0.02)',
+            border: `1px solid rgba(255, 255, 255, 0.08)`,
+            borderRadius: 12,
+            padding: 20,
+            marginBottom: 16,
+        }}>
+            <div style={{
+                fontSize: 11,
+                fontWeight: 600,
+                color: 'rgba(255,255,255,0.4)',
+                textTransform: 'uppercase',
+                letterSpacing: 0.5,
+                marginBottom: 8
+            }}>
+                Question {index + 1} of {total}
+            </div>
+            
+            <div style={{
+                fontSize: 15,
+                fontWeight: 600,
+                color: '#fff',
+                marginBottom: 16,
+                lineHeight: 1.4
+            }}>
+                {question.question}
+            </div>
+
+            <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
+                {question.options.map((opt: string, oIdx: number) => {
+                    const isSelected = selectedAnswer === oIdx;
+                    const isCorrect = question.correct === oIdx;
+                    
+                    let bg = 'rgba(255, 255, 255, 0.03)';
+                    let border = `1px solid rgba(255, 255, 255, 0.08)`;
+                    let textColor = 'rgba(255,255,255,0.7)';
+
+                    if (isAnswered) {
+                        if (isCorrect) {
+                            bg = 'rgba(52, 199, 89, 0.12)';
+                            border = `1px solid ${AppleColors.green}`;
+                            textColor = '#fff';
+                        } else if (isSelected) {
+                            bg = 'rgba(255, 59, 48, 0.12)';
+                            border = `1px solid ${AppleColors.red}`;
+                            textColor = '#fff';
+                        } else {
+                            textColor = 'rgba(255, 255, 255, 0.3)';
+                        }
+                    }
+
+                    return (
+                        <button
+                            key={oIdx}
+                            onClick={() => {
+                                if (!isAnswered) {
+                                    onAnswerSelected(oIdx);
+                                    triggerFeedback('light');
+                                }
+                            }}
+                            disabled={isAnswered}
+                            style={{
+                                display: 'flex',
+                                alignItems: 'center',
+                                gap: 12,
+                                width: '100%',
+                                textAlign: 'left',
+                                padding: '12px 16px',
+                                borderRadius: 8,
+                                background: bg,
+                                border: border,
+                                color: textColor,
+                                fontSize: 14,
+                                fontWeight: 500,
+                                cursor: isAnswered ? 'default' : 'pointer',
+                                transition: 'all 0.2s ease',
+                            }}
+                        >
+                            <span style={{
+                                display: 'inline-flex',
+                                alignItems: 'center',
+                                justifyContent: 'center',
+                                width: 22,
+                                height: 22,
+                                borderRadius: 11,
+                                border: `1px solid ${isAnswered ? (isCorrect ? AppleColors.green : (isSelected ? AppleColors.red : 'rgba(255,255,255,0.15)')) : 'rgba(255,255,255,0.3)'}`,
+                                background: isAnswered && isCorrect ? AppleColors.green : (isAnswered && isSelected ? AppleColors.red : 'transparent'),
+                                color: isAnswered && (isCorrect || isSelected) ? '#fff' : 'rgba(255,255,255,0.7)',
+                                fontSize: 11,
+                                fontWeight: 700,
+                                flexShrink: 0
+                            }}>
+                                {String.fromCharCode(65 + oIdx)}
+                            </span>
+                            <span style={{ flex: 1 }}>{opt}</span>
+                            
+                            {isAnswered && isCorrect && (
+                                <span style={{ color: AppleColors.green, fontWeight: 600, fontSize: 13 }}>✓</span>
+                            )}
+                            {isAnswered && isSelected && !isCorrect && (
+                                <span style={{ color: AppleColors.red, fontWeight: 600, fontSize: 13 }}>✗</span>
+                            )}
+                        </button>
+                    );
+                })}
+            </div>
+
+            {isAnswered && (
+                <div style={{
+                    marginTop: 16,
+                    padding: '12px 16px',
+                    background: 'rgba(255, 255, 255, 0.02)',
+                    borderLeft: `3px solid ${selectedAnswer === question.correct ? AppleColors.green : AppleColors.orange}`,
+                    borderRadius: '0 8px 8px 0',
+                    fontSize: 13,
+                    color: 'rgba(255,255,255,0.7)',
+                    lineHeight: 1.5,
+                }}>
+                    <strong style={{ color: selectedAnswer === question.correct ? AppleColors.green : AppleColors.orange, display: 'block', marginBottom: 4 }}>
+                        {selectedAnswer === question.correct ? 'Correct!' : 'Incorrect'}
+                    </strong>
+                    {question.explanation}
+                </div>
+            )}
+        </div>
+    );
+}
+
+function QuizBlock({ 
+    questions, 
+    lessonPath, 
+    stage 
+}: { 
+    questions: any[]; 
+    lessonPath: string; 
+    stage: 'pre' | 'post' 
+}) {
+    const [answers, setAnswers] = useState<Record<number, number>>({});
+
+    useEffect(() => {
+        setAnswers({});
+    }, [lessonPath, stage]);
+
+    return (
+        <div>
+            {questions.map((q, idx) => {
+                const questionId = `${lessonPath}-${stage}-${idx}`;
+                return (
+                    <QuizQuestion
+                        key={idx}
+                        question={q}
+                        index={idx}
+                        total={questions.length}
+                        questionId={questionId}
+                        selectedAnswer={answers[idx]}
+                        onAnswerSelected={(ansIdx) => {
+                            setAnswers(prev => ({
+                                ...prev,
+                                [idx]: ansIdx
+                            }));
+                        }}
+                    />
+                );
+            })}
+        </div>
+    );
+}
+
+function AIFSLearningWorkspace({
+    activeLesson,
+    activePhase,
+    allPhases,
+    aifsProgressData,
+    onSelectLesson,
+    onToggleComplete,
+    onClose
+}: AIFSLearningWorkspaceProps) {
+    const [lessonMd, setLessonMd] = useState<string | null>(null);
+    const [isMdLoading, setIsMdLoading] = useState(false);
+    const [quizData, setQuizData] = useState<any | null>(null);
+    const readerPanelRef = useRef<HTMLDivElement>(null);
+
+    const relativePath = extractAIFSPath(activeLesson.url);
+
+    const [expandedSidebarPhases, setExpandedSidebarPhases] = useState<Record<number, boolean>>({
+        [activePhase.id]: true
+    });
+
+    const toggleSidebarPhase = (phaseId: number) => {
+        setExpandedSidebarPhases(prev => ({
+            ...prev,
+            [phaseId]: !prev[phaseId]
+        }));
+    };
+
+    useEffect(() => {
+        if (!activeLesson) return;
+
+        if (readerPanelRef.current) {
+            readerPanelRef.current.scrollTop = 0;
+        }
+
+        if (!relativePath) {
+            setLessonMd(activeLesson.summary || 'No detailed content available.');
+            setQuizData(null);
+            return;
+        }
+
+        setIsMdLoading(true);
+        setLessonMd(null);
+        setQuizData(null);
+
+        const mdUrl = `/elite-resources/aifs/${relativePath}/docs/en.md`;
+        fetch(mdUrl)
+            .then(res => {
+                if (!res.ok) throw new Error('Markdown not found');
+                return res.text();
+            })
+            .then(text => {
+                setLessonMd(text);
+            })
+            .catch(() => {
+                setLessonMd(activeLesson.summary || 'No detailed content available.');
+            })
+            .finally(() => {
+                setIsMdLoading(false);
+            });
+
+        const quizUrl = `/elite-resources/aifs/${relativePath}/quiz.json`;
+        fetch(quizUrl)
+            .then(res => {
+                if (!res.ok) throw new Error('Quiz not found');
+                return res.json();
+            })
+            .then(data => {
+                setQuizData(data);
+            })
+            .catch(() => {
+                setQuizData(null);
+            });
+
+    }, [activeLesson, relativePath]);
+
+    const parsed = useMemo(() => {
+        if (!lessonMd) return null;
+        return parseLessonMarkdown(lessonMd);
+    }, [lessonMd]);
+
+    const isCurrentCompleted = !!(relativePath && aifsProgressData.lessons[relativePath]?.completedAt);
+
+    const getNextLesson = () => {
+        const currentLessons = activePhase.lessons;
+        const currentIndex = currentLessons.findIndex((l: any) => l.url === activeLesson.url);
+        if (currentIndex !== -1 && currentIndex < currentLessons.length - 1) {
+            return { lesson: currentLessons[currentIndex + 1], phase: activePhase };
+        }
+        
+        const nextPhaseIndex = allPhases.findIndex(p => p.id === activePhase.id) + 1;
+        if (nextPhaseIndex < allPhases.length) {
+            const nextPhase = allPhases[nextPhaseIndex];
+            if (nextPhase.lessons.length > 0) {
+                return { lesson: nextPhase.lessons[0], phase: nextPhase };
+            }
+        }
+        return null;
+    };
+
+    const nextInfo = getNextLesson();
+
+    return (
+        <div style={{
+            position: 'fixed',
+            top: 0,
+            left: 0,
+            right: 0,
+            bottom: 0,
+            zIndex: 1000,
+            background: '#07080a',
+            display: 'flex',
+            fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif',
+        }}>
+            {/* Sidebar */}
+            <div style={{
+                width: 280,
+                height: '100%',
+                background: 'rgba(15, 17, 23, 0.95)',
+                borderRight: '1px solid rgba(255, 255, 255, 0.08)',
+                display: 'flex',
+                flexDirection: 'column',
+                overflow: 'hidden',
+                zIndex: 10,
+            }}>
+                <div style={{
+                    padding: '20px 16px',
+                    borderBottom: '1px solid rgba(255, 255, 255, 0.08)',
+                    display: 'flex',
+                    alignItems: 'center',
+                    gap: 12
+                }}>
+                    <button
+                        onClick={onClose}
+                        style={{
+                            background: 'rgba(255,255,255,0.05)',
+                            border: '1px solid rgba(255,255,255,0.08)',
+                            color: '#fff',
+                            padding: '8px 12px',
+                            borderRadius: 8,
+                            fontSize: 13,
+                            fontWeight: 600,
+                            cursor: 'pointer',
+                            display: 'inline-flex',
+                            alignItems: 'center',
+                            gap: 6,
+                            transition: 'all 0.2s ease',
+                        }}
+                    >
+                        <ArrowLeft size={14} />
+                        Back to Hub
+                    </button>
+                </div>
+
+                <div style={{
+                    flex: 1,
+                    overflowY: 'auto',
+                    padding: '16px 8px',
+                    display: 'flex',
+                    flexDirection: 'column',
+                    gap: 16
+                }}>
+                    {allPhases.map((phase) => {
+                        const isPhaseActive = phase.id === activePhase.id;
+                        const isExpanded = !!expandedSidebarPhases[phase.id];
+                        
+                        let completedCount = 0;
+                        phase.lessons.forEach((l: any) => {
+                            const path = extractAIFSPath(l.url);
+                            if (path && aifsProgressData.lessons[path]?.completedAt) {
+                                completedCount++;
+                            }
+                        });
+
+                        return (
+                            <div key={phase.id} style={{ display: 'flex', flexDirection: 'column', gap: 4 }}>
+                                <div 
+                                    onClick={() => toggleSidebarPhase(phase.id)}
+                                    style={{
+                                        padding: '8px',
+                                        cursor: 'pointer',
+                                        display: 'flex',
+                                        alignItems: 'center',
+                                        justifyContent: 'space-between',
+                                        borderRadius: 6,
+                                        userSelect: 'none',
+                                        background: isPhaseActive ? 'rgba(255,255,255,0.02)' : 'transparent',
+                                    }}
+                                >
+                                    <div style={{ display: 'flex', flexDirection: 'column', minWidth: 0 }}>
+                                        <span style={{ 
+                                            fontSize: 9, 
+                                            fontWeight: 700, 
+                                            color: isPhaseActive ? AppleColors.blue : 'rgba(255,255,255,0.3)',
+                                            textTransform: 'uppercase',
+                                            letterSpacing: 0.5
+                                        }}>
+                                            Phase {String(phase.id).padStart(2, '0')}
+                                        </span>
+                                        <span style={{ 
+                                            fontSize: 13, 
+                                            fontWeight: 700, 
+                                            color: isPhaseActive ? '#fff' : 'rgba(255,255,255,0.7)',
+                                            overflow: 'hidden',
+                                            textOverflow: 'ellipsis',
+                                            whiteSpace: 'nowrap'
+                                        }}>
+                                            {phase.name}
+                                        </span>
+                                    </div>
+                                    <div style={{ display: 'flex', alignItems: 'center', gap: 6 }}>
+                                        <span style={{ fontSize: 11, color: 'rgba(255,255,255,0.4)', fontWeight: 500 }}>
+                                            {completedCount}/{phase.lessons.length}
+                                        </span>
+                                        <ChevronRight 
+                                            size={12} 
+                                            color="rgba(255,255,255,0.4)" 
+                                            style={{ 
+                                                transform: isExpanded ? 'rotate(90deg)' : 'rotate(0deg)',
+                                                transition: 'transform 0.2s' 
+                                            }} 
+                                        />
+                                    </div>
+                                </div>
+
+                                {isExpanded && (
+                                    <div style={{ display: 'flex', flexDirection: 'column', gap: 2, paddingLeft: 4, marginTop: 4 }}>
+                                        {phase.lessons.map((lesson: any, lIdx: number) => {
+                                            const path = extractAIFSPath(lesson.url);
+                                            const isLessonCompleted = !!(path && aifsProgressData.lessons[path]?.completedAt);
+                                            const isLessonActive = lesson.url === activeLesson.url;
+
+                                            return (
+                                                <div
+                                                    key={lIdx}
+                                                    onClick={() => onSelectLesson(lesson, phase)}
+                                                    style={{
+                                                        padding: '8px 10px',
+                                                        borderRadius: 8,
+                                                        cursor: 'pointer',
+                                                        display: 'flex',
+                                                        alignItems: 'center',
+                                                        gap: 8,
+                                                        background: isLessonActive ? 'rgba(0, 122, 255, 0.15)' : 'transparent',
+                                                        borderLeft: `3px solid ${isLessonActive ? AppleColors.blue : 'transparent'}`,
+                                                        transition: 'all 0.2s ease',
+                                                    }}
+                                                >
+                                                    {isLessonCompleted ? (
+                                                        <CheckCircle2 size={13} color={AppleColors.green} style={{ flexShrink: 0 }} />
+                                                    ) : (
+                                                        <Circle size={13} color="rgba(255,255,255,0.3)" style={{ flexShrink: 0 }} />
+                                                    )}
+                                                    <span style={{
+                                                        fontSize: 13,
+                                                        fontWeight: isLessonActive ? 600 : 400,
+                                                        color: isLessonActive ? '#fff' : (isLessonCompleted ? 'rgba(255,255,255,0.8)' : 'rgba(255,255,255,0.5)'),
+                                                        overflow: 'hidden',
+                                                        textOverflow: 'ellipsis',
+                                                        whiteSpace: 'nowrap',
+                                                        flex: 1
+                                                    }}>
+                                                        {lesson.name}
+                                                    </span>
+                                                </div>
+                                            );
+                                        })}
+                                    </div>
+                                )}
+                            </div>
+                        );
+                    })}
+                </div>
+            </div>
+
+            {/* Reader Panel */}
+            <div 
+                ref={readerPanelRef}
+                style={{
+                    flex: 1,
+                    height: '100%',
+                    overflowY: 'auto',
+                    position: 'relative',
+                    background: '#0B0D13',
+                    backgroundImage: 'radial-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px)',
+                    backgroundSize: '24px 24px',
+                    padding: '40px 60px',
+                    scrollBehavior: 'smooth',
+                }}
+            >
+                {/* Neon Glow backdrop */}
+                <div style={{
+                    position: 'absolute',
+                    top: 0,
+                    left: '50%',
+                    transform: 'translateX(-50%)',
+                    width: '60%',
+                    height: '300px',
+                    background: 'radial-gradient(circle at 50% 0%, rgba(10, 132, 255, 0.08) 0%, transparent 70%)',
+                    pointerEvents: 'none',
+                    zIndex: 0
+                }} />
+
+                <div style={{ maxWidth: 800, margin: '0 auto', position: 'relative', zIndex: 1 }}>
+                    {/* Breadcrumbs */}
+                    <div style={{ 
+                        fontSize: 12, 
+                        fontWeight: 600, 
+                        color: AppleColors.blue, 
+                        textTransform: 'uppercase', 
+                        letterSpacing: 1,
+                        marginBottom: 8
+                    }}>
+                        {activePhase.name}
+                    </div>
+
+                    <h1 style={{ 
+                        fontSize: 36, 
+                        fontWeight: 800, 
+                        color: '#fff', 
+                        marginBottom: 16,
+                        letterSpacing: '-0.5px' 
+                    }}>
+                        {activeLesson.name}
+                    </h1>
+
+                    <hr style={{ border: 'none', height: 1, background: 'rgba(255, 255, 255, 0.08)', marginBottom: 20 }} />
+
+                    {isMdLoading ? (
+                        <div style={{
+                            display: 'flex',
+                            flexDirection: 'column',
+                            alignItems: 'center',
+                            justifyContent: 'center',
+                            padding: '100px 0',
+                            color: 'rgba(255,255,255,0.4)',
+                            gap: 12
+                        }}>
+                            <div style={{
+                                width: 24,
+                                height: 24,
+                                border: '2px solid rgba(255,255,255,0.1)',
+                                borderTopColor: AppleColors.blue,
+                                borderRadius: '50%',
+                                animation: 'spin 1s linear infinite'
+                            }} />
+                            <span>Loading lesson guide...</span>
+                        </div>
+                    ) : (
+                        parsed && (
+                            <>
+                                {/* Styled Subtitle Blockquote */}
+                                {parsed.body.startsWith('>') && (
+                                    <blockquote style={{
+                                        margin: '0 0 24px 0',
+                                        fontSize: 17,
+                                        lineHeight: 1.6,
+                                        fontStyle: 'italic',
+                                        color: 'rgba(255, 255, 255, 0.85)',
+                                        borderLeft: `4px solid ${AppleColors.blue}`,
+                                        paddingLeft: 20
+                                    }}>
+                                        {parsed.body.split('\n')[0].replace(/^>\s*/, '')}
+                                    </blockquote>
+                                )}
+
+                                {/* Metadata blocks with stylized drop-cap T */}
+                                <div style={{
+                                    background: 'rgba(255, 255, 255, 0.02)',
+                                    border: '1px solid rgba(255, 255, 255, 0.06)',
+                                    borderRadius: 12,
+                                    padding: '20px 24px',
+                                    margin: '24px 0',
+                                    backdropFilter: 'blur(10px)'
+                                }}>
+                                    <div style={{ display: 'flex', flexDirection: 'column', gap: 12, fontSize: 15 }}>
+                                        <div style={{ display: 'flex', gap: 12, alignItems: 'flex-start' }}>
+                                            <span style={{ fontSize: 56, fontWeight: 900, color: AppleColors.blue, lineHeight: 0.85, fontFamily: 'monospace', float: 'left', marginRight: 4 }}>T</span>
+                                            <div style={{ display: 'flex', flexDirection: 'column', gap: 4, justifyContent: 'center', height: 48 }}>
+                                                <div style={{ fontWeight: 600, color: '#fff' }}>ype: <span style={{ fontWeight: 400, color: 'rgba(255,255,255,0.7)' }}>{parsed.type}</span></div>
+                                                <div style={{ fontWeight: 600, color: '#fff' }}>Languages: <span style={{ fontWeight: 400, color: 'rgba(255,255,255,0.7)' }}>{parsed.languages}</span></div>
+                                            </div>
+                                        </div>
+                                        <div style={{ borderTop: '1px solid rgba(255, 255, 255, 0.06)', paddingTop: 12, marginTop: 4, display: 'flex', flexDirection: 'column', gap: 6 }}>
+                                            <div style={{ fontWeight: 600, color: '#fff' }}>Prerequisites: <span style={{ fontWeight: 400, color: 'rgba(255,255,255,0.7)' }}>{parsed.prerequisites}</span></div>
+                                            <div style={{ fontWeight: 600, color: '#fff' }}>Time: <span style={{ fontWeight: 400, color: 'rgba(255,255,255,0.7)' }}>{parsed.time}</span></div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                {/* Objectives box */}
+                                {parsed.objectives.length > 0 && (
+                                    <div style={{
+                                        border: `1px solid ${AppleColors.blue}`,
+                                        background: 'rgba(0, 122, 255, 0.04)',
+                                        borderRadius: 12,
+                                        padding: '20px 24px',
+                                        margin: '24px 0',
+                                        backdropFilter: 'blur(10px)'
+                                    }}>
+                                        <div style={{ fontSize: 13, fontWeight: 700, color: AppleColors.blue, letterSpacing: 1, textTransform: 'uppercase', marginBottom: 12, display: 'flex', alignItems: 'center', gap: 8 }}>
+                                            <span>🎯 LEARNING OBJECTIVES</span>
+                                        </div>
+                                        <ul style={{ margin: 0, paddingLeft: 20, display: 'flex', flexDirection: 'column', gap: 8 }}>
+                                            {parsed.objectives.map((obj, oIdx) => (
+                                                <li key={oIdx} style={{ fontSize: 14, color: 'rgba(255,255,255,0.7)', lineHeight: 1.5 }}>
+                                                    {obj}
+                                                </li>
+                                            ))}
+                                        </ul>
+                                    </div>
+                                )}
+
+                                {/* Pre-Lesson Quiz */}
+                                {quizData && quizData.questions && quizData.questions.some((q: any) => q.stage === 'pre') && (
+                                    <div style={{ margin: '32px 0' }}>
+                                        <h3 style={{ fontSize: 15, fontWeight: 700, color: AppleColors.blue, letterSpacing: 0.5, marginBottom: 16, display: 'flex', alignItems: 'center', gap: 8 }}>
+                                            <span>✅ PRE-LESSON CHECK</span>
+                                        </h3>
+                                        <QuizBlock 
+                                            questions={quizData.questions.filter((q: any) => q.stage === 'pre')} 
+                                            lessonPath={relativePath}
+                                            stage="pre"
+                                        />
+                                    </div>
+                                )}
+
+                                {/* Markdown body */}
+                                <div style={{ display: 'flex', flexDirection: 'column', gap: 16, margin: '24px 0' }}>
+                                    {renderMarkdown(parsed.body)}
+                                </div>
+
+                                {/* Post-Lesson Quiz */}
+                                {quizData && quizData.questions && quizData.questions.some((q: any) => q.stage === 'post') && (
+                                    <div style={{ margin: '40px 0', borderTop: `1px solid rgba(255, 255, 255, 0.08)`, paddingTop: 32 }}>
+                                        <h3 style={{ fontSize: 15, fontWeight: 700, color: AppleColors.green, letterSpacing: 0.5, marginBottom: 16, display: 'flex', alignItems: 'center', gap: 8 }}>
+                                            <span>✅ POST-LESSON QUIZ</span>
+                                        </h3>
+                                        <QuizBlock 
+                                            questions={quizData.questions.filter((q: any) => q.stage === 'post')} 
+                                            lessonPath={relativePath}
+                                            stage="post"
+                                        />
+                                    </div>
+                                )}
+
+                                {/* Bottom navigation action bars */}
+                                <div style={{ 
+                                    marginTop: 48,
+                                    paddingTop: 32,
+                                    borderTop: '1px solid rgba(255, 255, 255, 0.08)',
+                                    display: 'flex',
+                                    flexWrap: 'wrap',
+                                    alignItems: 'center',
+                                    justifyContent: 'space-between',
+                                    gap: 16,
+                                    paddingBottom: 80
+                                }}>
+                                    <div style={{ display: 'flex', gap: 12 }}>
+                                        <button
+                                            onClick={() => {
+                                                triggerFeedback('light');
+                                                onToggleComplete(activeLesson);
+                                            }}
+                                            style={{
+                                                display: 'inline-flex',
+                                                alignItems: 'center',
+                                                gap: 8,
+                                                padding: '12px 20px',
+                                                borderRadius: 10,
+                                                border: `1px solid ${isCurrentCompleted ? AppleColors.green : 'rgba(255, 255, 255, 0.08)'}`,
+                                                background: isCurrentCompleted ? 'rgba(52, 199, 89, 0.12)' : 'rgba(255, 255, 255, 0.04)',
+                                                color: isCurrentCompleted ? AppleColors.green : '#fff',
+                                                fontSize: 14,
+                                                fontWeight: 600,
+                                                cursor: 'pointer',
+                                                transition: 'all 0.2s ease',
+                                            }}
+                                        >
+                                            {isCurrentCompleted ? (
+                                                <>
+                                                    <CheckCircle2 size={16} />
+                                                    Completed
+                                                </>
+                                            ) : (
+                                                <>
+                                                    <Circle size={16} />
+                                                    Mark as Complete
+                                                </>
+                                            )}
+                                        </button>
+
+                                        {activeLesson.url && (
+                                            <a
+                                                href={activeLesson.url}
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                onClick={() => triggerFeedback('light')}
+                                                style={{
+                                                    display: 'inline-flex',
+                                                    alignItems: 'center',
+                                                    gap: 8,
+                                                    padding: '12px 20px',
+                                                    borderRadius: 10,
+                                                    border: '1px solid rgba(255, 255, 255, 0.08)',
+                                                    background: 'rgba(255, 255, 255, 0.04)',
+                                                    color: 'rgba(255,255,255,0.8)',
+                                                    fontSize: 14,
+                                                    fontWeight: 600,
+                                                    textDecoration: 'none',
+                                                    transition: 'all 0.2s ease',
+                                                }}
+                                            >
+                                                <ExternalLink size={16} />
+                                                Open on GitHub
+                                            </a>
+                                        )}
+                                    </div>
+
+                                    {nextInfo && (
+                                        <button
+                                            onClick={() => {
+                                                triggerFeedback('light');
+                                                onSelectLesson(nextInfo.lesson, nextInfo.phase);
+                                            }}
+                                            style={{
+                                                display: 'inline-flex',
+                                                alignItems: 'center',
+                                                gap: 8,
+                                                padding: '12px 24px',
+                                                borderRadius: 10,
+                                                border: 'none',
+                                                background: AppleColors.blue,
+                                                color: '#fff',
+                                                fontSize: 14,
+                                                fontWeight: 600,
+                                                cursor: 'pointer',
+                                                transition: 'opacity 0.2s ease',
+                                            }}
+                                        >
+                                            Next Lesson
+                                            <ChevronRight size={16} />
+                                        </button>
+                                    )}
+                                </div>
+                            </>
+                        )
+                    )}
+                </div>
+            </div>
         </div>
     );
 }
 
 // Updated: iteration 4
-
 // Updated: iteration 10
-
 // Updated: iteration 14
-
 // Updated: iteration 20
-
 // Updated: iteration 24
 
 // Updated: iteration 26

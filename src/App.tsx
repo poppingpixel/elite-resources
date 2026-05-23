@@ -1,8 +1,9 @@
 import { useState, useMemo, useEffect } from 'react';
-import { Search, ExternalLink, Youtube, Globe, BookOpen, FileText, GraduationCap, Map, Library, DollarSign } from 'lucide-react';
+import { Search, ExternalLink, Youtube, Globe, BookOpen, FileText, GraduationCap, Map, Library, DollarSign, Compass } from 'lucide-react';
 import { RESOURCES, CATEGORIES, type Resource, type Category } from './data';
 import IncomeTracker from './IncomeTracker';
 import Roadmap from './Roadmap';
+import DevHub from './DevHub';
 
 import {
   fetchChannelThumbnail, getCachedChannelThumbnail,
@@ -301,7 +302,7 @@ function Section({
 function App() {
   const [searchQuery, setSearchQuery] = useState('');
   const [activeCategory, setActiveCategory] = useState('all');
-  const [activeView, setActiveView] = useState<'resources' | 'roadmap' | 'income'>('resources');
+  const [activeView, setActiveView] = useState<'resources' | 'roadmap' | 'income' | 'devhub'>('resources');
 
   // Filter resources based on search and category
   const filteredResources = useMemo(() => {
@@ -377,6 +378,13 @@ function App() {
           <DollarSign size={18} />
           <span>Income</span>
         </button>
+        <button
+          className={`nav-item ${activeView === 'devhub' ? 'active' : ''}`}
+          onClick={() => setActiveView('devhub')}
+        >
+          <Compass size={18} />
+          <span>Dev Hub</span>
+        </button>
 
       </nav>
 
@@ -385,6 +393,8 @@ function App() {
         <Roadmap />
       ) : activeView === 'income' ? (
         <IncomeTracker />
+      ) : activeView === 'devhub' ? (
+        <DevHub />
       ) : (
         <>
           {/* Header */}

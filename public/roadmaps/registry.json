@@ -1,0 +1,250 @@
+[
+  {
+    "id": "ai-agents",
+    "title": "AI Agents"
+  },
+  {
+    "id": "ai-data-scientist",
+    "title": "AI and Data Scientist"
+  },
+  {
+    "id": "ai-engineer",
+    "title": "AI Engineer"
+  },
+  {
+    "id": "ai-red-teaming",
+    "title": "AI Red Teaming"
+  },
+  {
+    "id": "android",
+    "title": "Android"
+  },
+  {
+    "id": "angular",
+    "title": "Angular"
+  },
+  {
+    "id": "api-design",
+    "title": "API Design"
+  },
+  {
+    "id": "aspnet-core",
+    "title": "ASP.NET Core"
+  },
+  {
+    "id": "aws",
+    "title": "AWS"
+  },
+  {
+    "id": "backend",
+    "title": "Backend"
+  },
+  {
+    "id": "bi-analyst",
+    "title": "BI Analyst"
+  },
+  {
+    "id": "blockchain",
+    "title": "Blockchain"
+  },
+  {
+    "id": "cloudflare",
+    "title": "Cloudflare"
+  },
+  {
+    "id": "code-review",
+    "title": "Code Review"
+  },
+  {
+    "id": "computer-science",
+    "title": "Computer Science"
+  },
+  {
+    "id": "cpp",
+    "title": "C++"
+  },
+  {
+    "id": "cyber-security",
+    "title": "Cyber Security"
+  },
+  {
+    "id": "data-analyst",
+    "title": "Data Analyst"
+  },
+  {
+    "id": "data-engineer",
+    "title": "Data Engineer"
+  },
+  {
+    "id": "datastructures-and-algorithms",
+    "title": "Data Structures & Algorithms"
+  },
+  {
+    "id": "design-system",
+    "title": "Design System"
+  },
+  {
+    "id": "devops",
+    "title": "DevOps"
+  },
+  {
+    "id": "devrel",
+    "title": "Developer Relations"
+  },
+  {
+    "id": "docker",
+    "title": "Docker"
+  },
+  {
+    "id": "engineering-manager",
+    "title": "Engineering Manager"
+  },
+  {
+    "id": "flutter",
+    "title": "Flutter"
+  },
+  {
+    "id": "frontend",
+    "title": "Frontend"
+  },
+  {
+    "id": "full-stack",
+    "title": "Full Stack"
+  },
+  {
+    "id": "game-developer",
+    "title": "Game Developer"
+  },
+  {
+    "id": "git-github",
+    "title": "Git and GitHub"
+  },
+  {
+    "id": "golang",
+    "title": "Go"
+  },
+  {
+    "id": "graphql",
+    "title": "GraphQL"
+  },
+  {
+    "id": "ios",
+    "title": "iOS"
+  },
+  {
+    "id": "java",
+    "title": "Java"
+  },
+  {
+    "id": "javascript",
+    "title": "JavaScript"
+  },
+  {
+    "id": "kubernetes",
+    "title": "Kubernetes"
+  },
+  {
+    "id": "linux",
+    "title": "Linux"
+  },
+  {
+    "id": "machine-learning",
+    "title": "Machine Learning"
+  },
+  {
+    "id": "mlops",
+    "title": "MLOps"
+  },
+  {
+    "id": "mongodb",
+    "title": "MongoDB"
+  },
+  {
+    "id": "nodejs",
+    "title": "Node.js"
+  },
+  {
+    "id": "php",
+    "title": "PHP"
+  },
+  {
+    "id": "postgresql-dba",
+    "title": "PostgreSQL"
+  },
+  {
+    "id": "product-manager",
+    "title": "Product Manager"
+  },
+  {
+    "id": "prompt-engineering",
+    "title": "Prompt Engineering"
+  },
+  {
+    "id": "python",
+    "title": "Python"
+  },
+  {
+    "id": "qa",
+    "title": "QA"
+  },
+  {
+    "id": "react",
+    "title": "React"
+  },
+  {
+    "id": "react-native",
+    "title": "React Native"
+  },
+  {
+    "id": "redis",
+    "title": "Redis"
+  },
+  {
+    "id": "rust",
+    "title": "Rust"
+  },
+  {
+    "id": "server-side-game-developer",
+    "title": "Server Side Game Developer"
+  },
+  {
+    "id": "software-architect",
+    "title": "Software Architect"
+  },
+  {
+    "id": "software-design-architecture",
+    "title": "Software Design and Architecture"
+  },
+  {
+    "id": "spring-boot",
+    "title": "Spring Boot"
+  },
+  {
+    "id": "sql",
+    "title": "SQL"
+  },
+  {
+    "id": "system-design",
+    "title": "System Design"
+  },
+  {
+    "id": "technical-writer",
+    "title": "Technical Writer"
+  },
+  {
+    "id": "terraform",
+    "title": "Terraform"
+  },
+  {
+    "id": "typescript",
+    "title": "TypeScript"
+  },
+  {
+    "id": "ux-design",
+    "title": "UX Design"
+  },
+  {
+    "id": "vue",
+    "title": "Vue"
+  }
+]
