@@ -12,6 +12,8 @@ import { getResourcesForTopic } from './data/topicResources';
 import { getResourcesForSkill } from './data/skillResources';
 import { ALL_PAPERS, type Paper } from './data/papers';
 import { AI_ENGINEERING_PHASES, AI_ENGINEERING_GLOSSARY } from './data/aiEngineering';
+import { AI_BEGINNERS_PHASES } from './data/aiBeginnersData';
+import { MADE_WITH_ML_PHASES } from './data/madeWithMlData';
 import {
     getAllTopicsProgress, getAllSkillsProgress, getAllBooksProgress, getAllMethodsProgress,
     getAllResilienceProgress, completeResilienceActivity,
@@ -19,6 +21,8 @@ import {
     getAIFSProgress, setAIFSLessonStatus, extractAIFSPath,
     getDevRoadmapProgress, setDevRoadmapNodeStatus, isDevRoadmapNodeComplete,
     incrementMethodPractice, setMethodMastered,
+    getAIBeginnersProgress, setAIBeginnersLessonStatus,
+    getMadeWithMlProgress, setMadeWithMlLessonStatus,
     type TopicProgress, type SkillProgress, type BookProgress, type TopicStatus, type BookStatus,
     type MethodProgress, type ResilienceProgress
 } from './services/progressStore';
@@ -26,7 +30,7 @@ import { triggerFeedback } from './services/feedback';
 
 // Breakpoints for responsiveness - handled via responsive class styles
 
-type RoadmapTab = 'topics' | 'skills' | 'books' | 'polymath' | 'milestones' | 'papers' | 'ai-engineering' | 'ai-glossary' | 'dev-roadmaps';
+type RoadmapTab = 'topics' | 'skills' | 'books' | 'polymath' | 'milestones' | 'papers' | 'ai-engineering' | 'ai-glossary' | 'dev-roadmaps' | 'ai-beginners' | 'made-with-ml';
 
 export interface AIFSLesson {
     name: string;
@@ -873,7 +877,7 @@ function PremiumCodeBlock({ code, lang }: PremiumCodeBlockProps) {
             background: '#0e0f12',
             borderRadius: 10,
             border: `1px solid rgba(255, 255, 255, 0.08)`,
-            margin: '18px 0',
+            margin: '16px 0',
             overflow: 'hidden',
             position: 'relative'
         }}>
@@ -930,21 +934,228 @@ function PremiumCodeBlock({ code, lang }: PremiumCodeBlockProps) {
 // LIGHTWEIGHT MARKDOWN FORMATTER FOR PREMIUM UI
 // ═══════════════════════════════════════════════════════════════════════════════
 
+// ═══════════════════════════════════════════════════════════════════════════════
+// LIGHTWEIGHT MARKDOWN FORMATTER FOR PREMIUM UI - WITH HTML PREPROCESSING & PARAGRAPH GROUPING
+// ═══════════════════════════════════════════════════════════════════════════════
+
+const preprocessMarkdown = (text: string): string => {
+    if (!text) return '';
+    let processed = text;
+    
+    // Replace HTML entities
+    processed = processed.replace(/&nbsp;/g, ' ');
+    processed = processed.replace(/&amp;/g, '&');
+    
+    // Replace <br> tags with newline
+    processed = processed.replace(/<br\s*\/?>/gi, '\n');
+    
+    // Convert <h1>...</h1> to # ...
+    processed = processed.replace(/<h1[^>]*>([\s\S]*?)<\/h1>/gi, '\n# $1\n');
+    // Convert <h2>...</h2> to ## ...
+    processed = processed.replace(/<h2[^>]*>([\s\S]*?)<\/h2>/gi, '\n## $1\n');
+    // Convert <h3>...</h3> to ### ...
+    processed = processed.replace(/<h3[^>]*>([\s\S]*?)<\/h3>/gi, '\n### $1\n');
+    // Convert <h4>...</h4> to #### ...
+    processed = processed.replace(/<h4[^>]*>([\s\S]*?)<\/h4>/gi, '\n#### $1\n');
+    
+    // Convert <img ... src="url" ...> to ![] (url)
+    processed = processed.replace(/<img[^>]*src=["'](.*?)["'][^>]*>/gi, (match, src) => {
+        const altMatch = match.match(/alt=["'](.*?)["']/i);
+        const alt = altMatch ? altMatch[1] : '';
+        return `![${alt}](${src})`;
+    });
+
+    // Convert <a href="url">text</a> to [text](url)
+    processed = processed.replace(/<a[^>]*href=["'](.*?)["'][^>]*>([\s\S]*?)<\/a>/gi, '[$2]($1)');
+
+    // Strip other common block HTML tags but keep their contents
+    processed = processed.replace(/<div[^>]*>/gi, '');
+    processed = processed.replace(/<\/div>/gi, '\n');
+    processed = processed.replace(/<p[^>]*>/gi, '');
+    processed = processed.replace(/<\/p>/gi, '\n');
+    processed = processed.replace(/<span[^>]*>/gi, '');
+    processed = processed.replace(/<\/span>/gi, '');
+    
+    // Strip bold/strong/em tags if they are inside
+    processed = processed.replace(/<strong[^>]*>([\s\S]*?)<\/strong>/gi, '**$1**');
+    processed = processed.replace(/<b[^>]*>([\s\S]*?)<\/b>/gi, '**$1**');
+    processed = processed.replace(/<em[^>]*>([\s\S]*?)<\/em>/gi, '*$1*');
+    processed = processed.replace(/<i[^>]*>([\s\S]*?)<\/i>/gi, '*$1*');
+    
+    // Replace html horizontal rule
+    processed = processed.replace(/<hr\s*\/?>/gi, '\n---\n');
+
+    // Collapse blank lines between consecutive lines that are inline links/images
+    // This merges inline elements separated by blank lines into a single paragraph
+    processed = processed.replace(/((?:\[|!\[)[^\n]*)\n+(?=\s*(?:\[|!\[))/gi, '$1 ');
+
+    // Collapse three or more newlines into exactly two newlines
+    processed = processed.replace(/\n{3,}/g, '\n\n');
+
+    return processed;
+};
+
+const parseInlineStyles = (text: string, lineKey: string | number): React.ReactNode => {
+    if (!text) return '';
+
+    const tokens: React.ReactNode[] = [];
+    let remaining = text;
+    let keyCounter = 0;
+
+    while (remaining.length > 0) {
+        const linkedImgIndex = remaining.search(/\[!\[.*?\]\(.*?\)\]\(.*?\)/);
+        const imgIndex = remaining.search(/!\[.*?\]\(.*?\)/);
+        const linkIndex = remaining.search(/\[.*?\]\(.*?\)/);
+        const boldIndex = remaining.search(/\*\*.*?\*\*/);
+        const codeIndex = remaining.search(/`.*?`/);
+
+        const indices = [
+            { type: 'linkedImg', index: linkedImgIndex },
+            { type: 'img', index: imgIndex },
+            { type: 'link', index: linkIndex },
+            { type: 'bold', index: boldIndex },
+            { type: 'code', index: codeIndex }
+        ].filter(item => item.index >= 0);
+
+        if (indices.length === 0) {
+            tokens.push(<span key={`text-${lineKey}-${keyCounter++}`}>{remaining}</span>);
+            break;
+        }
+
+        indices.sort((a, b) => a.index - b.index);
+        const earliest = indices[0];
+
+        if (earliest.index > 0) {
+            tokens.push(
+                <span key={`text-${lineKey}-${keyCounter++}`}>
+                    {remaining.substring(0, earliest.index)}
+                </span>
+            );
+        }
+
+        const matchedString = remaining.substring(earliest.index);
+        if (earliest.type === 'linkedImg') {
+            const match = matchedString.match(/^\[!\[(.*?)\]\((.*?)\)\]\((.*?)\)/);
+            if (match) {
+                const alt = match[1];
+                const imgUrl = match[2];
+                const linkUrl = match[3];
+                tokens.push(
+                    <a 
+                        key={`linked-img-${lineKey}-${keyCounter++}`} 
+                        href={linkUrl} 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        onClick={(e) => e.stopPropagation()}
+                        style={{ display: 'inline-block', verticalAlign: 'middle', margin: '0 4px' }}
+                    >
+                        <img 
+                            src={imgUrl} 
+                            alt={alt} 
+                            style={{ maxHeight: 20, verticalAlign: 'middle', borderRadius: 4 }} 
+                            onError={(e) => { (e.target as HTMLElement).style.display = 'none'; }}
+                        />
+                    </a>
+                );
+                remaining = remaining.substring(earliest.index + match[0].length);
+                continue;
+            }
+        } else if (earliest.type === 'img') {
+            const match = matchedString.match(/^!\[(.*?)\]\((.*?)\)/);
+            if (match) {
+                const alt = match[1];
+                const imgUrl = match[2];
+                tokens.push(
+                    <img 
+                        key={`img-${lineKey}-${keyCounter++}`}
+                        src={imgUrl} 
+                        alt={alt} 
+                        style={{ maxHeight: 20, verticalAlign: 'middle', margin: '0 4px', borderRadius: 4 }}
+                        onError={(e) => { (e.target as HTMLElement).style.display = 'none'; }}
+                    />
+                );
+                remaining = remaining.substring(earliest.index + match[0].length);
+                continue;
+            }
+        } else if (earliest.type === 'link') {
+            const match = matchedString.match(/^\[(.*?)\]\((.*?)\)/);
+            if (match) {
+                const linkText = match[1];
+                const linkUrl = match[2];
+                tokens.push(
+                    <a 
+                        key={`link-${lineKey}-${keyCounter++}`} 
+                        href={linkUrl} 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        style={{ color: AppleColors.blue, textDecoration: 'none', fontWeight: 500 }}
+                        onClick={(e) => e.stopPropagation()}
+                    >
+                        {parseInlineStyles(linkText, `sub-${lineKey}-${keyCounter}`)}
+                    </a>
+                );
+                remaining = remaining.substring(earliest.index + match[0].length);
+                continue;
+            }
+        } else if (earliest.type === 'bold') {
+            const match = matchedString.match(/^\*\*(.*?)\*\*/);
+            if (match) {
+                const boldText = match[1];
+                tokens.push(
+                    <strong key={`bold-${lineKey}-${keyCounter++}`} style={{ color: AppleColors.labelPrimary, fontWeight: 700 }}>
+                        {parseInlineStyles(boldText, `sub-${lineKey}-${keyCounter}`)}
+                    </strong>
+                );
+                remaining = remaining.substring(earliest.index + match[0].length);
+                continue;
+            }
+        } else if (earliest.type === 'code') {
+            const match = matchedString.match(/^`(.*?)`/);
+            if (match) {
+                const codeText = match[1];
+                tokens.push(
+                    <code key={`code-${lineKey}-${keyCounter++}`} style={{
+                        fontFamily: 'monospace',
+                        background: 'rgba(255, 255, 255, 0.08)',
+                        padding: '2px 6px',
+                        borderRadius: 4,
+                        fontSize: '0.9em',
+                        color: AppleColors.orange,
+                        border: `1px solid ${AppleColors.glassBorder}`
+                    }}>
+                        {codeText}
+                    </code>
+                );
+                remaining = remaining.substring(earliest.index + match[0].length);
+                continue;
+            }
+        }
+
+        tokens.push(<span key={`fallback-${lineKey}-${keyCounter++}`}>{remaining[0]}</span>);
+        remaining = remaining.substring(1);
+    }
+
+    return tokens;
+};
+
 const renderMarkdown = (text: string | null) => {
     if (!text) return null;
 
-    const lines = text.split('\n');
+    const cleanText = preprocessMarkdown(text);
+    const lines = cleanText.split('\n');
     const elements: React.ReactNode[] = [];
+    
     let inCodeBlock = false;
     let codeContent: string[] = [];
     let codeLang = '';
     let listItems: React.ReactNode[] = [];
     let tableRows: React.ReactNode[][] = [];
+    let paragraphLines: string[] = [];
 
     const flushList = (key: string | number) => {
         if (listItems.length > 0) {
             elements.push(
-                <ul key={`list-${key}`} style={{ margin: '10px 0 16px 20px', padding: 0, listStyleType: 'disc' }}>
+                <ul key={`list-${key}`} style={{ margin: '12px 0 12px 20px', padding: 0, listStyleType: 'disc' }}>
                     {listItems}
                 </ul>
             );
@@ -975,57 +1186,41 @@ const renderMarkdown = (text: string | null) => {
         }
     };
 
-    const parseInlineStyles = (line: string, lineKey: string | number) => {
-        const linkParts = line.split(/(\[.*?\]\(.*?\))/);
-        return linkParts.map((part, pIdx) => {
-            if (part.startsWith('[') && part.includes('](')) {
-                const match = part.match(/\[(.*?)\]\((.*?)\)/);
-                if (match) {
-                    const text = match[1];
-                    const url = match[2];
-                    return (
-                        <a 
-                            key={`${lineKey}-link-${pIdx}`} 
-                            href={url} 
-                            target="_blank" 
-                            rel="noopener noreferrer"
-                            style={{ color: AppleColors.blue, textDecoration: 'none', fontWeight: 500 }}
-                            onClick={(e) => e.stopPropagation()}
-                        >
-                            {text}
-                        </a>
-                    );
+    const flushParagraph = (key: string | number) => {
+        if (paragraphLines.length > 0) {
+            const paragraphText = paragraphLines.join(' ').trim();
+            if (paragraphText) {
+                if (paragraphText.startsWith('![') && paragraphText.endsWith(')') && !paragraphText.startsWith('[![')) {
+                    const match = paragraphText.match(/^!\[(.*?)\]\((.*?)\)$/);
+                    if (match) {
+                        const alt = match[1];
+                        const src = match[2];
+                        elements.push(
+                            <div key={`img-block-${key}`} style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', margin: '16px 0' }}>
+                                <img src={src} alt={alt} style={{ maxWidth: '100%', borderRadius: 8, border: `1px solid ${AppleColors.glassBorder}` }} />
+                                {alt && <span style={{ fontSize: 12, color: AppleColors.labelSecondary, marginTop: 8, fontStyle: 'italic' }}>{alt}</span>}
+                            </div>
+                        );
+                        paragraphLines = [];
+                        return;
+                    }
                 }
+
+                elements.push(
+                    <p key={`p-${key}`} style={{ fontSize: 15, lineHeight: 1.6, color: AppleColors.labelSecondary, margin: '12px 0' }}>
+                        {parseInlineStyles(paragraphText, key)}
+                    </p>
+                );
             }
-            const subParts = part.split(/(\*\*.*?\*\*|`.*?`)/);
-            return subParts.map((subPart, sIdx) => {
-                if (subPart.startsWith('**') && subPart.endsWith('**')) {
-                    return <strong key={`${lineKey}-${pIdx}-${sIdx}`} style={{ color: AppleColors.labelPrimary, fontWeight: 700 }}>{subPart.slice(2, -2)}</strong>;
-                }
-                if (subPart.startsWith('`') && subPart.endsWith('`')) {
-                    return (
-                        <code key={`${lineKey}-${pIdx}-${sIdx}`} style={{
-                            fontFamily: 'monospace',
-                            background: 'rgba(255, 255, 255, 0.08)',
-                            padding: '2px 6px',
-                            borderRadius: 4,
-                            fontSize: '0.9em',
-                            color: AppleColors.orange,
-                            border: `1px solid ${AppleColors.glassBorder}`
-                        }}>
-                            {subPart.slice(1, -1)}
-                        </code>
-                    );
-                }
-                return subPart;
-            });
-        });
+            paragraphLines = [];
+        }
     };
 
     for (let i = 0; i < lines.length; i++) {
         const line = lines[i];
+        const trimmedLine = line.trim();
 
-        if (line.trim().startsWith('```')) {
+        if (trimmedLine.startsWith('```')) {
             if (inCodeBlock) {
                 inCodeBlock = false;
                 const finalCode = codeContent.join('\n');
@@ -1043,8 +1238,9 @@ const renderMarkdown = (text: string | null) => {
             } else {
                 flushList(i);
                 flushTable(i);
+                flushParagraph(i);
                 inCodeBlock = true;
-                codeLang = line.trim().slice(3).trim();
+                codeLang = trimmedLine.slice(3).trim();
             }
             continue;
         }
@@ -1054,16 +1250,26 @@ const renderMarkdown = (text: string | null) => {
             continue;
         }
 
-        // Image support
-        if (line.trim().startsWith('![') && line.includes('](')) {
+        if (trimmedLine === '---') {
             flushList(i);
             flushTable(i);
-            const match = line.match(/!\[(.*?)\]\((.*?)\)/);
+            flushParagraph(i);
+            elements.push(
+                <hr key={`hr-${i}`} style={{ border: 'none', height: 1, background: 'rgba(255, 255, 255, 0.08)', margin: '20px 0' }} />
+            );
+            continue;
+        }
+
+        if (trimmedLine.startsWith('![') && trimmedLine.endsWith(')') && !trimmedLine.startsWith('[![')) {
+            const match = trimmedLine.match(/^!\[(.*?)\]\((.*?)\)$/);
             if (match) {
+                flushList(i);
+                flushTable(i);
+                flushParagraph(i);
                 const alt = match[1];
                 const src = match[2];
                 elements.push(
-                    <div key={`img-${i}`} style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', margin: '20px 0' }}>
+                    <div key={`img-${i}`} style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', margin: '16px 0' }}>
                         <img src={src} alt={alt} style={{ maxWidth: '100%', borderRadius: 8, border: `1px solid ${AppleColors.glassBorder}` }} />
                         {alt && <span style={{ fontSize: 12, color: AppleColors.labelSecondary, marginTop: 8, fontStyle: 'italic' }}>{alt}</span>}
                     </div>
@@ -1072,59 +1278,176 @@ const renderMarkdown = (text: string | null) => {
             }
         }
 
-        if (line.startsWith('## ')) {
+        if (trimmedLine.startsWith('# ')) {
             flushList(i);
             flushTable(i);
+            flushParagraph(i);
             elements.push(
-                <h3 key={i} style={{ fontSize: 18, fontWeight: 700, color: AppleColors.labelPrimary, marginTop: 24, marginBottom: 12 }}>
-                    {parseInlineStyles(line.slice(3), i)}
-                </h3>
-            );
-            continue;
-        }
-        if (line.startsWith('### ')) {
-            flushList(i);
-            flushTable(i);
-            elements.push(
-                <h4 key={i} style={{ fontSize: 15, fontWeight: 600, color: AppleColors.labelPrimary, marginTop: 18, marginBottom: 8 }}>
-                    {parseInlineStyles(line.slice(4), i)}
-                </h4>
-            );
-            continue;
-        }
-        if (line.startsWith('# ')) {
-            flushList(i);
-            flushTable(i);
-            elements.push(
-                <h2 key={i} style={{ fontSize: 22, fontWeight: 800, color: AppleColors.labelPrimary, marginTop: 28, marginBottom: 16 }}>
-                    {parseInlineStyles(line.slice(2), i)}
+                <h2 key={i} style={{ fontSize: 24, fontWeight: 800, color: AppleColors.labelPrimary, margin: '28px 0 14px 0', letterSpacing: '-0.5px' }}>
+                    {parseInlineStyles(trimmedLine.slice(2), i)}
                 </h2>
             );
             continue;
         }
 
-        if (line.startsWith('> ')) {
+        if (trimmedLine.startsWith('## ')) {
             flushList(i);
             flushTable(i);
+            flushParagraph(i);
             elements.push(
-                <blockquote key={i} style={{
-                    margin: '12px 0 16px 0',
-                    padding: '8px 16px',
-                    background: 'rgba(255, 255, 255, 0.02)',
-                    borderLeft: `3px solid ${AppleColors.blue}`,
-                    color: AppleColors.labelSecondary,
-                    fontStyle: 'italic',
-                    borderRadius: '0 8px 8px 0',
-                }}>
-                    {parseInlineStyles(line.slice(2), i)}
-                </blockquote>
+                <h3 key={i} style={{ fontSize: 20, fontWeight: 700, color: AppleColors.labelPrimary, margin: '24px 0 10px 0', letterSpacing: '-0.3px' }}>
+                    {parseInlineStyles(trimmedLine.slice(3), i)}
+                </h3>
             );
             continue;
         }
 
-        if (line.trim().startsWith('- ') || line.trim().startsWith('* ')) {
+        if (trimmedLine.startsWith('### ')) {
+            flushList(i);
             flushTable(i);
-            const content = line.trim().slice(2);
+            flushParagraph(i);
+            elements.push(
+                <h4 key={i} style={{ fontSize: 17, fontWeight: 600, color: AppleColors.labelPrimary, margin: '18px 0 8px 0' }}>
+                    {parseInlineStyles(trimmedLine.slice(4), i)}
+                </h4>
+            );
+            continue;
+        }
+
+        if (trimmedLine.startsWith('#### ')) {
+            flushList(i);
+            flushTable(i);
+            flushParagraph(i);
+            elements.push(
+                <h5 key={i} style={{ fontSize: 12, fontWeight: 600, color: AppleColors.blue, margin: '14px 0 6px 0', textTransform: 'uppercase', letterSpacing: 0.5 }}>
+                    {parseInlineStyles(trimmedLine.slice(5), i)}
+                </h5>
+            );
+            continue;
+        }
+
+        if (trimmedLine.startsWith('> ') || trimmedLine === '>') {
+            flushList(i);
+            flushTable(i);
+            flushParagraph(i);
+            
+            // Collect all consecutive blockquote lines
+            const rawQuoteLines: string[] = [trimmedLine === '>' ? '' : trimmedLine.slice(2)];
+            while (i + 1 < lines.length) {
+                const nextTrimmed = lines[i + 1].trim();
+                if (nextTrimmed.startsWith('> ') || nextTrimmed === '>') {
+                    i++;
+                    rawQuoteLines.push(nextTrimmed === '>' ? '' : nextTrimmed.slice(2));
+                } else {
+                    break;
+                }
+            }
+
+            // Reconstruct the body preserving code blocks inside blockquotes
+            const quoteContent = rawQuoteLines.join('\n');
+            const firstLine = rawQuoteLines[0].trim();
+
+            if (firstLine.startsWith('**') && firstLine.endsWith('**')) {
+                const title = firstLine.slice(2, -2).trim();
+                const bodyContent = rawQuoteLines.slice(1).join('\n').trim();
+
+                let headerBg = 'rgba(255, 255, 255, 0.04)';
+                let borderCol = 'rgba(255, 255, 255, 0.08)';
+                let titleCol = '#fff';
+
+                if (title.includes('Local') || title.includes('💻')) {
+                    headerBg = 'rgba(10, 132, 255, 0.06)';
+                    borderCol = 'rgba(10, 132, 255, 0.15)';
+                    titleCol = AppleColors.blue;
+                } else if (title.includes('Anyscale') || title.includes('🚀')) {
+                    headerBg = 'rgba(255, 159, 10, 0.06)';
+                    borderCol = 'rgba(255, 159, 10, 0.15)';
+                    titleCol = AppleColors.orange;
+                } else if (title.includes('Caution') || title.includes('Warning') || title.includes('Danger') || title.includes('⚠')) {
+                    headerBg = 'rgba(255, 69, 58, 0.06)';
+                    borderCol = 'rgba(255, 69, 58, 0.15)';
+                    titleCol = AppleColors.red;
+                } else if (title.includes('Tip') || title.includes('Success') || title.includes('✅')) {
+                    headerBg = 'rgba(52, 199, 89, 0.06)';
+                    borderCol = 'rgba(52, 199, 89, 0.15)';
+                    titleCol = AppleColors.green;
+                } else if (title.includes('Note') || title.includes('ℹ')) {
+                    headerBg = 'rgba(100, 210, 255, 0.06)';
+                    borderCol = 'rgba(100, 210, 255, 0.15)';
+                    titleCol = '#64d2ff';
+                }
+
+                elements.push(
+                    <div key={`admonition-${i}`} style={{
+                        margin: '18px 0',
+                        borderRadius: 10,
+                        border: `1px solid ${borderCol}`,
+                        background: 'rgba(255, 255, 255, 0.01)',
+                        overflow: 'hidden'
+                    }}>
+                        <div style={{
+                            padding: '8px 16px',
+                            background: headerBg,
+                            borderBottom: `1px solid ${borderCol}`,
+                            fontWeight: 700,
+                            fontSize: 13,
+                            color: titleCol,
+                            display: 'flex',
+                            alignItems: 'center',
+                            gap: 6
+                        }}>
+                            {title}
+                        </div>
+                        <div style={{ padding: '16px 20px', fontSize: 14 }}>
+                            {renderMarkdown(bodyContent)}
+                        </div>
+                    </div>
+                );
+            } else {
+                // Check if first line is a simple note/tip marker
+                const noteMatch = firstLine.match(/^\*?(Note|Tip|Warning|Caution|Important|Info)\*?:?$/i);
+                if (noteMatch) {
+                    const noteName = noteMatch[1];
+                    const bodyContent = rawQuoteLines.slice(1).join('\n').trim();
+                    let borderCol = AppleColors.blue;
+                    if (/warning|caution/i.test(noteName)) borderCol = AppleColors.orange;
+                    if (/danger/i.test(noteName)) borderCol = AppleColors.red;
+                    if (/tip|success/i.test(noteName)) borderCol = AppleColors.green;
+                    elements.push(
+                        <div key={`note-${i}`} style={{
+                            margin: '12px 0',
+                            padding: '12px 16px',
+                            background: 'rgba(255, 255, 255, 0.02)',
+                            borderLeft: `3px solid ${borderCol}`,
+                            borderRadius: '0 8px 8px 0',
+                        }}>
+                            <span style={{ fontWeight: 700, color: borderCol, fontSize: 12, textTransform: 'uppercase', letterSpacing: 0.5 }}>{noteName} </span>
+                            {renderMarkdown(bodyContent)}
+                        </div>
+                    );
+                } else {
+                    elements.push(
+                        <blockquote key={i} style={{
+                            margin: '12px 0',
+                            padding: '8px 16px',
+                            background: 'rgba(255, 255, 255, 0.02)',
+                            borderLeft: `3px solid ${AppleColors.blue}`,
+                            color: AppleColors.labelSecondary,
+                            fontStyle: 'italic',
+                            borderRadius: '0 8px 8px 0',
+                        }}>
+                            {renderMarkdown(quoteContent)}
+                        </blockquote>
+                    );
+                }
+            }
+            continue;
+        }
+
+        if (trimmedLine.startsWith('- ') || trimmedLine.startsWith('* ')) {
+            flushTable(i);
+            flushParagraph(i);
+            const content = trimmedLine.slice(2);
             listItems.push(
                 <li key={`li-${i}`} style={{ fontSize: 14, color: AppleColors.labelSecondary, marginBottom: 6, lineHeight: 1.5 }}>
                     {parseInlineStyles(content, i)}
@@ -1133,35 +1456,45 @@ const renderMarkdown = (text: string | null) => {
             continue;
         }
 
-        if (line.trim().startsWith('|')) {
+        // Ordered list: 1. 2. 3. etc.
+        if (/^\d+\.\s/.test(trimmedLine)) {
+            flushTable(i);
+            flushParagraph(i);
+            const content = trimmedLine.replace(/^\d+\.\s/, '');
+            listItems.push(
+                <li key={`oli-${i}`} style={{ fontSize: 14, color: AppleColors.labelSecondary, marginBottom: 6, lineHeight: 1.5 }}>
+                    {parseInlineStyles(content, i)}
+                </li>
+            );
+            continue;
+        }
+
+        if (trimmedLine.startsWith('|')) {
             flushList(i);
-            if (line.includes('---')) {
+            flushParagraph(i);
+            if (trimmedLine.includes('---')) {
                 continue;
             }
-            const cells = line.split('|').map(c => c.trim()).filter((_, idx, arr) => idx > 0 && idx < arr.length - 1);
+            const cells = trimmedLine.split('|').map(c => c.trim()).filter((_, idx, arr) => idx > 0 && idx < arr.length - 1);
             if (cells.length > 0) {
                 tableRows.push(cells.map((cell, cIdx) => parseInlineStyles(cell, `cell-${i}-${cIdx}`)));
             }
             continue;
         }
 
-        if (line.trim() === '') {
+        if (trimmedLine === '') {
             flushList(i);
             flushTable(i);
-            elements.push(<div key={`space-${i}`} style={{ height: 10 }} />);
-        } else {
-            flushList(i);
-            flushTable(i);
-            elements.push(
-                <p key={i} style={{ fontSize: 14, lineHeight: 1.6, color: AppleColors.labelSecondary, margin: '8px 0 12px 0' }}>
-                    {parseInlineStyles(line, i)}
-                </p>
-            );
+            flushParagraph(i);
+            continue;
         }
+
+        paragraphLines.push(line);
     }
 
     flushList('final');
     flushTable('final');
+    flushParagraph('final');
 
     return elements;
 };
@@ -2061,7 +2394,7 @@ function DetailModal({
                                         Loading guide content...
                                     </div>
                                 ) : (
-                                    <div style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
+                                    <div>
                                         {renderMarkdown(lessonMd)}
                                     </div>
                                 )}
@@ -2237,7 +2570,7 @@ function DetailModal({
                                             Loading guide content...
                                         </div>
                                     ) : (
-                                        <div style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
+                                        <div>
                                             {renderMarkdown(lessonMd)}
                                         </div>
                                     )}
@@ -2499,8 +2832,30 @@ export default function Roadmap() {
     const [expandedPhases, setExpandedPhases] = useState<Record<number, boolean>>({});
     const [activeAIFSLesson, setActiveAIFSLesson] = useState<{ lesson: any; phase: any } | null>(null);
 
+    const [aiBeginnersProgressData, setAiBeginnersProgressData] = useState(getAIBeginnersProgress());
+    const [activeAIBeginnersLesson, setActiveAIBeginnersLesson] = useState<{ lesson: any; phase: any } | null>(null);
+    const [expandedAIBeginnersPhases, setExpandedAIBeginnersPhases] = useState<Record<number, boolean>>({});
+
+    const [madeWithMlProgressData, setMadeWithMlProgressData] = useState(getMadeWithMlProgress());
+    const [activeMadeWithMlLesson, setActiveMadeWithMlLesson] = useState<{ lesson: any; phase: any } | null>(null);
+    const [expandedMadeWithMlPhases, setExpandedMadeWithMlPhases] = useState<Record<number, boolean>>({});
+
     const togglePhase = (phaseId: number) => {
         setExpandedPhases(prev => ({
+            ...prev,
+            [phaseId]: !prev[phaseId]
+        }));
+    };
+
+    const toggleAIBeginnersPhase = (phaseId: number) => {
+        setExpandedAIBeginnersPhases(prev => ({
+            ...prev,
+            [phaseId]: !prev[phaseId]
+        }));
+    };
+
+    const toggleMadeWithMlPhase = (phaseId: number) => {
+        setExpandedMadeWithMlPhases(prev => ({
             ...prev,
             [phaseId]: !prev[phaseId]
         }));
@@ -2525,6 +2880,48 @@ export default function Roadmap() {
             }
             return null;
         }).filter(Boolean) as typeof AI_ENGINEERING_PHASES;
+    }, [debouncedSearchQuery]);
+
+    // Filter AI Beginners phases and lessons
+    const filteredAIBeginnersPhases = useMemo(() => {
+        if (!debouncedSearchQuery.trim()) {
+            return AI_BEGINNERS_PHASES;
+        }
+        const query = debouncedSearchQuery.toLowerCase();
+        return AI_BEGINNERS_PHASES.map(phase => {
+            const matchingLessons = phase.lessons.filter((l: any) =>
+                l.name.toLowerCase().includes(query) ||
+                (l.summary && l.summary.toLowerCase().includes(query)) ||
+                (l.keywords && l.keywords.toLowerCase().includes(query)) ||
+                l.lang.toLowerCase().includes(query) ||
+                l.type.toLowerCase().includes(query)
+            );
+            if (matchingLessons.length > 0 || phase.name.toLowerCase().includes(query) || (phase.desc && phase.desc.toLowerCase().includes(query))) {
+                return { ...phase, lessons: matchingLessons };
+            }
+            return null;
+        }).filter(Boolean) as typeof AI_BEGINNERS_PHASES;
+    }, [debouncedSearchQuery]);
+
+    // Filter Made With ML phases and lessons
+    const filteredMadeWithMlPhases = useMemo(() => {
+        if (!debouncedSearchQuery.trim()) {
+            return MADE_WITH_ML_PHASES;
+        }
+        const query = debouncedSearchQuery.toLowerCase();
+        return MADE_WITH_ML_PHASES.map(phase => {
+            const matchingLessons = phase.lessons.filter((l: any) =>
+                l.name.toLowerCase().includes(query) ||
+                (l.summary && l.summary.toLowerCase().includes(query)) ||
+                (l.keywords && l.keywords.toLowerCase().includes(query)) ||
+                l.lang.toLowerCase().includes(query) ||
+                l.type.toLowerCase().includes(query)
+            );
+            if (matchingLessons.length > 0 || phase.name.toLowerCase().includes(query) || (phase.desc && phase.desc.toLowerCase().includes(query))) {
+                return { ...phase, lessons: matchingLessons };
+            }
+            return null;
+        }).filter(Boolean) as typeof MADE_WITH_ML_PHASES;
     }, [debouncedSearchQuery]);
 
     // Filter AIFS glossary terms
@@ -2599,6 +2996,28 @@ export default function Roadmap() {
         return expandedPhases;
     }, [expandedPhases, debouncedSearchQuery, filteredAIFSPhases]);
 
+    const effectiveExpandedAIBeginnersPhases = useMemo(() => {
+        if (debouncedSearchQuery.trim()) {
+            const expanded: Record<number, boolean> = {};
+            filteredAIBeginnersPhases.forEach(phase => {
+                expanded[phase.id] = true;
+            });
+            return expanded;
+        }
+        return expandedAIBeginnersPhases;
+    }, [expandedAIBeginnersPhases, debouncedSearchQuery, filteredAIBeginnersPhases]);
+
+    const effectiveExpandedMadeWithMlPhases = useMemo(() => {
+        if (debouncedSearchQuery.trim()) {
+            const expanded: Record<number, boolean> = {};
+            filteredMadeWithMlPhases.forEach(phase => {
+                expanded[phase.id] = true;
+            });
+            return expanded;
+        }
+        return expandedMadeWithMlPhases;
+    }, [expandedMadeWithMlPhases, debouncedSearchQuery, filteredMadeWithMlPhases]);
+
     const refreshProgress = useCallback(() => {
         setTopicsProgressData(getAllTopicsProgress());
         setSkillsProgressData(getAllSkillsProgress());
@@ -2607,6 +3026,8 @@ export default function Roadmap() {
         setResilienceProgressData(getAllResilienceProgress());
         setAifsProgressData(getAIFSProgress());
         setRoadmapProgressData(getDevRoadmapProgress());
+        setAiBeginnersProgressData(getAIBeginnersProgress());
+        setMadeWithMlProgressData(getMadeWithMlProgress());
     }, []);
 
     useEffect(() => {
@@ -2721,6 +3142,36 @@ export default function Roadmap() {
         return { total, completed };
     }, [aifsProgressData]);
 
+    const aiBeginnersProgress = useMemo(() => {
+        let total = 0;
+        let completed = 0;
+        AI_BEGINNERS_PHASES.forEach(phase => {
+            phase.lessons.forEach((lesson: any) => {
+                total++;
+                const path = getCourseLessonPath(lesson);
+                if (path && aiBeginnersProgressData.lessons[path]?.completedAt) {
+                    completed++;
+                }
+            });
+        });
+        return { total, completed };
+    }, [aiBeginnersProgressData]);
+
+    const madeWithMlProgress = useMemo(() => {
+        let total = 0;
+        let completed = 0;
+        MADE_WITH_ML_PHASES.forEach(phase => {
+            phase.lessons.forEach((lesson: any) => {
+                total++;
+                const path = getCourseLessonPath(lesson);
+                if (path && madeWithMlProgressData.lessons[path]?.completedAt) {
+                    completed++;
+                }
+            });
+        });
+        return { total, completed };
+    }, [madeWithMlProgressData]);
+
     const openModal = (
         type: 'topic' | 'skill' | 'book' | 'paper' | 'aifs-lesson' | 'dev-roadmap-node', 
         data: any
@@ -2733,6 +3184,8 @@ export default function Roadmap() {
         { id: 'polymath' as RoadmapTab, label: 'Polymath', icon: <Sparkles size={18} />, count: 5 },
         { id: 'topics' as RoadmapTab, label: 'AI Topics', icon: <Brain size={18} />, count: topicsProgress.total },
         { id: 'ai-engineering' as RoadmapTab, label: 'AI Scratch', icon: <Cpu size={18} />, count: aifsProgress.total },
+        { id: 'ai-beginners' as RoadmapTab, label: 'AI Beginners', icon: <BookOpen size={18} />, count: aiBeginnersProgress.total },
+        { id: 'made-with-ml' as RoadmapTab, label: 'Made with ML', icon: <Zap size={18} />, count: madeWithMlProgress.total },
         { id: 'ai-glossary' as RoadmapTab, label: 'AI Glossary', icon: <Terminal size={18} />, count: AI_ENGINEERING_GLOSSARY.length },
         { id: 'dev-roadmaps' as RoadmapTab, label: 'Dev Roadmaps', icon: <Map size={18} />, count: 62 },
         { id: 'skills' as RoadmapTab, label: 'CEO Skills', icon: <Target size={18} />, count: 30 },
@@ -3381,6 +3834,538 @@ export default function Roadmap() {
                 </div>
             )}
 
+            {activeTab === 'ai-beginners' && (
+                <div style={{ display: 'flex', flexDirection: 'column', gap: 24, paddingBottom: 60 }}>
+                    {/* Header stats bar */}
+                    <GlassCard padding={20}>
+                        <div style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', justifyContent: 'space-between', gap: 20 }}>
+                            <div style={{ display: 'flex', alignItems: 'center', gap: 16 }}>
+                                <ProgressRing progress={(aiBeginnersProgress.completed / aiBeginnersProgress.total) * 100} color={AppleColors.blue} size={70} strokeWidth={6} />
+                                <div>
+                                    <h3 style={{ fontSize: 18, fontWeight: 700, color: AppleColors.labelPrimary, marginBottom: 4 }}>
+                                        AI for Beginners
+                                    </h3>
+                                    <p style={{ fontSize: 14, color: AppleColors.labelSecondary }}>
+                                        {aiBeginnersProgress.completed} of {aiBeginnersProgress.total} lessons completed • ~26 lessons curriculum
+                                    </p>
+                                </div>
+                            </div>
+                            <div style={{ display: 'flex', gap: 12 }}>
+                                <a 
+                                    href="https://github.com/microsoft/AI-For-Beginners"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    onClick={() => triggerFeedback('light')}
+                                    style={{
+                                        display: 'inline-flex',
+                                        alignItems: 'center',
+                                        gap: 6,
+                                        fontSize: 13,
+                                        fontWeight: 600,
+                                        color: '#ffffff',
+                                        background: AppleColors.blue,
+                                        padding: '8px 16px',
+                                        borderRadius: 10,
+                                        textDecoration: 'none',
+                                        transition: 'opacity 0.2s ease',
+                                    }}
+                                >
+                                    <Terminal size={14} />
+                                    GitHub Repo
+                                </a>
+                            </div>
+                        </div>
+                    </GlassCard>
+
+                    {/* Phase lists */}
+                    <div style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
+                        {filteredAIBeginnersPhases.map((phase, idx) => {
+                            const isExpanded = !!effectiveExpandedAIBeginnersPhases[phase.id];
+                            const totalLessons = phase.lessons.length;
+                            
+                            // Calculate completed lessons in this phase
+                            let completedInPhase = 0;
+                            phase.lessons.forEach((l: any) => {
+                                const path = getCourseLessonPath(l);
+                                if (path && aiBeginnersProgressData.lessons[path]?.completedAt) {
+                                    completedInPhase++;
+                                }
+                            });
+
+                            const phasePercentage = totalLessons > 0 ? (completedInPhase / totalLessons) * 100 : 0;
+                            
+                            // Determine phase status dynamically
+                            const phaseStatus = completedInPhase === totalLessons && totalLessons > 0
+                                ? 'completed'
+                                : completedInPhase > 0
+                                    ? 'in_progress'
+                                    : 'not_started';
+
+                            return (
+                                <div 
+                                    key={phase.id} 
+                                    style={{ 
+                                        animation: `slideUp 0.6s cubic-bezier(0.2, 0.8, 0.2, 1) backwards`, 
+                                        animationDelay: `${Math.min(idx * 0.05, 0.5)}s` 
+                                    }}
+                                >
+                                    <GlassCard padding={16}>
+                                        {/* Phase Accordion Header */}
+                                        <div 
+                                            onClick={() => toggleAIBeginnersPhase(phase.id)}
+                                            style={{ 
+                                                display: 'flex', 
+                                                alignItems: 'center', 
+                                                justifyContent: 'space-between', 
+                                                cursor: 'pointer',
+                                                userSelect: 'none'
+                                            }}
+                                        >
+                                            <div style={{ display: 'flex', alignItems: 'center', gap: 12, flex: 1, minWidth: 0 }}>
+                                                <div style={{ transform: 'scale(0.8)', flexShrink: 0 }}>
+                                                    <ProgressRing 
+                                                        progress={phasePercentage} 
+                                                        color={phaseStatus === 'completed' ? AppleColors.green : AppleColors.orange} 
+                                                        size={40} 
+                                                        strokeWidth={4} 
+                                                        showLabel={false} 
+                                                    />
+                                                </div>
+                                                <div style={{ minWidth: 0 }}>
+                                                    <div style={{ display: 'flex', alignItems: 'center', gap: 8, flexWrap: 'wrap' }}>
+                                                        <span style={{ fontSize: 13, fontWeight: 700, color: AppleColors.blue, textTransform: 'uppercase', letterSpacing: 0.5 }}>
+                                                            Phase {phase.id}
+                                                        </span>
+                                                        <StatusPill status={phaseStatus} />
+                                                    </div>
+                                                    <h3 style={{ fontSize: 17, fontWeight: 700, color: AppleColors.labelPrimary, marginTop: 2, overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>
+                                                        {phase.name}
+                                                    </h3>
+                                                </div>
+                                            </div>
+                                            <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
+                                                <span style={{ fontSize: 13, color: AppleColors.labelSecondary, fontWeight: 500 }}>
+                                                    {completedInPhase}/{totalLessons} lessons
+                                                </span>
+                                                <ChevronRight 
+                                                    size={18} 
+                                                    color={AppleColors.labelSecondary} 
+                                                    style={{ 
+                                                        transform: isExpanded ? 'rotate(90deg)' : 'rotate(0deg)', 
+                                                        transition: 'transform 0.25s ease' 
+                                                    }} 
+                                                />
+                                            </div>
+                                        </div>
+
+                                        {/* Expanded Phase Lessons */}
+                                        {isExpanded && (
+                                            <div style={{ 
+                                                marginTop: 16, 
+                                                paddingTop: 16, 
+                                                borderTop: `1px solid ${AppleColors.separator}`,
+                                                display: 'flex',
+                                                flexDirection: 'column',
+                                                gap: 12
+                                            }}>
+                                                {phase.desc && (
+                                                    <p style={{ fontSize: 14, color: AppleColors.labelSecondary, marginBottom: 8, fontStyle: 'italic' }}>
+                                                        {phase.desc}
+                                                    </p>
+                                                )}
+                                                <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
+                                                    {phase.lessons.map((lesson: any, lIdx: number) => {
+                                                        const path = getCourseLessonPath(lesson);
+                                                        const isCompleted = !!(path && aiBeginnersProgressData.lessons[path]?.completedAt);
+                                                        const tags = lesson.keywords 
+                                                            ? lesson.keywords.split('·').map((t: string) => t.trim()).filter(Boolean)
+                                                            : [];
+
+                                                        return (
+                                                            <div 
+                                                                key={lIdx}
+                                                                style={{ 
+                                                                    display: 'flex', 
+                                                                    flexDirection: 'column',
+                                                                    padding: 12,
+                                                                    background: 'rgba(255, 255, 255, 0.02)',
+                                                                    borderRadius: 10,
+                                                                    border: `0.5px solid ${AppleColors.glassBorder}`,
+                                                                    transition: 'background 0.2s ease',
+                                                                }}
+                                                            >
+                                                                <div style={{ display: 'flex', alignItems: 'flex-start', justifyContent: 'space-between', gap: 12 }}>
+                                                                    <div style={{ display: 'flex', alignItems: 'flex-start', gap: 10, flex: 1 }}>
+                                                                        <button 
+                                                                            onClick={(e) => {
+                                                                                e.stopPropagation();
+                                                                                triggerFeedback('light');
+                                                                                setAIBeginnersLessonStatus(path, !isCompleted);
+                                                                                refreshProgress();
+                                                                            }}
+                                                                            style={{
+                                                                                background: 'none',
+                                                                                border: 'none',
+                                                                                padding: 0,
+                                                                                cursor: 'pointer',
+                                                                                display: 'inline-flex',
+                                                                                marginTop: 2,
+                                                                                flexShrink: 0
+                                                                            }}
+                                                                        >
+                                                                            {isCompleted ? (
+                                                                                <CheckCircle2 size={18} color={AppleColors.green} />
+                                                                            ) : (
+                                                                                <Circle size={18} color={AppleColors.labelTertiary} />
+                                                                            )}
+                                                                        </button>
+                                                                        <div style={{ minWidth: 0 }}>
+                                                                            <div style={{ display: 'flex', alignItems: 'center', gap: 8, flexWrap: 'wrap' }}>
+                                                                                <span style={{ fontSize: 12, fontWeight: 600, color: AppleColors.labelTertiary }}>
+                                                                                    {String(lIdx + 1).padStart(2, '0')}
+                                                                                </span>
+                                                                                <span 
+                                                                                    onClick={() => {
+                                                                                        triggerFeedback('light');
+                                                                                        setActiveAIBeginnersLesson({ lesson, phase });
+                                                                                    }}
+                                                                                    style={{ fontSize: 15, fontWeight: 600, color: AppleColors.labelPrimary, cursor: 'pointer', textDecoration: 'none' }}
+                                                                                >
+                                                                                    {lesson.name}
+                                                                                </span>
+                                                                                <span style={{ 
+                                                                                    fontSize: 10, 
+                                                                                    fontWeight: 700, 
+                                                                                    color: lesson.type === 'Build' ? AppleColors.blue : AppleColors.purple,
+                                                                                    background: lesson.type === 'Build' ? 'rgba(0,122,255,0.1)' : 'rgba(175,82,222,0.1)',
+                                                                                    padding: '1px 6px',
+                                                                                    borderRadius: 4
+                                                                                }}>
+                                                                                    {lesson.type}
+                                                                                </span>
+                                                                            </div>
+                                                                            <p style={{ fontSize: 13, color: AppleColors.labelSecondary, marginTop: 4, lineHeight: 1.4 }}>
+                                                                                {lesson.summary}
+                                                                            </p>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div style={{ display: 'flex', alignItems: 'center', gap: 8, flexShrink: 0 }}>
+                                                                        <span style={{ fontSize: 11, fontFamily: 'monospace', color: AppleColors.labelSecondary }}>
+                                                                            {lesson.lang}
+                                                                        </span>
+                                                                        <a 
+                                                                            href={lesson.url} 
+                                                                            target="_blank" 
+                                                                            rel="noopener noreferrer"
+                                                                            onClick={(e) => e.stopPropagation()}
+                                                                            style={{
+                                                                                display: 'inline-flex',
+                                                                                alignItems: 'center',
+                                                                                justifyContent: 'center',
+                                                                                width: 28,
+                                                                                height: 28,
+                                                                                borderRadius: 14,
+                                                                                background: AppleColors.fillTertiary,
+                                                                                textDecoration: 'none',
+                                                                                color: AppleColors.labelSecondary,
+                                                                                transition: 'background 0.2s ease',
+                                                                            }}
+                                                                        >
+                                                                            <ExternalLink size={12} />
+                                                                        </a>
+                                                                    </div>
+                                                                </div>
+                                                                
+                                                                {/* Tags list */}
+                                                                {tags.length > 0 && (
+                                                                    <div style={{ display: 'flex', flexWrap: 'wrap', gap: 6, marginTop: 10, marginLeft: 28 }}>
+                                                                        {tags.map((tag: string, tIdx: number) => (
+                                                                            <span key={tIdx} style={{ fontSize: 10, color: AppleColors.labelSecondary, background: AppleColors.fillTertiary, padding: '2px 8px', borderRadius: 4 }}>
+                                                                                {tag}
+                                                                            </span>
+                                                                        ))}
+                                                                    </div>
+                                                                )}
+                                                            </div>
+                                                        );
+                                                    })}
+                                                </div>
+                                            </div>
+                                        )}
+                                    </GlassCard>
+                                </div>
+                            );
+                        })}
+                    </div>
+                </div>
+            )}
+
+            {activeTab === 'made-with-ml' && (
+                <div style={{ display: 'flex', flexDirection: 'column', gap: 24, paddingBottom: 60 }}>
+                    {/* Header stats bar */}
+                    <GlassCard padding={20}>
+                        <div style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', justifyContent: 'space-between', gap: 20 }}>
+                            <div style={{ display: 'flex', alignItems: 'center', gap: 16 }}>
+                                <ProgressRing progress={(madeWithMlProgress.completed / madeWithMlProgress.total) * 100} color={AppleColors.blue} size={70} strokeWidth={6} />
+                                <div>
+                                    <h3 style={{ fontSize: 18, fontWeight: 700, color: AppleColors.labelPrimary, marginBottom: 4 }}>
+                                        Made with ML
+                                    </h3>
+                                    <p style={{ fontSize: 14, color: AppleColors.labelSecondary }}>
+                                        {madeWithMlProgress.completed} of {madeWithMlProgress.total} lessons completed • ~26 lessons curriculum
+                                    </p>
+                                </div>
+                            </div>
+                            <div style={{ display: 'flex', gap: 12 }}>
+                                <a 
+                                    href="https://github.com/GokuMohandas/Made-With-ML"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    onClick={() => triggerFeedback('light')}
+                                    style={{
+                                        display: 'inline-flex',
+                                        alignItems: 'center',
+                                        gap: 6,
+                                        fontSize: 13,
+                                        fontWeight: 600,
+                                        color: '#ffffff',
+                                        background: AppleColors.blue,
+                                        padding: '8px 16px',
+                                        borderRadius: 10,
+                                        textDecoration: 'none',
+                                        transition: 'opacity 0.2s ease',
+                                    }}
+                                >
+                                    <Terminal size={14} />
+                                    GitHub Repo
+                                </a>
+                            </div>
+                        </div>
+                    </GlassCard>
+
+                    {/* Phase lists */}
+                    <div style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
+                        {filteredMadeWithMlPhases.map((phase, idx) => {
+                            const isExpanded = !!effectiveExpandedMadeWithMlPhases[phase.id];
+                            const totalLessons = phase.lessons.length;
+                            
+                            // Calculate completed lessons in this phase
+                            let completedInPhase = 0;
+                            phase.lessons.forEach((l: any) => {
+                                const path = getCourseLessonPath(l);
+                                if (path && madeWithMlProgressData.lessons[path]?.completedAt) {
+                                    completedInPhase++;
+                                }
+                            });
+
+                            const phasePercentage = totalLessons > 0 ? (completedInPhase / totalLessons) * 100 : 0;
+                            
+                            // Determine phase status dynamically
+                            const phaseStatus = completedInPhase === totalLessons && totalLessons > 0
+                                ? 'completed'
+                                : completedInPhase > 0
+                                    ? 'in_progress'
+                                    : 'not_started';
+
+                            return (
+                                <div 
+                                    key={phase.id} 
+                                    style={{ 
+                                        animation: `slideUp 0.6s cubic-bezier(0.2, 0.8, 0.2, 1) backwards`, 
+                                        animationDelay: `${Math.min(idx * 0.05, 0.5)}s` 
+                                    }}
+                                >
+                                    <GlassCard padding={16}>
+                                        {/* Phase Accordion Header */}
+                                        <div 
+                                            onClick={() => toggleMadeWithMlPhase(phase.id)}
+                                            style={{ 
+                                                display: 'flex', 
+                                                alignItems: 'center', 
+                                                justifyContent: 'space-between', 
+                                                cursor: 'pointer',
+                                                userSelect: 'none'
+                                            }}
+                                        >
+                                            <div style={{ display: 'flex', alignItems: 'center', gap: 12, flex: 1, minWidth: 0 }}>
+                                                <div style={{ transform: 'scale(0.8)', flexShrink: 0 }}>
+                                                    <ProgressRing 
+                                                        progress={phasePercentage} 
+                                                        color={phaseStatus === 'completed' ? AppleColors.green : AppleColors.orange} 
+                                                        size={40} 
+                                                        strokeWidth={4} 
+                                                        showLabel={false} 
+                                                    />
+                                                </div>
+                                                <div style={{ minWidth: 0 }}>
+                                                    <div style={{ display: 'flex', alignItems: 'center', gap: 8, flexWrap: 'wrap' }}>
+                                                        <span style={{ fontSize: 13, fontWeight: 700, color: AppleColors.blue, textTransform: 'uppercase', letterSpacing: 0.5 }}>
+                                                            Phase {phase.id}
+                                                        </span>
+                                                        <StatusPill status={phaseStatus} />
+                                                    </div>
+                                                    <h3 style={{ fontSize: 17, fontWeight: 700, color: AppleColors.labelPrimary, marginTop: 2, overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>
+                                                        {phase.name}
+                                                    </h3>
+                                                </div>
+                                            </div>
+                                            <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
+                                                <span style={{ fontSize: 13, color: AppleColors.labelSecondary, fontWeight: 500 }}>
+                                                    {completedInPhase}/{totalLessons} lessons
+                                                </span>
+                                                <ChevronRight 
+                                                    size={18} 
+                                                    color={AppleColors.labelSecondary} 
+                                                    style={{ 
+                                                        transform: isExpanded ? 'rotate(90deg)' : 'rotate(0deg)', 
+                                                        transition: 'transform 0.25s ease' 
+                                                    }} 
+                                                />
+                                            </div>
+                                        </div>
+
+                                        {/* Expanded Phase Lessons */}
+                                        {isExpanded && (
+                                            <div style={{ 
+                                                marginTop: 16, 
+                                                paddingTop: 16, 
+                                                borderTop: `1px solid ${AppleColors.separator}`,
+                                                display: 'flex',
+                                                flexDirection: 'column',
+                                                gap: 12
+                                            }}>
+                                                {phase.desc && (
+                                                    <p style={{ fontSize: 14, color: AppleColors.labelSecondary, marginBottom: 8, fontStyle: 'italic' }}>
+                                                        {phase.desc}
+                                                    </p>
+                                                )}
+                                                <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
+                                                    {phase.lessons.map((lesson: any, lIdx: number) => {
+                                                        const path = getCourseLessonPath(lesson);
+                                                        const isCompleted = !!(path && madeWithMlProgressData.lessons[path]?.completedAt);
+                                                        const tags = lesson.keywords 
+                                                            ? lesson.keywords.split('·').map((t: string) => t.trim()).filter(Boolean)
+                                                            : [];
+
+                                                        return (
+                                                            <div 
+                                                                key={lIdx}
+                                                                style={{ 
+                                                                    display: 'flex', 
+                                                                    flexDirection: 'column',
+                                                                    padding: 12,
+                                                                    background: 'rgba(255, 255, 255, 0.02)',
+                                                                    borderRadius: 10,
+                                                                    border: `0.5px solid ${AppleColors.glassBorder}`,
+                                                                    transition: 'background 0.2s ease',
+                                                                }}
+                                                            >
+                                                                <div style={{ display: 'flex', alignItems: 'flex-start', justifyContent: 'space-between', gap: 12 }}>
+                                                                    <div style={{ display: 'flex', alignItems: 'flex-start', gap: 10, flex: 1 }}>
+                                                                        <button 
+                                                                            onClick={(e) => {
+                                                                                e.stopPropagation();
+                                                                                triggerFeedback('light');
+                                                                                setMadeWithMlLessonStatus(path, !isCompleted);
+                                                                                refreshProgress();
+                                                                            }}
+                                                                            style={{
+                                                                                background: 'none',
+                                                                                border: 'none',
+                                                                                padding: 0,
+                                                                                cursor: 'pointer',
+                                                                                display: 'inline-flex',
+                                                                                marginTop: 2,
+                                                                                flexShrink: 0
+                                                                            }}
+                                                                        >
+                                                                            {isCompleted ? (
+                                                                                <CheckCircle2 size={18} color={AppleColors.green} />
+                                                                            ) : (
+                                                                                <Circle size={18} color={AppleColors.labelTertiary} />
+                                                                            )}
+                                                                        </button>
+                                                                        <div style={{ minWidth: 0 }}>
+                                                                            <div style={{ display: 'flex', alignItems: 'center', gap: 8, flexWrap: 'wrap' }}>
+                                                                                <span style={{ fontSize: 12, fontWeight: 600, color: AppleColors.labelTertiary }}>
+                                                                                    {String(lIdx + 1).padStart(2, '0')}
+                                                                                </span>
+                                                                                <span 
+                                                                                    onClick={() => {
+                                                                                        triggerFeedback('light');
+                                                                                        setActiveMadeWithMlLesson({ lesson, phase });
+                                                                                    }}
+                                                                                    style={{ fontSize: 15, fontWeight: 600, color: AppleColors.labelPrimary, cursor: 'pointer', textDecoration: 'none' }}
+                                                                                >
+                                                                                    {lesson.name}
+                                                                                </span>
+                                                                                <span style={{ 
+                                                                                    fontSize: 10, 
+                                                                                    fontWeight: 700, 
+                                                                                    color: lesson.type === 'Build' ? AppleColors.blue : AppleColors.purple,
+                                                                                    background: lesson.type === 'Build' ? 'rgba(0,122,255,0.1)' : 'rgba(175,82,222,0.1)',
+                                                                                    padding: '1px 6px',
+                                                                                    borderRadius: 4
+                                                                                }}>
+                                                                                    {lesson.type}
+                                                                                </span>
+                                                                            </div>
+                                                                            <p style={{ fontSize: 13, color: AppleColors.labelSecondary, marginTop: 4, lineHeight: 1.4 }}>
+                                                                                {lesson.summary}
+                                                                            </p>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div style={{ display: 'flex', alignItems: 'center', gap: 8, flexShrink: 0 }}>
+                                                                        <span style={{ fontSize: 11, fontFamily: 'monospace', color: AppleColors.labelSecondary }}>
+                                                                            {lesson.lang}
+                                                                        </span>
+                                                                        <a 
+                                                                            href={lesson.url} 
+                                                                            target="_blank" 
+                                                                            rel="noopener noreferrer"
+                                                                            onClick={(e) => e.stopPropagation()}
+                                                                            style={{
+                                                                                display: 'inline-flex',
+                                                                                alignItems: 'center',
+                                                                                justifyContent: 'center',
+                                                                                width: 28,
+                                                                                height: 28,
+                                                                                borderRadius: 14,
+                                                                                background: AppleColors.fillTertiary,
+                                                                                textDecoration: 'none',
+                                                                                color: AppleColors.labelSecondary,
+                                                                                transition: 'background 0.2s ease',
+                                                                            }}
+                                                                        >
+                                                                            <ExternalLink size={12} />
+                                                                        </a>
+                                                                    </div>
+                                                                </div>
+                                                                
+                                                                {/* Tags list */}
+                                                                {tags.length > 0 && (
+                                                                    <div style={{ display: 'flex', flexWrap: 'wrap', gap: 6, marginTop: 10, marginLeft: 28 }}>
+                                                                        {tags.map((tag: string, tIdx: number) => (
+                                                                            <span key={tIdx} style={{ fontSize: 10, color: AppleColors.labelSecondary, background: AppleColors.fillTertiary, padding: '2px 8px', borderRadius: 4 }}>
+                                                                                {tag}
+                                                                            </span>
+                                                                        ))}
+                                                                    </div>
+                                                                )}
+                                                            </div>
+                                                        );
+                                                    })}
+                                                </div>
+                                            </div>
+                                        )}
+                                    </GlassCard>
+                                </div>
+                            );
+                        })}
+                    </div>
+                </div>
+            )}
+
             {activeTab === 'dev-roadmaps' && (
                 <div style={{ display: 'flex', flexDirection: 'column', gap: 24, paddingBottom: 60 }}>
                     {/* Header stats bar */}
@@ -3894,6 +4879,50 @@ export default function Roadmap() {
                         }
                     }}
                     onClose={() => setActiveAIFSLesson(null)}
+                />
+            )}
+
+            {activeAIBeginnersLesson && (
+                <CourseLearningWorkspace
+                    courseId="ai-beginners"
+                    activeLesson={activeAIBeginnersLesson.lesson}
+                    activePhase={activeAIBeginnersLesson.phase}
+                    allPhases={AI_BEGINNERS_PHASES}
+                    progressData={aiBeginnersProgressData}
+                    onSelectLesson={(lesson, phase) => {
+                        setActiveAIBeginnersLesson({ lesson, phase });
+                    }}
+                    onToggleComplete={(lesson) => {
+                        const path = getCourseLessonPath(lesson);
+                        if (path) {
+                            const isComplete = !!aiBeginnersProgressData.lessons[path]?.completedAt;
+                            setAIBeginnersLessonStatus(path, !isComplete);
+                            refreshProgress();
+                        }
+                    }}
+                    onClose={() => setActiveAIBeginnersLesson(null)}
+                />
+            )}
+
+            {activeMadeWithMlLesson && (
+                <CourseLearningWorkspace
+                    courseId="made-with-ml"
+                    activeLesson={activeMadeWithMlLesson.lesson}
+                    activePhase={activeMadeWithMlLesson.phase}
+                    allPhases={MADE_WITH_ML_PHASES}
+                    progressData={madeWithMlProgressData}
+                    onSelectLesson={(lesson, phase) => {
+                        setActiveMadeWithMlLesson({ lesson, phase });
+                    }}
+                    onToggleComplete={(lesson) => {
+                        const path = getCourseLessonPath(lesson);
+                        if (path) {
+                            const isComplete = !!madeWithMlProgressData.lessons[path]?.completedAt;
+                            setMadeWithMlLessonStatus(path, !isComplete);
+                            refreshProgress();
+                        }
+                    }}
+                    onClose={() => setActiveMadeWithMlLesson(null)}
                 />
             )}
         </div>
@@ -4585,7 +5614,7 @@ function AIFSLearningWorkspace({
                                 )}
 
                                 {/* Markdown body */}
-                                <div style={{ display: 'flex', flexDirection: 'column', gap: 16, margin: '24px 0' }}>
+                                <div style={{ margin: '24px 0' }}>
                                     {renderMarkdown(parsed.body)}
                                 </div>
 
@@ -4711,6 +5740,522 @@ function AIFSLearningWorkspace({
     );
 }
 
+// ═══════════════════════════════════════════════════════════════════════════════
+// GENERIC COURSE LEARNING WORKSPACE SUBCOMPONENTS & PARSER
+// ═══════════════════════════════════════════════════════════════════════════════
+
+const getCourseLessonPath = (lesson: any) => {
+    if (lesson.path) return lesson.path;
+    if (!lesson.keywords) return '';
+    const match = lesson.keywords.match(/Path:\s*([^\s,]+)/i);
+    return match ? match[1] : '';
+};
+
+function parseGenericCourseLessonMarkdown(mdText: string, lesson: any): ParsedLesson {
+    const result: ParsedLesson = {
+        type: lesson.type || 'Learn',
+        languages: lesson.lang || '—',
+        prerequisites: 'None',
+        time: '—',
+        objectives: [],
+        body: mdText
+    };
+
+    // Extract objectives if present
+    const objectivesSection = mdText.match(/## Learning Objectives([\s\S]*?)(?=##)/i);
+    if (objectivesSection) {
+        const objLines = objectivesSection[1].split('\n');
+        result.objectives = objLines
+            .map(line => line.trim())
+            .filter(line => line.startsWith('-') || line.startsWith('*'))
+            .map(line => line.replace(/^[-*]\s*/, '').trim());
+    }
+
+    // Clean H1 Title and sketchnote attribution
+    let bodyText = mdText;
+    bodyText = bodyText.replace(/^#\s+.*?\n+/m, ''); // remove H1 title
+    result.body = bodyText.trim();
+    return result;
+}
+
+interface CourseLearningWorkspaceProps {
+    courseId: 'ai-beginners' | 'made-with-ml';
+    activeLesson: any;
+    activePhase: any;
+    allPhases: any[];
+    progressData: any;
+    onSelectLesson: (lesson: any, phase: any) => void;
+    onToggleComplete: (lesson: any) => void;
+    onClose: () => void;
+}
+
+function CourseLearningWorkspace({
+    courseId,
+    activeLesson,
+    activePhase,
+    allPhases,
+    progressData,
+    onSelectLesson,
+    onToggleComplete,
+    onClose
+}: CourseLearningWorkspaceProps) {
+    const [lessonMd, setLessonMd] = useState<string | null>(null);
+    const [isMdLoading, setIsMdLoading] = useState(false);
+    const readerPanelRef = useRef<HTMLDivElement>(null);
+
+    const relativePath = getCourseLessonPath(activeLesson);
+
+    const [expandedSidebarPhases, setExpandedSidebarPhases] = useState<Record<number, boolean>>({
+        [activePhase.id]: true
+    });
+
+    const toggleSidebarPhase = (phaseId: number) => {
+        setExpandedSidebarPhases(prev => ({
+            ...prev,
+            [phaseId]: !prev[phaseId]
+        }));
+    };
+
+    useEffect(() => {
+        if (!activeLesson) return;
+
+        if (readerPanelRef.current) {
+            readerPanelRef.current.scrollTop = 0;
+        }
+
+        if (!relativePath) {
+            setLessonMd(activeLesson.summary || 'No detailed content available.');
+            return;
+        }
+
+        setIsMdLoading(true);
+        setLessonMd(null);
+
+        const mdUrl = `/elite-resources/${courseId}/${relativePath}`;
+        fetch(mdUrl)
+            .then(res => {
+                if (!res.ok) throw new Error('Markdown not found');
+                return res.text();
+            })
+            .then(text => {
+                setLessonMd(text);
+            })
+            .catch(() => {
+                setLessonMd(activeLesson.summary || 'No detailed content available.');
+            })
+            .finally(() => {
+                setIsMdLoading(false);
+            });
+    }, [activeLesson, relativePath, courseId]);
+
+    const parsed = useMemo(() => {
+        if (!lessonMd) return null;
+        return parseGenericCourseLessonMarkdown(lessonMd, activeLesson);
+    }, [lessonMd, activeLesson]);
+
+    const isCurrentCompleted = !!(relativePath && progressData.lessons[relativePath]?.completedAt);
+
+    const getNextLesson = () => {
+        const currentLessons = activePhase.lessons;
+        const currentIndex = currentLessons.findIndex((l: any) => l.url === activeLesson.url && l.name === activeLesson.name);
+        if (currentIndex !== -1 && currentIndex < currentLessons.length - 1) {
+            return { lesson: currentLessons[currentIndex + 1], phase: activePhase };
+        }
+        
+        const nextPhaseIndex = allPhases.findIndex(p => p.id === activePhase.id) + 1;
+        if (nextPhaseIndex < allPhases.length) {
+            const nextPhase = allPhases[nextPhaseIndex];
+            if (nextPhase.lessons.length > 0) {
+                return { lesson: nextPhase.lessons[0], phase: nextPhase };
+            }
+        }
+        return null;
+    };
+
+    const nextInfo = getNextLesson();
+
+    return (
+        <div style={{
+            position: 'fixed',
+            top: 0,
+            left: 0,
+            right: 0,
+            bottom: 0,
+            zIndex: 1000,
+            background: '#07080a',
+            display: 'flex',
+            fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif',
+        }}>
+            {/* Sidebar */}
+            <div style={{
+                width: 280,
+                height: '100%',
+                background: 'rgba(15, 17, 23, 0.95)',
+                borderRight: '1px solid rgba(255, 255, 255, 0.08)',
+                display: 'flex',
+                flexDirection: 'column',
+            }}>
+                <div style={{
+                    padding: '24px 16px 16px',
+                    borderBottom: '1px solid rgba(255, 255, 255, 0.08)',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'space-between',
+                }}>
+                    <button 
+                        onClick={onClose}
+                        style={{
+                            background: 'none',
+                            border: 'none',
+                            color: AppleColors.blue,
+                            fontSize: 14,
+                            fontWeight: 600,
+                            cursor: 'pointer',
+                            display: 'flex',
+                            alignItems: 'center',
+                            gap: 4,
+                            padding: 0,
+                        }}
+                    >
+                        <ArrowLeft size={16} />
+                        Back to Hub
+                    </button>
+                </div>
+
+                <div style={{
+                    flex: 1,
+                    overflowY: 'auto',
+                    padding: '16px 8px',
+                    display: 'flex',
+                    flexDirection: 'column',
+                    gap: 16
+                }}>
+                    {allPhases.map((phase) => {
+                        const isPhaseActive = phase.id === activePhase.id;
+                        const isExpanded = !!expandedSidebarPhases[phase.id];
+                        
+                        let completedCount = 0;
+                        phase.lessons.forEach((l: any) => {
+                            const path = getCourseLessonPath(l);
+                            if (path && progressData.lessons[path]?.completedAt) {
+                                completedCount++;
+                            }
+                        });
+
+                        return (
+                            <div key={phase.id} style={{ display: 'flex', flexDirection: 'column', gap: 4 }}>
+                                <div 
+                                    onClick={() => toggleSidebarPhase(phase.id)}
+                                    style={{
+                                        padding: '8px',
+                                        cursor: 'pointer',
+                                        display: 'flex',
+                                        alignItems: 'center',
+                                        justifyContent: 'space-between',
+                                        borderRadius: 6,
+                                        userSelect: 'none',
+                                        background: isPhaseActive ? 'rgba(255,255,255,0.02)' : 'transparent',
+                                    }}
+                                >
+                                    <div style={{ display: 'flex', flexDirection: 'column', minWidth: 0 }}>
+                                        <span style={{ 
+                                            fontSize: 9, 
+                                            fontWeight: 700, 
+                                            color: isPhaseActive ? AppleColors.blue : 'rgba(255,255,255,0.3)',
+                                            textTransform: 'uppercase',
+                                            letterSpacing: 0.5
+                                        }}>
+                                            Phase {String(phase.id).padStart(2, '0')}
+                                        </span>
+                                        <span style={{ 
+                                            fontSize: 13, 
+                                            fontWeight: 700, 
+                                            color: isPhaseActive ? '#fff' : 'rgba(255,255,255,0.7)',
+                                            overflow: 'hidden',
+                                            textOverflow: 'ellipsis',
+                                            whiteSpace: 'nowrap'
+                                        }}>
+                                            {phase.name}
+                                        </span>
+                                    </div>
+                                    <div style={{ display: 'flex', alignItems: 'center', gap: 6 }}>
+                                        <span style={{ fontSize: 11, color: 'rgba(255,255,255,0.4)', fontWeight: 500 }}>
+                                            {completedCount}/{phase.lessons.length}
+                                        </span>
+                                        <ChevronRight 
+                                            size={12} 
+                                            color="rgba(255,255,255,0.4)" 
+                                            style={{ 
+                                                transform: isExpanded ? 'rotate(90deg)' : 'rotate(0deg)',
+                                                transition: 'transform 0.2s' 
+                                            }} 
+                                        />
+                                    </div>
+                                </div>
+
+                                {isExpanded && (
+                                    <div style={{ display: 'flex', flexDirection: 'column', gap: 2, paddingLeft: 4, marginTop: 4 }}>
+                                        {phase.lessons.map((lesson: any, lIdx: number) => {
+                                            const path = getCourseLessonPath(lesson);
+                                            const isLessonCompleted = !!(path && progressData.lessons[path]?.completedAt);
+                                            const isLessonActive = lesson.url === activeLesson.url && lesson.name === activeLesson.name;
+
+                                            return (
+                                                <div
+                                                    key={lIdx}
+                                                    onClick={() => onSelectLesson(lesson, phase)}
+                                                    style={{
+                                                        padding: '8px 10px',
+                                                        borderRadius: 8,
+                                                        cursor: 'pointer',
+                                                        display: 'flex',
+                                                        alignItems: 'center',
+                                                        gap: 8,
+                                                        background: isLessonActive ? 'rgba(0, 122, 255, 0.15)' : 'transparent',
+                                                        borderLeft: `3px solid ${isLessonActive ? AppleColors.blue : 'transparent'}`,
+                                                        transition: 'all 0.2s ease',
+                                                    }}
+                                                >
+                                                    {isLessonCompleted ? (
+                                                        <CheckCircle2 size={13} color={AppleColors.green} style={{ flexShrink: 0 }} />
+                                                    ) : (
+                                                        <Circle size={13} color="rgba(255,255,255,0.3)" style={{ flexShrink: 0 }} />
+                                                    )}
+                                                    <span style={{
+                                                        fontSize: 13,
+                                                        fontWeight: isLessonActive ? 600 : 400,
+                                                        color: isLessonActive ? '#fff' : (isLessonCompleted ? 'rgba(255,255,255,0.8)' : 'rgba(255,255,255,0.5)'),
+                                                        overflow: 'hidden',
+                                                        textOverflow: 'ellipsis',
+                                                        whiteSpace: 'nowrap',
+                                                        flex: 1
+                                                    }}>
+                                                        {lesson.name}
+                                                    </span>
+                                                </div>
+                                            );
+                                        })}
+                                    </div>
+                                )}
+                            </div>
+                        );
+                    })}
+                </div>
+            </div>
+
+            {/* Reader Panel */}
+            <div 
+                ref={readerPanelRef}
+                style={{
+                    flex: 1,
+                    height: '100%',
+                    overflowY: 'auto',
+                    position: 'relative',
+                    background: '#0B0D13',
+                    backgroundImage: 'radial-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px)',
+                    backgroundSize: '24px 24px',
+                    padding: '40px 60px',
+                    scrollBehavior: 'smooth',
+                }}
+            >
+                {/* Neon Glow backdrop */}
+                <div style={{
+                    position: 'absolute',
+                    top: 0,
+                    left: '50%',
+                    transform: 'translateX(-50%)',
+                    width: '60%',
+                    height: '300px',
+                    background: 'radial-gradient(circle at 50% 0%, rgba(10, 132, 255, 0.08) 0%, transparent 70%)',
+                    pointerEvents: 'none',
+                    zIndex: 0
+                }} />
+
+                <div style={{ maxWidth: 800, margin: '0 auto', position: 'relative', zIndex: 1 }}>
+                    {/* Breadcrumbs */}
+                    <div style={{ 
+                        fontSize: 12, 
+                        fontWeight: 600, 
+                        color: AppleColors.blue, 
+                        textTransform: 'uppercase', 
+                        letterSpacing: 1,
+                        marginBottom: 8
+                    }}>
+                        {activePhase.name}
+                    </div>
+
+                    <h1 style={{ 
+                        fontSize: 36, 
+                        fontWeight: 800, 
+                        color: '#fff', 
+                        marginBottom: 16,
+                        letterSpacing: '-0.5px' 
+                    }}>
+                        {activeLesson.name}
+                    </h1>
+
+                    <hr style={{ border: 'none', height: 1, background: 'rgba(255, 255, 255, 0.08)', marginBottom: 20 }} />
+
+                    {isMdLoading ? (
+                        <div style={{
+                            display: 'flex',
+                            flexDirection: 'column',
+                            alignItems: 'center',
+                            justifyContent: 'center',
+                            padding: '100px 0',
+                            color: 'rgba(255,255,255,0.4)',
+                            gap: 12
+                        }}>
+                            <div style={{
+                                width: 24,
+                                height: 24,
+                                border: '2px solid rgba(255,255,255,0.1)',
+                                borderTopColor: AppleColors.blue,
+                                borderRadius: '50%',
+                                animation: 'spin 1s linear infinite'
+                            }} />
+                            <span>Loading lesson guide...</span>
+                        </div>
+                    ) : (
+                        parsed && (
+                            <>
+                                {/* Metadata blocks with stylized drop-cap T */}
+                                <div style={{
+                                    background: 'rgba(255, 255, 255, 0.02)',
+                                    border: '1px solid rgba(255, 255, 255, 0.06)',
+                                    borderRadius: 12,
+                                    padding: '20px 24px',
+                                    margin: '24px 0',
+                                    backdropFilter: 'blur(10px)'
+                                }}>
+                                    <div style={{ display: 'flex', flexDirection: 'column', gap: 12, fontSize: 15 }}>
+                                        <div style={{ display: 'flex', gap: 12, alignItems: 'flex-start' }}>
+                                            <span style={{ fontSize: 56, fontWeight: 900, color: AppleColors.blue, lineHeight: 0.85, fontFamily: 'monospace', float: 'left', marginRight: 4 }}>T</span>
+                                            <div style={{ display: 'flex', flexDirection: 'column', gap: 4, justifyContent: 'center', height: 48 }}>
+                                                <div style={{ fontWeight: 600, color: '#fff' }}>ype: <span style={{ fontWeight: 400, color: 'rgba(255,255,255,0.7)' }}>{parsed.type}</span></div>
+                                                <div style={{ fontWeight: 600, color: '#fff' }}>Languages: <span style={{ fontWeight: 400, color: 'rgba(255,255,255,0.7)' }}>{parsed.languages}</span></div>
+                                            </div>
+                                        </div>
+                                        <div style={{ borderTop: '1px solid rgba(255, 255, 255, 0.06)', paddingTop: 12, marginTop: 4, display: 'flex', flexDirection: 'column', gap: 6 }}>
+                                            <div style={{ fontWeight: 600, color: '#fff' }}>Prerequisites: <span style={{ fontWeight: 400, color: 'rgba(255,255,255,0.7)' }}>{parsed.prerequisites}</span></div>
+                                            <div style={{ fontWeight: 600, color: '#fff' }}>Time: <span style={{ fontWeight: 400, color: 'rgba(255,255,255,0.7)' }}>{parsed.time}</span></div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                {/* Markdown body */}
+                                <div style={{ margin: '24px 0' }}>
+                                    {renderMarkdown(parsed.body)}
+                                </div>
+
+                                {/* Bottom navigation action bars */}
+                                <div style={{ 
+                                    marginTop: 48,
+                                    paddingTop: 32,
+                                    borderTop: '1px solid rgba(255, 255, 255, 0.08)',
+                                    display: 'flex',
+                                    flexWrap: 'wrap',
+                                    alignItems: 'center',
+                                    justifyContent: 'space-between',
+                                    gap: 16,
+                                    paddingBottom: 80
+                                }}>
+                                    <div style={{ display: 'flex', gap: 12 }}>
+                                        <button
+                                            onClick={() => {
+                                                triggerFeedback('light');
+                                                onToggleComplete(activeLesson);
+                                            }}
+                                            style={{
+                                                display: 'inline-flex',
+                                                alignItems: 'center',
+                                                gap: 8,
+                                                padding: '12px 20px',
+                                                borderRadius: 10,
+                                                border: `1px solid ${isCurrentCompleted ? AppleColors.green : 'rgba(255, 255, 255, 0.08)'}`,
+                                                background: isCurrentCompleted ? 'rgba(52, 199, 89, 0.12)' : 'rgba(255, 255, 255, 0.04)',
+                                                color: isCurrentCompleted ? AppleColors.green : '#fff',
+                                                fontSize: 14,
+                                                fontWeight: 600,
+                                                cursor: 'pointer',
+                                                transition: 'all 0.2s ease',
+                                            }}
+                                        >
+                                            {isCurrentCompleted ? (
+                                                <>
+                                                    <CheckCircle2 size={16} />
+                                                    Completed
+                                                </>
+                                            ) : (
+                                                <>
+                                                    <Circle size={16} />
+                                                    Mark as Complete
+                                                </>
+                                            )}
+                                        </button>
+
+                                        {activeLesson.url && (
+                                            <a
+                                                href={activeLesson.url}
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                onClick={() => triggerFeedback('light')}
+                                                style={{
+                                                    display: 'inline-flex',
+                                                    alignItems: 'center',
+                                                    gap: 8,
+                                                    padding: '12px 20px',
+                                                    borderRadius: 10,
+                                                    border: '1px solid rgba(255, 255, 255, 0.08)',
+                                                    background: 'rgba(255, 255, 255, 0.04)',
+                                                    color: 'rgba(255,255,255,0.8)',
+                                                    fontSize: 14,
+                                                    fontWeight: 600,
+                                                    textDecoration: 'none',
+                                                    transition: 'all 0.2s ease',
+                                                }}
+                                            >
+                                                <ExternalLink size={16} />
+                                                Open on GitHub
+                                            </a>
+                                        )}
+                                    </div>
+
+                                    {nextInfo && (
+                                        <button
+                                            onClick={() => {
+                                                triggerFeedback('light');
+                                                onSelectLesson(nextInfo.lesson, nextInfo.phase);
+                                            }}
+                                            style={{
+                                                display: 'inline-flex',
+                                                alignItems: 'center',
+                                                gap: 8,
+                                                padding: '12px 24px',
+                                                borderRadius: 10,
+                                                border: 'none',
+                                                background: AppleColors.blue,
+                                                color: '#fff',
+                                                fontSize: 14,
+                                                fontWeight: 600,
+                                                cursor: 'pointer',
+                                                transition: 'opacity 0.2s ease',
+                                            }}
+                                        >
+                                            Next Lesson
+                                            <ChevronRight size={16} />
+                                        </button>
+                                    )}
+                                </div>
+                            </>
+                        )
+                    )}
+                </div>
+            </div>
+        </div>
+    );
+}
+
 // Updated: iteration 4
 // Updated: iteration 10
 // Updated: iteration 14
@@ -4718,3 +6263,5 @@ function AIFSLearningWorkspace({
 // Updated: iteration 24
 
 // Updated: iteration 26
+// Updated: iteration 27
+// Updated: iteration 28

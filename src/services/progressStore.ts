@@ -501,3 +501,90 @@ export function isDevRoadmapNodeComplete(roadmapId: string, nodeId: string): boo
 }
 
 
+// ============= AI BEGINNERS PROGRESS =============
+const AI_BEGINNERS_STORAGE_KEY = 'ai_beginners:progress:v1';
+
+export interface AIBeginnersProgressState {
+    lessons: Record<string, AIFSLessonProgress>;
+    updatedAt: number;
+}
+
+export function getAIBeginnersProgress(): AIBeginnersProgressState {
+    try {
+        const stored = localStorage.getItem(AI_BEGINNERS_STORAGE_KEY);
+        return stored ? JSON.parse(stored) : { lessons: {}, updatedAt: 0 };
+    } catch (err) {
+        console.error('Failed to load AI Beginners progress:', err);
+        return { lessons: {}, updatedAt: 0 };
+    }
+}
+
+export function saveAIBeginnersProgress(state: AIBeginnersProgressState): void {
+    try {
+        state.updatedAt = Date.now();
+        localStorage.setItem(AI_BEGINNERS_STORAGE_KEY, JSON.stringify(state));
+        localStorage.setItem('elite_roadmap_last_updated', new Date().toISOString());
+    } catch (err) {
+        console.error('Failed to save AI Beginners progress:', err);
+    }
+}
+
+export function setAIBeginnersLessonStatus(lessonPath: string, completed: boolean): void {
+    const state = getAIBeginnersProgress();
+    if (!state.lessons[lessonPath]) {
+        state.lessons[lessonPath] = { completedAt: null };
+    }
+    state.lessons[lessonPath].completedAt = completed ? Date.now() : null;
+    saveAIBeginnersProgress(state);
+}
+
+export function isAIBeginnersLessonComplete(lessonPath: string): boolean {
+    const state = getAIBeginnersProgress();
+    return !!state.lessons[lessonPath]?.completedAt;
+}
+
+
+// ============= MADE WITH ML PROGRESS =============
+const MADE_WITH_ML_STORAGE_KEY = 'made_with_ml:progress:v1';
+
+export interface MadeWithMlProgressState {
+    lessons: Record<string, AIFSLessonProgress>;
+    updatedAt: number;
+}
+
+export function getMadeWithMlProgress(): MadeWithMlProgressState {
+    try {
+        const stored = localStorage.getItem(MADE_WITH_ML_STORAGE_KEY);
+        return stored ? JSON.parse(stored) : { lessons: {}, updatedAt: 0 };
+    } catch (err) {
+        console.error('Failed to load Made With ML progress:', err);
+        return { lessons: {}, updatedAt: 0 };
+    }
+}
+
+export function saveMadeWithMlProgress(state: MadeWithMlProgressState): void {
+    try {
+        state.updatedAt = Date.now();
+        localStorage.setItem(MADE_WITH_ML_STORAGE_KEY, JSON.stringify(state));
+        localStorage.setItem('elite_roadmap_last_updated', new Date().toISOString());
+    } catch (err) {
+        console.error('Failed to save Made With ML progress:', err);
+    }
+}
+
+export function setMadeWithMlLessonStatus(lessonPath: string, completed: boolean): void {
+    const state = getMadeWithMlProgress();
+    if (!state.lessons[lessonPath]) {
+        state.lessons[lessonPath] = { completedAt: null };
+    }
+    state.lessons[lessonPath].completedAt = completed ? Date.now() : null;
+    saveMadeWithMlProgress(state);
+}
+
+export function isMadeWithMlLessonComplete(lessonPath: string): boolean {
+    const state = getMadeWithMlProgress();
+    return !!state.lessons[lessonPath]?.completedAt;
+}
+
+
+
