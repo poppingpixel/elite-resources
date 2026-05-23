@@ -3,6 +3,7 @@ import { Search, ExternalLink, Youtube, Globe, BookOpen, FileText, GraduationCap
 import { RESOURCES, CATEGORIES, type Resource, type Category } from './data';
 import IncomeTracker from './IncomeTracker';
 import Roadmap from './Roadmap';
+
 import {
   fetchChannelThumbnail, getCachedChannelThumbnail,
   loadCachedThumbnails, isYouTubeSearch, isYouTubeChannel
@@ -376,6 +377,7 @@ function App() {
           <DollarSign size={18} />
           <span>Income</span>
         </button>
+
       </nav>
 
       {/* Conditional Content Based on Active View */}
