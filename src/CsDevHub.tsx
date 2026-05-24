@@ -655,23 +655,70 @@ export default function CsDevHub() {
   // Fullscreen event listener
   useEffect(() => {
     const handleFullscreenChange = () => {
-      setIsFullscreen(!!document.fullscreenElement);
+      const isFull = !!(
+        document.fullscreenElement ||
+        (document as any).webkitFullscreenElement ||
+        (document as any).mozFullScreenElement ||
+        (document as any).msFullscreenElement
+      );
+      setIsFullscreen(isFull);
     };
     document.addEventListener('fullscreenchange', handleFullscreenChange);
-    return () => document.removeEventListener('fullscreenchange', handleFullscreenChange);
+    document.addEventListener('webkitfullscreenchange', handleFullscreenChange);
+    document.addEventListener('mozfullscreenchange', handleFullscreenChange);
+    document.addEventListener('MSFullscreenChange', handleFullscreenChange);
+    return () => {
+      document.removeEventListener('fullscreenchange', handleFullscreenChange);
+      document.removeEventListener('webkitfullscreenchange', handleFullscreenChange);
+      document.removeEventListener('mozfullscreenchange', handleFullscreenChange);
+      document.removeEventListener('MSFullscreenChange', handleFullscreenChange);
+    };
   }, []);
 
   const toggleFullscreen = useCallback(() => {
-    const rootEl = document.querySelector('.cs-hub-root');
+    const rootEl = document.querySelector('.cs-hub-root') as any;
     if (!rootEl) return;
-    if (!document.fullscreenElement) {
-      rootEl.requestFullscreen().catch(() => {
+
+    const doc = document as any;
+    const isCurrentlyFullscreen = !!(
+      doc.fullscreenElement ||
+      doc.webkitFullscreenElement ||
+      doc.mozFullScreenElement ||
+      doc.msFullscreenElement
+    );
+
+    if (!isCurrentlyFullscreen) {
+      if (rootEl.requestFullscreen) {
+        rootEl.requestFullscreen().catch(() => setIsFullscreen(true));
+      } else if (rootEl.webkitRequestFullscreen) {
+        rootEl.webkitRequestFullscreen();
         setIsFullscreen(true);
-      });
+      } else if (rootEl.mozRequestFullScreen) {
+        rootEl.mozRequestFullScreen();
+        setIsFullscreen(true);
+      } else if (rootEl.msRequestFullscreen) {
+        rootEl.msRequestFullscreen();
+        setIsFullscreen(true);
+      } else {
+        // Fallback for iOS / mobile browsers without native fullscreen
+        setIsFullscreen(true);
+      }
     } else {
-      document.exitFullscreen().catch(() => {
+      if (doc.exitFullscreen) {
+        doc.exitFullscreen().catch(() => setIsFullscreen(false));
+      } else if (doc.webkitExitFullscreen) {
+        doc.webkitExitFullscreen();
         setIsFullscreen(false);
-      });
+      } else if (doc.mozCancelFullScreen) {
+        doc.mozCancelFullScreen();
+        setIsFullscreen(false);
+      } else if (doc.msExitFullscreen) {
+        doc.msExitFullscreen();
+        setIsFullscreen(false);
+      } else {
+        // Fallback for iOS / mobile browsers
+        setIsFullscreen(false);
+      }
     }
   }, []);
 
@@ -1616,31 +1663,54 @@ export default function CsDevHub() {
           /* Mobile Browser Header - Reflows layout to fit 100% screen width */
           .cs-browser-header {
             flex-wrap: wrap !important;
-            padding: 8px 12px !important;
-            gap: 8px !important;
+            padding: 10px 12px !important;
+            gap: 10px !important;
           }
           .cs-mac-buttons {
             display: none !important; /* Hide traffic lights on small viewports */
           }
-          .cs-browser-nav-arrows {
-            order: 1 !important;
-          }
-          .cs-browser-modes {
+          .cs-browser-mobile-close {
+            display: block !important;
+            background: rgba(255,255,255,0.08) !important;
+            border: 1px solid rgba(255,255,255,0.12) !important;
+            color: #fff !important;
+            border-radius: 6px !important;
+            padding: 4px 10px !important;
+            font-size: 11px !important;
+            font-weight: 600 !important;
+            cursor: pointer !important;
             order: 2 !important;
             margin-left: auto !important;
           }
+          .cs-browser-nav-arrows {
+            order: 1 !important;
+            display: flex !important;
+            align-items: center !important;
+          }
+          .cs-browser-modes {
+            order: 3 !important;
+            width: 100% !important;
+            display: flex !important;
+            justify-content: space-between !important;
+            margin-top: 4px !important;
+            margin-left: 0 !important;
+          }
           .cs-mode-btn {
-            padding: 3px 6px !important;
-            font-size: 10px !important;
+            flex: 1 !important;
+            text-align: center !important;
+            padding: 4px 2px !important;
+            font-size: 9px !important;
           }
           .cs-browser-address-bar {
-            order: 3 !important;
+            order: 4 !important;
             flex: 1 1 100% !important;
             font-size: 10px !important;
             padding: 4px 8px !important;
+            width: 100% !important;
+            margin-top: 4px !important;
           }
           .cs-browser-actions {
-            order: 4 !important;
+            order: 5 !important;
             display: none !important; /* Hide external action in favor of clean touch overlay */
           }
           
@@ -1837,6 +1907,10 @@ export default function CsDevHub() {
           color: #fff;
           box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2), 0 0 0 1px rgba(255, 255, 255, 0.05);
           font-weight: 600;
+        }
+
+        .cs-browser-mobile-close {
+          display: none;
         }
 
         /* ── macOS Safari-style Preview Browser ── */
@@ -2156,6 +2230,14 @@ export default function CsDevHub() {
             onClick={e => e.stopPropagation()}
           >
             <div className="cs-browser-header">
+              {/* Mobile Close Button */}
+              <button 
+                className="cs-browser-mobile-close"
+                onClick={closeBrowser}
+                title="Close Browser"
+              >
+                Close
+              </button>
               {/* macOS Window Controls */}
               <div className="cs-mac-buttons">
                 <button className="cs-mac-btn close" onClick={closeBrowser} title="Close Browser"></button>

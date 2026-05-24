@@ -2,7 +2,7 @@ import { useState, useMemo, useEffect, useCallback, useRef } from 'react';
 import {
     Target, BookOpen, Brain, Trophy, ChevronRight, Search, X,
     Clock, Zap, Play, Minus, Plus, FileText, ExternalLink, Sparkles,
-    Cpu, Terminal, CheckCircle2, Circle, Map, ArrowLeft, Code2
+    Cpu, Terminal, CheckCircle2, Circle, Map, ArrowLeft, Code2, Menu
 } from 'lucide-react';
 import CsDevHub from './CsDevHub';
 import { ALL_AI_TOPICS, type AITopic } from './data/aiTopics';
@@ -3553,6 +3553,109 @@ export default function Roadmap() {
                         grid-template-columns: repeat(3, 1fr) !important;
                     }
                 }
+
+                /* ── Learning Workspace Responsive Framework ── */
+                .learning-workspace-container {
+                    position: fixed;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    z-index: 1000;
+                    background: #07080a;
+                    display: flex;
+                    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+                }
+                .learning-sidebar {
+                    width: 280px;
+                    height: 100%;
+                    background: rgba(15, 17, 23, 0.95);
+                    border-right: 1px solid rgba(255, 255, 255, 0.08);
+                    display: flex;
+                    flex-direction: column;
+                    overflow: hidden;
+                    z-index: 10;
+                    transition: left 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
+                }
+                .learning-reader-panel {
+                    flex: 1;
+                    height: 100%;
+                    overflow-y: auto;
+                    position: relative;
+                    background: #0B0D13;
+                    background-image: radial-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+                    background-size: 24px 24px;
+                    padding: 40px 60px;
+                    scroll-behavior: smooth;
+                }
+                .learning-reader-header-mobile {
+                    display: none;
+                }
+
+                @media (max-width: 768px) {
+                    .learning-sidebar {
+                        position: fixed !important;
+                        top: 0 !important;
+                        bottom: 0 !important;
+                        left: -280px !important;
+                        width: 280px !important;
+                        z-index: 10000 !important;
+                        box-shadow: 0 0 30px rgba(0,0,0,0.5) !important;
+                    }
+                    .learning-sidebar.open {
+                        left: 0 !important;
+                    }
+                    .learning-sidebar-overlay {
+                        position: fixed !important;
+                        inset: 0 !important;
+                        z-index: 9999 !important;
+                        background: rgba(0,0,0,0.5) !important;
+                        backdrop-filter: blur(4px) !important;
+                        -webkit-backdrop-filter: blur(4px) !important;
+                    }
+                    .learning-reader-panel {
+                        padding: 72px 16px 40px 16px !important;
+                    }
+                    .learning-reader-header-mobile {
+                        position: fixed !important;
+                        top: 0 !important;
+                        left: 0 !important;
+                        right: 0 !important;
+                        height: 56px !important;
+                        background: rgba(15, 17, 23, 0.8) !important;
+                        backdrop-filter: blur(20px) saturate(180%) !important;
+                        -webkit-backdrop-filter: blur(20px) saturate(180%) !important;
+                        border-bottom: 1px solid rgba(255,255,255,0.08) !important;
+                        display: flex !important;
+                        align-items: center !important;
+                        justify-content: space-between !important;
+                        padding: 0 16px !important;
+                        z-index: 999 !important;
+                    }
+                    .learning-reader-panel h1 {
+                        font-size: 26px !important;
+                    }
+                    .learning-reader-panel blockquote {
+                        font-size: 15px !important;
+                        padding-left: 12px !important;
+                        margin-left: 0 !important;
+                        margin-right: 0 !important;
+                    }
+                    .learning-reader-footer-nav {
+                        flex-direction: column !important;
+                        gap: 12px !important;
+                        align-items: stretch !important;
+                    }
+                    .learning-reader-footer-nav > div {
+                        flex-direction: column !important;
+                        gap: 8px !important;
+                        width: 100% !important;
+                    }
+                    .learning-reader-footer-nav button, .learning-reader-footer-nav a {
+                        width: 100% !important;
+                        justify-content: center !important;
+                    }
+                }
             `}</style>
 
             {/* Progress Overview */}
@@ -5426,6 +5529,7 @@ function AIFSLearningWorkspace({
     const [lessonMd, setLessonMd] = useState<string | null>(null);
     const [isMdLoading, setIsMdLoading] = useState(false);
     const [quizData, setQuizData] = useState<any | null>(null);
+    const [isSidebarOpen, setIsSidebarOpen] = useState(false);
     const readerPanelRef = useRef<HTMLDivElement>(null);
 
     const relativePath = extractAIFSPath(activeLesson.url);
@@ -5516,28 +5620,17 @@ function AIFSLearningWorkspace({
     const nextInfo = getNextLesson();
 
     return (
-        <div style={{
-            position: 'fixed',
-            top: 0,
-            left: 0,
-            right: 0,
-            bottom: 0,
-            zIndex: 1000,
-            background: '#07080a',
-            display: 'flex',
-            fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif',
-        }}>
+        <div className="learning-workspace-container">
+            {/* Sidebar mobile overlay background click catcher */}
+            {isSidebarOpen && (
+                <div 
+                    className="learning-sidebar-overlay"
+                    onClick={() => setIsSidebarOpen(false)}
+                />
+            )}
+
             {/* Sidebar */}
-            <div style={{
-                width: 280,
-                height: '100%',
-                background: 'rgba(15, 17, 23, 0.95)',
-                borderRight: '1px solid rgba(255, 255, 255, 0.08)',
-                display: 'flex',
-                flexDirection: 'column',
-                overflow: 'hidden',
-                zIndex: 10,
-            }}>
+            <div className={`learning-sidebar ${isSidebarOpen ? 'open' : ''}`}>
                 <div style={{
                     padding: '20px 16px',
                     borderBottom: '1px solid rgba(255, 255, 255, 0.08)',
@@ -5691,18 +5784,43 @@ function AIFSLearningWorkspace({
             {/* Reader Panel */}
             <div 
                 ref={readerPanelRef}
-                style={{
-                    flex: 1,
-                    height: '100%',
-                    overflowY: 'auto',
-                    position: 'relative',
-                    background: '#0B0D13',
-                    backgroundImage: 'radial-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px)',
-                    backgroundSize: '24px 24px',
-                    padding: '40px 60px',
-                    scrollBehavior: 'smooth',
-                }}
+                className="learning-reader-panel"
             >
+                {/* Mobile Sticky Header */}
+                <div className="learning-reader-header-mobile">
+                    <button 
+                        onClick={() => setIsSidebarOpen(true)}
+                        style={{
+                            background: 'none',
+                            border: 'none',
+                            color: AppleColors.blue,
+                            fontSize: 14,
+                            fontWeight: 600,
+                            cursor: 'pointer',
+                            display: 'flex',
+                            alignItems: 'center',
+                            gap: 6
+                        }}
+                    >
+                        <Menu size={18} />
+                        Outline
+                    </button>
+                    <button
+                        onClick={onClose}
+                        style={{
+                            background: 'rgba(255,255,255,0.05)',
+                            border: '1px solid rgba(255,255,255,0.08)',
+                            color: '#fff',
+                            padding: '6px 12px',
+                            borderRadius: 8,
+                            fontSize: 12,
+                            fontWeight: 600,
+                            cursor: 'pointer'
+                        }}
+                    >
+                        Close
+                    </button>
+                </div>
                 {/* Neon Glow backdrop */}
                 <div style={{
                     position: 'absolute',
@@ -5860,7 +5978,7 @@ function AIFSLearningWorkspace({
                                 )}
 
                                 {/* Bottom navigation action bars */}
-                                <div style={{ 
+                                <div className="learning-reader-footer-nav" style={{ 
                                     marginTop: 48,
                                     paddingTop: 32,
                                     borderTop: '1px solid rgba(255, 255, 255, 0.08)',
@@ -5871,7 +5989,7 @@ function AIFSLearningWorkspace({
                                     gap: 16,
                                     paddingBottom: 80
                                 }}>
-                                    <div style={{ display: 'flex', gap: 12 }}>
+                                    <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap' }}>
                                         <button
                                             onClick={() => {
                                                 triggerFeedback('light');
@@ -6028,6 +6146,7 @@ function CourseLearningWorkspace({
 }: CourseLearningWorkspaceProps) {
     const [lessonMd, setLessonMd] = useState<string | null>(null);
     const [isMdLoading, setIsMdLoading] = useState(false);
+    const [isSidebarOpen, setIsSidebarOpen] = useState(false);
     const readerPanelRef = useRef<HTMLDivElement>(null);
 
     const relativePath = getCourseLessonPath(activeLesson);
@@ -6102,26 +6221,17 @@ function CourseLearningWorkspace({
     const nextInfo = getNextLesson();
 
     return (
-        <div style={{
-            position: 'fixed',
-            top: 0,
-            left: 0,
-            right: 0,
-            bottom: 0,
-            zIndex: 1000,
-            background: '#07080a',
-            display: 'flex',
-            fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif',
-        }}>
+        <div className="learning-workspace-container">
+            {/* Sidebar mobile overlay background click catcher */}
+            {isSidebarOpen && (
+                <div 
+                    className="learning-sidebar-overlay"
+                    onClick={() => setIsSidebarOpen(false)}
+                />
+            )}
+
             {/* Sidebar */}
-            <div style={{
-                width: 280,
-                height: '100%',
-                background: 'rgba(15, 17, 23, 0.95)',
-                borderRight: '1px solid rgba(255, 255, 255, 0.08)',
-                display: 'flex',
-                flexDirection: 'column',
-            }}>
+            <div className={`learning-sidebar ${isSidebarOpen ? 'open' : ''}`}>
                 <div style={{
                     padding: '24px 16px 16px',
                     borderBottom: '1px solid rgba(255, 255, 255, 0.08)',
@@ -6273,18 +6383,43 @@ function CourseLearningWorkspace({
             {/* Reader Panel */}
             <div 
                 ref={readerPanelRef}
-                style={{
-                    flex: 1,
-                    height: '100%',
-                    overflowY: 'auto',
-                    position: 'relative',
-                    background: '#0B0D13',
-                    backgroundImage: 'radial-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px)',
-                    backgroundSize: '24px 24px',
-                    padding: '40px 60px',
-                    scrollBehavior: 'smooth',
-                }}
+                className="learning-reader-panel"
             >
+                {/* Mobile Sticky Header */}
+                <div className="learning-reader-header-mobile">
+                    <button 
+                        onClick={() => setIsSidebarOpen(true)}
+                        style={{
+                            background: 'none',
+                            border: 'none',
+                            color: AppleColors.blue,
+                            fontSize: 14,
+                            fontWeight: 600,
+                            cursor: 'pointer',
+                            display: 'flex',
+                            alignItems: 'center',
+                            gap: 6
+                        }}
+                    >
+                        <Menu size={18} />
+                        Outline
+                    </button>
+                    <button
+                        onClick={onClose}
+                        style={{
+                            background: 'rgba(255,255,255,0.05)',
+                            border: '1px solid rgba(255,255,255,0.08)',
+                            color: '#fff',
+                            padding: '6px 12px',
+                            borderRadius: 8,
+                            fontSize: 12,
+                            fontWeight: 600,
+                            cursor: 'pointer'
+                        }}
+                    >
+                        Close
+                    </button>
+                </div>
                 {/* Neon Glow backdrop */}
                 <div style={{
                     position: 'absolute',
@@ -6376,7 +6511,7 @@ function CourseLearningWorkspace({
                                 </div>
 
                                 {/* Bottom navigation action bars */}
-                                <div style={{ 
+                                <div className="learning-reader-footer-nav" style={{ 
                                     marginTop: 48,
                                     paddingTop: 32,
                                     borderTop: '1px solid rgba(255, 255, 255, 0.08)',
@@ -6387,7 +6522,7 @@ function CourseLearningWorkspace({
                                     gap: 16,
                                     paddingBottom: 80
                                 }}>
-                                    <div style={{ display: 'flex', gap: 12 }}>
+                                    <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap' }}>
                                         <button
                                             onClick={() => {
                                                 triggerFeedback('light');
