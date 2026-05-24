@@ -1551,10 +1551,151 @@ export default function CsDevHub() {
           border: 1px solid rgba(52,211,153,0.15);
         }
 
-        /* Responsive */
-        @media (max-width: 800px) {
-          .cs-sidebar { width: 0; }
-          .cs-content-inner { padding: 24px 20px 60px; }
+        /* Responsive Media Queries - Complete Mobile & Tablet Optimization */
+        @media (max-width: 768px) {
+          /* Sidebar handles collapse */
+          .cs-sidebar { width: 0 !important; border-right: none !important; }
+          .cs-sidebar.collapsed { width: 0 !important; }
+          
+          /* Reading panel adjustments */
+          .cs-content-inner {
+            padding: 24px 16px 80px !important;
+            max-width: 100% !important;
+          }
+          .cs-content-inner h1.cs-h1 { font-size: 1.6rem !important; margin-bottom: 20px !important; }
+          .cs-content-inner h2.cs-h2 { font-size: 1.25rem !important; margin: 32px 0 12px !important; }
+          .cs-content-inner h3.cs-h3 { font-size: 1.05rem !important; margin: 24px 0 10px !important; }
+          .cs-content-inner p, .cs-content-inner li.cs-list-item { font-size: 0.875rem !important; line-height: 1.7 !important; }
+          
+          /* Repo tabs - compact and scrollable */
+          .cs-repo-tab {
+            padding: 10px 14px !important;
+            font-size: 12px !important;
+            gap: 6px !important;
+          }
+          .cs-repo-tab .tab-icon { font-size: 14px !important; }
+          
+          /* Main Toolbar - stacks cleanly */
+          .cs-toolbar {
+            flex-wrap: wrap !important;
+            gap: 8px !important;
+            padding: 8px 12px !important;
+          }
+          .cs-search-bar {
+            max-width: 100% !important;
+            flex: 1 1 100% !important;
+            order: 1 !important;
+          }
+          .cs-toolbar-btn {
+            padding: 5px 10px !important;
+            font-size: 11px !important;
+            flex-grow: 1 !important;
+            justify-content: center !important;
+            order: 2 !important;
+          }
+          .cs-check-badge {
+            order: 3 !important;
+            flex-grow: 1 !important;
+            justify-content: center !important;
+            font-size: 10px !important;
+            padding: 4px 8px !important;
+          }
+          .cs-progress-pill {
+            order: 4 !important;
+            flex-grow: 1 !important;
+            justify-content: center !important;
+            font-size: 11px !important;
+          }
+          .cs-progress-pill .cs-pill-bar {
+            width: 50px !important;
+          }
+          .cs-github-link {
+            display: none !important; /* Hide redundant links on mobile screen */
+          }
+          
+          /* Mobile Browser Header - Reflows layout to fit 100% screen width */
+          .cs-browser-header {
+            flex-wrap: wrap !important;
+            padding: 8px 12px !important;
+            gap: 8px !important;
+          }
+          .cs-mac-buttons {
+            display: none !important; /* Hide traffic lights on small viewports */
+          }
+          .cs-browser-nav-arrows {
+            order: 1 !important;
+          }
+          .cs-browser-modes {
+            order: 2 !important;
+            margin-left: auto !important;
+          }
+          .cs-mode-btn {
+            padding: 3px 6px !important;
+            font-size: 10px !important;
+          }
+          .cs-browser-address-bar {
+            order: 3 !important;
+            flex: 1 1 100% !important;
+            font-size: 10px !important;
+            padding: 4px 8px !important;
+          }
+          .cs-browser-actions {
+            order: 4 !important;
+            display: none !important; /* Hide external action in favor of clean touch overlay */
+          }
+          
+          /* Browser Window margins */
+          .cs-browser-window {
+            width: 100vw !important;
+            height: 92vh !important;
+            border-radius: 12px 12px 0 0 !important;
+            position: fixed !important;
+            bottom: 0 !important;
+            border-left: none !important;
+            border-right: none !important;
+            border-bottom: none !important;
+          }
+          .cs-browser-overlay {
+            padding: 0 !important;
+            align-items: flex-end !important;
+          }
+          
+          /* Code blocks overflow handles */
+          .cs-code-block code {
+            padding: 12px !important;
+            font-size: 0.75rem !important;
+          }
+          .cs-code-header {
+            padding: 6px 10px !important;
+          }
+          .cs-lang-tag {
+            font-size: 10px !important;
+          }
+          
+          /* Mobile tables fluid wrap */
+          .cs-table-wrap {
+            margin: 12px 0 !important;
+          }
+          .cs-th, .cs-td {
+            padding: 8px 10px !important;
+            font-size: 11px !important;
+          }
+          
+          /* Checkboxes */
+          .cs-checkbox-custom {
+            width: 15px !important;
+            height: 15px !important;
+            margin-top: 2px !important;
+          }
+          .cs-task-text {
+            font-size: 0.85rem !important;
+          }
+          .cs-checkbox:checked + .cs-checkbox-custom::after {
+            left: 2.5px !important;
+            top: 0.5px !important;
+            width: 6px !important;
+            height: 3px !important;
+          }
         }
 
         /* Strong/em */

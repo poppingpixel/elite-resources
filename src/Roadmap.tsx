@@ -3274,36 +3274,289 @@ export default function Roadmap() {
                     gap: 16px;
                     padding-bottom: 40px;
                 }
+                .roadmap-stats-grid {
+                    display: grid;
+                    grid-template-columns: repeat(3, 1fr);
+                    gap: 16px;
+                    margin-bottom: 32px;
+                }
+                
+                /* Responsive Tab Scroll Container */
+                .roadmap-tabs-scroll-container {
+                    display: flex;
+                    justify-content: center;
+                    margin-bottom: 24px;
+                    overflow-x: auto;
+                    padding-bottom: 8px;
+                    -webkit-overflow-scrolling: touch;
+                    width: 100%;
+                }
+                .roadmap-tabs-inner {
+                    display: inline-flex;
+                    background: var(--glass-bg);
+                    backdrop-filter: blur(20px) saturate(180%);
+                    -webkit-backdrop-filter: blur(20px) saturate(180%);
+                    border-radius: 16px;
+                    padding: 6px;
+                    gap: 6px;
+                }
+
+                /* Stats Headers Responsive */
+                .responsive-header-bar {
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    justify-content: space-between;
+                    gap: 20px;
+                    flex-wrap: wrap;
+                }
+                .responsive-header-info {
+                    display: flex;
+                    align-items: center;
+                    gap: 16px;
+                }
+                .responsive-header-actions {
+                    display: flex;
+                    gap: 12px;
+                }
+
+                /* Phase Accordion Headers Responsive */
+                .responsive-phase-header {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    gap: 12px;
+                    width: 100%;
+                }
+                .responsive-phase-title-container {
+                    display: flex;
+                    align-items: center;
+                    gap: 12px;
+                    flex: 1;
+                    min-width: 0;
+                }
+                .responsive-phase-name {
+                    font-size: 17px;
+                    font-weight: 700;
+                    color: var(--text-primary);
+                    margin-top: 2px;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                }
+
+                /* Lesson Cards & Rows Responsive */
+                .responsive-lesson-row {
+                    display: flex;
+                    flex-direction: row;
+                    align-items: flex-start;
+                    justify-content: space-between;
+                    gap: 12px;
+                    width: 100%;
+                }
+                .responsive-lesson-left {
+                    display: flex;
+                    align-items: flex-start;
+                    gap: 10px;
+                    flex: 1;
+                    min-width: 0;
+                }
+                .responsive-lesson-right {
+                    display: flex;
+                    align-items: center;
+                    gap: 8px;
+                    flex-shrink: 0;
+                }
+
+                /* Glossary Columns Responsive */
+                .responsive-glossary-row {
+                    display: flex;
+                    gap: 24px;
+                    flex-wrap: wrap;
+                }
+                .responsive-glossary-says {
+                    flex: 1;
+                    min-width: 200px;
+                }
+                .responsive-glossary-means {
+                    flex: 1.5;
+                    min-width: 280px;
+                }
+
+                /* Dev Roadmap Responsive */
+                .responsive-dev-roadmap-selector {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 6px;
+                    min-width: 200px;
+                }
+                .responsive-dev-topic-header {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    gap: 12px;
+                }
+                .responsive-dev-topic-left {
+                    display: flex;
+                    align-items: center;
+                    gap: 12px;
+                    flex: 1;
+                    min-width: 0;
+                }
+                .responsive-dev-topic-title-container {
+                    display: flex;
+                    align-items: center;
+                    gap: 8px;
+                    flex-wrap: wrap;
+                }
+                .responsive-dev-topic-label {
+                    font-size: 17px;
+                    font-weight: 700;
+                    color: var(--text-primary);
+                    cursor: pointer;
+                }
+                .responsive-dev-topic-right {
+                    display: flex;
+                    align-items: center;
+                    gap: 12px;
+                    flex-shrink: 0;
+                }
+                .responsive-dev-subtopic-label {
+                    font-size: 14px;
+                    font-weight: 500;
+                    color: var(--text-primary);
+                    cursor: pointer;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                }
+
                 /* Mobile (Phones) */
-                @media (max-width: 640px) {
+                @media (max-width: 768px) {
                     .roadmap-grid {
-                        grid-template-columns: 1fr;
+                        grid-template-columns: 1fr !important;
                     }
                     .roadmap-stats-grid {
                         grid-template-columns: 1fr !important;
                     }
+                    
+                    /* Scrollable tabs instead of centering */
+                    .roadmap-tabs-scroll-container {
+                        justify-content: flex-start !important;
+                        padding-left: 16px;
+                        padding-right: 16px;
+                        box-sizing: border-box;
+                    }
+                    .roadmap-tabs-scroll-container::-webkit-scrollbar {
+                        display: none;
+                    }
+                    .roadmap-tabs-scroll-container {
+                        scrollbar-width: none;
+                    }
+
+                    /* Header Stats Bar Stack */
+                    .responsive-header-bar {
+                        flex-direction: column !important;
+                        align-items: stretch !important;
+                        gap: 16px !important;
+                    }
+                    .responsive-header-info {
+                        flex-direction: column !important;
+                        align-items: center !important;
+                        text-align: center !important;
+                    }
+                    .responsive-header-actions {
+                        justify-content: center !important;
+                        width: 100% !important;
+                    }
+                    .responsive-header-actions > a {
+                        flex: 1 !important;
+                        justify-content: center !important;
+                    }
+
+                    /* Phase Accordions Wraps */
+                    .responsive-phase-header {
+                        flex-direction: column !important;
+                        align-items: flex-start !important;
+                        gap: 10px !important;
+                    }
+                    .responsive-phase-title-container {
+                        width: 100% !important;
+                    }
+                    .responsive-phase-name {
+                        white-space: normal !important;
+                        font-size: 15px !important;
+                        line-height: 1.3 !important;
+                    }
+
+                    /* Lesson Card Stack and Left Alignments */
+                    .responsive-lesson-row {
+                        flex-direction: column !important;
+                        align-items: stretch !important;
+                        gap: 8px !important;
+                    }
+                    .responsive-lesson-right {
+                        align-self: flex-start !important;
+                        margin-left: 28px !important;
+                    }
+                    
+                    /* Glossary Columns Stack */
+                    .responsive-glossary-row {
+                        flex-direction: column !important;
+                        gap: 16px !important;
+                    }
+                    .responsive-glossary-says, .responsive-glossary-means {
+                        min-width: 100% !important;
+                    }
+
+                    /* Dev Roadmaps Select Stack */
+                    .responsive-dev-roadmap-selector {
+                        min-width: 100% !important;
+                        width: 100% !important;
+                    }
+                    .responsive-dev-topic-header {
+                        flex-direction: column !important;
+                        align-items: flex-start !important;
+                        gap: 10px !important;
+                    }
+                    .responsive-dev-topic-left {
+                        width: 100% !important;
+                    }
+                    .responsive-dev-topic-right {
+                        align-self: flex-end !important;
+                        margin-left: 32px !important;
+                    }
+                    .responsive-dev-topic-label {
+                        font-size: 15px !important;
+                        white-space: normal !important;
+                    }
+                    .responsive-dev-subtopic-label {
+                        white-space: normal !important;
+                    }
                 }
+                
                 /* Tablet */
-                @media (min-width: 641px) and (max-width: 1024px) {
+                @media (min-width: 769px) and (max-width: 1024px) {
                     .roadmap-grid {
-                        grid-template-columns: repeat(2, 1fr);
+                        grid-template-columns: repeat(2, 1fr) !important;
+                    }
+                    .roadmap-stats-grid {
+                        grid-template-columns: repeat(3, 1fr) !important;
                     }
                 }
                 /* Desktop */
                 @media (min-width: 1025px) {
                     .roadmap-grid {
-                        grid-template-columns: repeat(3, 1fr);
+                        grid-template-columns: repeat(3, 1fr) !important;
+                    }
+                    .roadmap-stats-grid {
+                        grid-template-columns: repeat(3, 1fr) !important;
                     }
                 }
             `}</style>
 
             {/* Progress Overview */}
-            <div className="roadmap-stats-grid" style={{
-                display: 'grid',
-                gridTemplateColumns: 'repeat(3, 1fr)',
-                gap: 16,
-                marginBottom: 32,
-            }}>
+            <div className="roadmap-stats-grid">
                 <GlassCard padding={20}>
                     <div style={{ display: 'flex', alignItems: 'center', gap: 16 }}>
                         <ProgressRing
@@ -3384,22 +3637,8 @@ export default function Roadmap() {
             </div>
 
             {/* Tab Navigation */}
-            <div style={{
-                display: 'flex',
-                justifyContent: 'center',
-                marginBottom: 24,
-                overflowX: 'auto',
-                paddingBottom: 4,
-            }}>
-                <div style={{
-                    display: 'inline-flex',
-                    background: AppleColors.glass,
-                    backdropFilter: 'blur(20px) saturate(180%)',
-                    WebkitBackdropFilter: 'blur(20px) saturate(180%)',
-                    borderRadius: 16,
-                    padding: 6,
-                    gap: 6,
-                }}>
+            <div className="roadmap-tabs-scroll-container">
+                <div className="roadmap-tabs-inner">
                     {tabs.map(tab => (
                         <button
                             key={tab.id}
@@ -3572,8 +3811,8 @@ export default function Roadmap() {
                 <div style={{ display: 'flex', flexDirection: 'column', gap: 24, paddingBottom: 60 }}>
                     {/* Header stats bar */}
                     <GlassCard padding={20}>
-                        <div style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', justifyContent: 'space-between', gap: 20 }}>
-                            <div style={{ display: 'flex', alignItems: 'center', gap: 16 }}>
+                        <div className="responsive-header-bar">
+                            <div className="responsive-header-info">
                                 <ProgressRing progress={(aifsProgress.completed / aifsProgress.total) * 100} color={AppleColors.blue} size={70} strokeWidth={6} />
                                 <div>
                                     <h3 style={{ fontSize: 18, fontWeight: 700, color: AppleColors.labelPrimary, marginBottom: 4 }}>
@@ -3584,7 +3823,7 @@ export default function Roadmap() {
                                     </p>
                                 </div>
                             </div>
-                            <div style={{ display: 'flex', gap: 12 }}>
+                            <div className="responsive-header-actions">
                                 <a 
                                     href="https://github.com/rohitg00/ai-engineering-from-scratch"
                                     target="_blank"
@@ -3647,15 +3886,10 @@ export default function Roadmap() {
                                         {/* Phase Accordion Header */}
                                         <div 
                                             onClick={() => togglePhase(phase.id)}
-                                            style={{ 
-                                                display: 'flex', 
-                                                alignItems: 'center', 
-                                                justifyContent: 'space-between', 
-                                                cursor: 'pointer',
-                                                userSelect: 'none'
-                                            }}
+                                            className="responsive-phase-header"
+                                            style={{ cursor: 'pointer', userSelect: 'none' }}
                                         >
-                                            <div style={{ display: 'flex', alignItems: 'center', gap: 12, flex: 1, minWidth: 0 }}>
+                                            <div className="responsive-phase-title-container">
                                                 <div style={{ transform: 'scale(0.8)', flexShrink: 0 }}>
                                                     <ProgressRing 
                                                         progress={phasePercentage} 
@@ -3665,19 +3899,19 @@ export default function Roadmap() {
                                                         showLabel={false} 
                                                     />
                                                 </div>
-                                                <div style={{ minWidth: 0 }}>
+                                                <div style={{ minWidth: 0, flex: 1 }}>
                                                     <div style={{ display: 'flex', alignItems: 'center', gap: 8, flexWrap: 'wrap' }}>
                                                         <span style={{ fontSize: 13, fontWeight: 700, color: AppleColors.blue, textTransform: 'uppercase', letterSpacing: 0.5 }}>
                                                             Phase {phase.id}
                                                         </span>
                                                         <StatusPill status={phaseStatus} />
                                                     </div>
-                                                    <h3 style={{ fontSize: 17, fontWeight: 700, color: AppleColors.labelPrimary, marginTop: 2, overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>
+                                                    <h3 className="responsive-phase-name">
                                                         {phase.name}
                                                     </h3>
                                                 </div>
                                             </div>
-                                            <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
+                                            <div style={{ display: 'flex', alignItems: 'center', gap: 12, flexShrink: 0 }}>
                                                 <span style={{ fontSize: 13, color: AppleColors.labelSecondary, fontWeight: 500 }}>
                                                     {completedInPhase}/{totalLessons} lessons
                                                 </span>
@@ -3730,8 +3964,8 @@ export default function Roadmap() {
                                                                     transition: 'background 0.2s ease',
                                                                 }}
                                                             >
-                                                                <div style={{ display: 'flex', alignItems: 'flex-start', justifyContent: 'space-between', gap: 12 }}>
-                                                                    <div style={{ display: 'flex', alignItems: 'flex-start', gap: 10, flex: 1 }}>
+                                                                <div className="responsive-lesson-row">
+                                                                    <div className="responsive-lesson-left">
                                                                         <button 
                                                                             onClick={(e) => {
                                                                                 e.stopPropagation();
@@ -3785,7 +4019,7 @@ export default function Roadmap() {
                                                                             </p>
                                                                         </div>
                                                                     </div>
-                                                                    <div style={{ display: 'flex', alignItems: 'center', gap: 8, flexShrink: 0 }}>
+                                                                    <div className="responsive-lesson-right">
                                                                         <span style={{ fontSize: 11, fontFamily: 'monospace', color: AppleColors.labelSecondary }}>
                                                                             {lesson.lang}
                                                                         </span>
@@ -3840,8 +4074,8 @@ export default function Roadmap() {
                 <div style={{ display: 'flex', flexDirection: 'column', gap: 24, paddingBottom: 60 }}>
                     {/* Header stats bar */}
                     <GlassCard padding={20}>
-                        <div style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', justifyContent: 'space-between', gap: 20 }}>
-                            <div style={{ display: 'flex', alignItems: 'center', gap: 16 }}>
+                        <div className="responsive-header-bar">
+                            <div className="responsive-header-info">
                                 <ProgressRing progress={(aiBeginnersProgress.completed / aiBeginnersProgress.total) * 100} color={AppleColors.blue} size={70} strokeWidth={6} />
                                 <div>
                                     <h3 style={{ fontSize: 18, fontWeight: 700, color: AppleColors.labelPrimary, marginBottom: 4 }}>
@@ -3852,7 +4086,7 @@ export default function Roadmap() {
                                     </p>
                                 </div>
                             </div>
-                            <div style={{ display: 'flex', gap: 12 }}>
+                            <div className="responsive-header-actions">
                                 <a 
                                     href="https://github.com/microsoft/AI-For-Beginners"
                                     target="_blank"
@@ -3915,15 +4149,10 @@ export default function Roadmap() {
                                         {/* Phase Accordion Header */}
                                         <div 
                                             onClick={() => toggleAIBeginnersPhase(phase.id)}
-                                            style={{ 
-                                                display: 'flex', 
-                                                alignItems: 'center', 
-                                                justifyContent: 'space-between', 
-                                                cursor: 'pointer',
-                                                userSelect: 'none'
-                                            }}
+                                            className="responsive-phase-header"
+                                            style={{ cursor: 'pointer', userSelect: 'none' }}
                                         >
-                                            <div style={{ display: 'flex', alignItems: 'center', gap: 12, flex: 1, minWidth: 0 }}>
+                                            <div className="responsive-phase-title-container">
                                                 <div style={{ transform: 'scale(0.8)', flexShrink: 0 }}>
                                                     <ProgressRing 
                                                         progress={phasePercentage} 
@@ -3933,19 +4162,19 @@ export default function Roadmap() {
                                                         showLabel={false} 
                                                     />
                                                 </div>
-                                                <div style={{ minWidth: 0 }}>
+                                                <div style={{ minWidth: 0, flex: 1 }}>
                                                     <div style={{ display: 'flex', alignItems: 'center', gap: 8, flexWrap: 'wrap' }}>
                                                         <span style={{ fontSize: 13, fontWeight: 700, color: AppleColors.blue, textTransform: 'uppercase', letterSpacing: 0.5 }}>
                                                             Phase {phase.id}
                                                         </span>
                                                         <StatusPill status={phaseStatus} />
                                                     </div>
-                                                    <h3 style={{ fontSize: 17, fontWeight: 700, color: AppleColors.labelPrimary, marginTop: 2, overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>
+                                                    <h3 className="responsive-phase-name">
                                                         {phase.name}
                                                     </h3>
                                                 </div>
                                             </div>
-                                            <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
+                                            <div style={{ display: 'flex', alignItems: 'center', gap: 12, flexShrink: 0 }}>
                                                 <span style={{ fontSize: 13, color: AppleColors.labelSecondary, fontWeight: 500 }}>
                                                     {completedInPhase}/{totalLessons} lessons
                                                 </span>
@@ -3996,8 +4225,8 @@ export default function Roadmap() {
                                                                     transition: 'background 0.2s ease',
                                                                 }}
                                                             >
-                                                                <div style={{ display: 'flex', alignItems: 'flex-start', justifyContent: 'space-between', gap: 12 }}>
-                                                                    <div style={{ display: 'flex', alignItems: 'flex-start', gap: 10, flex: 1 }}>
+                                                                <div className="responsive-lesson-row">
+                                                                    <div className="responsive-lesson-left">
                                                                         <button 
                                                                             onClick={(e) => {
                                                                                 e.stopPropagation();
@@ -4051,7 +4280,7 @@ export default function Roadmap() {
                                                                             </p>
                                                                         </div>
                                                                     </div>
-                                                                    <div style={{ display: 'flex', alignItems: 'center', gap: 8, flexShrink: 0 }}>
+                                                                    <div className="responsive-lesson-right">
                                                                         <span style={{ fontSize: 11, fontFamily: 'monospace', color: AppleColors.labelSecondary }}>
                                                                             {lesson.lang}
                                                                         </span>
@@ -4106,8 +4335,8 @@ export default function Roadmap() {
                 <div style={{ display: 'flex', flexDirection: 'column', gap: 24, paddingBottom: 60 }}>
                     {/* Header stats bar */}
                     <GlassCard padding={20}>
-                        <div style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', justifyContent: 'space-between', gap: 20 }}>
-                            <div style={{ display: 'flex', alignItems: 'center', gap: 16 }}>
+                        <div className="responsive-header-bar">
+                            <div className="responsive-header-info">
                                 <ProgressRing progress={(madeWithMlProgress.completed / madeWithMlProgress.total) * 100} color={AppleColors.blue} size={70} strokeWidth={6} />
                                 <div>
                                     <h3 style={{ fontSize: 18, fontWeight: 700, color: AppleColors.labelPrimary, marginBottom: 4 }}>
@@ -4118,7 +4347,7 @@ export default function Roadmap() {
                                     </p>
                                 </div>
                             </div>
-                            <div style={{ display: 'flex', gap: 12 }}>
+                            <div className="responsive-header-actions">
                                 <a 
                                     href="https://github.com/GokuMohandas/Made-With-ML"
                                     target="_blank"
@@ -4181,15 +4410,10 @@ export default function Roadmap() {
                                         {/* Phase Accordion Header */}
                                         <div 
                                             onClick={() => toggleMadeWithMlPhase(phase.id)}
-                                            style={{ 
-                                                display: 'flex', 
-                                                alignItems: 'center', 
-                                                justifyContent: 'space-between', 
-                                                cursor: 'pointer',
-                                                userSelect: 'none'
-                                            }}
+                                            className="responsive-phase-header"
+                                            style={{ cursor: 'pointer', userSelect: 'none' }}
                                         >
-                                            <div style={{ display: 'flex', alignItems: 'center', gap: 12, flex: 1, minWidth: 0 }}>
+                                            <div className="responsive-phase-title-container">
                                                 <div style={{ transform: 'scale(0.8)', flexShrink: 0 }}>
                                                     <ProgressRing 
                                                         progress={phasePercentage} 
@@ -4199,19 +4423,19 @@ export default function Roadmap() {
                                                         showLabel={false} 
                                                     />
                                                 </div>
-                                                <div style={{ minWidth: 0 }}>
+                                                <div style={{ minWidth: 0, flex: 1 }}>
                                                     <div style={{ display: 'flex', alignItems: 'center', gap: 8, flexWrap: 'wrap' }}>
                                                         <span style={{ fontSize: 13, fontWeight: 700, color: AppleColors.blue, textTransform: 'uppercase', letterSpacing: 0.5 }}>
                                                             Phase {phase.id}
                                                         </span>
                                                         <StatusPill status={phaseStatus} />
                                                     </div>
-                                                    <h3 style={{ fontSize: 17, fontWeight: 700, color: AppleColors.labelPrimary, marginTop: 2, overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>
+                                                    <h3 className="responsive-phase-name">
                                                         {phase.name}
                                                     </h3>
                                                 </div>
                                             </div>
-                                            <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
+                                            <div style={{ display: 'flex', alignItems: 'center', gap: 12, flexShrink: 0 }}>
                                                 <span style={{ fontSize: 13, color: AppleColors.labelSecondary, fontWeight: 500 }}>
                                                     {completedInPhase}/{totalLessons} lessons
                                                 </span>
@@ -4262,8 +4486,8 @@ export default function Roadmap() {
                                                                     transition: 'background 0.2s ease',
                                                                 }}
                                                             >
-                                                                <div style={{ display: 'flex', alignItems: 'flex-start', justifyContent: 'space-between', gap: 12 }}>
-                                                                    <div style={{ display: 'flex', alignItems: 'flex-start', gap: 10, flex: 1 }}>
+                                                                <div className="responsive-lesson-row">
+                                                                    <div className="responsive-lesson-left">
                                                                         <button 
                                                                             onClick={(e) => {
                                                                                 e.stopPropagation();
@@ -4317,7 +4541,7 @@ export default function Roadmap() {
                                                                             </p>
                                                                         </div>
                                                                     </div>
-                                                                    <div style={{ display: 'flex', alignItems: 'center', gap: 8, flexShrink: 0 }}>
+                                                                    <div className="responsive-lesson-right">
                                                                         <span style={{ fontSize: 11, fontFamily: 'monospace', color: AppleColors.labelSecondary }}>
                                                                             {lesson.lang}
                                                                         </span>
@@ -4378,8 +4602,8 @@ export default function Roadmap() {
                 <div style={{ display: 'flex', flexDirection: 'column', gap: 24, paddingBottom: 60 }}>
                     {/* Header stats bar */}
                     <GlassCard padding={20}>
-                        <div style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', justifyContent: 'space-between', gap: 20 }}>
-                            <div style={{ display: 'flex', alignItems: 'center', gap: 16 }}>
+                        <div className="responsive-header-bar">
+                            <div className="responsive-header-info">
                                 <ProgressRing 
                                     progress={
                                         roadmapData ? (() => {
@@ -4423,7 +4647,7 @@ export default function Roadmap() {
                             </div>
                             
                             {/* Selector */}
-                            <div style={{ display: 'flex', flexDirection: 'column', gap: 6, minWidth: 200 }}>
+                            <div className="responsive-dev-roadmap-selector">
                                 <label style={{ fontSize: 11, fontWeight: 700, textTransform: 'uppercase', letterSpacing: 0.5, color: AppleColors.labelSecondary }}>
                                     Select Roadmap
                                 </label>
@@ -4497,53 +4721,48 @@ export default function Roadmap() {
                                                         [topic.id]: !prev[topic.id]
                                                     }));
                                                 }}
-                                                style={{ 
-                                                    display: 'flex', 
-                                                    alignItems: 'center', 
-                                                    justifyContent: 'space-between', 
-                                                    cursor: 'pointer',
-                                                    userSelect: 'none'
-                                                }}
+                                                className="responsive-dev-topic-header"
+                                                style={{ cursor: 'pointer', userSelect: 'none' }}
                                             >
-                                                <div style={{ display: 'flex', alignItems: 'center', gap: 12, flex: 1, minWidth: 0 }}>
-                                                    <button
-                                                        onClick={(e) => {
-                                                            e.stopPropagation();
-                                                            triggerFeedback('light');
-                                                            setDevRoadmapNodeStatus(selectedRoadmapId, topic.id, !isTopicChecked);
-                                                            refreshProgress();
-                                                        }}
-                                                        style={{
-                                                            background: 'none',
-                                                            border: 'none',
-                                                            padding: 0,
-                                                            cursor: 'pointer',
-                                                            display: 'inline-flex',
-                                                            flexShrink: 0
-                                                        }}
-                                                    >
-                                                        {isTopicChecked ? (
-                                                            <CheckCircle2 size={20} color={AppleColors.green} />
-                                                        ) : (
-                                                            <Circle size={20} color={AppleColors.labelTertiary} />
-                                                        )}
-                                                    </button>
-                                                    <div style={{ minWidth: 0 }}>
-                                                        <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
-                                                            <span 
-                                                                onClick={(e) => {
-                                                                    e.stopPropagation();
-                                                                    openModal('dev-roadmap-node', { ...topic, roadmapId: selectedRoadmapId, roadmapName: registry.find(r => r.id === selectedRoadmapId)?.title });
-                                                                }}
-                                                                style={{ fontSize: 17, fontWeight: 700, color: AppleColors.labelPrimary, cursor: 'pointer' }}
-                                                            >
-                                                                {topic.label}
-                                                            </span>
-                                                            <StatusPill status={topicStatus} />
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
+                                                <div className="responsive-dev-topic-left">
+                                                     <button
+                                                         onClick={(e) => {
+                                                             e.stopPropagation();
+                                                             triggerFeedback('light');
+                                                             setDevRoadmapNodeStatus(selectedRoadmapId, topic.id, !isTopicChecked);
+                                                             refreshProgress();
+                                                         }}
+                                                         style={{
+                                                             background: 'none',
+                                                             border: 'none',
+                                                             padding: 0,
+                                                             cursor: 'pointer',
+                                                             display: 'inline-flex',
+                                                             flexShrink: 0
+                                                         }}
+                                                     >
+                                                         {isTopicChecked ? (
+                                                             <CheckCircle2 size={20} color={AppleColors.green} />
+                                                         ) : (
+                                                             <Circle size={20} color={AppleColors.labelTertiary} />
+                                                         )}
+                                                     </button>
+                                                     <div style={{ minWidth: 0, flex: 1 }}>
+                                                         <div className="responsive-dev-topic-title-container">
+                                                             <span 
+                                                                 onClick={(e) => {
+                                                                     e.stopPropagation();
+                                                                     openModal('dev-roadmap-node', { ...topic, roadmapId: selectedRoadmapId, roadmapName: registry.find(r => r.id === selectedRoadmapId)?.title });
+                                                                 }}
+                                                                 className="responsive-dev-topic-label"
+                                                             >
+                                                                 {topic.label}
+                                                             </span>
+                                                             <StatusPill status={topicStatus} />
+                                                         </div>
+                                                     </div>
+                                                 </div>
+                                                 <div className="responsive-dev-topic-right">
                                                     {totalSubs > 0 && (
                                                         <span style={{ fontSize: 13, color: AppleColors.labelSecondary, fontWeight: 500 }}>
                                                             {completedSubs}/{totalSubs} steps
@@ -4672,8 +4891,8 @@ export default function Roadmap() {
                                     <div style={{ fontSize: 17, fontWeight: 700, color: AppleColors.blue, marginBottom: 12 }}>
                                         {t.term}
                                     </div>
-                                    <div style={{ display: 'flex', gap: 24, flexWrap: 'wrap' }}>
-                                        <div style={{ flex: 1, minWidth: 200 }}>
+                                    <div className="responsive-glossary-row">
+                                        <div className="responsive-glossary-says">
                                             <div style={{ fontSize: 11, fontWeight: 700, textTransform: 'uppercase', letterSpacing: 0.5, color: AppleColors.labelTertiary, marginBottom: 4 }}>
                                                 What they say
                                             </div>
@@ -4681,7 +4900,7 @@ export default function Roadmap() {
                                                 "{t.says}"
                                             </div>
                                         </div>
-                                        <div style={{ flex: 1.5, minWidth: 280 }}>
+                                        <div className="responsive-glossary-means">
                                             <div style={{ fontSize: 11, fontWeight: 700, textTransform: 'uppercase', letterSpacing: 0.5, color: AppleColors.labelTertiary, marginBottom: 4 }}>
                                                 What it actually means
                                             </div>

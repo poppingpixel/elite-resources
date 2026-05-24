@@ -33,28 +33,28 @@
 
   /* Liquid Glass Backgrounds */
   --glass-bg: rgba(28, 28, 30, 0.72);
-  --glass-bg-subtle: rgba(255, 255, 255, 0.5);
-  --glass-bg-strong: rgba(255, 255, 255, 0.85);
-  --glass-border: rgba(255, 255, 255, 0.25);
-  --glass-border-light: rgba(255, 255, 255, 0.12);
-  --glass-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
-  --glass-shadow-lg: 0 24px 80px rgba(0, 0, 0, 0.12);
+  --glass-bg-subtle: rgba(28, 28, 30, 0.55);
+  --glass-bg-strong: rgba(28, 28, 30, 0.88);
+  --glass-border: rgba(255, 255, 255, 0.12);
+  --glass-border-light: rgba(255, 255, 255, 0.06);
+  --glass-shadow: 0 8px 32px rgba(0, 0, 0, 0.35);
+  --glass-shadow-lg: 0 24px 80px rgba(0, 0, 0, 0.5);
   --glass-blur: 20px;
   --glass-blur-strong: 40px;
 
   /* Text Colors */
-  --text-primary: rgba(0, 0, 0, 0.88);
-  --text-secondary: rgba(0, 0, 0, 0.55);
-  --text-tertiary: rgba(0, 0, 0, 0.35);
+  --text-primary: rgba(255, 255, 255, 0.92);
+  --text-secondary: rgba(255, 255, 255, 0.6);
+  --text-tertiary: rgba(255, 255, 255, 0.38);
   --text-white: rgba(255, 255, 255, 0.95);
   --text-white-secondary: rgba(255, 255, 255, 0.7);
 
   /* Background Gradients */
-  --bg-gradient-main: linear-gradient(145deg, #E8F4FD 0%, #F0E6FF 35%, #FFF0F5 70%, #F0F9FF 100%);
+  --bg-gradient-main: linear-gradient(145deg, #0a0a15 0%, #0d0d1a 35%, #121218 70%, #0a0f14 100%);
   --bg-gradient-mesh:
-    radial-gradient(at 0% 0%, rgba(0, 122, 255, 0.12) 0%, transparent 50%),
-    radial-gradient(at 100% 0%, rgba(191, 90, 242, 0.1) 0%, transparent 50%),
-    radial-gradient(at 100% 100%, rgba(255, 159, 10, 0.08) 0%, transparent 50%),
+    radial-gradient(at 0% 0%, rgba(0, 122, 255, 0.15) 0%, transparent 50%),
+    radial-gradient(at 100% 0%, rgba(191, 90, 242, 0.12) 0%, transparent 50%),
+    radial-gradient(at 100% 100%, rgba(255, 159, 10, 0.1) 0%, transparent 50%),
     radial-gradient(at 0% 100%, rgba(48, 209, 88, 0.08) 0%, transparent 50%);
 
   /* Spacing */
@@ -150,32 +150,7 @@
 }
 
 
-/* ═══════════════════════════════════════════════════════════════════════════════
-   DARK MODE - LIQUID GLASS
-   ═══════════════════════════════════════════════════════════════════════════════ */
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --glass-bg: rgba(28, 28, 30, 0.72);
-    --glass-bg-subtle: rgba(28, 28, 30, 0.55);
-    --glass-bg-strong: rgba(28, 28, 30, 0.88);
-    --glass-border: rgba(255, 255, 255, 0.12);
-    --glass-border-light: rgba(255, 255, 255, 0.06);
-    --glass-shadow: 0 8px 32px rgba(0, 0, 0, 0.35);
-    --glass-shadow-lg: 0 24px 80px rgba(0, 0, 0, 0.5);
-
-    --text-primary: rgba(255, 255, 255, 0.92);
-    --text-secondary: rgba(255, 255, 255, 0.6);
-    --text-tertiary: rgba(255, 255, 255, 0.38);
-
-    --bg-gradient-main: linear-gradient(145deg, #0a0a15 0%, #0d0d1a 35%, #121218 70%, #0a0f14 100%);
-    --bg-gradient-mesh:
-      radial-gradient(at 0% 0%, rgba(0, 122, 255, 0.15) 0%, transparent 50%),
-      radial-gradient(at 100% 0%, rgba(191, 90, 242, 0.12) 0%, transparent 50%),
-      radial-gradient(at 100% 100%, rgba(255, 159, 10, 0.1) 0%, transparent 50%),
-      radial-gradient(at 0% 100%, rgba(48, 209, 88, 0.08) 0%, transparent 50%);
-  }
-}
+/* Forced Dark Mode Enabled Globally */
 
 /* ═══════════════════════════════════════════════════════════════════════════════
    RESET & BASE STYLES
